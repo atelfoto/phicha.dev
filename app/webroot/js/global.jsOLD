@@ -3,27 +3,17 @@ Theme by: WebThemez.com
 Note: Please use our back link in your site
 */
 $( function() {
-	// $.vegas( 'slideshow', {
-	// 	delay: 8000,
-	// 	backgrounds: [
-	// 		{ src: 'img/images/background4.jpg', fade: 4000 },
-	// 		{ src: 'img/images/background3.jpg', fade: 4000 },
-	// 		{ src: 'img/images/background2.jpg', fade: 4000 },
-	// 		{ src: 'img/images/background1.jpg', fade: 4000 }
-	// 	]
-	// } )( 'overlay' );
+	$.vegas( 'slideshow', {
+		delay: 8000,
+		backgrounds: [
+			{ src: 'img/images/background4.jpg', fade: 4000 },
+			{ src: 'img/images/background3.jpg', fade: 4000 },
+			{ src: 'img/images/background2.jpg', fade: 4000 },
+			{ src: 'img/images/background1.jpg', fade: 4000 }
+		]
+	} )( 'overlay' );
 
-	    $('#home').vegas({
-        slides: [
-{ src: 'img/images/background4.jpg' },
-{ src: 'img/images/background3.jpg' },
-{ src: 'img/images/background2.jpg' },
-{ src: 'img/images/background1.jpg' }
-        ]
-    });
-
-
-        var endDate = "September  27, 2015 15:03:25";
+        var endDate = "December  27, 2015 15:03:25";
 
         $('.countdown.simple').countdown({ date: endDate });
 

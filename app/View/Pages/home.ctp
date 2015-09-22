@@ -26,4 +26,5 @@
 			</form>
 		</div>
 	</div>
-<?php echo $this->Html->script(array("jquery.vegas.min","jquery.countdown","global"),array('inline'=>false)); ?>
+	<?php  echo $this->element('sidebar'); ?>
+<?php echo $this->Html->script(array("vegas.min","jquery.countdown","global"),array('inline'=>false)); ?>

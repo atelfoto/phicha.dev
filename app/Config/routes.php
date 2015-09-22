@@ -29,6 +29,7 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	Router::connect('/portfolio/:slug',array('controller'=>'portfolios','action'=>'view'),array('pass'=>array('slug'),'slug'=>'[a-z0-9\-]+'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
