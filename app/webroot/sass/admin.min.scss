@@ -1,0 +1,140 @@
+@import "bootstrap-compass";
+@import "bootstrap-variables";
+@import "bootstrap";
+//@import "bootstrap/theme";
+//@import "bootstrap-social";
+//@import "bouton";
+//@import "sitemap";
+//@import "buildingpage";
+@import "font-awesome-compass";
+@import "font-awesome";
+@import "font";
+//@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+//@import url('http://fonts.googleapis.com/css?family=Actor|PT+Sans');
+//@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Montserrat:400,700);
+//@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic|Montserrat:400,700);
+//@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import "compass";
+@import "AdminLTE2";
+@import "skin-blue";
+
+
+$gray-base: #000;
+$white: #fff;
+$red: #f00;
+$marron: #E98500;
+$navigation: #2e2e2e;
+
+/**
+ * FONTS
+ * @type {[type]}
+ */
+$font-M: Montserrat;
+$font-s-s: sans-serif;
+$font-essai: 'Indie Flower', cursive;
+
+/**
+ * URLS
+ * @type {[type]}
+ */
+
+$url-nav: url(../img/nav.png);
+
+h1{
+	text-transform: capitalize;
+}
+// bare de progression
+.progress , .spin{
+	display: none;
+}
+/**
+ * Scrol top
+ * @type {[type]}
+ */
+ .topbar{
+ 	position: fixed;
+ 	bottom:50px;
+ 	z-index: 999;
+ 	width: 70px;
+    left: 95%;
+    text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+
+		& a{color: $gray-light;
+		//	& span{font-size: 4em}
+		}
+ }
+
+/**
+ * bouton toogle dans les formulaires
+ */
+ .toggle.ios,
+ .toggle-on.ios,
+ .toggle-off.ios {
+ 	border-radius: 20px;
+ }
+ .toggle.ios .toggle-handle {
+ 	border-radius: 20px;
+ }
+ label i.fa-asterisk , form .text-left i.fa-asterisk{
+ 	color:red !important;
+ 	font-size: 0.6em !important;
+ }
+
+/**
+ * image thumb dans les formulaire
+ */
+ .admin-edit-thumb a img{
+ 	width: 50px;
+ }
+
+/**
+ * pour les sous menus de admin
+ */
+ .dropdown-submenu{
+ 	position:relative;
+ }
+ .dropdown-submenu>.dropdown-menu{
+ 	top:0;
+ 	left:100%;
+ 	margin-top:0;
+ 	margin-left:-1px;
+ 	-webkit-border-radius:0 6px 6px 6px;
+ 	-moz-border-radius:0 6px 6px 6px;
+ 	border-radius:0 6px 6px 6px;
+ }
+ .dropdown-submenu:hover>.dropdown-menu{
+ 	display:block;
+ }
+
+ .dropdown-submenu>a:after{
+ 	display:block;
+ 	content:" ";
+ 	float:right;
+ 	width:0;
+ 	height:0;
+ 	border-color:transparent;
+ 	border-style:solid;
+ 	border-width:5px 0 5px 5px;
+ 	border-left-color:#cccccc;
+ 	margin-top:5px;
+ 	margin-right:-10px;
+ }
+ .dropdown-submenu:hover>a:after{
+ 	border-left-color:#ffffff;
+ }
+ .dropdown-submenu.pull-left{
+ 	float:none;
+ }
+ .dropdown-submenu.pull-left>.dropdown-menu{
+ 	left:-100%;
+ 	margin-left:10px;
+ 	-webkit-border-radius:6px 0 6px 6px;
+ 	-moz-border-radius:6px 0 6px 6px;
+ 	border-radius:6px 0 6px 6px;
+ }
+
+ //alignement image  pour le tinymce
+ .alignLeft{ float:left;margin-right: 20px;}
+.alignRight{ float:right;margin-left: 20px;}
+.alignCenter{ display: block; margin: 0 auto;}

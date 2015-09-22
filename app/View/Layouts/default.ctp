@@ -49,11 +49,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 		<div id="Content" class="wrapper"> -->
 
-			<?php echo $this->Flash->render(); ?>
+			<?php // echo $this->Flash->render(); ?>
+			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 
-		<footer>
+		<footer class="footer text-center">
 			<?php echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
 					'http://www.cakephp.org/',

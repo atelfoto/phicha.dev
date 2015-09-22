@@ -31,4 +31,62 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    	public $helpers = array(
+		'Text',
+		"Html",
+		'Form',
+		'Session',
+		'Cache',
+	);
+
+public $components = array('Session','Cookie',"Auth");
+
+
+
+	function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->loginAction = array('controller'=>'users','action'=>'login','admin'=>false);
+		$this->Cookie->httpOnly = true;
+		if (!$this->Auth->loggedIn() && $this->Cookie->read('remember')) {
+		$cookie = $this->Cookie->read('remember');
+		$user = $this->User->find('first', array(
+		'conditions' => array(
+		'User.username' => $cookie['username'],
+		'User.password' => $cookie['password']
+		)
+		));
+
+		}
+
+		$this->Auth->authorize = array('Controller');
+		if (!isset($this->request->params['prefix'])){
+			$this->Auth->allow();
+		}
+		if(isset($this->request->params['prefix']) && $this->request->params['prefix']=='admin'){
+			$this->layout = 'admin';
+		}
+		if(isset($this->request->params['prefix']) && $this->request->params['prefix']=='member'){
+			$this->layout = 'member';
+		}
+	}
+
+	function isAuthorized($user){
+		if(!isset($this->request->params['prefix'])){
+			return true;
+		}
+		$roles = array(
+			'admin'=>10,
+			'member'=>5,
+			);
+		if(isset($roles[$this->request->params['prefix']] )){
+			$lvlAction = $roles[$this->request->params['prefix']];
+			$lvlUser = $roles[$user['role']];
+			if($lvlUser >= $lvlAction){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		return false;
+	}
 }

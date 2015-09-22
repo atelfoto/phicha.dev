@@ -41,23 +41,21 @@ class EmailConfig {
 
 	public $default = array(
 		'transport' => 'Mail',
-		'from' => 'you@localhost',
-		//'charset' => 'utf-8',
-		//'headerCharset' => 'utf-8',
+		'from' => 'philippewagner2@sfr.fr',
+		'charset' => 'utf-8',
+		'headerCharset' => 'utf-8',
 	);
 
 	public $smtp = array(
-		'transport' => 'Smtp',
-		'from' => array('site@localhost' => 'My Site'),
-		'host' => 'localhost',
-		'port' => 25,
-		'timeout' => 30,
-		'username' => 'user',
-		'password' => 'secret',
-		'client' => null,
-		'log' => false,
-		//'charset' => 'utf-8',
-		//'headerCharset' => 'utf-8',
+    	'host' => 'smtp-auth.sfr.fr',
+    	'port' => 587,
+    	'from' => 'philippewagner2@sfr.fr',
+    	'username' => 'philippewagner2@sfr.fr',
+    	'password' => '16marcel1961',
+    	'transport' => 'Smtp',
+    	'timeout' => 30,
+    	'charset' => 'utf-8',
+    	'headerCharset' => 'utf-8',
 	);
 
 	public $fast = array(
