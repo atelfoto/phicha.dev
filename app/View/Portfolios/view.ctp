@@ -1,86 +1,30 @@
-<div class="portfolios view">
-<h2><?php echo __('Portfolio'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Subtitle'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['subtitle']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Slug'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['slug']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Photographer'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['photographer']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Content'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['content']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Type'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['type']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Photo'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['photo']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Photo Dir'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['photo_dir']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Online'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['online']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('User'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($portfolio['User']['id'], array('controller' => 'users', 'action' => 'view', $portfolio['User']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['modified']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Remove'); ?></dt>
-		<dd>
-			<?php echo h($portfolio['Portfolio']['remove']); ?>
-			&nbsp;
-		</dd>
-	</dl>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Portfolio'), array('action' => 'edit', $portfolio['Portfolio']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Portfolio'), array('action' => 'delete', $portfolio['Portfolio']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $portfolio['Portfolio']['id']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Portfolios'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Portfolio'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+<?php // echo $this->fetch('title')?> <?= $this->assign('title',"Portfolio " .$portfolio['Portfolio']['name']); ?>
+<?php  echo $this->Html->css(array('portfolio'),array('inline'=>false)); ?>
+<?php  $this->Html->meta('description', $this->Text->truncate(strip_tags($portfolio['Portfolio']['content'], 200)), array(
+'exact' => false,'inline' => false)); ?>
+<?php echo $this->Html->meta(array('property' => 'og:type', 'type' => 'meta', 'content' => "website" ),NULL,array("inline"=>false)); ?>
+<?php echo $this->Html->meta(array('property' => 'og:title', 'type' => 'meta', 'content' => $portfolio['Portfolio']['name']),NULL,array("inline"=>false)); ?>
+<?php echo $this->Html->meta(array('property' => 'og:url', 'type' => 'meta', 'content' => "http://www.chateau-chazeron.com/portfolio/".$portfolio['Portfolio']['slug'] ),NULL,array("inline"=>false)); ?>
+<?php echo $this->Html->meta(array('property' => 'og:image', 'type' => 'meta',
+'content' => "http://www.chateau-chazeron.com/files/portfolio/photo/". $portfolio['Portfolio']['photo_dir']."/". 'port_'.$portfolio['Portfolio']['photo'] ),NULL,array("inline"=>false)); ?>
+<?php echo $this->Html->meta(array('property' => 'og:description', 'type' => 'meta',
+ 'content' => $this->Text->truncate(strip_tags($portfolio['Portfolio']['content']), 200)),NULL,array("inline"=>false)); ?>
+<?php    $this->Html->script("../files/portfolio/".$portfolio['Portfolio']['slug']."/jbcore/juicebox", array("inline"=>false)); ?>
+<?php  $this->Html->scriptStart(array("inline"=>false)); ?>
+			new juicebox({
+				baseUrl : '../files/portfolio/<?php echo $portfolio['Portfolio']['slug']; ?>/',
+				useFullscreenExpand: true,
+				//showOpenButton: false,
+				debugMode: true,
+				galleryTitle: '<?php echo $portfolio['Portfolio']['name']; ?>',
+				languagelist:"Montrez les vignettes|Cachez les Vignettes|Plein Ecran|reduire plein Ecran|Ouvrez cette image une nouvelle fenêtre|Images",
+				backgroundColor: "rgba(34,34,34,1)",
+				containerId: "juicebox-container",
+				galleryHeight: "100%",
+				galleryWidth: "100%",
+				top:"150px"
+			});
+<?php  $this->Html->scriptEnd(); ?>
+
+<div id="juicebox-container" ></div>
 </div>

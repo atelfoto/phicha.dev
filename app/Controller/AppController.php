@@ -41,8 +41,6 @@ class AppController extends Controller {
 
 public $components = array('Session','Cookie',"Auth");
 
-
-
 	function beforeFilter(){
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller'=>'users','action'=>'login','admin'=>false);

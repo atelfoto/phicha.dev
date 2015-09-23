@@ -91,23 +91,7 @@
 		</div><!-- end col md 12 -->
 	</div><!-- end row -->
 </div>
-	<?php echo $this->Html->css(array('bootstrap-toggle','fileinput.min'),array('inline'=>false)); ?>
-	<?php  echo  $this->Html->script(array('bootstrap-toggle','fileinput.min','fileinput_locale_fr',
-		"tinymce/tinymce.min"
+	<?php // echo $this->Html->css(array('fileinput.min'),array('inline'=>false)); ?>
+	<?php  echo  $this->Html->script(array('bootstrap-toggle.min','fileinput.min','fileinput_locale_fr',
 	),array('inline'=>false)); ?>
-<?php  echo  $this->Html->scriptStart(array('inline'=>false)); ?>
- //pour le textarea
- tinyMCE.init({
- selector: 'textarea',
-   theme: "modern",
-   language :"fr_FR",
-   resize: "both",
-   plugins: ['example textcolor fullscreen code visualblocks wordcount'],
-   toolbar1: "| forecolor backcolor | code | fullscreen ",
-   paste_remove_styles : true,
- //  image_explorer :'<?= $this->Html->url(array('controller'=>'portfolio','action'=>'editor', $this->request->data['Portfolio']['slug'])); ?>',
-  // editor_selector : "emmet",
-   width: 800,
-   height: 400
-});
-<?php  $this->Html->scriptEnd(); ?>
+

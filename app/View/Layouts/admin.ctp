@@ -1,5 +1,5 @@
 <?php
-$cakeDescription = __d('cake_dev', 'Administration');
+$cakeDescription = __d('cake_dev', 'phicha');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>

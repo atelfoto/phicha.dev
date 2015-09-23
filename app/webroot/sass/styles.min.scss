@@ -2,8 +2,21 @@
 @import "bootstrap-variables";
 @import "bootstrap";
 @import "bootstrap/theme";
-//@import "_jquery.vegas.min";
-//@import "_jquery.vegas";
-//@import "_vegas";
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic|Montserrat:400,700);
+// @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold);
+//$url-bg-paper: url(../img/bg-paper.jpg);
+
+
+body{
+	font-family: 'Lora', serif;
+
+}
+
+//ombres sur index portfolio
+.box-home{
+	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+	padding-right:0;
+	margin-top:20px
+}
 
 

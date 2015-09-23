@@ -4,3 +4,44 @@
 @import "_homepage";
 
 
+.side-bar {
+	padding-right: 0px;
+	ul.sidebar-menu {
+		padding-left: 0px;
+		li {
+			list-style: none;
+			margin: 0 0 4px 0;
+			padding: 0;
+			border-top: 1px solid transparent;
+			//border-top: 1px solid #fff;
+			//border-bottom: 1px solid #dbdbdb;
+			border-bottom: 1px solid transparent;
+			text-decoration: none;
+			a{
+				background: #000;
+				text-transform: capitalize;
+				font-size: 2em;
+    			font-weight: 700;
+   				font-family: "Raleway";
+				padding: 12px 5px 12px 15px;
+				display: block;
+				color: #fff;
+				//color: #222;
+  		  //color: #fff;
+  		  &:hover{
+  			//color: #fff;
+  			color: #777;
+  			//background:#f9f9f9;
+  			background: transparent;
+  			text-decoration: none !important;
+  		}
+  		span{
+  			float:right;
+  			margin-right: 10px;
+  		}
+  	}
+  }
+}
+}
+
+

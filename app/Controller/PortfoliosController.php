@@ -124,9 +124,6 @@ public $components = array('Paginator', 'Flash', 'Session');
 		if ($this->request->is(array('post', 'put'))) {
 
 			if ($this->Portfolio->save($this->request->data)) {
-				// debug($this->request->data);
-				// die();
-			//	$this->Portfolio->set(array('photo' => $image_url));
 				$this->Session->setFlash(__('The portfolio has been saved.'), 'notif', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -138,10 +135,6 @@ public $components = array('Paginator', 'Flash', 'Session');
 		}
 	//	$users = $this->Portfolio->User->find('list');
 	//	$this->set(compact('users'));
-	}
-
-	public function admin_editor(){
-
 	}
 
 /**

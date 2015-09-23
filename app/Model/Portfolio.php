@@ -51,18 +51,27 @@ class Portfolio extends AppModel {
 					'deleteOnUpdate' => true,
 					'deleteFolderOnDelete' => true
 				)
-			)
+			),
+			'Sluggable.Sluggable' => array(
+	        'field'     => 'name',  // Field that will be slugged
+	        'slug'      => 'slug',  // Field that will be used for the slug
+	        'lowercase' => true,    // Do we lowercase the slug ?
+	        'separator' => '-',     //
+	        'overwrite' => false    // Does the slug is auto generated when field is saved no matter what
+		)
 		);
 
+
+
 /**
- * Validation rules
+ * Validation rules  notBlank
  *
  * @var array
  */
 	public $validate = array(
 		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 				'message' => 'Name is required',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -75,8 +84,8 @@ class Portfolio extends AppModel {
 			)
 		),
 		// 'type' => array(
-		// 	'notEmpty' => array(
-		// 		'rule' => array('notEmpty'),
+		// 	'notBlank' => array(
+		// 		'rule' => array('notBlank'),
 		// 		//'message' => 'Your custom message here',
 		// 		//'allowEmpty' => false,
 		// 		//'required' => false,
@@ -181,12 +190,12 @@ class Portfolio extends AppModel {
  * @param  array  $options [description]
  * @return [type]          [description]
  */
-	public function beforeSave($options= array()) {
-		if (empty($this->data['post']['slug']) && isset($this->data['Portfolio']['slug']) && !empty($this->data['Portfolio']['name']))
-			$this->data["Portfolio"]['slug'] = strtolower(Inflector::slug($this->data['Portfolio']['name']
-			,'-'	));
+// 	public function beforeSave($options= array()) {
+// 		if (empty($this->data['post']['slug']) && isset($this->data['Portfolio']['slug']) && !empty($this->data['Portfolio']['name']))
+// 			$this->data["Portfolio"]['slug'] = strtolower(Inflector::slug($this->data['Portfolio']['name']
+// 			,'-'	));
 
-		return true;
-	}
+// 		return true;
+// 	}
 
-}
+ }

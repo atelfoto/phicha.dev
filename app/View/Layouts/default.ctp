@@ -33,7 +33,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min"));
 		echo $this->fetch('script');
 	?>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold">
+	<!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold"> -->
 </head>
 <body id="home">
 	<!-- 	<div id="Header">

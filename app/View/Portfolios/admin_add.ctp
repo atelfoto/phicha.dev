@@ -1,12 +1,9 @@
 <div class="portfolios form">
-
 		<div class="col-md-12">
 			<div class="page-header">
 				<h1><?php echo __('Add Portfolio'); ?></h1>
 			</div>
 		</div>
-
-
 		<div class="col-md-3">
 			<div class="actions">
 				<div class="panel panel-default">
@@ -46,7 +43,6 @@
 				<div class="col-md-6">
 					<?php echo $this->Form->input('Portfolio.photo', array('type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true'));  ?>
 					<?php echo $this->Form->input('photographer', array('class' => 'form-control', "label"=> __('photographer'), 'placeholder' => __('photographe')));?>
-
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
@@ -75,12 +71,8 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<?php // echo $this->TinyMCE->editor(array('theme' => 'advanced', 'mode' => 'textarea')); ?>
 				<?php echo $this->Form->input('content', array('class' => 'form-control', 'placeholder' => 'Content'));?>
 			</div>
-			<!-- <div class="form-group">
-				<?php echo $this->Form->input('user_id', array('class' => 'form-control', 'placeholder' => 'User Id'));?>
-			</div> -->
 			<div class="form-group text-right">
 				<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-default')); ?>
 			</div>
@@ -88,22 +80,7 @@
 		</div><!-- end col md 12 -->
 	<!-- end row -->
 </div>
-	<?php echo $this->Html->css(array('bootstrap-toggle','fileinput.min'),array('inline'=>false)); ?>
-	<?php  echo  $this->Html->script(array('bootstrap-toggle','fileinput.min','fileinput_locale_fr',
-	"tinymce/tinymce.min"
+	<?php // echo $this->Html->css(array('fileinput.min'),array('inline'=>false)); ?>
+	<?php  echo  $this->Html->script(array('bootstrap-toggle.min','fileinput.min','fileinput_locale_fr'
 	),array('inline'=>false)); ?>
-<?php  echo  $this->Html->scriptStart(array('inline'=>false)); ?>
- //pour le textarea
- tinyMCE.init({
- selector: 'textarea',
-   theme: "modern",
-   language :"fr_FR",
-   resize: "both",
-   plugins: ['emmet wordcount code'],
-   paste_remove_styles : true,
-   editor_selector : "emmet",
-   width: 800,
-   height: 400
 
-});
-<?php  $this->Html->scriptEnd(); ?>
