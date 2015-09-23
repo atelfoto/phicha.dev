@@ -29,7 +29,7 @@ App::uses('AppController', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
 class PagesController extends AppController {
-
+public $helpers = array('GoogleMap');//a enlever une fois tester
 /**
  * This controller does not use a model
  *
@@ -38,12 +38,55 @@ class PagesController extends AppController {
 	public $uses = array();
 
 	public function home()	{
+		$this->layout= 'home';
 
 	}
 
 	public function customers(){
 
 	}
+
+	public function map()
+	{
+
+	}
+/**
+ * [legalinformations description]
+ * @return [type] [description]
+ */
+	public function legalinformations()
+	{
+
+	}
+/**
+ * [sitemap description]
+ * @return [type] [description]
+ */
+	public function sitemap(){
+
+	}
+
+/**
+ * [admin_clearcache Permet de vider le cache]
+ * @return [type] [description]
+ */
+    function admin_clearcache(){
+        Cache::clear();
+        foreach(glob(CACHE.'*_cache') as $file){
+        	unlink($file);
+        }
+        foreach(glob(CACHE.'views'.DS.'*.php') as $file){
+        	unlink($file);
+        }
+        foreach(glob(CACHE.'models'.DS.'*') as $file){
+        	unlink($file);
+        }
+        foreach(glob(CACHE.'persistent'.DS.'*') as $file){
+        	unlink($file);
+        }
+        $this->Session->setFlash('Cache vidé avec succès','notif');
+        $this->redirect($this->referer());
+    }
 
 /**
  * Displays a view

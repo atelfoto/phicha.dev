@@ -336,8 +336,8 @@ array('controller' => 'histories', 'action' => 'edit'),array('escape'=>false)); 
 <li class="treeview <?php if ($this->request->controller =='homes'):?>active<?php endif; ?>">
 <a href="#"><i class="fa  fa-gear "></i><span><?= __('maintenance');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 <ul class="treeview-menu">
-<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_clearcache'):?> class="active"<?php  endif; ?>>
-<?php echo $this->Html->link(__(" Clear Cache"),array('action'=>'clearcache','controller'=>'homes')); ?>
+<li <?php if ($this->request->controller =='pages' && $this->request->action =='admin_clearcache'):?> class="active"<?php  endif; ?>>
+<?php echo $this->Html->link(__(" Clear Cache"),array('action'=>'clearcache','controller'=>'pages')); ?>
 </li>
 </ul>
 </li>

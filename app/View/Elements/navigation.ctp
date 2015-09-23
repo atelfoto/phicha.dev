@@ -16,16 +16,16 @@
 	<?= $this->Html->link(__("Accueil",true),array('controller'=>'pages','action'=>'home')); ?>
 </li>
 <li <?php if ($this->request->controller =='portfolios'):?> class="active"<?php endif; ?>>
-<?= $this->Html->link(__("portfolios") ,array('controller'=>'portfolios','action'=>'index','admin'=>false)); ?>
+<?= $this->Html->link(__("portfolio") ,array('controller'=>'portfolios','action'=>'index','admin'=>false)); ?>
 </li>
 <li <?php if ($this->request->controller =='pages' && $this->request->action == "customers"):?> class="active"<?php endif; ?>>
 <?= $this->Html->link(__("Acces clients") ,array('controller'=>'pages','action'=>'customers','admin'=>false)); ?>
 </li>
-<li <?php if ($this->request->controller =='maps'):?> class="active"<?php endif; ?>>
-<?= $this->Html->link(__("map") ,array('controller'=>'maps','action'=>'index','admin'=>false)); ?>
-</li>
 <li <?php if ($this->request->controller =='contacts'):?> class="active"<?php endif; ?>>
 <?= $this->Html->link(__("contact") ,array('controller'=>'contacts','action'=>'index','admin'=>false)); ?>
+</li>
+<li <?php if ($this->request->controller =='posts'):?> class="active"<?php endif; ?>>
+<?= $this->Html->link(__("Livre d'or") ,array('controller'=>'posts','action'=>'index','admin'=>false)); ?>
 </li>
 </ul>
 <ul class="nav navbar-nav navbar-right">

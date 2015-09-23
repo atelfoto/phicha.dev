@@ -15,7 +15,7 @@
 </div>
 <div id="Content" class="wrapper">
 	<div class="col-md-9">
-		<h2>Nous sommes en construction</h2>
+		<h2>Site en construction</h2>
 		<br/><br/>
 		<div class="countdown styled"></div>
 		<div id="subscribe">

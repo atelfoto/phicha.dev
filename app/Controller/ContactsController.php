@@ -2,6 +2,7 @@
 App::uses('AppController', 'Controller');
 class ContactsController extends AppController{
 	public $components = array ('Session','Security');
+
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow('index');

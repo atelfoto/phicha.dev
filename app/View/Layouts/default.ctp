@@ -31,36 +31,83 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('styles.min');
 		echo $this->fetch('css');
 		echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min"));
-		echo $this->fetch('script');
 	?>
-	<!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold"> -->
+<script>
+
+//tooltype de bootstrap
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+});
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+	$('a.page-scroll').bind('click', function(event) {
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $($anchor.attr('href')).offset().top
+		}, 1500, 'easeInOutExpo');
+		event.preventDefault();
+	});
+});
+// jQuery to collapse the navbar on scroll
+$(window).scroll(function() {
+	if ($(".navbar").offset().top > 50) {
+		$(".navbar-fixed-top").addClass("top-nav-collapse");
+	} else {
+		$(".navbar-fixed-top").removeClass("top-nav-collapse");
+	}
+});
+// script hamburger
+$(document).ready(function(){
+	$('.menu-icon').click(function(e){
+		e.preventDefault();
+		$this = $(this);
+		if($this.hasClass('is-opened')){
+			$this.addClass('is-closed').removeClass('is-opened');
+		}else{
+			$this.removeClass('is-closed').addClass('is-opened');
+		}
+	})
+});
+</script>
+<?php echo $this->fetch('script');	?>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="studio">
+<meta name="twitter:creator" content="studio">
+<meta name="twitter:domain" content="studio.com">
+<meta name="twitter:title" content="studio" />
+<meta name="twitter:description" content="studio " />
+<meta name="twitter:image" content="http://www.studio/img/sceenshot.jpg" />
+<meta name="twitter:url" content="http://www.studio.com" />
+<meta name="application-name" content="studio"/>
+<meta name="msapplication-TileColor" content="#EBEAE6"/>
+<meta name="msapplication-square70x70logo" content="http://www.studio/img/tiny.png"/>
+<meta name="msapplication-square150x150logo" content="http://www.studio/img/square.png"/>
+<meta name="msapplication-wide310x150logo" content="http://www.studio/img/wide.jpg"/>
+<meta name="msapplication-square310x310logo" content="http://www.studio/img/large.jpg"/>
 </head>
-<body id="home">
-	<!-- 	<div id="Header">
-			<div class="wrapper">
-				<h1><?php // echo $cakeDescription; ?>Phicha</h1>
-				<ul>
-					<li><a href="" title="Twitter" class="twitterIcon"></a></li>
-					<li><a href="" title="facebook" class="facebookIcon"></a></li>
-					<li><a href="" title="linkedIn" class="linkedInIcon"></a></li>
-					<li><a href="" title="Pintrest" class="pintrestIcon"></a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="Content" class="wrapper"> -->
+<body id="home" data-target=".navbar-fixed-top">
+<?php   echo $this->Element('navigation'); ?>
+<!--/nocache-->
+<?php  echo $this->element('carrousel'); ?>
 
 			<?php // echo $this->Flash->render(); ?>
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 
-		<footer class="footer text-center">
-
+<!-- 		<footer class="footer text-center">
 			<p>
 				<?php echo $cakeVersion; ?>
 			</p>
 		</footer>
-		<div id="overlay"></div>
+ -->
+	<?php  echo $this->element('footer'); ?>
 	<?php // echo $this->element('sql_dump'); ?>
 </body>
 </html>
