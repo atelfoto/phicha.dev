@@ -11,7 +11,7 @@
 			<?php echo $this->Html->link("espace client", array('controller' => 'pages', 'action' => 'customers')); ?>
 		</li>
 		<li><a href="">liens</a></li>
-		<li><a href="">contact</a></li>
+		<li><?php echo $this->Html->link("contact", array('controller' => 'contacts', 'action' => 'index')); ?></li>
 		<li><a href="">livre d'or</a></li>
 	</ul>
 </div>

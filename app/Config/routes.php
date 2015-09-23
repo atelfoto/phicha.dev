@@ -31,7 +31,7 @@
 	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	Router::connect('/acces-clients', array('controller' => 'pages', 'action' => 'customers'));
 	Router::connect('/portfolio/:slug',array('controller'=>'portfolios','action'=>'view'),array('pass'=>array('slug'),'slug'=>'[a-z0-9\-]+'));
-
+	Router::connect('/contact', array('controller' => 'contacts', 'action' => 'index'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

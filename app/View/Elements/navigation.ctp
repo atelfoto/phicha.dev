@@ -29,12 +29,6 @@
 </li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
-<li class="hidden-xs"><!--
-<a href="https://www.facebook.com/ChateauDeChazeron" target="_blank" class="hidden-xs btn btn-social-icon btn-facebook btn-lg" > -->
-<a href="https://www.facebook.com/pages/Ch%C3%A2teau-de-Chazeron/864681886914832?fref=ts" target="_blank" class="hidden-xs btn btn-social-icon btn-facebook btn-lg" >
-<i class="fa fa-facebook hidden-xs" style="color:#fff;"></i>
-</a>
-</li>
 <?php if ($this->Session->read('Auth.User.id')): ?>
 <li class="dropdown user user-menu">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">

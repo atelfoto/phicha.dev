@@ -12,6 +12,16 @@ body{
 
 }
 
+// contact pour empécher les spams
+.toto{
+	visibility: hidden;
+}
+
+ label i.glyphicon-asterisk , form .text-left i.glyphicon-asterisk{
+ 	color:red !important;
+ 	font-size: 0.6em !important;
+ }
+
 //ombres sur index portfolio
 .box-home{
 	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
