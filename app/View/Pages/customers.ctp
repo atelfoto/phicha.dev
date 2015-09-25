@@ -1,6 +1,6 @@
-<?php echo $this->fetch('title')?> <?= $this->assign('title', 'Acces clients'); ?>
+<?php echo $this->fetch('title');?> <?= $this->assign('title', 'Acces clients'); ?>
 <?= $this->Html->meta("description", "acces aux pages clients", array('inline'=>false)); ?>
-<?php $this->Html->addCrumb('Portfolio'); ?>
+<?php $this->Html->addCrumb('Acces Clients'); ?>
 <?php //  echo $this->Element('navigation'); ?>
 <div class="container page">
 	<div class="page-header text-center">
@@ -14,6 +14,7 @@
 					Cliquer sur le bouton ci-dessous pour accéder à la page de recherche d'albums publics.
 				</p>
 				<input class="btn btn-primary" type="button" value="albums publics" onclick="window.open('http://www.jingoo.com/album/public.php?id_photographe=165557','Albums','status=yes,scrollbars=yes,resizable=yes,width=1000,height=600,menubar=yes,toolbar=yes,location=yes');return false;;">
+				<p>&nbsp;</p>
 			</div>
 		</div>
 		<div class="col-sm-6 col-md-6 text-capitalize " >
@@ -23,6 +24,7 @@
 					Découvrez, partagez, commandez mes plus belles réalisations : des images originales disponibles sur différents supports
 				</p>
 				<input class="btn btn-primary" type="button" value="banque d'images" onclick="window.open('http://www.jingoo.com/album/postershop/index.php?id_photographe=165557','Albums','status=yes,scrollbars=yes,resizable=yes,width=1000,height=600,menubar=yes,toolbar=yes,location=yes');return false;">
+				<p>&nbsp;</p>
 			</div>
 		</div>
 		<div class="col-sm-3 col">
@@ -52,6 +54,7 @@
 						echo $this->Form->button("ok", array("class"=>"btn btn-primary",'type'=>"submit"));
 						echo  $this->Form->end();
 					?>
+					<p>&nbsp;</p>
 			</div>
 		</div>
 	</div>

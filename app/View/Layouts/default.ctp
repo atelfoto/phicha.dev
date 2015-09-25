@@ -97,8 +97,16 @@ $(document).ready(function(){
 <?php  echo $this->element('carrousel'); ?>
 
 			<?php // echo $this->Flash->render(); ?>
-			<?php echo $this->Session->flash(); ?>
-
+			<div class="container">
+				<?php echo $this->Session->flash(); ?>
+				<p class="breadcrumb ">
+					<?php   echo $this->Html->getCrumbs(' / ', array(
+						'text' => __('home'),
+						'url' => array('controller' => 'pages', 'action' => 'home'),
+						'escape' => false
+					)); ?>
+				</p>
+			</div>
 			<?php echo $this->fetch('content'); ?>
 
 <!-- 		<footer class="footer text-center">

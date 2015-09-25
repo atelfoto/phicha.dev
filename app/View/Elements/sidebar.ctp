@@ -12,7 +12,7 @@
 		</li>
 		<li><a href="">liens</a></li>
 		<li><?php echo $this->Html->link("contact", array('controller' => 'contacts', 'action' => 'index')); ?></li>
-		<li><a href="">livre d'or</a></li>
+		<li><?php echo $this->Html->link("livre d'or", array('controller' => 'posts', 'action' => 'index')); ?></li>
 	</ul>
 </div>
 <!--nocache-->

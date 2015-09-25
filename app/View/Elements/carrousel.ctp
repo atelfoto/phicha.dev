@@ -54,7 +54,7 @@
 </div>
 </div>
 <div class="item ">
-<?=  $this->Html->image('/img/slides/slider-6.jpg', array('alt'=>__('castle of Chazeron'))); ?>
+<?=  $this->Html->image('../files/carousel/photo/1/xvga_20150703_095603.jpg', array('alt'=>__('studio'))); ?>
 <div class="">
 <div class="carousel-caption">
 <p><?= __(''); ?></p>

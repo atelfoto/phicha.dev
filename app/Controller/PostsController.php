@@ -23,6 +23,7 @@ class PostsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout= 'home';
 		$this->Post->recursive = 0;
 		$this->set('posts', $this->Paginator->paginate());
 	}

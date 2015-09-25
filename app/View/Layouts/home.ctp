@@ -14,7 +14,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'Phicha');
+$cakeDescription = __d('cake_dev', 'Studio');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
-		echo $this->Html->css('styles.min');
+		echo $this->Html->css(array('styles.min'));
 		echo $this->fetch('css');
 		echo  $this->Html->script(array("jquery-1.11.3.min"));
 		echo $this->fetch('script');
@@ -45,16 +45,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					<li><a href="" title="Pintrest" class="pintrestIcon"></a></li>
 				</ul>
 			</div>
-		</div>
-		<div id="Content" class="wrapper"> -->
+		</div>-->
+		<div  class="wrapper">
+		<!-- <div id="Content" class="wrapper">  -->
 
-			<?php // echo $this->Flash->render(); ?>
-			<?php echo $this->Session->flash(); ?>
+			<?php  echo $this->Flash->render(); ?>
+			<?php // echo $this->Session->flash(); ?>
+		</div>
 
 			<?php echo $this->fetch('content'); ?>
 
-		<footer class="footer text-center">
-
+		<footer class=" text-center">
 			<p>
 				<?php echo $cakeVersion; ?>
 			</p>

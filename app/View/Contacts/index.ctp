@@ -2,12 +2,12 @@
 <?php  $this->Html->meta('description', "Si vous avez des questions, n'hésitez pas à nous contacter." , array('inline'=> false)); ?>
 <?php   echo $this->Element('navigation'); ?>
 <?php $this->Html->addCrumb("contact"); ?>
-<div class="container page container-contact">
-	<div class="page contact index">
+<!-- <div class="container page container-contact"> -->
+	<div class="container page contact index">
 		<div class="page-header" id="page-header">
 			<h1><?php echo __('Contact'); ?></h1>
 		</div>
-		<div class="col-xs-12 col-md-12 page-content" id="ajax-contact">
+		<div class=" page-content" id="ajax-contact">
 			<div class="centered-form" >
 				<div class="alert alert-info text-center" role="alert">
 					<p><strong></strong>
@@ -86,7 +86,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-12">
+		<div class="">
 			<div class="centered-form box-home">
 				<div class="panel panel-default">
 					<div class="panel-body text-center">
@@ -97,7 +97,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+<!-- </div> -->
 <?=  $this->Html->script("https://maps.google.com/maps/api/js?sensor=false",array('inline'=>false));; ?>
 <?= $this->Html->scriptStart(); ?>
 jQuery(function ($) {

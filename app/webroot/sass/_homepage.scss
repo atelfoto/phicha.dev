@@ -146,7 +146,7 @@ clear: both;
 #subscribe p{
 text-align:center;
 }
-#subscribe input {
+#subscribe input, #subscribe button {
 background: rgba(255, 255, 255, 0.52);
 color: #000;
 font: bold 19px Arial, Helvetica, sans-serif;
@@ -156,7 +156,8 @@ width: 293px;
 border: 1px solid rgba(255, 255, 255, 0.76);
 padding: 10px;
 }
-#subscribe input[type="button"]{
+#subscribe input[type="button"],
+#subscribe button[type="submit"]{
 background: rgba(255, 255, 255, 1);
 width:auto;
 padding:10px 25px;

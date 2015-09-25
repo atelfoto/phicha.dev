@@ -37,8 +37,8 @@ public function signup(){
 					$this->Session->setFlash(__("Thank you you are registered mail sent to you to confirm your compte.Veuillez check your spam in case."),
 						'notif',array('class'=>'success','type'=>'ok-sign'));
 				}else{
-				//	$this->Session->setFlash(__("Thank you to correct your mistakes"), 'notif', array('class'=>'danger','type'=>'info'));
-					$this->Session->setFlash(__("Thank you to correct your mistakes"));
+				$this->Session->setFlash(__("Thank you to correct your mistakes"), 'notif', array('class'=>'danger','type'=>'info'));
+				//$this->Session->setFlash(__("Thank you to correct your mistakes"));
 			}
 		}
 	}
@@ -60,7 +60,7 @@ public function signup(){
 						));
 					$this->User->save();
 					App::uses('CakeEmail','Network/Email');
-					$CakeEmail = new CakeEmail('default'); // à changer par Default sur le site en ligne sinon smtp en local
+					$CakeEmail = new CakeEmail('smtp'); // à changer par Default sur le site en ligne sinon smtp en local
 					$CakeEmail->to($this->request->data['User']["mail"]);
 					$CakeEmail->subject(__(' your registration to our site'));
 					$CakeEmail->viewVars(
@@ -96,9 +96,9 @@ public function signup(){
 				$this->User->id = $user['User']['id'];
 				$this->User->saveField('token', $token);
 				App::uses('CakeEmail', 'Network/Email');
-				$cakeMail = new CakeEmail('default');// à changer par default sur le site en ligne ou smtp en local
+				$cakeMail = new CakeEmail('smtp');// à changer par default sur le site en ligne ou smtp en local
 				$cakeMail->to($this->request->data['User']['mail']);
-				$cakeMail->from(array('info@chateau-chazeron.com'=>"site du château de chazeron"));
+				$cakeMail->from(array('philippewagner2@sfr.fr'=>"site "));
 				$cakeMail->subject(__('Password regeneration'));
 				$cakeMail->template('forgot');
 				$cakeMail->viewVars(array('token' =>$token,'id'=>$user['User']['id']));
@@ -110,7 +110,7 @@ public function signup(){
 		}
 	}
 /**
- *pemet de refaire un mot de passe
+ *permet de refaire un mot de passe
  *
  */
 public function password($user_id,$token){
@@ -252,6 +252,16 @@ public function member_account(){
 			}
 		}
 	}
+/**
+ * [logout description]
+ * @return [type] [description]
+ */
+	public function logout(){
+		$this->Auth->logout();
+		$this->Cookie->delete('remember');
+		$this->Session->setFlash(__("You are now offline"), "notif",array('class'=>'success','type'=>'ok'));
+		$this->redirect('/');
+	}
 
 /**
  * [logout description]
@@ -263,6 +273,7 @@ public function member_account(){
 		$this->Session->setFlash(__("You are now offline"), "notif",array('class'=>'success','type'=>'ok'));
 		$this->redirect('/');
 	}
+
 	function user_profil(){
 		$this->layout= 'member';
 		return true;
