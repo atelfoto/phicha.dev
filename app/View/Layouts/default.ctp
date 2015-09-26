@@ -108,14 +108,6 @@ $(document).ready(function(){
 				</p>
 			</div>
 			<?php echo $this->fetch('content'); ?>
-
-<!-- 		<footer class="footer text-center">
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</footer>
- -->
 	<?php  echo $this->element('footer'); ?>
-	<?php // echo $this->element('sql_dump'); ?>
 </body>
 </html>

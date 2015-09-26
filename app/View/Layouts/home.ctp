@@ -28,7 +28,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
-		echo $this->Html->css(array('styles.min'));
+		//echo $this->Html->css(array('styles.min'));
 		echo $this->fetch('css');
 		echo  $this->Html->script(array("jquery-1.11.3.min"));
 		echo $this->fetch('script');
@@ -49,18 +49,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div  class="wrapper">
 		<!-- <div id="Content" class="wrapper">  -->
 
-			<?php  echo $this->Flash->render(); ?>
-			<?php // echo $this->Session->flash(); ?>
+			<?php // echo $this->Flash->render(); ?>
+			<?php  echo $this->Session->flash(); ?>
 		</div>
 
 			<?php echo $this->fetch('content'); ?>
 
-		<footer class=" text-center">
+		<footer class="text-center">
 			<p>
 				<?php echo $cakeVersion; ?>
 			</p>
 		</footer>
 		<div id="overlay"></div>
-	<?php // echo $this->element('sql_dump'); ?>
+
 </body>
 </html>

@@ -23,34 +23,7 @@
 		<div id="subscribe">
 			<h3>Restez en contact</h3>
 			<p>inscrivez vous à la newsletter</p>
-			<!-- <h3>Stay in touch</h3> -->
-			<!-- <form action="" method="post" onsubmit="">
-				<p><input name="" placeholder="Entrez votre e-mail" type="text" id=""/>
-					<input type="button" value="Submit" class="btn btn-primary" />
-				</p>
-			</form> -->
-<?php
-	echo $this->Form->create("Enews", array(
-		'action'=> 'add',
-		'type' => 'post',
-		'inputDefaults' => array(
-			'label' => false,
-			'div' => false,
-			)
-		));
-		?>
-		<p>
-		<?php
-	echo $this->Form->input('mail', array("placeholder"=>"Entrez votre Email"));
-	//echo $this->Form->submit();
-	//echo $this->Form->input("Envoyer", array('type'=>"button","value"=>"Submit"));
-	echo $this->Form->button("Envoyer", array('type'=>"submit","class"=>"btn btn-primary"));
-?>
-<!-- <input type="button" value="Envoyez"> -->
-</p>
-<?php
-	echo  $this->Form->end();
-?>
+			<?php  echo $this->element('enews'); ?>
 		</div>
 	</div>
 	<div class="">
@@ -62,14 +35,7 @@
 <?php echo $this->Html->script(array("vegas.min","jquery.countdown"),array('inline'=>false)); ?>
 <?php  $this->Html->scriptStart($options = array("inline"=>false)); ?>
 $( function() {
-	    $('#home').vegas({
-        	slides: [
-				{ src: 'img/images/background4.jpg' },
-				{ src: 'img/images/background3.jpg' },
-				{ src: 'img/images/background2.jpg' },
-				{ src: 'img/images/background1.jpg' }
-        	]
-    });
+
 
 
 var endDate = "october  27, 2015 15:03:25";

@@ -1,27 +1,20 @@
 <div class="portfolios index">
-			<div class="page-header">
-				<h1><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Portfolios'); ?></h1>
-			</div>
-		<div class="col-md-3">
-			<div class="actions">
-				<div class="panel panel-info">
-					<div class="panel-heading">Actions</div>
-						<div class="panel-body">
-							<ul class="nav nav-pills nav-stacked">
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New Portfolio'), array('action' => 'add'), array('escape' => false)); ?></li>
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Users'), array('controller' => 'users', 'action' => 'index'), array('escape' => false)); ?> </li>
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New User'), array('controller' => 'users', 'action' => 'add'), array('escape' => false)); ?> </li>
-							</ul>
-						</div><!-- end body -->
-				</div><!-- end panel -->
-			</div><!-- end actions -->
-		</div><!-- end col md 3 -->
-		<div class="text-right" style='margin-bottom:10px;'>
-			<button class="btn btn-xs"data-toggle="modal" data-target="#ModalAide"><i class="glyphicon glyphicon-question-sign">&nbsp;<?= __('Help') ?></i></button>
-			<?php echo $this->Html->link(__("<i class='glyphicon glyphicon-plus'></i> Add portfolio"),array('action'=>'add'),
-			array('class'=>"btn btn-success btn-xs",'escape'=>false)); ?>
-		</div>
+	<div class="page-header">
+		<h1><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Portfolios'); ?></h1>
+	</div>
+	<div class="col-md-3">
+		<div class="panel panel-info box-home">
+			<div class="panel-heading">Actions</div>
+			<div class="panel-body">
+				<ul class="nav nav-pills nav-stacked">
+					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New Portfolio'), array('action' => 'add'), array('escape' => false)); ?>
+					</li>
+				</ul>
+			</div><!-- end body -->
+		</div><!-- end panel -->
+	</div><!-- end col md 3 -->
 		<div class="col-md-9 table-responsive">
+		<div class="panel panel-info box-home">
 			<table cellpadding="0" cellspacing="0" class="table table-striped">
 				<thead style="">
 					<tr class="info">
@@ -58,10 +51,8 @@
 							?>
 						</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $portfolio['Portfolio']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit" style="color:#00f;"></span>', array('action' => 'edit', $portfolio['Portfolio']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
-							<?php // echo $this->Form->postLink('<span class="glyphicon glyphicon-trash"></span>', array('action' => 'delete', $portfolio['Portfolio']['id']), array ('escape' => false), __('Are you sure you want to delete # %s?', $portfolio['Portfolio']['id'])); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-trash" style="color:#f00;"></span>','#Modal'.$portfolio['Portfolio']['id'],
+							<?php echo $this->Html->link('<span class="fa fa-edit fa-2x" ></span>', array('action' => 'edit', $portfolio['Portfolio']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
+							<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$portfolio['Portfolio']['id'],
               				array(
               				  'class' => 'btn btn-default btn-remove-modal btn-sm',
               				  'escape' =>false,
@@ -69,16 +60,18 @@
               				  'role'  => 'button',
               				  'data-uid' => $portfolio['Portfolio']['id']
               				  )); ?>
-
 						</td>
 					</tr>
 				<?php endforeach; ?>
 				</tbody>
 			</table>
+			</div>
 		</div> <!-- end col md 9 -->
 		<div class="col-md-12 text-center">
-			<?php echo $this->element('pagination-counter'); ?>
-			<?php echo $this->element('pagination'); ?>
+			<p>
+				<?php echo $this->element('pagination-counter'); ?>
+				<?php echo $this->element('pagination'); ?>
+			</p>
 		</div>
 </div><!-- end containing of content -->
 <?php // echo $this->Js->writeBuffer(); ?>
@@ -113,7 +106,7 @@
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="glyphicon glyphicon-remove-sign" style="color:#f00;"></i></button>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove-sign" style="color:#f00;"></i></button>
 				<h4 id="myModalLabel"><?= __('Help') ?></h4>
 			</div>
 			<div class="modal-body">

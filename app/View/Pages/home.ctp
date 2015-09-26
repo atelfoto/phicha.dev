@@ -20,7 +20,7 @@
 		<h2>Site en construction</h2>
 		<br/><br/>
 		<div class="countdown styled"></div>
-		<div id="subscribe">
+		<div id="subscribe" class="text-center">
 			<h3>Restez en contact</h3>
 			<p>inscrivez vous à la newsletter</p>
 			<!-- <h3>Stay in touch</h3> -->
@@ -29,29 +29,9 @@
 					<input type="button" value="Submit" class="btn btn-primary" />
 				</p>
 			</form> -->
-<?php
-	echo $this->Form->create("Enews", array(
-		'action'=> 'add',
-		'type' => 'post',
-		'inputDefaults' => array(
-			'label' => false,
-			'div' => false,
-			)
-		));
-		?>
+			<?php  echo $this->element('enews'); ?>
 
-		<?php
-	echo $this->Form->input('mail', array("placeholder"=>"Entrez votre Email"));
-	//echo $this->Form->submit();
-	//echo $this->Form->input("Envoyer", array('type'=>"button","value"=>"Submit"));
-	echo $this->Form->button("Envoyer", array('type'=>"submit"));
-?>
-<!-- <input type="button" value="Envoyez"> -->
-
-<?php
-	echo  $this->Form->end();
-?>
-		</div>
+			</div>
 	</div>
 	<div class="">
 		<?php  echo $this->element('sidebar'); ?>
@@ -62,17 +42,6 @@
 <?php echo $this->Html->script(array("vegas.min","jquery.countdown"),array('inline'=>false)); ?>
 <?php  $this->Html->scriptStart($options = array("inline"=>false)); ?>
 $( function() {
-	    $('#home').vegas({
-        	slides: [
-				{ src: 'img/images/background1.jpg' },
-				{ src: 'img/images/background3.jpg' },
-				{ src: 'img/images/background2.jpg' },
-				{ src: 'img/images/background1.jpg' },
-				{ src: 'img/images/background4.jpg' },
-				{ src: 'files/home/photo/2/xvga_20150706_194107.jpg' },
-				{ src: 'files/home/photo/3/xvga_20150712_095114.jpg' }
-        	]
-    });
 
 var endDate = "September  29, 2015 15:03:25";
 

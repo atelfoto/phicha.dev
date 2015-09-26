@@ -1,84 +1,89 @@
 <div class="portfolios index">
-			<div class="page-header">
-				<h1><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Background'); ?></h1>
+	<div class="page-header ">
+		<div class="panel  box-home">
+			<div class="panel-heading">
+				<h1 class=""><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('home'); ?></h1>
 			</div>
-		<div class="col-md-3">
-			<div class="actions">
-				<div class="panel panel-info">
-					<div class="panel-heading">Actions</div>
-						<div class="panel-body">
-							<ul class="nav nav-pills nav-stacked">
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New picture'), array('action' => 'add'), array('escape' => false)); ?></li>
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Users'), array('controller' => 'users', 'action' => 'index'), array('escape' => false)); ?> </li>
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New User'), array('controller' => 'users', 'action' => 'add'), array('escape' => false)); ?> </li>
-							</ul>
-						</div><!-- end body -->
-				</div><!-- end panel -->
-			</div><!-- end actions -->
-		</div><!-- end col md 3 -->
-		<div class="text-right" style='margin-bottom:10px;'>
-			<button class="btn btn-xs"data-toggle="modal" data-target="#ModalAide"><i class="glyphicon glyphicon-question-sign">&nbsp;<?= __('Help') ?></i></button>
-			<?php echo $this->Html->link(__("<i class='glyphicon glyphicon-plus'></i> Add Picture"),array('action'=>'add'),
-			array('class'=>"btn btn-success btn-xs",'escape'=>false)); ?>
 		</div>
-		<div class="col-md-9 table-responsive">
-			<table cellpadding="0" cellspacing="0" class="table table-striped">
-				<thead style="">
-					<tr class="info">
-						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo '#'; ?></th>
-						<th><?php echo $this->Paginator->sort('name'); ?></th>
-						<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-						<th><?php echo $this->Paginator->sort('created'); ?></th>
-						<th><?php echo $this->Paginator->sort('modified'); ?></th>
-						<th><?php echo $this->Paginator->sort('online'); ?></th>
-						<th class="actions"></th>
-					</tr>
-				</thead>
-				<tbody>
-				<?php foreach ($homes as $home): ?>
+	</div>
+	<div class="col-md-9 table-responsive ">
+	<div class="panel panel-info box-home">
+		<table cellpadding="0" cellspacing="0" class="table table-striped">
+			<thead style="">
+				<tr class="info">
+					<th><?php echo $this->Paginator->sort('id'); ?></th>
+					<th><?php echo '#'; ?></th>
+					<th><?php echo $this->Paginator->sort('name'); ?></th>
+					<th><?php echo $this->Paginator->sort('user_id'); ?></th>
+					<th><?php echo $this->Paginator->sort('created'); ?></th>
+					<th><?php echo $this->Paginator->sort('modified'); ?></th>
+					<th><?php echo $this->Paginator->sort('online'); ?></th>
+					<th class="actions"></th>
+				</tr>
+			</thead>
+			<tbody>
+					<?php foreach ($homes as $home): ?>
 					<tr>
 						<td><?php echo h($home['Home']['id']); ?>&nbsp;</td>
 						<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/home/photo/' . $home['Home']['photo_dir'] . '/' . 'thumb_' .$home['Home']['photo'],
-						array("url"=> array("controller"=>'homes','action'=>'view',"slug"=>$home['Home']['slug'],"admin"=>false ))); ?></td>
-						<td><?php echo h($home['Home']['name']); ?>&nbsp;</td>
-						<td>
-						<?php echo $this->Html->link($home['User']['name'], array(
-						'controller' => 'users', 'action' => 'view', $home['User']['id'])); ?>
-						</td>
-						<td><?php echo $this->Date->french($home['Home']['created']); ?>&nbsp;</td>
-						<td><?php echo $this->Date->french($home['Home']['modified']); ?>&nbsp;</td>
-						<td><?php if($home['Home'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
-						 	array('action'=>'enable', $home['Home']['id']),
-							array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom", "title"=>__('Enable this Home'),'escape'=>false));
-							}else{
-							echo $this->Html->link(__('<span class="label label-success">In line</span>'), array('action'=>'disable', $home['Home']['id']),
-							array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom", "title"=>__('Disable this Post'),'escape'=>false));
-							}
-							?>
+							array("url"=> array("controller"=>'homes','action'=>'view',"slug"=>$home['Home']['slug'],"admin"=>false ))); ?></td>
+							<td><?php echo h($home['Home']['name']); ?>&nbsp;</td>
+							<td>
+								<?php echo $this->Html->link($home['User']['name'], array(
+								'controller' => 'users', 'action' => 'view', $home['User']['id'])); ?>
+							</td>
+							<td><?php echo $this->Date->french($home['Home']['created']); ?>&nbsp;</td>
+							<td><?php echo $this->Date->french($home['Home']['modified']); ?>&nbsp;</td>
+							<td>
+								<?php if($home['Home'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
+									array('action'=>'enable', $home['Home']['id']),
+									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
+										"title"=>__('Enable this picture'),'escape'=>false));
+									}else{
+									echo $this->Html->link(__('<span class="label label-success">In line</span>'),
+									array('action'=>'disable', $home['Home']['id']),
+									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
+										"title"=>__('Disable this picture'),'escape'=>false));
+									}
+								?>
 						</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-search"></span>', array('action' => 'view', $home['Home']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-edit" style="color:#00f;"></span>', array('action' => 'edit', $home['Home']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
-							<?php echo $this->Html->link('<span class="glyphicon glyphicon-trash" style="color:#f00;"></span>','#Modal'.$home['Home']['id'],
-              				array(
-              				  'class' => 'btn btn-default btn-remove-modal btn-sm',
-              				  'escape' =>false,
-              				  'data-toggle' => 'modal',
-              				  'role'  => 'button',
-              				  'data-uid' => $home['Home']['id']
-              				  )); ?>
+						<?php echo $this->Html->link('<span class="fa fa-edit fa-2x" "></span>', array('action' => 'edit', $home['Home']['id']),
+						array('class' => 'btn btn-default btn-sm',"data-toggle"=>"tooltip","data-placement"=>"bottom", "title"=>__('edit this picture'),'escape' => false)); ?>
+						<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$home['Home']['id'],
+							array(
+								'class' => 'btn btn-default btn-remove-modal btn-sm',
+								"title"=>__('delete this picture'),
+								'escape' =>false,
+								'data-toggle' => 'modal',
+								'role'  => 'button',
+								'data-uid' => $home['Home']['id']
+								)); ?>
 
 						</td>
 					</tr>
-				<?php endforeach; ?>
-				</tbody>
-			</table>
-		</div> <!-- end col md 9 -->
-		<div class="col-md-12 text-center">
+					<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+	</div> <!-- end col md 9 -->
+	<div class="col-md-3 ">
+		<div class="panel panel-info box-home">
+			<div class="panel-heading">Actions</div>
+			<div class="panel-body">
+				<ul class="nav nav-pills nav-stacked">
+					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New picture'), array('action' => 'add'), array('escape' => false)); ?>
+					</li>
+				</ul>
+			</div><!-- end body -->
+		</div><!-- end panel -->
+	</div><!-- end col md 3 -->
+	<div class="col-md-12 text-center">
+		<p>
 			<?php echo $this->element('pagination-counter'); ?>
 			<?php echo $this->element('pagination'); ?>
-		</div>
+		</p>
+	</div>
 </div><!-- end containing of content -->
 <?php // echo $this->Js->writeBuffer(); ?>
 <!-- modal supprimer -->
@@ -94,8 +99,7 @@
 			<div class="modal-body">
 				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
 					<b style="color:#f00;">
-					<?php echo  $v['name'] ?></b>&nbsp;
-					<?php echo __('of your Articles') ?>
+					<?php echo  $v['name'] ?></b>
 					<span class="label-uname strong"></span> ?
 				</p>
 			</div>
@@ -112,7 +116,7 @@
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="glyphicon glyphicon-remove-sign" style="color:#f00;"></i></button>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove-sign" style="color:#f00;"></i></button>
 				<h4 id="myModalLabel"><?= __('Help') ?></h4>
 			</div>
 			<div class="modal-body">

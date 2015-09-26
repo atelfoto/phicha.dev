@@ -1,5 +1,5 @@
-<footer class="footer text-center">
-<nav class='text-center '>
+<footer class="footer text-center ">
+<nav class='text-center text-capitalize'>
 <ul class='list-inline'>
 <li><?php echo $this->Html->link(__('Legal Information'), array(
 'controller' => 'pages', 'action' => 'legalinformations')); ?> |
@@ -12,8 +12,9 @@
 </nav>
 <address id="hcard-studio" itemscope itemtype="http://shema.org/Person" class="vcard">
 <small class="fn n">
+<span itemprop="name " >Studio chardon</span>
 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-<span itemprop="name street address" class="given-name street-address">Studio</span>
+<span itemprop="streetAddress class="given-name street-address"">1 rue Franche</span>
 <span class="postal-code" itemprop="postalCode">52200</span>
 <span itemprop="addressLocality" class="locality country-name">LANGRES</span>
 </span>

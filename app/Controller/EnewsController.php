@@ -68,12 +68,12 @@ class EnewsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Enews->create();
 			if ($this->Enews->save($this->request->data)) {
-				$this->Flash->success(__('Thanks your Email has been saved.See you later'));
-				//$this->Session->setFlash(__('Thanks your Email has been saved.See you later'));
+				//$this->Flash->success(__('Thanks your Email has been saved.See you later'));
+				$this->Session->setFlash(__('Thanks your Email has been saved.See you later'), 'notif', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'home',"controller"=>"pages"));
 			} else {
-				$this->Flash->error(__('The enews could not be saved. Please, try again.'));
-				//$this->Session->setFlash(__('The enews could not be saved. Please, try again.'));
+				//$this->Flash->error(__('The enews could not be saved. '), 'notif', array('class' => 'alert alert-danger'));
+				$this->Session->setFlash(__('The enews could not be saved. Please, try again.'), 'notif', array('class' => 'alert alert-danger'));
 				return $this->redirect(array('action' => 'home',"controller"=>"pages"));
 				$this->Flash->error(__('The enews could not be saved. Please, try again.'));
 			}
@@ -93,7 +93,8 @@ class EnewsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Enews->save($this->request->data)) {
-				$this->Flash->success(__('The enews has been saved.'));
+				//$this->Flash->success(__('The enews has been saved.'));
+				$this->Session->setFlash(__('The enews has been saved.'), 'notif', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Flash->error(__('The enews could not be saved. Please, try again.'));
