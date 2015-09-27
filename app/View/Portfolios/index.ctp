@@ -1,6 +1,6 @@
 <?php echo $this->fetch('title')?> <?= $this->assign('title', 'Portfolio'); ?>
 <?= $this->Html->meta("description", "Galerie photos", array('inline'=>false)); ?>
-<?php $this->Html->addCrumb('Portfolio'); ?>
+<?php $this->Html->addCrumb('Portfolio',array("controller"=>"portfolio","action"=>"index"),array('class'=>"btn btn-default")); ?>
 <?php   echo $this->Element('navigation'); ?>
 <div class="container page">
 	<div class="page-header">

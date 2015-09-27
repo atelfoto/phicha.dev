@@ -68,6 +68,18 @@ $(document).ready(function(){
 		}
 	})
 });
+$(document).ready(function(){
+    $(window).resize(function() {
+
+        ellipses1 = $("#bc1 :nth-child(2)")
+        if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
+
+        ellipses2 = $("#bc2 :nth-child(2)")
+        if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
+
+    })
+
+});
 </script>
 <?php echo $this->fetch('script');	?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -97,15 +109,16 @@ $(document).ready(function(){
 <?php  echo $this->element('carrousel'); ?>
 
 			<?php // echo $this->Flash->render(); ?>
-			<div class="container">
+			<div class="container breadcrumb">
 				<?php echo $this->Session->flash(); ?>
-				<p class="breadcrumb ">
-					<?php   echo $this->Html->getCrumbs(' / ', array(
-						'text' => __('home'),
+				<div id="bc1" class="btn-group btn-breadcrumb">
+					<?php   echo $this->Html->getCrumbs('', array(
+						'text' => __('<i class="glyphicon glyphicon-home"></i>'),
+						"class"=>"btn btn-default",
 						'url' => array('controller' => 'pages', 'action' => 'home'),
 						'escape' => false
 					)); ?>
-				</p>
+				</div>
 			</div>
 			<?php echo $this->fetch('content'); ?>
 	<?php  echo $this->element('footer'); ?>

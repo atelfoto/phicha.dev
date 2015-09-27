@@ -1,19 +1,7 @@
-<div class="portfolios index">
 	<div class="page-header">
 		<h1><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Portfolios'); ?></h1>
 	</div>
-	<div class="col-md-3">
-		<div class="panel panel-info box-home">
-			<div class="panel-heading">Actions</div>
-			<div class="panel-body">
-				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New Portfolio'), array('action' => 'add'), array('escape' => false)); ?>
-					</li>
-				</ul>
-			</div><!-- end body -->
-		</div><!-- end panel -->
-	</div><!-- end col md 3 -->
-		<div class="col-md-9 table-responsive">
+	<div class="col-md-9 table-responsive">
 		<div class="panel panel-info box-home">
 			<table cellpadding="0" cellspacing="0" class="table table-striped">
 				<thead style="">
@@ -29,7 +17,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<?php foreach ($portfolios as $portfolio): ?>
+					<?php foreach ($portfolios as $portfolio): ?>
 					<tr>
 						<td><?php echo h($portfolio['Portfolio']['id']); ?>&nbsp;</td>
 						<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/portfolio/photo/' . $portfolio['Portfolio']['photo_dir'] . '/' . 'thumb_' .$portfolio['Portfolio']['photo'],
@@ -62,18 +50,28 @@
               				  )); ?>
 						</td>
 					</tr>
-				<?php endforeach; ?>
+					<?php endforeach; ?>
 				</tbody>
 			</table>
-			</div>
-		</div> <!-- end col md 9 -->
-		<div class="col-md-12 text-center">
-			<p>
-				<?php echo $this->element('pagination-counter'); ?>
-				<?php echo $this->element('pagination'); ?>
-			</p>
 		</div>
-</div><!-- end containing of content -->
+	</div> <!-- end col md 9 -->
+	<div class="col-md-3">
+		<div class="panel panel-info box-home">
+			<div class="panel-heading">Actions</div>
+			<div class="panel-body">
+				<ul class="nav nav-pills nav-stacked">
+					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New Portfolio'), array('action' => 'add'), array('escape' => false)); ?>
+					</li>
+				</ul>
+			</div><!-- end body -->
+		</div><!-- end panel -->
+	</div><!-- end col md 3 -->
+	<div class="col-md-12 text-center">
+		<p>
+			<?php echo $this->element('pagination-counter'); ?>
+			<?php echo $this->element('pagination'); ?>
+		</p>
+	</div>
 <?php // echo $this->Js->writeBuffer(); ?>
 <!-- modal supprimer -->
 <?php foreach ($portfolios as $k => $v): $v = current($v);?>

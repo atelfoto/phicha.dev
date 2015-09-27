@@ -12,23 +12,15 @@
 				<?php echo $this->Form->input('id');?>
 				<div class="form-group col-md-6">
 					<?php echo $this->Form->input('name', array('class' => 'form-control', 'placeholder' => 'Name'));?>
+				</div>
+				<div class="form-group col-md-6">
 					<?php  echo $this->Form->input('photo', array('type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true' ));
 					echo $this->Form->input('photo_dir', array('type' => 'hidden')); ?>
 				</div>
-				<div class="form-group col-md-6">
-					<?php echo $this->Form->input('slug', array('class' => 'form-control', 'placeholder' => 'Slug'));?>
-					<?php echo  $this->Form->input("subtitle", array("class"=>"form-control","label"=>__("subtitle"))); ?>
-				</div>
-				<div class="form-group col-md-6">
-					<?php echo $this->Form->input('photographer', array('label'=> __('photographer') ,'class' => 'form-control', 'placeholder' => __('photographer')));?>
-				</div>
-				<div class="col-md-6" style="top:20px;">
+				<div class="col-md-12 text-right" style="top:-10px;">
 					<?php echo $this->Form->input('online', array('class' => '', 'label' => 'Online'));?>
 				</div>
-				<div class="form-group col-md-12">
-					<?php echo $this->Form->input('content', array('class' => 'form-control', 'placeholder' => 'Content'));?>
-				</div>
-				<div class="form-group pull-right col-md-2 ">
+				<div class="form-group text-right col-md-12">
 					<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-primary')); ?>
 				</div>
 				<?php echo $this->Form->end() ?>

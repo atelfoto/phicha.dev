@@ -57,7 +57,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		<footer class="text-center">
 			<p>
-				<?php echo $cakeVersion; ?>
+				<strong>Copyright &copy; 2014-<?php echo date('Y'); ?> <a href=""><?php echo env('HTTP_HOST'); ?></a>.</strong> All rights reserved.
 			</p>
 		</footer>
 		<div id="overlay"></div>

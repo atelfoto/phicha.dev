@@ -4,7 +4,7 @@
 </div>
 <div class="row centered-form">
 	<div class=" col-md-6 col-md-offset-3">
-		<div class="panel panel-default ">
+		<div class="panel panel-info box-home">
 			<div class="panel-heading">
 			<?= $this->Html->link(__('<i class="fa fa-times"></i>'),
 				array('action' => 'index'),
@@ -55,8 +55,8 @@
 			    		</div>
 			    	</fieldset>
 					<div class="button text-right">
-						<button  type="submit" class="btn btn-default"> <?= __('Register'); ?></button>
-						<button  type="reset" class="btn btn-default"> <?= __('Reset'); ?></button>
+						<button  type="submit" class="btn btn-primary"> <?= __('Register'); ?></button>
+						<button  type="reset" class="btn btn-primary"> <?= __('Reset'); ?></button>
 					</div>
 				<?= $this->Form->end(); ?>
 			</div>

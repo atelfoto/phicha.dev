@@ -1,3 +1,4 @@
+<?php $this->Html->addCrumb('login',array("controller"=>"users","action"=>"login"),array('class'=>"btn btn-default")); ?>
 <div class="panel panel-primary box-home">
 	<div class="panel-heading">
 		<h1 class="panel-title"><?= __('Login'); ?></h1>
@@ -17,7 +18,7 @@
 			<div class="form-group">
 				<label for="password"> <?= __('Password :'); ?> <i class="glyphicon glyphicon-asterisk"></i></label>
 				<div class="input-group">
-					<div class="input-group-addon"><i class="fa fa-lock"></i>
+					<div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
 					</div>
 					<?= $this->Form->input('password', array('required'=>false,'label' => false ,
 					'placeholder'=>__('Password :'),'class'=>'form-control')); ?>

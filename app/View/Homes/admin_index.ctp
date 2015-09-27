@@ -1,32 +1,33 @@
-<div class="portfolios index">
-	<div class="page-header ">
-		<div class="panel  box-home">
-			<div class="panel-heading">
-				<h1 class=""><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('home'); ?></h1>
-			</div>
+<div class="page-header ">
+	<div class="panel  box-home">
+		<div class="panel-heading">
+			<h1 class=""><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('home manager'); ?></h1>
 		</div>
 	</div>
-	<div class="col-md-9 table-responsive ">
-	<div class="panel panel-info box-home">
-		<table cellpadding="0" cellspacing="0" class="table table-striped">
-			<thead style="">
-				<tr class="info">
-					<th><?php echo $this->Paginator->sort('id'); ?></th>
-					<th><?php echo '#'; ?></th>
-					<th><?php echo $this->Paginator->sort('name'); ?></th>
-					<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-					<th><?php echo $this->Paginator->sort('created'); ?></th>
-					<th><?php echo $this->Paginator->sort('modified'); ?></th>
-					<th><?php echo $this->Paginator->sort('online'); ?></th>
-					<th class="actions"></th>
-				</tr>
-			</thead>
-			<tbody>
+</div>
+<div class="row">
+	<div class="col-md-9">
+		<div class="panel panel-info table-responsive box-home">
+			<table cellpadding="0" cellspacing="0" class="table table-striped">
+				<thead style="">
+					<tr class="info">
+						<th><?php echo $this->Paginator->sort('id'); ?></th>
+						<th><?php echo '#'; ?></th>
+						<th><?php echo $this->Paginator->sort('name'); ?></th>
+						<th><?php echo $this->Paginator->sort('user_id'); ?></th>
+						<th><?php echo $this->Paginator->sort('created'); ?></th>
+						<th><?php echo $this->Paginator->sort('modified'); ?></th>
+						<th><?php echo $this->Paginator->sort('online'); ?></th>
+						<th class="actions"></th>
+					</tr>
+				</thead>
+				<tbody>
 					<?php foreach ($homes as $home): ?>
-					<tr>
-						<td><?php echo h($home['Home']['id']); ?>&nbsp;</td>
-						<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/home/photo/' . $home['Home']['photo_dir'] . '/' . 'thumb_' .$home['Home']['photo'],
-							array("url"=> array("controller"=>'homes','action'=>'view',"slug"=>$home['Home']['slug'],"admin"=>false ))); ?></td>
+						<tr>
+							<td><?php echo h($home['Home']['id']); ?>&nbsp;</td>
+							<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/home/photo/' . $home['Home']['photo_dir'] . '/' . 'thumb_' .$home['Home']['photo'],
+								array("url"=> array("controller"=>'homes','action'=>'view',"slug"=>$home['Home']['slug'],"admin"=>false ))); ?>
+							</td>
 							<td><?php echo h($home['Home']['name']); ?>&nbsp;</td>
 							<td>
 								<?php echo $this->Html->link($home['User']['name'], array(
@@ -46,26 +47,27 @@
 										"title"=>__('Disable this picture'),'escape'=>false));
 									}
 								?>
-						</td>
-						<td class="actions">
-						<?php echo $this->Html->link('<span class="fa fa-edit fa-2x" "></span>', array('action' => 'edit', $home['Home']['id']),
-						array('class' => 'btn btn-default btn-sm',"data-toggle"=>"tooltip","data-placement"=>"bottom", "title"=>__('edit this picture'),'escape' => false)); ?>
-						<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$home['Home']['id'],
-							array(
-								'class' => 'btn btn-default btn-remove-modal btn-sm',
-								"title"=>__('delete this picture'),
-								'escape' =>false,
-								'data-toggle' => 'modal',
-								'role'  => 'button',
-								'data-uid' => $home['Home']['id']
-								)); ?>
-
-						</td>
-					</tr>
+							</td>
+							<td class="actions">
+								<?php echo $this->Html->link('<span class="fa fa-edit fa-2x" "></span>',
+									array('action' => 'edit', $home['Home']['id']),
+									array('class' => 'btn btn-default btn-sm',"data-toggle"=>"tooltip","data-placement"=>"bottom",
+									"title"=>__('edit this picture'),'escape' => false)); ?>
+								<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$home['Home']['id'],
+									array(
+										'class' => 'btn btn-default btn-remove-modal btn-sm',
+										"title"=>__('delete this picture'),
+										'escape' =>false,
+										'data-toggle' => 'modal',
+										'role'  => 'button',
+										'data-uid' => $home['Home']['id']
+										)); ?>
+							</td>
+						</tr>
 					<?php endforeach; ?>
-			</tbody>
-		</table>
-	</div>
+				</tbody>
+			</table>
+		</div>
 	</div> <!-- end col md 9 -->
 	<div class="col-md-3 ">
 		<div class="panel panel-info box-home">
@@ -84,8 +86,9 @@
 			<?php echo $this->element('pagination'); ?>
 		</p>
 	</div>
-</div><!-- end containing of content -->
-<?php // echo $this->Js->writeBuffer(); ?>
+</div>
+<!-- end containing of content -->
+
 <!-- modal supprimer -->
 <?php foreach ($homes as $k => $v): $v = current($v);?>
 <div class="modal fade" id="Modal<?= $v['id']; ?>">

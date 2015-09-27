@@ -1,7 +1,8 @@
 <?php $this->set('title_for_layout', __('forgot'));  ?>
+<?php $this->Html->addCrumb('forgot',array("controller"=>"users","action"=>"forgot"),array('class'=>"btn btn-default","disabled"=>"disabled")); ?>
 <div class="container forgot" style="padding-bottom:50px;">
 	<div class="col-md-6 col-md-offset-3 centered-form">
-		<div class="panel panel-default row">
+		<div class="panel panel-primary box-home">
 			<div class="text-center panel-heading"> <?= __('forgot'); ?>
 			</div>
 			<div class="panel-body text-center">

@@ -2,7 +2,7 @@
 <nav class='text-center text-capitalize'>
 <ul class='list-inline'>
 <li><?php echo $this->Html->link(__('Legal Information'), array(
-'controller' => 'pages', 'action' => 'legalinformations')); ?> |
+'controller' => 'pages', 'action' => 'legalinformations',"admin"=>false,"member"=>false)); ?> |
 </li>
 <li><?php echo $this->Html->link( __('Contact Us'), array(
 'controller' => 'contacts', 'action' => 'index')); ?> | </li>

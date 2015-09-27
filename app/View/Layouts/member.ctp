@@ -88,10 +88,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php  echo $this->fetch('content'); ?>
 		</div>
 	</div>
-		<?php  echo $this->element('top'); ?>
-			<div class="footer text-center">
-				<p> <?php echo $cakeVersion; ?> </p>
-			</div>
+		<?php  // echo $this->element('top'); ?>
+		<?php  echo $this->element('footer'); ?>
 		<?php  echo $this->fetch('script'); ?>
 </body>
 </html>

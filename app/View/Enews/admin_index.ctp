@@ -1,48 +1,54 @@
 <div class="page-header" style="">
-	<h1><span class="fa fa-users"></span>&nbsp;<?= __('User Manager'); ?></h1>
+	<h1><span class="fa fa-newspaper-o"></span>&nbsp;<?= __('newsletter manager'); ?></h1>
 </div>
 <div class="row">
-	<div class="col-md-12">
-		<p class='text-right'>
-			<?php echo $this->Html->link(__("<i class='glyphicon glyphicon-plus'></i> Add user"),array('action'=>'signup'),array(
-			'class'=>"btn btn-success btn-xs","escape"=>false)); ?>
-		</p>
-	</div>
-	<div class="col-md-12">
-	<div class="table-responsive">
-		<table class="table table-bordered table-striped ">
-			<tr>
-				<th><?php echo $this->Paginator->sort('id'); ?></th>
-				<th><?= __('email'); ?></th>
-				<th><?= __('Registration Date'); ?></th>
-				<th>&nbsp;</th>
-			</tr>
-			<?php foreach ($enews as $k => $v): $v = current($v);?>
-				<tr>
-					<td> <?= $v['id']; ?></td>
-					<td><?= $v['mail']; ?></td>
-					<td> <?= $this->Date->french($v['created']); ?></td>
-					<td>	<?php echo $this->Html->link("<i class='glyphicon glyphicon-pencil' style='color:#00f;'></i> Editer", array('action' => 'edit',
-			 			$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>
-					&nbsp;&nbsp;
-					<?php echo $this->Html->link(__('<i class="glyphicon glyphicon-trash" style="color:#f00;""></i> Delete'),'#UsersModal',
-              				array(
-              				  'class' => 'btn btn-default btn-remove-modal',
-              				  'escape' =>false,
-              				  'data-toggle' => 'modal',
-              				  'role'  => 'button',
-              				  'data-uid' => $v['id']
-               				));
-              		?>
-					</td>
-				</tr>
-			<?php endforeach ?>
-		</table>
-		<?= $this->Paginator->numbers(); ?>
-	</div>
-	</div>
-</div>
-
+	<div class="col-md-9">
+		<div class="panel panel-info table-responsive box-home">
+			<table class="table  table-striped ">
+				<thead>
+					<tr class="info">
+						<th><?php echo $this->Paginator->sort('id'); ?></th>
+						<th><?php echo $this->Paginator->sort('mail'); ?></th>
+						<th><?php echo $this->Paginator->sort('date'); ?></th>
+						<th class="actionss">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($enews as $k => $v): $v = current($v);?>
+					<tr>
+						<td> <?= $v['id']; ?></td>
+						<td><?= $v['mail']; ?></td>
+						<td> <?= $this->Date->french($v['created']); ?></td>
+						<td class="actions"><?php echo $this->Html->link("<span class='fa fa-edit fa-2x' ></span>", array('action' => 'edit',
+				 			$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>	&nbsp;&nbsp;
+							<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
+	              				array(
+	              				  'class' => 'btn btn-default btn-remove-modal',
+	              				  'escape' =>false,
+	              				  'data-toggle' => 'modal',
+	              				  'role'  => 'button',
+	              				  'data-uid' => $v['id']
+	               				));
+	              			?>
+						</td>
+					</tr>
+					<?php endforeach ?>
+				</tbody>
+			</table>
+		</div>
+			<?= $this->Paginator->numbers(); ?>
+	</div> <!-- end col-md-12 -->
+	<div class="col-md-3 ">
+		<div class="panel panel-info box-home">
+			<div class="panel-heading">Actions</div>
+			<div class="panel-body">
+				<ul class="nav nav-pills nav-stacked">
+					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New picture'), array('action' => 'add'), array('escape' => false)); ?>
+					</li>
+				</ul>
+			</div><!-- end body -->
+		</div><!-- end panel -->
+	</div><!-- end col md 3 --></div>
 <div class="modal fade" id="UsersModal">
 	<div class="modal-dialog ">
 		<div class="modal-content">
