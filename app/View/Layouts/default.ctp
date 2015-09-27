@@ -23,8 +23,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->charset(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title><?php echo $cakeDescription ?>&nbsp;:&nbsp;<?php echo $this->fetch('title'); ?></title>
-<link rel="apple-touch-icon" href=""/>
-<link rel="apple-touch-startup-image" href=""/>
+<link rel="apple-touch-icon" href="#"/>
+<link rel="apple-touch-startup-image" href="#"/>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
@@ -69,17 +69,30 @@ $(document).ready(function(){
 	})
 });
 $(document).ready(function(){
-    $(window).resize(function() {
+		$(window).resize(function() {
 
-        ellipses1 = $("#bc1 :nth-child(2)")
-        if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
+				ellipses1 = $("#bc1 :nth-child(2)")
+				if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
 
-        ellipses2 = $("#bc2 :nth-child(2)")
-        if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
+				ellipses2 = $("#bc2 :nth-child(2)")
+				if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
 
-    })
+		})
 
 });
+</script>
+
+<script type="text/javascript">
+//script pour le menu mobile
+	$(document).ready(function() {
+		var sideslider = $('[data-toggle=collapse-side]');
+		var sel = sideslider.attr('data-target-1');
+		var sel2 = sideslider.attr('data-target-2');
+		sideslider.click(function(event){
+			$(sel).toggleClass('in');
+			$(sel2).toggleClass('out');
+		});
+	});
 </script>
 <?php echo $this->fetch('script');	?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -104,10 +117,11 @@ $(document).ready(function(){
 <meta name="msapplication-square310x310logo" content="http://www.studio/img/large.jpg"/>
 </head>
 <body id="home" data-target=".navbar-fixed-top">
+
+<div class="side-collapse-container">
+<?php  echo $this->element('carrousel'); ?>
 <?php   echo $this->Element('navigation'); ?>
 <!--/nocache-->
-<?php  echo $this->element('carrousel'); ?>
-
 			<?php // echo $this->Flash->render(); ?>
 			<div class="container breadcrumb">
 				<?php echo $this->Session->flash(); ?>
@@ -122,5 +136,6 @@ $(document).ready(function(){
 			</div>
 			<?php echo $this->fetch('content'); ?>
 	<?php  echo $this->element('footer'); ?>
+	</div>
 </body>
 </html>
