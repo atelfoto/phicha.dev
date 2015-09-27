@@ -8,6 +8,10 @@
 /build
 /dist
 /tags
+*.OLD
+*.jpg
+*.jpeg
+*.png
 *.mo
 *.sass-cache
 
