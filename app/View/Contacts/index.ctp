@@ -72,7 +72,7 @@
 										'class'=>"form-control",	"placeholder"=> __('Enter Your message ...'),'style'=>"width: 100%;",'cols'=>"15")); ?>
 									</div>
 								</div>
-								<?= $this->Form->input('website', array('label'=>false,'type'=>'text','class'=>'toto ')); ?>
+								<?= $this->Form->input('website', array('label'=>false,'type'=>'text','class'=>'toto')); ?>
 							</fieldset>
 						</div>
 						<div class="panel-footer">

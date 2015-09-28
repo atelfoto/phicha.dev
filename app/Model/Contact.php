@@ -47,7 +47,6 @@ App::uses('FrValidation', 'Localized.Validation');
  			$mail->to(array('philippewagner2@sfr.fr'))
  			//$mail->cc(array('philippewagner2@sfr.fr'))// pour plusieurs destinataire
  			 	 ->from($d['email'],"studio")
- 			 	// ->sender($d['name'], 'studio')
  			 	 ->subject($d['subject'])
  			 	 ->emailFormat('html')
  			 	 ->template('contact')->viewVars($d);

@@ -34,6 +34,8 @@
 	Router::connect('/acces-clients', array('controller' => 'pages', 'action' => 'customers'));
 	Router::connect('/contact', array('controller' => 'contacts', 'action' => 'index'));
 	Router::connect('/map', array('controller' => 'contacts', 'pages' => 'map'));
+	Router::connect("/livre-d-or", array('controller' => 'comments', 'action' => 'index'));
+	// Router::connect("/livre-d-or/**", array('controller' => 'comments', 'action' => 'index'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

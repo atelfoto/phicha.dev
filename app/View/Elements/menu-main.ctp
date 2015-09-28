@@ -1,0 +1,15 @@
+<li <?php if ($this->request->controller =='pages' && $this->request->action =='home' ):?> class="active"<?php endif; ?> >
+	<?= $this->Html->link(__('<span class="visible-xs-inline-block glyphicon glyphicon-home ">&nbsp;</span>Accueil',true),array('controller'=>'pages','action'=>'home'),array('escape'=>false)); ?>
+</li>
+<li <?php if ($this->request->controller =='portfolios'):?> class="active"<?php endif; ?>>
+	<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-picture'>&nbsp;</span>portfolio") ,array('controller'=>'portfolios','action'=>'index','admin'=>false),array('escape'=>false)); ?>
+</li>
+<li <?php if ($this->request->controller =='pages' && $this->request->action == "customers"):?> class="active"<?php endif; ?>>
+	<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-shopping-cart'>&nbsp;</span>Acces clients") ,array('controller'=>'pages','action'=>'customers','admin'=>false),array('escape'=>false)); ?>
+</li>
+<li <?php if ($this->request->controller =='contacts'):?> class="active"<?php endif; ?>>
+	<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-envelope'>&nbsp;</span>contact") ,array('controller'=>'contacts','action'=>'index','admin'=>false),array('escape'=>false)); ?>
+</li>
+<li <?php if ($this->request->controller =='comments'):?> class="active"<?php endif; ?>>
+	<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-book'>&nbsp;</span>Livre d'or") ,array('controller'=>'comments','action'=>'index','admin'=>false),array('escape'=>false)); ?>
+</li>

@@ -1,64 +1,87 @@
-<div class="comments index">
-	<h2><?php echo __('Comments'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('username'); ?></th>
-			<th><?php echo $this->Paginator->sort('mail'); ?></th>
-			<th><?php echo $this->Paginator->sort('content'); ?></th>
-			<th><?php echo $this->Paginator->sort('post_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('online'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	</thead>
-	<tbody>
-	<?php foreach ($comments as $comment): ?>
-	<tr>
-		<td><?php echo h($comment['Comment']['id']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($comment['User']['username'], array('controller' => 'users', 'action' => 'view', $comment['User']['id'])); ?>
-		</td>
-		<td><?php echo h($comment['Comment']['username']); ?>&nbsp;</td>
-		<td><?php echo h($comment['Comment']['mail']); ?>&nbsp;</td>
-		<td><?php echo h($comment['Comment']['content']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($comment['Post']['name'], array('controller' => 'posts', 'action' => 'view', $comment['Post']['id'])); ?>
-		</td>
-		<td><?php echo h($comment['Comment']['created']); ?>&nbsp;</td>
-		<td><?php echo h($comment['Comment']['online']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $comment['Comment']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $comment['Comment']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $comment['Comment']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $comment['Comment']['id']))); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</tbody>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
+<?php echo $this->fetch('title');?> <?= $this->assign('title', "Livre d'or"); ?>
+<?= $this->Html->meta("description", "Commentaires de nos clients", array('inline'=>false)); ?>
+<?php $this->Html->addCrumb("livre d'or",array("controller"=>"comments","action"=>"index"),array('class'=>"btn btn-default disabled")); ?>
+<div class="container">
+	<div class="page-header text-center">
+		<h1><?php echo __("livre d'or"); ?></h1>
 	</div>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Comment'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-	</ul>
+	<div class="row">
+		<section>
+			<?php echo $this->Form->create('Comment', array(
+				'inputDefaults' => array(
+					'div' => 'form-group',
+					'label' => array(
+						'class' => 'col col-md-3 control-label'
+						),
+					'wrapInput' => 'col col-md-9',
+					'class' => 'form-control',
+					'required'=>false,
+					),
+				'class' => 'well form-horizontal col-md-11 col-md-offset-1'
+				)); ?>
+			<?php echo $this->Form->input('name', array(
+				'placeholder' => 'nom'
+				)); ?>
+			<?php echo $this->Form->input('mail', array(
+				'placeholder' => 'Email'
+				)); ?>
+
+			<?php echo $this->Form->input('content', array(
+				'wrapInput' => 'col col-md-9 col-md-offset-3',
+				'label' => false,
+				'class' => "form-control",
+				'type'=>"textarea",
+				"placeholder"=>""
+				)); ?>
+				<?= $this->Form->input('website', array('label'=>false,'type'=>'text','class'=>'toto ')); ?>
+				<div class="form-group text-right">
+						<?php echo $this->Form->submit('envoyer', array(
+						'div' => 'col col-md-9 col-md-offset-3',
+						'class' => 'btn btn-primary'
+						)); ?>
+				</div>
+					<?php echo $this->Form->end(); ?>
+		</section>
+		<section class="comment-list">
+			<?php foreach ($comments as $comment):?>
+			<article class="row ">
+				<div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-0 hidden-xs ">
+					<div class="box-home">
+						<figure class="thumbnail ">
+						<?php echo  $this->Html->image('default-avatar.jpg',array('alt'=>'avatar',"class"=>"img-responsive")); ?>
+							<figcaption class="text-center"> <?php echo  h($comment['Comment']['name']); ?></figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="col-md-9 col-sm-9 ">
+					<div class="panel panel-default arrow left box-home">
+						<!-- <div class="panel-heading right">Reply</div> -->
+						<div class="panel-body">
+							<header class="text-left">
+								<div class="comment-user text-capitalize"><i class="glyphicon glyphicon-user">&nbsp;</i>
+									<strong>
+										<?php echo  h($comment['Comment']['name']); ?>
+									</strong>
+								</div>
+								<time class="comment-date" datetime="<?php echo $this->Date->french($comment['Comment']['created']); ?>"><i class="glyphicon glyphicon glyphicon-time">&nbsp;</i><?php echo $this->Date->french($comment['Comment']['created']); ?></time>
+							</header>
+							<div class="comment-post">
+								<p>
+									<?php echo $this->Text->truncate($comment['Comment']['content'],Null,array('exact' =>true,'html'=> true)); ?>
+								</p>
+							</div>
+							<p class="text-right"><a href="#" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-circle-arrow-right"></i> reply</a></p>
+						</div>
+					</div>
+				</div>
+			</article>
+			<?php endforeach; ?>
+		</section>
+		<div class="col-md-12 text-center">
+			<p>
+				<?php echo $this->element('pagination-counter'); ?>
+				<?php echo $this->element('pagination'); ?>
+			</p>
+		</div>
+	</div>
 </div>

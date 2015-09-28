@@ -201,6 +201,17 @@ $(window).scroll(function() {
 							<i class="fa fa-dashboard"></i> <span><?php echo __('Dashboard'); ?></span> <i class="fa fa-angle-left pull-right"></i>
 						</a>
 					</li>
+					<li class="treeview <?php if ($this->request->controller =='homes'):?>active<?php endif; ?>">
+						<a href="#"><i class="fa fa-file-image-o"></i><span><?= __('Home');?></span> <i class="fa fa-angle-left pull-right"></i></a>
+						<ul class="treeview-menu">
+							<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
+								<?= $this->Html->link(__("homes manager") , array('controller' => 'homes', 'action' => 'index')); ?>
+							</li>
+							<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_add'):?> class="active"<?php  endif; ?>>
+								<?= $this->Html->link(__("Add new image"), array('controller' => 'homes', 'action' => 'add')); ?>
+							</li>
+						</ul>
+					</li>
 					<li class="treeview <?php if ($this->request->controller =='posts'):?>active<?php endif; ?>">
 						<a href="#"><i class="fa fa-file-text"></i><span><?= __('posts');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 						<ul class="treeview-menu">
@@ -223,14 +234,11 @@ $(window).scroll(function() {
 							</li>
 						</ul>
 					</li>
-					<li class="treeview <?php if ($this->request->controller =='homes'):?>active<?php endif; ?>">
-						<a href="#"><i class="fa fa-file-image-o"></i><span><?= __('Home');?></span> <i class="fa fa-angle-left pull-right"></i></a>
+					<li class="treeview <?php if ($this->request->controller =='comments'):?>active<?php endif; ?>">
+						<a href="#"><i class="fa fa-book"></i><span><?= __('comments');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 						<ul class="treeview-menu">
 							<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
-								<?= $this->Html->link(__("homes manager") , array('controller' => 'homes', 'action' => 'index')); ?>
-							</li>
-							<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_add'):?> class="active"<?php  endif; ?>>
-								<?= $this->Html->link(__("Add new image"), array('controller' => 'homes', 'action' => 'add')); ?>
+								<?= $this->Html->link(__("comments manager") , array('controller' => 'comments', 'action' => 'index')); ?>
 							</li>
 						</ul>
 					</li>
@@ -257,10 +265,10 @@ $(window).scroll(function() {
 						</ul>
 					</li>
 					<li class="treeview <?php if ($this->request->controller =='enews'):?>active<?php endif; ?>">
-						<a href="#"><i class="fa fa-newspaper-o"></i><span><?= __('enews');?></span> <i class="fa fa-angle-left pull-right"></i></a>
+						<a href="#"><i class="fa fa-newspaper-o"></i><span><?= __('newsletter');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 						<ul class="treeview-menu">
 							<li <?php if ($this->request->controller =='enews' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
-								<?= $this->Html->link(__("enews manager") , array('controller' => 'enews', 'action' => 'index')); ?>
+								<?= $this->Html->link(__("newsletter manager") , array('controller' => 'enews', 'action' => 'index')); ?>
 							</li>
 						</ul>
 					</li>

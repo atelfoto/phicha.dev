@@ -134,21 +134,23 @@ $(document).ready(function() {
 	<div class="side-collapse-container">
 		<?php  echo $this->element('carrousel'); ?>
 		<?php   echo $this->Element('navigation'); ?>
-		<div class="container breadcrumb">
+		<div class="container ">
 			<?php echo $this->Session->flash(); ?>
-			<div id="bc1" class="btn-group btn-breadcrumb">
+			<div class="breadcrumb" style="margin-top:10px;">
+				<div id="bc1" class="btn-group btn-breadcrumb">
 					<?php   echo $this->Html->getCrumbs('', array(
-												'text' => __('<i class="glyphicon glyphicon-home"></i>'),
-												"class"=>"btn btn-default",
-										'url' => array('controller' => 'pages', 'action' => 'home'),
-										'escape' => false
-										));
-					?>
+						'text' => __('<i class="glyphicon glyphicon-home"></i>'),
+						"class"=>"btn btn-default",
+						'url' => array('controller' => 'pages', 'action' => 'home'),
+						'escape' => false
+						));
+						?>
+					</div>
+				</div>
 			</div>
-		</div>
 			<?php echo $this->fetch('content'); ?>
 			<?php  echo $this->element('footer'); ?>
-		<div class="site-cache" id="site-cache"></div>
-	</div>
-</body>
+			<div class="site-cache" id="site-cache"></div>
+		</div>
+	</body>
 </html>

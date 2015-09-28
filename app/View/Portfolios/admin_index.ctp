@@ -1,8 +1,10 @@
 	<div class="page-header">
-		<h1><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Portfolios'); ?></h1>
+		<h1>
+			<i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Portfolios'); ?>
+		</h1>
 	</div>
-	<div class="col-md-9 table-responsive">
-		<div class="panel panel-info box-home">
+	<div class="col-md-9 ">
+		<div class="panel panel-info box-home table-responsive">
 			<table cellpadding="0" cellspacing="0" class="table table-striped">
 				<thead style="">
 					<tr class="info">

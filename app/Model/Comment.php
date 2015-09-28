@@ -7,13 +7,12 @@ App::uses('AppModel', 'Model');
  * @property Post $Post
  */
 class Comment extends AppModel {
-
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'username';
+	public $displayField = 'name';
 
 /**
  * Validation rules
@@ -21,10 +20,18 @@ class Comment extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'user_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+		'name' => array(
+			'notBlank' => array(
+				'rule' => array('notBlank'),
+				'message' => 'you must enter your name',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+			'lengthBetween' => array(
+				'rule' => array('lengthBetween',5,15),
+				'message' => 'Between 5 to 15 characters',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -44,7 +51,7 @@ class Comment extends AppModel {
 		'content' => array(
 			'notBlank' => array(
 				'rule' => array('notBlank'),
-				//'message' => 'Your custom message here',
+				'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule

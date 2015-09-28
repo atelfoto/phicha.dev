@@ -13,21 +13,7 @@
 		<div id="navbar" class="navbar-custom side-collapse in">
 		<nav class="navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li <?php if ($this->request->controller =='pages' && $this->request->action =='home' ):?> class="active"<?php endif; ?> >
-					<?= $this->Html->link(__('<span class="visible-xs-inline-block glyphicon glyphicon-home ">&nbsp;</span>Accueil',true),array('controller'=>'pages','action'=>'home'),array('escape'=>false)); ?>
-				</li>
-				<li <?php if ($this->request->controller =='portfolios'):?> class="active"<?php endif; ?>>
-					<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-picture'>&nbsp;</span>portfolio") ,array('controller'=>'portfolios','action'=>'index','admin'=>false),array('escape'=>false)); ?>
-				</li>
-				<li <?php if ($this->request->controller =='pages' && $this->request->action == "customers"):?> class="active"<?php endif; ?>>
-					<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-shopping-cart'>&nbsp;</span>Acces clients") ,array('controller'=>'pages','action'=>'customers','admin'=>false),array('escape'=>false)); ?>
-				</li>
-				<li <?php if ($this->request->controller =='contacts'):?> class="active"<?php endif; ?>>
-					<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-envelope'>&nbsp;</span>contact") ,array('controller'=>'contacts','action'=>'index','admin'=>false),array('escape'=>false)); ?>
-				</li>
-				<li <?php if ($this->request->controller =='posts'):?> class="active"<?php endif; ?>>
-					<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-book'>&nbsp;</span>Livre d'or") ,array('controller'=>'posts','action'=>'index','admin'=>false),array('escape'=>false)); ?>
-				</li>
+				<?php  echo $this->element('menu-main'); ?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<?php if ($this->Session->read('Auth.User.id')): ?>
