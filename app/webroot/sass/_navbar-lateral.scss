@@ -1,4 +1,7 @@
+$menu-width: 250px !default;
 @media screen and (max-width: 768px) {
+/*	$gray-base:  #000;
+$gray-dark:lighten($gray-base, 20%);*/
 	body {
 		padding-top: 50px;
 		position: relative;
@@ -7,7 +10,14 @@
 	pre {
 		tab-size: 8;
 	}
+	#navbar > nav > ul:nth-child(1) 	>
+		li:nth-child(1) > a{
+			border-top: 1px solid $gray-dark ;
+		}
 
+	li > a{
+		border-bottom: 1px solid $gray-dark ;
+			}
 	.navbar-inverse.side-collapse{
 		height:1000;
 	}
@@ -23,7 +33,6 @@
 	}
 	.side-collapse {
 		top:50px;
-
 		bottom:0;
 		left:0;
 		width:200px;
@@ -34,4 +43,30 @@
 	.side-collapse.in {
 		width:0;
 	}
+
+	.with--sidebar{
+		.side-collapse-container{
+
+		@include transform(translateX($menu-width));
+		}
+
+		.site-cache{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,0.6);
+		}
+
+	}
+
+/*	.site-cache{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,0.6);
+		}*/
 }

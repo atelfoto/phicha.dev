@@ -2,6 +2,7 @@
 <?php echo $this->Html->meta(array('name' => 'robots','type'=>"meta", 'content' => 'index,follow'),NULL,array('inline'=>false)); ?>
 <?= $this->Html->css(array('home.min',"https://fonts.googleapis.com/css?family=Raleway:700 "),array('inline'=>false)); ?>
 <?php echo $this->Html->meta("description", " ", array("inline"=>false)); ?>
+<?php $this->Html->addCrumb("posts",array("controller"=>"posts","action"=>"index"),array('class'=>"btn btn-default disabled")); ?>
 <div id="Header">
 	<div class="wrapper">
 		<h1><?php  echo "studio"; ?></h1>

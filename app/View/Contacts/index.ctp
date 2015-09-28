@@ -1,7 +1,7 @@
 <?= $this->assign('title', __('Contactez nous')); ?>
 <?php  $this->Html->meta('description', "Si vous avez des questions, n'hésitez pas à nous contacter." , array('inline'=> false)); ?>
 <?php   echo $this->Element('navigation'); ?>
-<?php $this->Html->addCrumb("contact"); ?>
+<?php $this->Html->addCrumb("contact",array("controller"=>"contact","action"=>"index"),array('class'=>"btn btn-default disabled")); ?>
 <!-- <div class="container page container-contact"> -->
 	<div class="container page contact index">
 		<div class="page-header" id="page-header">

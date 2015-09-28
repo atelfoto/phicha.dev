@@ -2,11 +2,15 @@
 @import "bootstrap-variables";
 @import "bootstrap";
 @import "bootstrap/theme";
+@import "compass";
+@import "compass";
+//@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic|Montserrat:400,700);
+
+@import "_font";
 @import "_navbar-lateral";
 @import "_hamburger";
-@import "compass";
 @import "_breadcrump";
-@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic|Montserrat:400,700);
+
 //@import "font-awesome-compass";
 //@import "font-awesome";
 // @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold);
@@ -29,10 +33,10 @@ body{
 	visibility: hidden;
 }
 // asterix du formulaire contact
- label i.glyphicon-asterisk , form .text-left i.glyphicon-asterisk{
+label i.glyphicon-asterisk , form .text-left i.glyphicon-asterisk{
 	color:red !important;
 	font-size: 0.6em !important;
- }
+}
 
 //ombres autour des boites portfolio formulaire de contact
 .box-home{
@@ -52,16 +56,14 @@ body{
 #myCarousel .logo{
 	position: absolute;
 	z-index: 15;
-	//top:15%;
 	left:5%;
-	}
- #myCarousel >  {
+}
+#myCarousel >  {
 
-border-bottom: -2px #f00 solid;
+	border-bottom: -2px #f00 solid;
 	h1{
 		color: #fff;
 		text-transform: capitalize;
-		//font-family: $font-tange;
 		font-size: 6em;
 		position: absolute;
 		top: 25%;
@@ -73,33 +75,23 @@ border-bottom: -2px #f00 solid;
 		padding-left: 0;
 		line-height: 1.5em;
 		text-align: left;
-		// color: black;
-   //-webkit-text-fill-color: white; /* Will override color (regardless of order) */
-   //-webkit-text-stroke-width: 1px;
-   //-webkit-text-stroke-color: black;
 		text-shadow: 4px 9px 11px rgba(22, 0, 6, 0.43);
-		//@include text-shadow(rgba(black, 0.2) 2px 2px 0, rgba(black, 0.2) 4px 4px 0, rgba(black, 0.2) 6px 6px 0);
-		font-weight: 700;
 		span{
 			margin-left: -0.3em;
 		}
 
 	}
- }
- .page-header.home-top{
+}
+.page-header.home-top{
 	text-align: center;
 	margin-top:50;
 	h1{
 		color: #f00;
 		text-transform: capitalize;
-		//font-family: $font-tange;
-		//font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 		letter-spacing: 1px;
 		font-weight: 700;
 	}
 	h2{
-		//color: $marron;
-		//font-family: $font-tange;
 		text-transform: none;
 		font-weight: 700;
 		font-size: 4em;
@@ -110,16 +102,15 @@ border-bottom: -2px #f00 solid;
 		margin-top:1.5em;
 		margin-bottom: 4em;
 		display: block;
-		//margin: -9px auto 4em auto;
 		font-style: italic;
-		 padding: 0 15px;
-		 font-size:1.2em;
-		 line-height:2.7em;
+		padding: 0 15px;
+		font-size:1.2em;
+		line-height:2.7em;
 	}
 
- }
+}
 
- //fin HEADER
+//fin HEADER
 .box-home{
 	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
 	padding-right:0;
@@ -128,27 +119,22 @@ border-bottom: -2px #f00 solid;
 
 
 /**
- * page map
- */
+* page map
+*/
 .map {
-	// min-width: 300px;
-	 min-height: 500px;
-	// width: 100%;
-	// height: 100%;
+	min-height: 500px;
 }
 
 //navigation
 
 .navbar-custom .navbar-toggle .icon-bar {
 	background-color: #fff
-	}
+}
 
 .navbar-custom {
 	margin-bottom: 0;
 	border-bottom: 1px solid rgba(255,255,255,.3);
 	text-transform: uppercase;
-	//font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	//font-family: $font-M;
 	background-color: #000;
 	color: #fff;
 }
@@ -197,46 +183,43 @@ border-bottom: -2px #f00 solid;
 
 //footer
 .footer  {
-	//position: absolute;
 	bottom: 0;
 	width: 100%;
-	/* Set the fixed height of the footer here */
-	min-height: 60px;
-	background-color: #000;
-	color: #fff;
-	margin-top:20px;
-	padding-top: 20px;
+/* Set the fixed height of the footer here */
+min-height: 60px;
+background-color: #000;
+color: #fff;
+margin-top:20px;
+padding-top: 20px;
+padding-bottom: 20px;
+border-top: 2px #f00 solid;
+-webkit-box-shadow: 0px -4px 13px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px -4px 13px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px -4px 13px 0px rgba(50, 50, 50, 0.75);
+
+hr{
+	border: 0px;
+}
+nav>ul{
+	margin:0;
 	padding-bottom: 20px;
-	border-top: 2px #f00 solid;
-	// -webkit-box-shadow: 0px -3px 14px 0px rgba(50, 50, 50, 0.75);
-	// -moz-box-shadow:    0px -3px 14px 0px rgba(50, 50, 50, 0.75);
-	// box-shadow:         0px -3px 14px 0px rgba(50, 50, 50, 0.75);
-	-webkit-box-shadow: 0px -4px 13px 0px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow:    0px -4px 13px 0px rgba(50, 50, 50, 0.75);
-	box-shadow:         0px -4px 13px 0px rgba(50, 50, 50, 0.75);
-
-	hr{
-		border: 0px;
+	li a{
+		color:#fff;
 	}
-	nav>ul{
-		margin:0;
-		padding-bottom: 20px;
-		li a{
-			color:#fff;
-		}
 
+}
+address {
+	abbr a{
+		color:#fff;
 	}
-	address {
-		abbr a{
-			color:#fff;
-		}
-		.copyright{
-			display: block;
-			padding-top:15px;
-		}
+	.copyright{
+		display: block;
+		padding-top:15px;
 	}
 }
- @media(min-width:767px) {
+}
+@media(min-width:767px) {
+
 	.navbar {
 		padding: 20px 0;
 		border-bottom: 0;
@@ -253,18 +236,17 @@ border-bottom: -2px #f00 solid;
 
 	.navbar-custom.top-nav-collapse {
 		border-bottom: 3px solid rgba(255,0,0,.8);
-		//border-bottom: 4px solid rgba(255,255,255,.3);
 		-webkit-box-shadow: 0px 9px 13px 0px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow:    0px 9px 13px 0px rgba(50, 50, 50, 0.75);
 		box-shadow:         0px 9px 13px 0px rgba(50, 50, 50, 0.75);
 
 	}
 
-	 	#navbar{
+	#navbar{
+		border-bottom: 0;
+		background-color: transparent;
 
-    border-bottom: 0;
-     background-color: transparent;
+	}
+
 }
-
-  }
 

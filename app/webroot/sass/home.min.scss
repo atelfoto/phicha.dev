@@ -3,9 +3,11 @@
 @import "_bootstrap-home";
 @import "_vegas";
 @import "_homepage";
+@import "_font";
+
 
 h1{text-transform: capitalize;
-
+	font-family: 'Lora', serif;
 }
 .side-bar {
 // -moz-transform: scale(1.1) rotate(10deg);
