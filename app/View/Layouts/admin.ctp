@@ -202,7 +202,7 @@ $(window).scroll(function() {
 						</a>
 					</li>
 					<li class="treeview <?php if ($this->request->controller =='homes'):?>active<?php endif; ?>">
-						<a href="#"><i class="fa fa-file-image-o"></i><span><?= __('Home');?></span> <i class="fa fa-angle-left pull-right"></i></a>
+						<a href="#"><i class="fa fa-home"></i><span><?= __('Home');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 						<ul class="treeview-menu">
 							<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
 								<?= $this->Html->link(__("homes manager") , array('controller' => 'homes', 'action' => 'index')); ?>
@@ -211,7 +211,7 @@ $(window).scroll(function() {
 								<?= $this->Html->link(__("Add new image"), array('controller' => 'homes', 'action' => 'add')); ?>
 							</li>
 						</ul>
-					</li>
+					</li><!--
 					<li class="treeview <?php if ($this->request->controller =='posts'):?>active<?php endif; ?>">
 						<a href="#"><i class="fa fa-file-text"></i><span><?= __('posts');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 						<ul class="treeview-menu">
@@ -233,9 +233,9 @@ $(window).scroll(function() {
 								<?= $this->Html->link(__("add new category"), array('controller' => 'categories', 'action' => 'edit')); ?>
 							</li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="treeview <?php if ($this->request->controller =='comments'):?>active<?php endif; ?>">
-						<a href="#"><i class="fa fa-book"></i><span><?= __('comments');?></span> <i class="fa fa-angle-left pull-right"></i></a>
+						<a href="#"><i class="fa fa-book"></i><span><?= __('visitors book');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 						<ul class="treeview-menu">
 							<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
 								<?= $this->Html->link(__("comments manager") , array('controller' => 'comments', 'action' => 'index')); ?>

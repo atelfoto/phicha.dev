@@ -43,7 +43,7 @@
 <?php  $this->Html->scriptStart($options = array("inline"=>false)); ?>
 $( function() {
 
-var endDate = "September  29, 2015 15:03:25";
+var endDate = "october  29, 2015 15:03:25";
 
         $('.countdown.simple').countdown({ date: endDate });
 

@@ -49,18 +49,20 @@
 			</div><!-- end body -->
 		</div><!-- end panel -->
 	</div><!-- end col md 3 --></div>
-<div class="modal fade" id="UsersModal">
+<div class="modal fade" id="UsersModal"> <!-- boite modal pour supprime -->
 	<div class="modal-dialog ">
 		<div class="modal-content">
-			<div class="modal-header modal-danger">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo _(' Press Esc to close'); ?>">&times;</button>
+			<div class="modal-header panel-danger" >
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo __(' close'); ?>">&times;</button>
 				<h4 id="myModalLabel"><?php echo __('Remove user') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo __('&nbsp; '. $v['username'].' &nbsp;'); ?></b><?php echo __(' permanently from your users'); ?>
+				<p>&nbsp;</p>
+				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo __('&nbsp; '. $v['id'].' &nbsp;'); ?></b><?php echo __(' permanently from your users'); ?>
 					<span class="label-uname strong"></span> ?</p>
+					<p>&nbsp;</p>
 			</div>
-			<div class="modal-footer">
+			<div class="modal-footer" style="background-color:#2b2b2b;color:#fff;">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
 				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
 						array('class' => 'btn btn-danger delete-user-link')) ?>
