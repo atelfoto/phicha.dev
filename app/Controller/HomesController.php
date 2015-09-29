@@ -16,14 +16,6 @@ class HomesController extends AppController {
  * @var array
  */
 	public $components = array('Paginator', 'Flash', 'Session');
-
-
-
-
-
-
-
-
 /**
  * admin_index method
  *
