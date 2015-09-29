@@ -65,11 +65,11 @@
 									</h3>
 								</div>
 								<time class="comment-date" datetime="<?php echo $this->Date->french($comment['Comment']['created']); ?>">
-									<!-- <time class="comment-date" value="<?php echo $this->Date->french($comment['Comment']['created']); ?>" > -->
 									<i class="glyphicon glyphicon glyphicon-time">&nbsp;</i>
 									<small>
-									<?php echo $this->Date->french($comment['Comment']['created']); ?>&nbsp
-									<?= $this->Time->timeAgoInWords($comment['Comment']['created']); ?>;
+									<?php echo $this->Date->french($comment['Comment']['created']); ?>&nbsp;
+									<?= $this->Time->timeAgoInWords($comment['Comment']['created'],
+                	array('accuracy' => array('month' => 'month'),'end' => '2 years')); ?>
 									</small>
 								</time>
 							</header>
