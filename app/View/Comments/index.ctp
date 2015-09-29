@@ -19,6 +19,9 @@
 					),
 				'class' => 'well form-horizontal col-md-11 col-md-offset-1'
 				)); ?>
+			<p class="col-md-offset-3">
+				<strong><?php  echo $comments_count?> Commentaires </strong>
+			</p>
 			<?php echo $this->Form->input('name', array(
 				'placeholder' => 'nom'
 				)); ?>

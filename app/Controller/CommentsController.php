@@ -36,6 +36,7 @@ class CommentsController extends AppController {
  */
 public function index() {
 	$this->Comment->recursive = 0;
+	$this->set('comments_count', $this->Comment->find('count'));
 	if ($this->request->is('post')) {
 		$this->Comment->create();
 		if ($this->Comment->save($this->request->data)) {
