@@ -19,22 +19,21 @@
 					),
 				'class' => 'well form-horizontal col-md-11 col-md-offset-1'
 				)); ?>
-			<p class="col-md-offset-3">
+			<h3 class="col-md-offset-2">
 				<strong><?php  echo $comments_count?> Commentaires </strong>
-			</p>
+			</h3>
 			<?php echo $this->Form->input('name', array(
 				'placeholder' => 'nom'
 				)); ?>
 			<?php echo $this->Form->input('mail', array(
 				'placeholder' => 'Email'
 				)); ?>
-
 			<?php echo $this->Form->input('content', array(
 				'wrapInput' => 'col col-md-9 col-md-offset-3',
 				'label' => false,
 				'class' => "form-control",
 				'type'=>"textarea",
-				"placeholder"=>""
+				"placeholder"=>"votre commantaire..."
 				)); ?>
 				<?= $this->Form->input('website', array('label'=>false,'type'=>'text','class'=>'toto ')); ?>
 				<div class="form-group text-right">
@@ -60,17 +59,24 @@
 					<div class="panel panel-default arrow left box-home">
 						<div class="panel-body">
 							<header class="text-left">
-								<div class="comment-user text-capitalize"><i class="glyphicon glyphicon-user">&nbsp;</i>
-									<strong>
-										<?php echo  h($comment['Comment']['name']); ?>
-									</strong>
+								<div class="comment-user text-capitalize">
+									<h3><i class="glyphicon glyphicon-user">&nbsp;</i>
+										<strong><?php echo  h($comment['Comment']['name']); ?></strong>
+									</h3>
 								</div>
-								<time class="comment-date" datetime="<?php echo $this->Date->french($comment['Comment']['created']); ?>"><i class="glyphicon glyphicon glyphicon-time">&nbsp;</i><?php echo $this->Date->french($comment['Comment']['created']); ?></time>
+								<time class="comment-date" datetime="<?php echo $this->Date->french($comment['Comment']['created']); ?>">
+									<!-- <time class="comment-date" value="<?php echo $this->Date->french($comment['Comment']['created']); ?>" > -->
+									<i class="glyphicon glyphicon glyphicon-time">&nbsp;</i>
+									<small>
+									<?php echo $this->Date->french($comment['Comment']['created']); ?>&nbsp
+									<?= $this->Time->timeAgoInWords($comment['Comment']['created']); ?>;
+									</small>
+								</time>
 							</header>
 							<div class="comment-post">
-								<p>
-									<?php echo $this->Text->truncate($comment['Comment']['content'],Null,array('exact' =>true,'html'=> true)); ?>
-								</p>
+								<blockquote>
+									<p><?php echo $this->Text->truncate($comment['Comment']['content'],Null,array('exact' =>true,'html'=> true)); ?></p>
+								</blockquote>
 							</div>
 							<p class="text-right"><a href="#" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-circle-arrow-right"></i> reply</a></p>
 						</div>
