@@ -197,7 +197,7 @@ $(window).scroll(function() {
 				<ul class="sidebar-menu text-capitalize"><!-- Sidebar Menu -->
 					<li class="header">HEADER</li>
 					<li>
-						<a href="<?php echo $this->Html->url(array('controller' => 'dashboards', 'action' => 'index')); ?>">
+						<a href="<?php echo $this->Html->url(array('controller' => 'pages', 'action' => 'dashboard')); ?>">
 							<i class="fa fa-dashboard"></i> <span><?php echo __('Dashboard'); ?></span> <i class="fa fa-angle-left pull-right"></i>
 						</a>
 					</li>

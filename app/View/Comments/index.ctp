@@ -55,7 +55,6 @@
 				</div>
 				<div class="col-md-9 col-sm-9 ">
 					<div class="panel panel-default arrow left box-home">
-						<!-- <div class="panel-heading right">Reply</div> -->
 						<div class="panel-body">
 							<header class="text-left">
 								<div class="comment-user text-capitalize"><i class="glyphicon glyphicon-user">&nbsp;</i>

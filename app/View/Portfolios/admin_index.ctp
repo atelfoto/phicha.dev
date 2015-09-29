@@ -1,6 +1,6 @@
 	<div class="page-header">
 		<h1>
-			<i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Portfolios'); ?>
+			<i class="fa fa-file-image-o">&nbsp;</i><?php echo __('portfolios manager'); ?>
 		</h1>
 	</div>
 	<div class="col-md-9 ">

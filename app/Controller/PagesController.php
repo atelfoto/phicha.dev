@@ -35,7 +35,9 @@ public $helpers = array('GoogleMap');//a enlever une fois tester
  *
  * @var array
  */
-	public $uses = array();
+	// public $uses = array();
+public $uses= array('User','Comment','Carousel','Enews','Portfolio');
+
 
 	public function home()	{
 		$this->layout= 'home';
@@ -46,6 +48,33 @@ public $helpers = array('GoogleMap');//a enlever une fois tester
 
 	}
 
+	public function admin_dashboard(){
+		$this->layout='admin';
+		$this->set('users_count', $this->User->find('count'));
+		$this->set('Comment_count', $this->Comment->find('count'));
+		$this->set('Carousel_count', $this->Carousel->find('count'));
+		$this->set('Enews_count', $this->Enews->find('count'));
+		if($this->request->is('post')){
+			if (!empty($this->request->data['Page']['website'])) {
+				$this->Session->setFlash(__("Your Mail us is reached."),'notif',array('class'=>"success",'type'=>'ok-sign'));
+				$this->request->data = array();
+			}else{
+				if($this->Page->send($this->request->data['Page'] )){
+					debug($this->request->data['Page'] );die();
+					$this->Session->setFlash(__("Thank you.Your Mail Us is reached."),'notif',array('class'=>"success", 'type'=>'ok-sign'));
+					$this->request->data = array();
+				} else{
+					$this->Session->setFlash(__("Thank you to correct your fields."),"notif",array('class'=>'danger', 'type'=>'info-sign'));
+				}
+			}
+		}
+	}
+
+
+	function admin_index(){
+
+
+	}
 	public function map()
 	{
 

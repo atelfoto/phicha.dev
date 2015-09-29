@@ -1,6 +1,6 @@
 <div class="page-header">
 	<h1>
-		<i class="fa fa-book">&nbsp;</i><?php echo __('Comments'); ?></h1>
+		<i class="fa fa-book">&nbsp;</i><?php echo __('comments manager'); ?></h1>
 </div>
 <div class="row">
 	<div class="col-md-9 ">

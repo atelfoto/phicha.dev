@@ -22,6 +22,19 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL DEFAULT '0',
+  `name` varchar(255) DEFAULT NULL,
+  `mail` varchar(255) DEFAULT NULL,
+  `content` longtext,
+  `post_id` int(11) DEFAULT NULL,
+  `created` timestamp NULL DEFAULT NULL,
+  `online` int(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `post_id` (`post_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
 --
 -- Structure de la table `articles`
 --

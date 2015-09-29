@@ -53,8 +53,6 @@ public function index() {
 	$d['comments']= $this->Paginate('Comment',array('Comment.online >= 1'));
 	$this->set($d);
 }
-
-
 /**
  * add method
  *

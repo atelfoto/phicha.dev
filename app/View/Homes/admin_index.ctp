@@ -59,6 +59,9 @@
 										"title"=>__('delete this picture'),
 										'escape' =>false,
 										'data-toggle' => 'modal',
+										'data-toggle-2'=>'tooltip',
+										"data-placement"=>"bottom",
+										"title"=>__('edit this picture'),
 										'role'  => 'button',
 										'data-uid' => $home['Home']['id']
 										)); ?>

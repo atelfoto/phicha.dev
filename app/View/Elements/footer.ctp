@@ -22,10 +22,10 @@
 				<span itemprop="addressLocality" class="locality country-name">LANGRES</span>
 			</span>
 		</small> <br>
-		<ul class="list-inline  ">
+		<ul class="list-inline">
 			<li>
-				<i class=' fa fa-phone'>&nbsp;</i>
-				<abbr title="Phone"> Tel : <a href="tel:0033607221786" class="tel" itemprop="telephone">06 07 22 17 86</a>
+				<i class='glyphicon  glyphicon-earphone'>&nbsp;</i>
+				<abbr title="Phone">Tel : <a href="tel:0033607221786" class="tel" itemprop="telephone">06 07 22 17 86</a>
 				</abbr>
 			</li>
 		</ul>
