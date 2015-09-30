@@ -111,7 +111,7 @@ public function index() {
 		$this->paginate = array('Comment'=>array(
 			'limit'=>5,
 			'order' => array(
-            'Comment.modified' => 'desc')
+            'Comment.created' => 'desc')
 			));
 		$d['comments'] = $this->Paginate('Comment',array(
 			//'type'=>'post',

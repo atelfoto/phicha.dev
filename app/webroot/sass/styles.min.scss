@@ -39,7 +39,7 @@ label i.glyphicon-asterisk , form .text-left i.glyphicon-asterisk{
 	font-size: 0.6em !important;
 }
 
-//ombres autour des boites portfolio formulaire de contact
+//ombres autour des boites portfolio formulaire de contact comment
 .box-home{
 	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
 	padding-right:0;
@@ -125,7 +125,17 @@ label i.glyphicon-asterisk , form .text-left i.glyphicon-asterisk{
 .map {
 	min-height: 500px;
 }
-
+/*
+*comment
+ */
+#CommentIndexForm > h3{
+	margin-bottom: 2em;
+}
+header > time > small{
+	color:#777777;
+	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 //navigation
 
 .navbar-custom .navbar-toggle .icon-bar {

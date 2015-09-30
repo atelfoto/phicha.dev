@@ -59,11 +59,11 @@
 					<div class="panel panel-default arrow left box-home">
 						<div class="panel-body">
 							<header class="text-left">
-								<div class="comment-user text-capitalize">
-									<h3><i class="glyphicon glyphicon-user">&nbsp;</i>
+
+									<h3 class="comment-user text-capitalize"><i class="glyphicon glyphicon-user">&nbsp;</i>
 										<strong><?php echo  h($comment['Comment']['name']); ?></strong>
 									</h3>
-								</div>
+
 								<time class="comment-date" datetime="<?php echo $this->Date->french($comment['Comment']['created']); ?>">
 									<i class="glyphicon glyphicon glyphicon-time">&nbsp;</i>
 									<small><?= $this->Time->i18nFormat($comment['Comment']['created'],'Le %A %d %B à %H:%M'); ?>
