@@ -66,16 +66,16 @@
 								</div>
 								<time class="comment-date" datetime="<?php echo $this->Date->french($comment['Comment']['created']); ?>">
 									<i class="glyphicon glyphicon glyphicon-time">&nbsp;</i>
-									<small>
-									<?php echo $this->Date->french($comment['Comment']['created']); ?>&nbsp;
+									<small><?= $this->Time->i18nFormat($comment['Comment']['created'],'Le %A %d %B à %H:%M'); ?>
 									<?= $this->Time->timeAgoInWords($comment['Comment']['created'],
                 	array('accuracy' => array('month' => 'month'),'end' => '2 years')); ?>
 									</small>
 								</time>
 							</header>
-							<div class="comment-post">
+							<div class="comment-post" style="margin-top:10px;">
 								<blockquote>
-									<p><?php echo $this->Text->truncate($comment['Comment']['content'],Null,array('exact' =>true,'html'=> true)); ?></p>
+									<p><?php echo $this->Text->truncate($comment['Comment']['content'],Null,array('exact' =>true,'html'=> true)); ?>
+									</p>
 								</blockquote>
 							</div>
 							<p class="text-right"><a href="#" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-circle-arrow-right"></i> reply</a></p>
