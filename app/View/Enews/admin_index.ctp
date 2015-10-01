@@ -53,8 +53,8 @@
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-danger" >
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo __(' close'); ?>">&times;</button>
-				<h4 id="myModalLabel"><?php echo __('Remove user') ?></h4>
+				<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo __(' close'); ?>">&times;</button>
+				<h4 id="myModalLabel"></h4> --><?php echo __('Remove user') ?>
 			</div>
 			<div class="modal-body">
 				<p>&nbsp;</p>

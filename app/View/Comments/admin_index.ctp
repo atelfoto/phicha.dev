@@ -74,9 +74,11 @@
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo __(' Press Esc to close'); ?>">&times;</button>
-				<h4><i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
-				&nbsp;&nbsp;<?php echo __('Remove Post') ?></h4>
+			<!-- 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php // echo __(' Press Esc to close'); ?>">&times;</button> -->
+				<!-- <h4> --><!-- <i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i> -->
+				&nbsp;&nbsp;<!-- </h4> --><?php // echo __('Remove Post') ?>
+				</div>
+			<div class="modal-header panel-default">
 			</div>
 			<div class="modal-body">
 				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
