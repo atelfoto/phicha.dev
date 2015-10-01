@@ -23,8 +23,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->charset(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title><?php echo $cakeDescription ?>&nbsp;:&nbsp;<?php echo $this->fetch('title'); ?></title>
-<link rel="apple-touch-icon" href=""/>
-<link rel="apple-touch-startup-image" href=""/>
+<link rel="apple-touch-icon" href="#"/>
+<link rel="apple-touch-startup-image" href="#"/>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
@@ -54,10 +54,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 
 			<?php echo $this->fetch('content'); ?>
-
+		<div class="test"></div>
 		<footer class="text-center">
 			<p>
-				<strong>Copyright &copy; 2014-<?php echo date('Y'); ?> <a href=""><?php echo env('HTTP_HOST'); ?></a>.</strong> All rights reserved.
+				<strong>Copyright &copy; 2014-<?php echo date('Y'); ?> <a href=""><?php echo env('HTTP_HOST'); ?></a></strong> All rights reserved.
 			</p>
 		</footer>
 		<div id="overlay"></div>
