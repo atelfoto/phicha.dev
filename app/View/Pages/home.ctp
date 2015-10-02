@@ -4,10 +4,8 @@
 <?php echo $this->Html->meta("description", "Passionné par la photographie dès l'age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J'ai acquis mon savoir faire dans les ", array("inline"=>false)); ?>
 <div id="Header">
 	<div class="">
-		<!-- <div class="wrapper"> -->
 		<h1><?php  echo "studio chardon"; ?></h1>
-		<!-- <h1><?php // echo $this->fetch('title'); ?></h1> -->
-		<?php // echo $this->assign('title', 'Acces clients'); ?>
+
 		<ul>
 			<li><a href="#" title="Twitter" class="twitterIcon"></a></li>
 			<li><a href="#" title="facebook" class="facebookIcon"></a></li>
