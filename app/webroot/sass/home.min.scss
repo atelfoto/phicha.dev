@@ -4,7 +4,9 @@
 @import "_vegas";
 @import "_homepage";
 @import "_font";
-
+body{
+	font-family: "Lora",serif;
+}
 
 h1{text-transform: capitalize;
 	font-family: 'Lora', serif;
@@ -27,8 +29,9 @@ h1{text-transform: capitalize;
 			border-bottom: 1px solid transparent;
 			text-decoration: none;
 			a{
-				background: #000;
+				//background: #000;
 				text-transform: capitalize;
+				text-align: right;
 				font-size: 2em;
     			font-weight: 700;
    				font-family: "Raleway";

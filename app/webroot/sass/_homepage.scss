@@ -48,6 +48,15 @@ h4 {
 }
 p, pre {
 	margin:0 0 10px 0;
+font-family: Georgia,"Bitstream Charter",serif;
+
+font-size: 16px;
+
+line-height: 1.5em ;
+vertical-align: baseline;
+letter-spacing: normal;
+word-spacing: 0px;
+
 }
 code {
 	text-transform:uppercase !important;
@@ -79,7 +88,7 @@ z-index: 1;
 .wrapper {
 margin: 0 auto;
 position: relative;
-width: 920px;
+width: 640px;
 z-index: 1;
 }
 #Header ul {
@@ -262,6 +271,9 @@ min-width: initial !important;
 	}
 	#subscribe input{
 	width:80%;
+	}
+	a{
+		background: #337ab7;border-radius: 10px;
 	}
 	footer{
 	position:relative !important;

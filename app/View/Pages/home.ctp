@@ -1,7 +1,7 @@
 <?php  echo  $this->set('title_for_layout',__("Accueil")); ?>
 <?php echo $this->Html->meta(array('name' => 'robots','type'=>"meta", 'content' => 'index,follow'),NULL,array('inline'=>false)); ?>
 <?= $this->Html->css(array('home.min',"https://fonts.googleapis.com/css?family=Raleway:700 "),array('inline'=>false)); ?>
-<?php echo $this->Html->meta("description", " ", array("inline"=>false)); ?>
+<?php echo $this->Html->meta("description", "Passionné par la photographie dès l'age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J'ai acquis mon savoir faire dans les ", array("inline"=>false)); ?>
 <div id="Header">
 	<div class="">
 		<!-- <div class="wrapper"> -->
@@ -18,8 +18,8 @@
 </div>
 <div class="col-md-9">
 	<div id="Content" class="wrapper">
-		<h2>Site en construction</h2>
-		<h3>Restez en contact</h3>
+		<!-- <h2>Site en construction</h2>
+		<h3>Restez en contact</h3> -->
 		<p>Passionné par la photographie dès l’age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J’ai acquis mon savoir faire dans les grands studios de portraits et de nature-morte par un sens de la lumière et du détail.</p>
 		<p>Passionné par la composition et la mise en scène, je crée en 1996 le Studio Chardon sur la  place Diderot de Langres pour un contact facilité avec le public et un laboratoire argentique performant.</p>
 		<p>En l’an 2000 la « Teinturerie Albert ‘ est rénové pour devenir le studio photographique actuel</p>

@@ -28,11 +28,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
-		//echo $this->Html->css(array('styles.min'));
 		echo $this->fetch('css');
 		echo  $this->Html->script(array("jquery-1.11.3.min"));
 		echo $this->fetch('script');
 	?>
+	<?php echo $this->element('meta'); ?>
 </head>
 <body id="home">
 	<!-- 	<div id="Header">
