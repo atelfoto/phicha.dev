@@ -17,6 +17,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <?php echo $this->Form->input('slug', array('class' => 'form-control','label'=>'Url', 'placeholder' => 'url'));?>
+                    <?= $this->Form->input('user_id',array('value'=>$this->Session->read('Auth.User.id'),'type'=>'hidden')); ?>
                 </div>
             </div>
             <div class="row">

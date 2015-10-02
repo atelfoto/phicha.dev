@@ -26,7 +26,7 @@
 						array("url"=> array("controller"=>'portfolios','action'=>'view',"slug"=>$portfolio['Portfolio']['slug'],"admin"=>false ))); ?></td>
 						<td><?php echo h($portfolio['Portfolio']['name']); ?>&nbsp;</td>
 						<td>
-						<?php echo $this->Html->link($portfolio['User']['name'], array(
+						<?php echo $this->Html->link($portfolio['User']['username'], array(
 						'controller' => 'users', 'action' => 'view', $portfolio['User']['id'])); ?>
 						</td>
 						<td><?php echo $this->Date->french($portfolio['Portfolio']['created']); ?>&nbsp;</td>

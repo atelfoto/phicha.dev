@@ -108,6 +108,10 @@ $(window).scroll(function() {
 							</ul>
 						</li><!-- /.messages-menu -->
 						<li class="dropdown notifications-menu"><!-- Notifications Menu -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- Menu toggle button -->
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
 							<ul class="dropdown-menu">
 								<li class="header">You have 10 notifications</li>
 								<li>
