@@ -61,6 +61,20 @@ letter-spacing: normal;
 word-spacing: 0px;
 
 }
+p.first:first-letter{
+	font:small-caps bold;
+	float:left;
+	margin-left: 10px;
+	font-size: 2.5em;
+	line-height: 1;
+	margin-right: .2em;
+	padding-bottom: 0.1em;
+	margin-top:0.1em;
+}
+
+
+p::first-line { margin-left: 20px }
+
 
 a {
 	color:#CF0;

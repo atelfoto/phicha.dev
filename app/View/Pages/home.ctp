@@ -22,7 +22,7 @@
 	<div id="Content" class="wrapper">
 		<!-- <h2>Site en construction</h2>
 		<h3>Restez en contact</h3> -->
-		<p>Passionné par la photographie dès l’age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J’ai acquis mon savoir faire dans les grands studios de portraits et de nature-morte par un sens de la lumière et du détail.</p>
+		<p class="first">Passionné par la photographie dès l’age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J’ai acquis mon savoir faire dans les grands studios de portraits et de nature-morte par un sens de la lumière et du détail.</p>
 		<p>Passionné par la composition et la mise en scène, je crée en 1996 le Studio Chardon sur la  place Diderot de Langres pour un contact facilité avec le public et un laboratoire argentique performant.</p>
 		<p>En l’an 2000 la « Teinturerie Albert ‘ est rénové pour devenir le studio photographique actuel</p>
 		<p>Il dispose de 2 plateaux, l’un de 100 m2 avec cyclo et lumière naturel, l’autre de 70 m2 avec cuisine et cabine de maquillage. Je travaille la lumière du jour combiné au flash Broncolor ou tungstène.</p>
