@@ -2,7 +2,7 @@
 $( function() {
 	    $('#home').vegas({
         	slides: [
-				{ src: 'img/images/background1.jpg' },
+				{ src: 'img/images/background1.jpg' }	,
 				{ src: 'img/images/background3.jpg' },
 				{ src: 'img/images/background2.jpg' },
 				{ src: 'img/images/background1.jpg' },
