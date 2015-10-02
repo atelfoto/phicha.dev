@@ -1,4 +1,6 @@
 html {
+	position: relative;
+  min-height: 1
 }
 body {
 	background:#000;
@@ -13,6 +15,7 @@ body {
 	width:100%;
 	margin:0;
 	padding: 0;
+	// margin-bottom: 60px;
 }
 .ie body {
 	filter: dropshadow(color=#000000, offx=0, offy=1);
@@ -52,8 +55,8 @@ h4 {
 p, pre {
 	margin:0 0 10px 0;
 font-family: Georgia,"Bitstream Charter",serif;
-
-font-size: 16px;
+font-size: 1.3em;
+//font-size: 16px;
 
 line-height: 1.5em ;
 vertical-align: baseline;
@@ -166,6 +169,10 @@ text-align:center;
 	div.side-bar ul.sidebar-menu li a span{
 					display: none;
 				}
+footer{
+//position:absolute;
+	// position:relative !important;
+}
 
 }
 

@@ -20,16 +20,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->element('meta'); ?>
 </head>
 <body id="home">
-		<div  class="wrapper">
-			<?php  echo $this->Session->flash(); ?>
-		</div>
-			<?php echo $this->fetch('content'); ?>
+	<div  class="wrapper">
+		<?php  echo $this->Session->flash(); ?>
+	</div>
+		<?php echo $this->fetch('content'); ?>
 		<footer class="text-center">
 			<p>
 				<strong>Copyright &copy; 2014-<?php echo date('Y'); ?> <a href=""><?php echo env('HTTP_HOST'); ?></a></strong> All rights reserved.
 			</p>
 		</footer>
-		<div id="overlay"></div>
-
+	<div id="overlay"></div>
 </body>
 </html>

@@ -26,22 +26,20 @@
 		<p>Passionné par la composition et la mise en scène, je crée en 1996 le Studio Chardon sur la  place Diderot de Langres pour un contact facilité avec le public et un laboratoire argentique performant.</p>
 		<p>En l’an 2000 la « Teinturerie Albert ‘ est rénové pour devenir le studio photographique actuel</p>
 		<p>Il dispose de 2 plateaux, l’un de 100 m2 avec cyclo et lumière naturel, l’autre de 70 m2 avec cuisine et cabine de maquillage. Je travaille la lumière du jour combiné au flash Broncolor ou tungstène.</p>
-		<!-- <p>Aujourd’hui un labo numérique high-tech sert à la post-production des images et permet de contrôler la qualité à toutes les étapes de fabrication .</p>
+		<p>Aujourd’hui un labo numérique high-tech sert à la post-production des images et permet de contrôler la qualité à toutes les étapes de fabrication .</p>
 		<p>Le 6 Fevrier 2011 le titre de « Portraitiste de France » lui est remis au congrès de Lyon pour l’ excellente qualité de son travail en portraits et mariages
-		</p> -->
-		<!-- <h3>Nos références :</h3> -->
-<!-- 		<ul>
+		</p>
+		<h3>Nos références :</h3>
+		<ul>
 			<li><strong>Arts picturaux :</strong>  reproduction d’œuvres d’art : César, Villeglé, Arthur, centres d’art  et catalogues de collections.</li>
 			<li><strong>Arts de la table et gastronomie :</strong>   Chateau de Challange, Caveau des Arches,Le Cheval Blanc,  Jum’hotel , A-F Gros</li>
 			<li><strong>Architecture :</strong> cabinets d’architectes, Bouygues, Kauffmann&Broad,</li>
 			<li><strong>Industrie :</strong>Bouygues, CDE, Carrefour, Café Caron, Dunhill, Dedôme side-car, Eiffage, Freudenberg, Gascard-Martin-Prost, Plastic Omnium, Vingeanne Transports,Siplast, 3P</li>
 			<li><strong>Institutionnel :</strong> conseils généraux.Musée de Langres, ELeclerc …</li>
-		</ul> -->
+		</ul>
 	</div>
 </div>
-
 	<?php  echo $this->element('sidebar'); ?>
-
 </div>
 	<?php  echo $this->element('vegas'); ?>
 <?php echo $this->Html->script(array("vegas.min"),array('inline'=>false)); ?>
