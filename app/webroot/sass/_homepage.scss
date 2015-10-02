@@ -1,6 +1,6 @@
 html {
-	position: relative;
-  min-height: 1
+	//position: relative;
+
 }
 body {
 	background:#000;
@@ -126,7 +126,9 @@ background-position: -245px 0px;
 .pintrestIcon{
 background-position: -331px 0px;
 }
-
+#Content{
+	padding-bottom: 60px;
+}
 #Content h2 {
 margin: 0px 0px 65px 0px;
 padding: 0px;
@@ -159,13 +161,19 @@ position:absolute;
 bottom:0px;
 text-align:center;
 }
-// @media(max-width:768px){
-// body {
-// min-width: initial !important;
-// }
-// .wrapper{width:100%;}
-// }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+	html {
+	position: relative;
+  min-height: 100%;
+}
+}
 @media (min-width: 768px) and (max-width: 992px){
+	html {
+	position: relative;
+  min-height: 100%;
+}
 	div.side-bar ul.sidebar-menu li a span{
 					display: none;
 				}
