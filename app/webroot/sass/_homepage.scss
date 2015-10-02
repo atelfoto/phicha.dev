@@ -163,16 +163,23 @@ text-align:center;
 }
 
 @media(min-width:1200px){
+	html{position: relative;
+ // min-height: 100%;
+  }
 
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-
 	html {
-	position: relative;
- // min-height: 100%;
+		position: relative;
+		// min-height: 100%;
+	}
+	// footer{
+	// 	position:relative !important;
+	// }
 }
-}
+
+
 @media (min-width: 768px) and (max-width: 992px){
 	html {
 	position: relative;
