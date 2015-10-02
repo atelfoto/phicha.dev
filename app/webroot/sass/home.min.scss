@@ -6,6 +6,7 @@
 @import "_homepage";
 
 .side-bar {
+
 // -moz-transform: scale(1.1) rotate(10deg);
 // -webkit-transform: scale(1.1) rotate(10deg);
 // -o-transform: scale(1.1) rotate(10deg);
@@ -14,11 +15,11 @@
 	ul.sidebar-menu {
 		padding-left: 0px;
 		li {
-			list-style: none;
-			margin: 0 0 4px 0;
-			padding: 0;
-			border-top: 1px solid transparent;
-			border-bottom: 1px solid transparent;
+			list-style: none;text-align: right;
+			// margin: 0 0 4px 0;
+			// padding: 0;
+			// border-top: 1px solid transparent;
+			// border-bottom: 1px solid transparent;
 			text-decoration: none;
 			a{
 				text-transform: capitalize;
@@ -27,17 +28,17 @@
 				font-weight: 700;
 				font-family: "Raleway";
 				padding: 12px 5px 12px 15px;
-				display: block;
+				//display: block;
 				color: #fff;
 				&:hover{
 					color: #777;
 					background: transparent;
 					text-decoration: none !important;
 				}
-				span{
-					float:right;
-					margin-right: 10px;
-				}
+				 span{display: none;;
+				 	// float:right;
+				 	// margin-right: 10px;
+				 }
 			}
 		}
 	}
