@@ -15,7 +15,7 @@
 						<th><?= __('Registration Date'); ?></th>
 						<th><?= __('Last Visit Date'); ?></th>
 						<th><?= __('online'); ?></th>
-						<th class="actions">&nbsp;</th>
+						<th class="actions" colspan="2">&nbsp;</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -37,17 +37,20 @@
 									}
 								?>
 							</td>
-							<td class="actions"><?php echo $this->Html->link("<span class='fa fa-edit fa-2x' ></span>", array('action' => 'edit',
-														$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>&nbsp;&nbsp;
-												<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
-														array(
-																'class' => 'btn btn-default btn-remove-modal',
-																'escape' =>false,
-																'data-toggle' => 'modal',
-																'role'  => 'button',
-																'data-uid' => $v['id']
-																));
-												?>
+							<td class="actions">
+								<?php echo $this->Html->link("<span class='fa fa-edit fa-2x' ></span>", array('action' => 'edit',
+														$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>
+							</td>
+							<td>
+								<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
+										array(
+												'class' => 'btn btn-default btn-remove-modal',
+												'escape' =>false,
+												'data-toggle' => 'modal',
+												'role'  => 'button',
+												'data-uid' => $v['id']
+												));
+								?>
 							</td>
 						</tr>
 					<?php endforeach ?>

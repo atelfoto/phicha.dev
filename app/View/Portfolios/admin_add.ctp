@@ -82,12 +82,20 @@
 		</div>
 		<div class="panel-body">
 			<ul class="nav nav-pills nav-stacked">
-				<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x"></span>&nbsp;&nbsp;List Portfolios'),
+				<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x"></span> &nbsp;&nbsp;List Portfolio'),
 					array('action' => 'index'), array('escape' => false)); ?>
 				</li>
 
-    			<li role="presentation" class="active"><a href="#contenu" aria-controls="contenu" role="tab" data-toggle="tab">Contenu</a></li>
-    			<li role="presentation"><a href="#publication" aria-controls="publications" role="tab" data-toggle="tab">Publication</a></li>
+    			<li role="presentation" class="active">
+    				<a href="#contenu" aria-controls="contenu" role="tab" data-toggle="tab">
+    					<span class="fa fa-file-text-o fa-2x"></span>&nbsp;&nbsp; Contenu
+    				</a>
+    			</li>
+    			<li role="presentation">
+    				<a href="#publication" aria-controls="publications" role="tab" data-toggle="tab">
+    					<span class="fa fa-file-archive-o fa-2x"></span>&nbsp;&nbsp; Publication
+    				</a>
+    			</li>
   			</ul>
 		</div>
 	</div>

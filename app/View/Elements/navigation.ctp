@@ -1,4 +1,4 @@
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header ">
 			<button type="button" class="navbar-toggle collapsed menu-icon menu-icon-svg" data-target-1=".side-collapse" data-target-2=".side-collapse-container" data-toggle="collapse-side" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

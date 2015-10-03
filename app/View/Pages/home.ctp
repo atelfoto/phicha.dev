@@ -5,11 +5,11 @@
 
 <?php echo $this->Html->meta(array('property' => 'og:description', 'type' => 'meta', 'content' => "Passionné par la photographie dès l'age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J'ai acquis mon savoir faire dans les "),NULL,array("inline"=>false)); ?>
 <div id="Header">
-		<div class="col-sm-5 col-md-offset-1 col-xs-12 ">
-			<h1><?php  echo "studio chardon"; ?></h1>
-		</div>
+	<div class="col-sm-5 col-md-offset-1 col-xs-12 ">
+		<h1><?php  echo "studio chardon"; ?></h1>
+	</div>
 	<div class="col-sm-4 col-xs-12">
-			<ul class-" ">
+		<ul>
 			<li><a href="#" title="Twitter" class="twitterIcon"></a></li>
 			<li><a href="#" title="facebook" class="facebookIcon"></a></li>
 			<li><a href="#" title="linkedIn" class="linkedInIcon"></a></li>
@@ -32,14 +32,13 @@
 		<ul>
 			<li><strong>Arts picturaux :</strong>  reproduction d’œuvres d’art : César, Villeglé, Arthur, centres d’art  et catalogues de collections.</li>
 			<li><strong>Arts de la table et gastronomie :</strong>   Chateau de Challange, Caveau des Arches,Le Cheval Blanc,  Jum’hotel , A-F Gros</li>
-			<li><strong>Architecture :</strong> cabinets d’architectes, Bouygues, Kauffmann&Broad,</li>
+			<li><strong>Architecture :</strong> cabinets d’architectes, Bouygues, Kauffmann &amp; Broad,</li>
 			<li><strong>Industrie :</strong>Bouygues, CDE, Carrefour, Café Caron, Dunhill, Dedôme side-car, Eiffage, Freudenberg, Gascard-Martin-Prost, Plastic Omnium, Vingeanne Transports,Siplast, 3P</li>
 			<li><strong>Institutionnel :</strong> conseils généraux.Musée de Langres, ELeclerc …</li>
 		</ul>
 	</div>
 </div>
 	<?php  echo $this->element('sidebar'); ?>
-</div>
 	<?php  echo $this->element('vegas'); ?>
 <?php echo $this->Html->script(array("vegas.min"),array('inline'=>false)); ?>
 

@@ -1,7 +1,7 @@
 <div class="page-header">
 	<h1><?= __('Edit User') ?></h1>
 </div>
-<div class="well col-md-8 col-md-offset-2">
+<div class="well col-md-8 col-md-offset-2 box-home">
 	<?=  $this->Form->create('User',array('action'=>'edit','role'=>'form')); ?>
 	<div class="col-md-11 text-right">
 		<button  type="submit" class="btn btn-success btn-xs"><i class="fa fa fa-check fa-lg" style="color:#fff;">&nbsp;</i>

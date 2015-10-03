@@ -6,7 +6,7 @@
 		<h1><?php echo __("livre d'or"); ?></h1>
 	</div>
 	<div class="row">
-		<section>
+		<div>
 			<?php echo $this->Form->create('Comment', array(
 				'inputDefaults' => array(
 					'div' => 'form-group',
@@ -43,8 +43,8 @@
 						)); ?>
 				</div>
 					<?php echo $this->Form->end(); ?>
-		</section>
-		<section class="comment-list">
+		</div>
+		<div class="comment-list">
 			<?php foreach ($comments as $comment):?>
 			<article class="row ">
 				<div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-0 hidden-xs ">
@@ -61,18 +61,16 @@
 					<div class="panel panel-default arrow left box-home">
 						<div class="panel-body">
 							<header class="text-left">
-
 									<h3 class="comment-user text-capitalize"><i class="glyphicon glyphicon-user">&nbsp;</i>
 										<strong><?php echo  h($comment['Comment']['name']); ?></strong>
 									</h3>
-
-								<time class="comment-date" datetime="<?php echo $this->Date->french($comment['Comment']['created']); ?>">
+								<div class="comment-date" >
 									<i class="glyphicon glyphicon glyphicon-time">&nbsp;</i>
 									<small><?= $this->Time->i18nFormat($comment['Comment']['created'],'Le %A %d %B à %H:%M'); ?>
 									<?= $this->Time->timeAgoInWords($comment['Comment']['created'],
                 	array('accuracy' => array('month' => 'month'),'end' => '2 years')); ?>
 									</small>
-								</time>
+								</div>
 							</header>
 							<div class="comment-post" style="margin-top:10px;">
 								<blockquote>
@@ -86,12 +84,12 @@
 				</div>
 			</article>
 			<?php endforeach; ?>
-		</section>
+		</div>
 		<div class="col-md-12 text-center">
-			<p>
+
 				<?php echo $this->element('pagination-counter'); ?>
 				<?php echo $this->element('pagination'); ?>
-			</p>
+
 		</div>
 	</div>
 </div>

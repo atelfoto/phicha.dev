@@ -10,7 +10,7 @@
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
 						<th><?php echo $this->Paginator->sort('mail'); ?></th>
 						<th><?php echo $this->Paginator->sort('date'); ?></th>
-						<th class="actionss">&nbsp;</th>
+						<th class="" colspan="2">&nbsp;</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -19,8 +19,10 @@
 						<td> <?= $v['id']; ?></td>
 						<td><?= $v['mail']; ?></td>
 						<td> <?= $this->Date->french($v['created']); ?></td>
-						<td class="actions"><?php echo $this->Html->link("<span class='fa fa-edit fa-2x' ></span>", array('action' => 'edit',
-				 			$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>	&nbsp;&nbsp;
+						<td class=""><?php echo $this->Html->link("<span class='fa fa-edit fa-2x' ></span>", array('action' => 'edit',
+				 			$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>
+				 		</td>
+				 		<td>
 							<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
 	              				array(
 	              				  'class' => 'btn btn-default btn-remove-modal',
@@ -29,7 +31,7 @@
 	              				  'role'  => 'button',
 	              				  'data-uid' => $v['id']
 	               				));
-	              			?>
+	            ?>
 						</td>
 					</tr>
 					<?php endforeach ?>
@@ -43,7 +45,7 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New picture'), array('action' => 'add'), array('escape' => false)); ?>
+					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New'), array('action' => 'add'), array('escape' => false)); ?>
 					</li>
 				</ul>
 			</div><!-- end body -->
