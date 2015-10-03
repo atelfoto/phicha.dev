@@ -14,7 +14,7 @@
 						<th><?php echo $this->Paginator->sort('created'); ?></th>
 						<th><?php echo $this->Paginator->sort('modified'); ?></th>
 						<th><?php echo $this->Paginator->sort('online'); ?></th>
-						<th class="actions"></th>
+						<th class="actions" colspan="2"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -47,13 +47,16 @@
 					<td class="actions">
 						<?php echo $this->Html->link('<span class="fa fa-edit fa-2x"></span>',
 						array('action' => 'edit', $carousel['Carousel']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
+					</td>
+					<td>
 						<?php echo $this->Html->link('<span class="fa fa-trash	fa-2x"></span>','#Modal'.$carousel['Carousel']['id'],
 							array('class' => 'btn btn-default btn-remove-modal btn-sm',
 								'escape' =>false,
 								'data-toggle' => 'modal',
 								'role'  => 'button',
 								'data-uid' => $carousel['Carousel']['id']
-								)); ?>
+								));
+								?>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -77,51 +80,49 @@
 		<?php echo $this->element('pagination'); ?>
 	</div> <!-- end col-md-12 -->
 </div><!-- row end containing of content -->
-
-	<!-- modal supprimer -->
-	<?php foreach ($carousels as $k => $v): $v = current($v);?>
-		<div class="modal fade" id="Modal<?= $v['id']; ?>">
-			<div class="modal-dialog ">
-				<div class="modal-content">
-					<div class="modal-header panel-default">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo __(' Press Esc to close'); ?>">&times;
-						</button>
-						<h4>
-							<i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
-							&nbsp;&nbsp;<?php echo __('Remove Post') ?>
-						</h4>
-					</div>
-					<div class="modal-body">
-						<p>
-							<?php echo __('Are you sure you want to delete'); ?>&nbsp;
-							<b style="color:#f00;"><?php echo  $v['name'] ?></b>&nbsp;
-							<?php echo __('of your Articles') ?>
-							<span class="label-uname strong"></span> ?
-						</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?>
-						</button>
-						<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
-						array('class' => 'btn btn-danger delete-user-link')) ?>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-	<?php endforeach ?>  <!-- fin modal supprimer -->
-	<div class="modal fade" id="ModalAide"> <!-- modal Aide -->
+<?php foreach ($carousels as $k => $v): $v = current($v);?><!-- modal supprimer -->
+	<div class="modal fade" id="Modal<?= $v['id']; ?>">
 		<div class="modal-dialog ">
 			<div class="modal-content">
 				<div class="modal-header panel-default">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove-sign" style="color:#f00;"></i></button>
-					<h4 id="myModalLabel"><?= __('Help') ?></h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="<?php echo __('close'); ?>">&times;
+					</button>
+					<h4>
+						<i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
+						&nbsp;&nbsp;<?php echo __('Remove Post') ?>
+					</h4>
 				</div>
 				<div class="modal-body">
-					<p></p>
+					<p>
+						<?php echo __('Are you sure you want to delete'); ?>&nbsp;
+						<b style="color:#f00;"><?php echo  $v['name'] ?></b>&nbsp;
+						<?php echo __('of your Articles') ?>
+						<span class="label-uname strong"></span> ?
+					</p>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Closed') ?></button>
+					<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?>
+					</button>
+					<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
+					array('class' => 'btn btn-danger delete-user-link')) ?>
 				</div>
-			</div><!-- /.modal-aide-content -->
-		</div><!-- /.modal-aide-dialog -->
-	</div><!-- /.modal-aide -->
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+<?php endforeach ?>  <!-- fin modal supprimer -->
+<div class="modal fade" id="ModalAide"> <!-- modal Aide -->
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header panel-default">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove-sign" style="color:#f00;"></i></button>
+				<h4 id="myModalLabel"><?= __('Help') ?></h4>
+			</div>
+			<div class="modal-body">
+				<p>&nbsp;</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Closed') ?></button>
+			</div>
+		</div><!-- /.modal-aide-content -->
+	</div><!-- /.modal-aide-dialog -->
+</div><!-- /.modal-aide -->
