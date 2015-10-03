@@ -19,20 +19,20 @@ msgstr ""
 
 #: View/Layouts/admin.ctp:3
 #: View/Layouts/default.ctp:18
-#: View/Layouts/home.ctp:18
+#: View/Layouts/home.ctp:3
 #: View/Layouts/member.ctp:3
 msgid "CakePHP %s"
 msgstr ""
 
 #: View/Layouts/default.ctp:17
-msgid "Phicha"
+msgid "studio chardon"
 msgstr ""
 
 #: View/Layouts/error.ctp:17
 msgid "CakePHP: the rapid development php framework"
 msgstr ""
 
-#: View/Layouts/home.ctp:17
+#: View/Layouts/home.ctp:2
 msgid "Studio"
 msgstr ""
 

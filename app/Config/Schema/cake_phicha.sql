@@ -270,3 +270,42 @@ INSERT INTO `users` (`id`, `name`, `username`, `mail`, `password`, `firstname`, 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- ------------------------------------------------------------------
+
+--
+-- Structure de la table `meta`
+--
+CREATE TABLE IF NOT EXISTS `metas` (
+	`id` int(10) NOT NULL AUTO_INCREMENT,
+	`description` varchar(255) NOT NULL,
+	`robots` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+-- ------------------------------------------------------------------
+
+--
+-- Structure de la table `robots`
+--
+CREATE TABLE IF NOT EXISTS `robots` (
+	`id` int(10) NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `robots`
+--
+
+INSERT INTO `enews` (`id`, `name`) VALUES
+(1, 'Index, Follow' ),
+(2, 'No index, follow' ),
+(3, 'Index, Nofollow' ),
+(4, 'No index, no follow', );
+
+
+
+
+
+

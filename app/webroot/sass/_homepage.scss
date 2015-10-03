@@ -6,6 +6,7 @@ body {
 	background:#000;
 	color:#FFF;
 	font-family: "Lora",serif;
+
 	text-shadow:0 2px 0px #000;
 	//min-width:960px;
 	top:0;
@@ -22,11 +23,13 @@ body {
 }
 h1 {
 	text-transform: capitalize;
-	font-family: 'Lora', serif;
-	font-size:68px;
+	//font-family: 'Lora', serif;
+	font-family: "Indie Flower";
+	font-size:7em;
+	//font-size:68px;
 	letter-spacing:-2px;
 	line-height:60px;
-	margin:25px 0;
+	margin:.9em 0;
 	text-shadow:0 3px 3px #000;
 	float: left;
 	margin-left:15px;
@@ -54,10 +57,11 @@ h4 {
 }
 p, pre {
 	margin:0 0 10px 0;
-font-family: Georgia,"Bitstream Charter",serif;
-font-size: 1.3em;
+//font-family: Georgia,"Bitstream Charter",serif;
+font-size: 1.4em;
 //font-size: 16px;
 
+font-family: "Indie Flower";
 line-height: 1.5em ;
 vertical-align: baseline;
 letter-spacing: normal;
@@ -67,12 +71,12 @@ word-spacing: 0px;
 p.first:first-letter{
 	font:small-caps bold;
 	float:left;
-	margin-left: 10px;
-	font-size: 2.5em;
-	line-height: 1;
-	margin-right: .2em;
+	margin-left: .25em;
+	font-size: 5em;
+	line-height: .2em;
+	margin-right: .25em;
 	padding-bottom: 0.1em;
-	margin-top:0.1em;
+	margin-top:0.25em;
 }
 
 
@@ -163,8 +167,8 @@ text-align:center;
 }
 
 @media(min-width:1200px){
-	html{position: relative;
- // min-height: 100%;
+	html{position: absolute;
+ 	min-height: 100%;
   }
 
 }
