@@ -69,6 +69,8 @@ public $components = array('Paginator', 'Flash', 'Session');
 		$this->Portfolio->recursive = 0;
 		$this->paginate = array('Portfolio'=>array(
 			'limit'=>5,
+					'order'=>array(
+						'Portfolio.created'=>'desc'),
 			));
 		$d['portfolios'] = $this->Paginate('Portfolio',array(
 			//'type'=>'gallerie',
@@ -100,6 +102,10 @@ public $components = array('Paginator', 'Flash', 'Session');
 		if ($this->request->is('post')) {
 			$this->Portfolio->create();
 			if ($this->Portfolio->save($this->request->data)) {
+				$name= Inflector::slug($this->request->data['Portfolio']['name'],'-');
+				$dir = WWW_ROOT .'files'.DS.'portfolio'.DS.$name;
+        if(!file_exists($dir))
+            mkdir($dir, 0777);
 				$this->Session->setFlash(__('The portfolio has been saved.'), 'notif', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {

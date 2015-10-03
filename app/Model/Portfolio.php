@@ -148,7 +148,26 @@ class Portfolio extends AppModel {
 	    }
 	}
 
+	// public function beforeDelete($cascade = true){
+	// 	$name = $this->field('slug');
+	// 	$dir = WWW_ROOT .'files'.DS.'portfolio'.DS.$name;
+	// 	unlink($dir);
 
+	// 	return true;
+
+	// }
+	// public function beforeDelete($cascade = true){
+	// 	//$this->Media->id = $id;//????
+	// 	$file = $this->field('url');
+	// 	unlink(IMAGES.DS.$file);
+	// 	$f = explode('.',$file);
+	// 	$ext = '.'.end($f);
+	// 	$file =implode('.',array_slice($f,0,-1));
+	// 	foreach(glob(IMAGES.DS.$file.'_*.jpg') as $v){
+	// 		unlink($v);
+	// 	}
+	// 	return true;
+	// }
 
 /**
  * [afterFind Raccourcissement d_URL en mettre en place]
