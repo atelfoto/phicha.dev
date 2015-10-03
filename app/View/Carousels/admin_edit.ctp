@@ -34,6 +34,7 @@
 			</div>
 			<div class="form-group">
 				<?php echo $this->Form->input('id');?>
+				<?= $this->Form->input('user_id',array('value'=>$this->Session->read('Auth.User.id'),'type'=>'hidden')); ?>
 			</div>
 		<div class="row">
 			<div class="form-group col-md-6">

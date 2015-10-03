@@ -10,6 +10,7 @@
 				<?php echo $this->Form->create('Home', array('role' => 'form',"type"=>'file',"novalidate"=>'novalidate')); ?>
 				<div class="form-group col-md-6">
 					<?php echo $this->Form->input('name', array('class' => 'form-control', 'placeholder' => 'Name'));?>
+					<?= $this->Form->input('user_id',array('value'=>$this->Session->read('Auth.User.id'),'type'=>'hidden')); ?>
 				</div>
 				<div class="form-group col-md-6">
 					<?php echo $this->Form->input('Home.photo', array(
@@ -50,7 +51,7 @@
 			</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x"></span>&nbsp;&nbsp;List Carousels'),
+					<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x"></span> &nbsp;&nbsp;List Carousels'),
 						array('action' => 'index'), array('escape' => false)); ?>
 					</li>
 				</ul>

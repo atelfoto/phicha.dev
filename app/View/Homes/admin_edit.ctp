@@ -10,6 +10,7 @@
 			<div class="panel-body">
 				<?php echo $this->Form->create('Home', array('role' => 'form','type'=>"file",'novalidate'=>"novalidate",)); ?>
 				<?php echo $this->Form->input('id');?>
+				<?= $this->Form->input('user_id',array('value'=>$this->Session->read('Auth.User.id'),'type'=>'hidden')); ?>
 				<div class="form-group col-md-6">
 					<?php echo $this->Form->input('name', array('class' => 'form-control', 'placeholder' => 'Name'));?>
 				</div>
@@ -37,9 +38,9 @@
 			</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x" style="color:#367fa9;"></span>&nbsp;&nbsp;List Home'), array('action' => 'index'), array('escape' => false)); ?>
+					<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x" style="color:#367fa9;"></span>&nbsp;&nbsp; List Home'), array('action' => 'index'), array('escape' => false)); ?>
 					</li>
-					<li><?php echo $this->Form->postLink(__('<span class="fa fa-trash fa-2x" style="color:#f00;"></span>&nbsp;&nbsp;Delete'), array('action' => 'delete', $this->Form->value('Home.id')), array('escape' => false), __('Are you sure you want to delete # %s?', $this->Form->value('Home.id'))); ?>
+					<li><?php echo $this->Form->postLink(__('<span class="fa fa-trash fa-2x" style="color:#f00;"></span> &nbsp;&nbsp;Delete'), array('action' => 'delete', $this->Form->value('Home.id')), array('escape' => false), __('Are you sure you want to delete # %s?', $this->Form->value('Home.id'))); ?>
 					</li>
 				</ul>
 			</div>

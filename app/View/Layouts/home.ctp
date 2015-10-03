@@ -12,12 +12,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <link rel="apple-touch-startup-image" href="#"/>
 	<?php
 		echo $this->Html->meta('icon');
+		echo $this->element('meta');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo  $this->Html->script(array("jquery-1.11.3.min"));
 		echo $this->fetch('script');
 	?>
-	<?php echo $this->element('meta'); ?>
+
 </head>
 <body id="home">
 	<div  class="wrapper">

@@ -2,12 +2,12 @@
 <?php echo $this->Html->meta(array('name' => 'robots','type'=>"meta", 'content' => 'index,follow'),NULL,array('inline'=>false)); ?>
 <?= $this->Html->css(array('home.min',"https://fonts.googleapis.com/css?family=Raleway:700 "),array('inline'=>false)); ?>
 <?php echo $this->Html->meta("description", "Passionné par la photographie dès l'age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J'ai acquis mon savoir faire dans les ", array("inline"=>false)); ?>
-<div id="Header">
 
+<?php echo $this->Html->meta(array('property' => 'og:description', 'type' => 'meta', 'content' => "Passionné par la photographie dès l'age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J'ai acquis mon savoir faire dans les "),NULL,array("inline"=>false)); ?>
+<div id="Header">
 		<div class="col-sm-5 col-md-offset-1 col-xs-12 ">
 			<h1><?php  echo "studio chardon"; ?></h1>
 		</div>
-
 	<div class="col-sm-4 col-xs-12">
 			<ul class-" ">
 			<li><a href="#" title="Twitter" class="twitterIcon"></a></li>
@@ -16,7 +16,6 @@
 			<li><a href="#" title="Pintrest" class="pintrestIcon"></a></li>
 		</ul>
 	</div>
-
 </div>
 <div class="col-lg-5 col-lg-offset-2 col-md-offset-1 col-md-7 col-sm-7"  >
 	<div id="Content" class="wrapper">

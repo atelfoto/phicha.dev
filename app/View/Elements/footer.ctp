@@ -13,10 +13,10 @@
 			</li>
 		</ul>
 	</nav>
-	<address id="hcard-studio" itemscope itemtype="http://shema.org/Person" class="vcard">
-		<small class="fn n">
+	<address id="hcard-studio" itemscope itemtype="http://shema.org/Person" class="vcard text-center">
+		<small class="fn n text-center">
 			<span itemprop="name" >Studio chardon</span>
-			<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="text-center">
 				<span itemprop="streetAddress" class="given-name street-address">1 rue Franche</span>
 				<span class="postal-code" itemprop="postalCode">52200</span>
 				<span itemprop="addressLocality" class="locality country-name">LANGRES</span>
