@@ -32,7 +32,9 @@ App::uses('AppController', 'Controller');
 class PagesController extends AppController {
 
 		public $cacheAction = array(
-		'home'=>'2 DAY');
+		'home'=>'2 DAY',
+		'customers'=>'2 DAY',
+		);
 
 public $helpers = array('GoogleMap');//a enlever une fois tester
 /**

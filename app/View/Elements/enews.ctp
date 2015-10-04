@@ -1,7 +1,7 @@
 <?php
 echo $this->Form->create("Enews", array(
 	'action'=> 'add',
-	'type' => 'post',
+	//'type' => 'post',
 	"wrapInput"=>false,
 	'inputDefaults' => array(
 		'label' => false,
@@ -10,15 +10,8 @@ echo $this->Form->create("Enews", array(
 			) ,
 		)
 	));
-	?>
-<?php
 echo $this->Form->input('mail', array("placeholder"=>"Entrez votre Email","class"=>"form-control"));
-echo $this->Form->button("Envoyer", array('type'=>"submit"
-	,"class"=>"btn btn-primary col-md-2"
-	));
-	?>
-<?php
-echo  $this->Form->end();
+echo $this->Form->button("Envoyer", array('type'=>"submit","class"=>"btn btn-primary col-md-2"));
+echo $this->Form->end();
+echo $this->element('vegas');
 ?>
-
-			<?php  echo $this->element('vegas'); ?>

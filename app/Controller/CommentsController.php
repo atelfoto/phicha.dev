@@ -18,7 +18,9 @@ class CommentsController extends AppController {
 	public $components = array(
 		//'Paginator',
 		'Flash', 'Session');
-
+		public $cacheAction = array(
+		'index'=>'2 DAY'
+		);
 /**
  * [$paginate description]
  * @var array

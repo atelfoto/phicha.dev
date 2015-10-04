@@ -89,7 +89,7 @@
 					</button>
 					<h4>
 						<i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
-						&nbsp;&nbsp;<?php echo __('Remove Post') ?>
+						&nbsp;&nbsp;<?php echo __('Remove Picture'); ?>
 					</h4>
 				</div>
 				<div class="modal-body">
