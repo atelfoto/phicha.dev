@@ -407,6 +407,9 @@ msgid "Submit"
 msgstr ""
 
 #: View/Carousels/admin_add.ctp:52
+msgid "List Carousel"
+msgstr ""
+
 #: View/Carousels/admin_edit.ctp:53
 msgid "<span class=\"fa fa-list\"></span> &nbsp;&nbsp;List Carousel"
 msgstr ""

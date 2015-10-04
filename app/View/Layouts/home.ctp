@@ -1,5 +1,5 @@
 <?php
-$cakeDescription = __d('cake_dev', 'Studio');
+$cakeDescription = __d('cake_dev', 'Studio Chardon');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -7,21 +7,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title><?php echo $cakeDescription ?>&nbsp;:&nbsp;<?php echo $this->fetch('title'); ?></title>
-<link rel="apple-touch-icon" href="#"/>
-<link rel="apple-touch-startup-image" href="#"/>
-	<?php
-		echo $this->Html->meta('icon');
-		echo $this->element('meta');
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo  $this->Html->script(array("jquery-1.11.3.min"));
-		echo $this->fetch('script');
-	?>
-
+	<title><?php echo $cakeDescription ?> <?php echo $this->fetch('title'); ?></title>
+<link rel="apple-touch-icon" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
+<link rel="apple-touch-startup-image" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
+<?php
+echo $this->Html->meta('icon');
+echo $this->element('meta');
+echo $this->fetch('meta');
+echo $this->fetch('css');
+echo  $this->Html->script(array("jquery-1.11.3.min"));
+echo $this->fetch('script');
+?>
 </head>
 <body id="home">
-	<div  class="wrapper">
+	<div  class="container">
 		<?php  echo $this->Session->flash(); ?>
 	</div>
 		<?php echo $this->fetch('content'); ?>

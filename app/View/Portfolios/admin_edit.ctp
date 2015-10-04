@@ -56,8 +56,8 @@
 							</div>
 						</div><!-- end tab-panel home-->
 						<div role="tabpanel" class="tab-pane" id="publication">
-							<?= $this->Form->input('keywords',array('label'=>__('keywords'),"class"=>"form-control","name"=>'data[Post][keywords]')); ?>
-							<?php echo  $this->Form->input("robots", array("class"=>"form-control","type"=>"select","name"=>'data[Post][robots]',
+							<?php echo $this->Form->input('keywords',array('label'=>__('keywords'),"class"=>"form-control","name"=>'data[Portfolio][keywords]')); ?>
+							<?php echo  $this->Form->input("robots", array("class"=>"form-control","type"=>"select","name"=>'data[Portfolio][robots]',
 								"options"=>array(
 									"Paramètres globaux"=>"Paramètres globaux",
 									"Index, Follow"=>"Index, Follow",
