@@ -14,8 +14,9 @@ class PortfoliosController extends AppController {
  * @var array
  */
 public $components = array('Paginator', 'Flash', 'Session');
-	// public $cacheAction = array(
-	// 	'view'=>'2 DAY');
+	public $cacheAction = array(
+		'index'=>'2 DAY',
+		'view'=>'2 DAY');
 
 	public function menu(){
 		$portfolios = $this->Portfolio->find('all',array(

@@ -28,7 +28,12 @@ App::uses('AppController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
+
 class PagesController extends AppController {
+
+		public $cacheAction = array(
+		'home'=>'2 DAY');
+
 public $helpers = array('GoogleMap');//a enlever une fois tester
 /**
  * This controller does not use a model

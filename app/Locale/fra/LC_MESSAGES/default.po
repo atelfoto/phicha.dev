@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP 2.4.4\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-10-04 00:01+0200\n"
+"PO-Revision-Date: 2015-10-04 17:07+0200\n"
 "Last-Translator: philippe wagner <atelfoto@msn.com>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -376,11 +376,11 @@ msgstr ""
 "Aucun nom de fichier après l'analyse. Fonction %s a retourné un nom de "
 "fichier non valide"
 
-#: View/Carousels/admin_add.ctp:2 View/Carousels/admin_edit.ctp:2
+#: View/Carousels/admin_add.ctp:2
 msgid "Add Carousel"
 msgstr "Ajouter un Carousel"
 
-#: View/Carousels/admin_add.ctp:21 View/Carousels/admin_edit.ctp:22
+#: View/Carousels/admin_add.ctp:21 View/Carousels/admin_edit.ctp:25
 #: View/Comments/admin_view.ctp:39 View/Comments/view.ctp:39
 #: View/Homes/admin_add.ctp:22 View/Portfolios/admin_add.ctp:34
 #: View/Portfolios/admin_edit.ctp:36 View/Portfolios/admin_view.ctp:69
@@ -389,19 +389,19 @@ msgstr "Ajouter un Carousel"
 msgid "Online"
 msgstr "En ligne"
 
-#: View/Carousels/admin_add.ctp:31 View/Carousels/admin_edit.ctp:32
+#: View/Carousels/admin_add.ctp:31 View/Carousels/admin_edit.ctp:35
 #: View/Homes/admin_add.ctp:32 View/Portfolios/admin_add.ctp:43
 #: View/Portfolios/admin_edit.ctp:45 View/Users/admin_edit.ctp:29
 msgid "En Ligne"
 msgstr "En Ligne"
 
-#: View/Carousels/admin_add.ctp:32 View/Carousels/admin_edit.ctp:33
+#: View/Carousels/admin_add.ctp:32 View/Carousels/admin_edit.ctp:36
 #: View/Homes/admin_add.ctp:33 View/Portfolios/admin_add.ctp:44
 #: View/Portfolios/admin_edit.ctp:46 View/Users/admin_edit.ctp:30
 msgid "Hors Ligne"
 msgstr "Hors Ligne"
 
-#: View/Carousels/admin_add.ctp:39 View/Carousels/admin_edit.ctp:40
+#: View/Carousels/admin_add.ctp:39 View/Carousels/admin_edit.ctp:43
 #: View/Comments/admin_add.ctp:14 View/Comments/admin_edit.ctp:15
 #: View/Comments/edit.ctp:15 View/Contacts/index.ctp:82
 #: View/Homes/admin_add.ctp:41 View/Homes/admin_edit.ctp:25
@@ -415,7 +415,11 @@ msgstr "Soumettre"
 msgid "List Carousel"
 msgstr "Liste du carrousel"
 
-#: View/Carousels/admin_edit.ctp:53
+#: View/Carousels/admin_edit.ctp:2
+msgid "Edit Carousel"
+msgstr "Modifier le  carrousel"
+
+#: View/Carousels/admin_edit.ctp:56
 msgid "<span class=\"fa fa-list\"></span> &nbsp;&nbsp;List Carousel"
 msgstr "<span class=\"fa fa-list\"></span> &nbsp;&nbsp;List Carousel"
 
@@ -450,42 +454,40 @@ msgstr "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;Ajouter une photo"
 msgid "close"
 msgstr "Fermer"
 
-#: View/Carousels/admin_index.ctp:92 View/Homes/admin_index.ctp:103
-#: View/Portfolios/admin_index.ctp:85
+#: View/Carousels/admin_index.ctp:92 View/Portfolios/admin_index.ctp:85
 msgid "Remove Post"
 msgstr "Supprimer l'article"
 
 #: View/Carousels/admin_index.ctp:97 View/Comments/admin_index.ctp:84
-#: View/Homes/admin_index.ctp:106 View/Portfolios/admin_index.ctp:88
+#: View/Homes/admin_index.ctp:103 View/Portfolios/admin_index.ctp:88
 msgid "Are you sure you want to delete"
 msgstr "Etes-vous sûr de vouloir supprimer"
 
-#: View/Carousels/admin_index.ctp:99 View/Comments/admin_index.ctp:87
-#: View/Portfolios/admin_index.ctp:92
-msgid "of your Articles"
-msgstr "de vos Articles "
+#: View/Carousels/admin_index.ctp:99
+msgid "of your Carousel"
+msgstr "de votre carousel"
 
 #: View/Carousels/admin_index.ctp:104 View/Comments/admin_index.ctp:92
-#: View/Enews/admin_index.ctp:68 View/Homes/admin_index.ctp:113
+#: View/Enews/admin_index.ctp:68 View/Homes/admin_index.ctp:110
 #: View/Portfolios/admin_index.ctp:97 View/Users/admin_index.ctp:87
 msgid "Cancel"
 msgstr "Annuler"
 
 #: View/Carousels/admin_index.ctp:106 View/Comments/admin_edit.ctp:21
 #: View/Comments/admin_index.ctp:93 View/Comments/edit.ctp:21
-#: View/Enews/admin_index.ctp:69 View/Homes/admin_index.ctp:114
+#: View/Enews/admin_index.ctp:69 View/Homes/admin_index.ctp:111
 #: View/Portfolios/admin_index.ctp:98 View/Posts/admin_edit.ctp:23
 #: View/Posts/admin_index.ctp:43 View/Users/admin_index.ctp:88
 msgid "Delete"
 msgstr "Supprimer"
 
 #: View/Carousels/admin_index.ctp:118 View/Comments/admin_index.ctp:105
-#: View/Homes/admin_index.ctp:126 View/Portfolios/admin_index.ctp:110
+#: View/Homes/admin_index.ctp:123 View/Portfolios/admin_index.ctp:110
 msgid "Help"
 msgstr "Aide"
 
 #: View/Carousels/admin_index.ctp:124 View/Comments/admin_index.ctp:111
-#: View/Homes/admin_index.ctp:132 View/Portfolios/admin_index.ctp:116
+#: View/Homes/admin_index.ctp:129 View/Portfolios/admin_index.ctp:116
 msgid "Closed"
 msgstr "Fermer"
 
@@ -566,6 +568,10 @@ msgstr "Activez ce Portfolio"
 #: View/Comments/admin_index.ctp:59
 msgid "<span class=\"fa fa-plus\"></span> &nbsp;&nbsp;New Comment"
 msgstr "<span class=\"fa fa-plus\"></span> &nbsp;&nbsp;New Comment"
+
+#: View/Comments/admin_index.ctp:87 View/Portfolios/admin_index.ctp:92
+msgid "of your Articles"
+msgstr "de vos Articles "
 
 #: View/Comments/admin_view.ctp:2 View/Comments/view.ctp:2
 msgid "Comment"
@@ -680,13 +686,9 @@ msgstr "Réinitialiser"
 msgid "studio"
 msgstr "Studio"
 
-#: View/Elements/carrousel.ctp:17
-msgid "Castle of Chazeron"
-msgstr "Château de chazeron"
-
-#: View/Elements/carrousel.ctp:25;33;41;49
-msgid "castle of Chazeron"
-msgstr "Château de chazeron"
+#: View/Elements/carrousel.ctp:17;25;33;41;49
+msgid "Studio chardon"
+msgstr ""
 
 #: View/Elements/carrousel.ctp:67
 msgid "Previous"
@@ -816,7 +818,8 @@ msgstr "<span class=\"fa fa-trash fa-2x\" ></span>"
 msgid "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;New"
 msgstr "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;Nouveau"
 
-#: View/Enews/admin_index.ctp:58 View/Portfolios/admin_index.ctp:82
+#: View/Enews/admin_index.ctp:58 View/Homes/admin_index.ctp:98
+#: View/Portfolios/admin_index.ctp:82
 msgid " close"
 msgstr "Fermer"
 
@@ -885,9 +888,13 @@ msgstr "Modifier la photo"
 msgid "delete this picture"
 msgstr "supprimer l' image"
 
-#: View/Homes/admin_index.ctp:101
-msgid " Press Esc to close"
-msgstr "Appuyez sur ÉCHAP pour fermer"
+#: View/Homes/admin_index.ctp:100
+msgid "Remove this picture"
+msgstr "Supprimer cette  photo"
+
+#: View/Homes/admin_index.ctp:106
+msgid "to your background"
+msgstr "de votre arrière-plan"
 
 #: View/Layouts/admin.ctp:154
 msgid "Member since"
@@ -965,7 +972,7 @@ msgstr "Nettoyer le cache"
 msgid "home"
 msgstr "Accueil"
 
-#: View/Layouts/default.ctp:128
+#: View/Layouts/default.ctp:113
 msgid "<i class=\"glyphicon glyphicon-home\"></i>"
 msgstr "<i class=\"glyphicon glyphicon-home\"></i>"
 
@@ -1428,6 +1435,15 @@ msgstr "Ce mot de passe n'est pas identique"
 #: Model/User.php:validation for field avatarf
 msgid "You must send a jpg"
 msgstr "vous devez envoyer des jpg"
+
+#~ msgid "Castle of Chazeron"
+#~ msgstr "Château de chazeron"
+
+#~ msgid "castle of Chazeron"
+#~ msgstr "Château de chazeron"
+
+#~ msgid " Press Esc to close"
+#~ msgstr "Appuyez sur ÉCHAP pour fermer"
 
 #~ msgid "Edit Portfolio"
 #~ msgstr "Modifier"
@@ -2146,9 +2162,6 @@ msgstr "vous devez envoyer des jpg"
 #~ msgid "<span class=\"label label-success\">Enabled</span>"
 #~ msgstr "<span class=\"label label-success\">Activé</span>"
 
-#~ msgid "of your users"
-#~ msgstr "vos utilisateurs"
-
 #~ msgid "links"
 #~ msgstr "Liens"
 
@@ -2206,9 +2219,6 @@ msgstr "vous devez envoyer des jpg"
 
 #~ msgid "delete"
 #~ msgstr "Effacer"
-
-#~ msgid "Remove picture"
-#~ msgstr "Supprimer photo"
 
 #~ msgid ""
 #~ "<i class=\"glyphicon glyphicon-pencil\"  style=\"color:#00f;\"></i> Editer"

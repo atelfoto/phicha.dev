@@ -13,19 +13,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: View/Elements/meta.ctp:2
+#: View/Layouts/default.ctp:2
+msgid "studio chardon"
+msgstr ""
+
 #: View/Layouts/admin.ctp:2
 msgid "studio"
 msgstr ""
 
 #: View/Layouts/admin.ctp:3
-#: View/Layouts/default.ctp:18
+#: View/Layouts/default.ctp:3
 #: View/Layouts/home.ctp:3
 #: View/Layouts/member.ctp:3
 msgid "CakePHP %s"
-msgstr ""
-
-#: View/Layouts/default.ctp:17
-msgid "studio chardon"
 msgstr ""
 
 #: View/Layouts/error.ctp:17
@@ -33,7 +34,7 @@ msgid "CakePHP: the rapid development php framework"
 msgstr ""
 
 #: View/Layouts/home.ctp:2
-msgid "Studio"
+msgid "Studio Chardon"
 msgstr ""
 
 #: View/Layouts/member.ctp:2
