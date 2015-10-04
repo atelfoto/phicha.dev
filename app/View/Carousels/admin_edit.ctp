@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><?php echo __('Add Carousel'); ?></h1>
+	<h1><?php echo __('Edit Carousel'); ?></h1>
 </div>
 <div class="col-md-7 col-md-offset-1">
 	<div class="panel panel-info  box-home">
@@ -15,7 +15,10 @@
 			</div>
 			<div class="col-md-6">
 					<?php echo $this->Form->input('Carousel.photo', array(
-					'type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true'));  ?>
+					'type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true'));
+								echo  $this->Form->hidden("Carousel.photo_dir");
+								//echo $this->Form->input('photo_dir', array('type' => 'hidden'));
+					  ?>
 			</div>
 			<div class="form-group pull-left active col-md-12" style="margin-bottom:0px;margin-top:25px;">
 						<?php echo $this->Form->input('online',array(
@@ -34,7 +37,7 @@
 						  'div'=>array('class'=>'text-right '),
 						 ));
 						  ?>
-				<?php echo  $this->Form->hidden("Carousel.photo_dir"); ?>
+				<?php // echo  $this->Form->hidden("Carousel.photo_dir"); ?>
 			</div>
 			<div class="form-group text-right col-md-12">
 				<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-primary')); ?>

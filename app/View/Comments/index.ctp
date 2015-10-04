@@ -50,9 +50,8 @@
 				<div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-0 hidden-xs ">
 					<div class="box-home">
 						<figure class="thumbnail ">
-						<?php echo  $this->Html->image("http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg",array('alt'=>'avatar',"class"=>"img-responsive")); ?>
+						<?php echo  $this->Html->image('http://2.gravatar.com/avatar/bb635f3898368fa2aab6af5b91fb3c04?s=148&amp;d=mm&amp;r=g',array('alt'=>'avatar',"class"=>"img-responsive")); ?>
 						<?php // echo  $this->Html->image("http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg",array('alt'=>'avatar',"class"=>"img-responsive")); ?>
-						<?php // echo  $this->Html->image('default-avatar.jpg',array('alt'=>'avatar',"class"=>"img-responsive")); ?>
 							<figcaption class="text-center"> <?php echo  h($comment['Comment']['name']); ?></figcaption>
 						</figure>
 					</div>

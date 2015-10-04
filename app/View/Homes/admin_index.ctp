@@ -89,24 +89,21 @@
 			<?php echo $this->element('pagination'); ?>
 		</p>
 	</div>
-</div>
-<!-- end containing of content -->
-
-<!-- modal supprimer -->
-<?php foreach ($homes as $k => $v): $v = current($v);?>
+</div><!-- end containing of content -->
+<?php foreach ($homes as $k => $v): $v = current($v);?><!-- modal supprimer -->
 <div class="modal fade" id="Modal<?= $v['id']; ?>">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo __(' Press Esc to close'); ?>">&times;</button>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php echo __(' close'); ?>">&times;</button>
 				<h4><i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
-				&nbsp;&nbsp;<?php echo __('Remove Post') ?></h4>
+				&nbsp;&nbsp;<?php echo __('Remove this picture') ?></h4>
 			</div>
 			<div class="modal-body">
 				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
 					<b style="color:#f00;">
 					<?php echo  $v['name'] ?></b>
-					<span class="label-uname strong"></span> ?
+					<span class="label-uname strong"></span><?php echo __('to your background') ?> ?
 				</p>
 			</div>
 			<div class="modal-footer">

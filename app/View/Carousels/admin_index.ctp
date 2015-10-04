@@ -96,7 +96,7 @@
 					<p>
 						<?php echo __('Are you sure you want to delete'); ?>&nbsp;
 						<b style="color:#f00;"><?php echo  $v['name'] ?></b>&nbsp;
-						<?php echo __('of your Articles') ?>
+						<?php echo __('of your Carousel') ?>
 						<span class="label-uname strong"></span> ?
 					</p>
 				</div>

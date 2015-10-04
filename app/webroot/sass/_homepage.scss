@@ -160,10 +160,17 @@ clear: both;
 footer{
 width:100%;
 height:30px;
+font-family: "Lora",serif !important;
 background:rgba(0, 0, 0, 0.64);
 position:absolute;
 bottom:0px;
 text-align:center;
+p{
+	font-family: "Lora",serif !important;
+	font-size: 1em;
+	font-weight: 400;
+	font-style: italic;
+}
 }
 
 @media(min-width:1200px){
@@ -178,9 +185,10 @@ text-align:center;
 		position: relative;
 		// min-height: 100%;
 	}
-	// footer{
-	// 	position:relative !important;
-	// }
+	 footer{
+	 	font-family: "Lora",serif;
+	 //	position:relative !important;
+	 }
 }
 
 

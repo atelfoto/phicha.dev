@@ -2,13 +2,11 @@
 $( function() {
 	    $('#home').vegas({
         	slides: [
-				{ src: 'img/images/background1.jpg' }	,
-				{ src: 'img/images/background3.jpg' },
-				{ src: 'img/images/background2.jpg' },
-				{ src: 'img/images/background1.jpg' },
-				{ src: 'img/images/background4.jpg' },
-				{ src: 'files/home/photo/2/xvga_20150706_194107.jpg' },
-				{ src: 'files/home/photo/3/xvga_20150712_095114.jpg' }
+				{ src: 'files/home/photo/1/xvga_01.jpg' },
+				{ src: 'files/home/photo/2/xvga_02.jpg' },
+				{ src: 'files/home/photo/3/xvga_03.jpg' },
+				{ src: 'files/home/photo/4/xvga_04.jpg' },
+				{ src: 'files/home/photo/5/xvga_05.jpg' }
         	]
     });
      });
