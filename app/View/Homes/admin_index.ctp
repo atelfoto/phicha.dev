@@ -12,22 +12,17 @@
 				<thead style="">
 					<tr class="info">
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
-						<th><?php echo '#'; ?></th>
 						<th><?php echo $this->Paginator->sort('name'); ?></th>
 						<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('created'); ?></th>
 						<th><?php echo $this->Paginator->sort('modified'); ?></th>
 						<th><?php echo $this->Paginator->sort('online'); ?></th>
-						<th class="actions"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php foreach ($homes as $home): ?>
 						<tr>
 							<td><?php echo h($home['Home']['id']); ?>&nbsp;</td>
-							<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/home/photo/' . $home['Home']['photo_dir'] . '/' . 'thumb_' .$home['Home']['photo'],
-								array("url"=> array("controller"=>'homes','action'=>'view',"slug"=>$home['Home']['slug'],"admin"=>false ))); ?>
-							</td>
 							<td><?php echo h($home['Home']['name']); ?>&nbsp;</td>
 							<td>
 								<?php echo $this->Html->link($home['User']['name'], array(
@@ -39,32 +34,14 @@
 								<?php if($home['Home'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
 									array('action'=>'enable', $home['Home']['id']),
 									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
-										"title"=>__('Enable this picture'),'escape'=>false));
+										"title"=>__('Enable this page'),'escape'=>false));
 									}else{
 									echo $this->Html->link(__('<span class="label label-success">In line</span>'),
 									array('action'=>'disable', $home['Home']['id']),
 									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
-										"title"=>__('Disable this picture'),'escape'=>false));
+										"title"=>__('Disable this page'),'escape'=>false));
 									}
 								?>
-							</td>
-							<td class="actions">
-								<?php echo $this->Html->link('<span class="fa fa-edit fa-2x" "></span>',
-									array('action' => 'edit', $home['Home']['id']),
-									array('class' => 'btn btn-default btn-sm',"data-toggle"=>"tooltip","data-placement"=>"bottom",
-									"title"=>__('edit this picture'),'escape' => false)); ?>
-								<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$home['Home']['id'],
-									array(
-										'class' => 'btn btn-default btn-remove-modal btn-sm',
-										"title"=>__('delete this picture'),
-										'escape' =>false,
-										'data-toggle' => 'modal',
-										'data-toggle-2'=>'tooltip',
-										"data-placement"=>"bottom",
-										"title"=>__('edit this picture'),
-										'role'  => 'button',
-										'data-uid' => $home['Home']['id']
-										)); ?>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -77,7 +54,26 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New picture'), array('action' => 'add'), array('escape' => false)); ?>
+					<li>
+						<?php echo $this->Html->link('<span class="fa fa-edit fa-2x"></span>'.__("edit this homepage"),
+									array('action' => 'edit', $home['Home']['id']),
+									array("data-toggle"=>"tooltip","data-placement"=>"bottom",
+									"title"=>__('edit the homepage'),'escape' => false));
+						?>
+					</li>
+					<li>
+						<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>'. __("delete"),'#Modal'.$home['Home']['id'],
+									array(
+										'class' => 'btn-remove-modal btn-sm',
+										"title"=>__('delete this picture'),
+										'escape' =>false,
+										'data-toggle' => 'modal',
+										'data-toggle-2'=>'tooltip',
+										"data-placement"=>"bottom",
+										"title"=>__('edit this picture'),
+										'role'  => 'button',
+										'data-uid' => $home['Home']['id']
+						)); ?>
 					</li>
 				</ul>
 			</div><!-- end body -->

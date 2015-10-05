@@ -24,14 +24,7 @@ class CarouselsController extends AppController {
  *
  * @return void
  */
-	// public function index() {
-	// 	$this->Carousel->recursive = 0;
-	// 	$this->set('carousels', $this->Paginator->paginate());
-	// }
 public function index(){
-		// $this->Carousel->recursive = 0;
-		// $this->set('carousels', $this->Paginator->paginate());
-
 		$pages = $this->Carousel->find('all'
 			 ,array(
 			 'conditions'=>array('type'=>'image/jpeg','online'=>1),

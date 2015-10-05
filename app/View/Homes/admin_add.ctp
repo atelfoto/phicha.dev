@@ -12,31 +12,9 @@
 					<?php echo $this->Form->input('name', array('class' => 'form-control', 'placeholder' => 'Name'));?>
 					<?= $this->Form->input('user_id',array('value'=>$this->Session->read('Auth.User.id'),'type'=>'hidden')); ?>
 				</div>
-				<div class="form-group col-md-6">
-					<?php echo $this->Form->input('Home.photo', array(
-						'type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false',
-						 'data-show-caption' => 'true'));  ?>
+				<div class="form-group text-right col-md-12">
+					<?php echo $this->Form->input('content', array('label'=>'Contenu',"type"=>"textarea" ,"class"=>"textarea1")); ?>
 				</div>
-				<div class="form-group pull-left active col-md-12">
-					<?php echo $this->Form->input('online',array(
-						'label'=>__('Online'),
-						'required'=>false,
-						'type'=>'checkbox',
-						//'hiddenField' => false,
-						'name'=>'data[Home][online]',
-						'data-toggle'=>"toggle",
-						"data-onstyle"=>"success",
-						"data-offstyle"=>"danger",
-						'data-style'=>"ios",
-						'data-size'=>"mini",
-						"data-on"=>__('En Ligne'),
-						"data-off"=>__('Hors Ligne'),
-						'div'=>array('class'=>'text-right '),
-						));
-						?>
-				</div>
-				<?php echo  $this->Form->hidden("Home.photo_dir"); ?>
-
 				<div class="form-group text-right col-md-12">
 					<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-primary')); ?>
 				</div>
@@ -58,4 +36,25 @@
 			</div>
 		</div>
 	</div><!-- end col md 3 -->
-	<?php  echo  $this->Html->script(array('bootstrap-toggle.min','fileinput.min','fileinput_locale_fr'	),array('inline'=>false)); ?>
+	<?php  echo  $this->Html->script(array('tinymce/tinymce.min'),array('inline'=>false)); ?>
+<?=  $this->Html->scriptStart(array('inline'=>false)); ?>
+//pour le textarea
+tinyMCE.init({
+    selector: ".textarea1",
+    mode:"exact",
+	entity_encoding : "raw",
+	encoding: "UTF-8",
+    theme: "modern",
+	language :"fr_FR",
+    resize: "both",
+    	plugins: [
+        "wordcount visualblocks visualchars  fullscreen",
+        "insertdatetime media nonbreaking save table contextmenu directionality",
+        "template paste textcolor emmet visualblocks  code fullscreen "
+    ],
+
+
+
+});
+
+<?= $this->Html->scriptEnd(); ?>

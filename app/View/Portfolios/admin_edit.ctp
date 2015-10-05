@@ -21,12 +21,12 @@
 								<?php echo $this->Form->input('slug', array('class' => 'form-control','label'=>'Url', 'placeholder' => 'url'));?>
 								<?= $this->Form->input('user_id',array('value'=>$this->Session->read('Auth.User.id'),'type'=>'hidden')); ?>
 							</div>
-						</div>
+						</div> <!-- /row -->
 						<div class="row">
 							<div class="col-md-6">
 								<?php echo $this->Form->input('Portfolio.photo', array('type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true'));  ?>
 								<?php echo $this->Form->input('photographer', array('class' => 'form-control', "label"=> __('photographer'), 'placeholder' => __('photographe')));?>
-							</div>
+							</div> <!-- /col-md-6 -->
 							<div class="col-md-6">
 								<div class="form-group">
 									<?php echo  $this->Form->input("subtitle", array("class"=>"form-control",'label'=> __('subtitle'),"placeholder"=>__('subtitle'))); ?>
@@ -47,17 +47,17 @@
 										'div'=>array('class'=>'text-right '),
 										));
 										?>
-									</div>
-									<?php echo  $this->Form->hidden("Portfolio.photo_dir"); ?>
 								</div>
-							</div>
-							<div class="form-group ">
-								<?php echo $this->Form->input('content', array('class' => 'form-control', 'placeholder' => 'Content'));?>
-							</div>
-						</div><!-- end tab-panel home-->
-						<div role="tabpanel" class="tab-pane" id="publication">
-							<?php echo $this->Form->input('keywords',array('label'=>__('keywords'),"class"=>"form-control","name"=>'data[Portfolio][keywords]')); ?>
-							<?php echo  $this->Form->input("robots", array("class"=>"form-control","type"=>"select","name"=>'data[Portfolio][robots]',
+								<?php echo  $this->Form->hidden("Portfolio.photo_dir"); ?>
+							</div> <!-- /col-md-6 -->
+						</div> <!-- /row -->
+						<div class="form-group ">
+							<?php echo $this->Form->input('content', array('class' => 'form-control', 'placeholder' => 'Content'));?>
+						</div>
+					</div><!-- end tab-panel contenu-->
+					<div role="tabpanel" class="tab-pane" id="publication">
+						<?php echo $this->Form->input('keywords',array('label'=>__('keywords'),"class"=>"form-control","name"=>'data[Portfolio][keywords]')); ?>
+						<?php echo  $this->Form->input("robots", array("class"=>"form-control","type"=>"select","name"=>'data[Portfolio][robots]',
 								"options"=>array(
 									"Paramètres globaux"=>"Paramètres globaux",
 									"Index, Follow"=>"Index, Follow",
@@ -65,17 +65,17 @@
 									"Index, Nofollow"=>"Index, Nofollow",
 									"No index, no follow"=>"No index, no follow",
 									))); ?>
-							<div class="form-group ">
-								<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea', "class"=>"form-control")); ?>
-							</div>
+						<div class="form-group ">
+							<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea', "class"=>"form-control")); ?>
 						</div>
+					</div> <!-- /publication -->
 				</div> <!-- end tab-content -->
 				<div class="form-group pull-right">
 					<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-primary')); ?>
 				</div>
 				<?php echo $this->Form->end() ?>
-			</div>
-		</div>
+			</div> <!-- /panel-body -->
+		</div> <!-- /panel -->
 	</div><!-- end col md 9 -->
 	<div class="col-md-3">
 		<div class="panel panel-info box-home">

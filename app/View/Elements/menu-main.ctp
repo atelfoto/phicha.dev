@@ -1,5 +1,5 @@
-<li <?php if ($this->request->controller =='pages' && $this->request->action =='home' ):?> class="active"<?php endif; ?> >
-	<?= $this->Html->link(__('<span class="visible-xs-inline-block glyphicon glyphicon-home ">&nbsp;</span>Accueil',true),array('controller'=>'pages','action'=>'home'),array('escape'=>false)); ?>
+<li <?php if ($this->request->controller =='homes' && $this->request->action =='index' ):?> class="active"<?php endif; ?> >
+	<?= $this->Html->link(__('<span class="visible-xs-inline-block glyphicon glyphicon-home ">&nbsp;</span>Accueil',true),array('controller'=>'homes','action'=>'index'),array('escape'=>false)); ?>
 </li>
 <li <?php if ($this->request->controller =='portfolios'):?> class="active"<?php endif; ?>>
 	<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-picture'>&nbsp;</span>portfolio") ,array('controller'=>'portfolios','action'=>'index','admin'=>false),array('escape'=>false)); ?>
