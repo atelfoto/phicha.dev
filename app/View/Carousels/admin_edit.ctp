@@ -14,9 +14,9 @@
 					<?php echo $this->Form->input('name', array('class' => 'form-control', 'placeholder' => 'Name'));?>
 			</div>
 			<div class="col-md-6">
-					<?php echo $this->Form->input('Carousel.photo', array(
+					<?php echo $this->Form->input('photo', array(
 					'type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true'));
-								echo  $this->Form->hidden("Carousel.photo_dir");
+							//	echo  $this->Form->hidden("photo_dir");
 								//echo $this->Form->input('photo_dir', array('type' => 'hidden'));
 					  ?>
 			</div>

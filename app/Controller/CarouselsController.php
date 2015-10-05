@@ -17,14 +17,28 @@ class CarouselsController extends AppController {
  */
 	public $components = array('Paginator', 'Flash', 'Session');
 
+
+
 /**
  * index method
  *
  * @return void
  */
-	public function index() {
-		$this->Carousel->recursive = 0;
-		$this->set('carousels', $this->Paginator->paginate());
+	// public function index() {
+	// 	$this->Carousel->recursive = 0;
+	// 	$this->set('carousels', $this->Paginator->paginate());
+	// }
+public function index(){
+		// $this->Carousel->recursive = 0;
+		// $this->set('carousels', $this->Paginator->paginate());
+
+		$pages = $this->Carousel->find('all'
+			 ,array(
+			 'conditions'=>array('type'=>'image/jpeg','online'=>1),
+			 'fields'    =>array('name','photo','photo_dir','class')
+			 )
+			);
+		return $pages;
 	}
 
 /**
@@ -104,6 +118,14 @@ class CarouselsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Carousel->save($this->request->data)) {
+				Cache::clear();
+				foreach(glob(CACHE.'models'.DS.'*') as $file){
+        	unlink($file);
+        }
+        foreach(glob(CACHE.'views'.DS.'*.php') as $file){
+        	unlink($file);
+        }
+
 				$this->Session->setFlash(__('The carousel has been saved.'), 'notif', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
