@@ -147,7 +147,29 @@ h1{
 	padding-right:0;
 	margin-top:20px
 }
+/**
+ * pour la balise p du comptage de lcaractere
+ */
+// form {
+//   //text-align:center;
+//   margin-top:80px;
+//   margin-left:auto;
+//   margin-right:auto;
+//   width:890px;
+// }
 
+#compteur {
+  text-align:right;
+  //width:855px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:15px;
+  font:12px Verdana;
+}
+
+.mauvais {
+  color:#cc0000;
+}
 /**
  * couleur des formulaire
  */
@@ -162,7 +184,7 @@ span.fa.fa-trash{
 span.fa.fa-edit{
 	color:#00f;
 }
-
+// boite model supprimer
  div > div > div.modal-header.panel-danger{
 	background: #595959;
 background: -moz-linear-gradient(top,  #595959 0%, #252729 0%, #252729 49%, #111111 51%, #2b2b2b 76%, #1c1c1c 90%, #38393b 100%);

@@ -31,7 +31,8 @@
 									"No index, no follow"=>"No index, no follow",
 									))); ?>
 						<div class="form-group ">
-							<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea', "class"=>"form-control")); ?>
+							<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea',"id"=>"metadescription", "class"=>"form-control")); ?>
+							<p id="compteur" class="text-right"><i>0 mots - 0 Caractere / 250</i></p>
 						</div>
 					</div> <!-- /publication -->
 				</div> <!-- tab-content -->
@@ -83,9 +84,23 @@ tinyMCE.init({
         "insertdatetime media nonbreaking save table contextmenu directionality",
         "template paste textcolor emmet visualblocks  code fullscreen "
     ],
+});
+$(document).ready(function(e) {
 
+  $('#metadescription').keyup(function() {
 
+    var nombreCaractere = $(this).val().length;
+
+    var nombreMots = jQuery.trim($(this).val()).split(' ').length;
+    if($(this).val() === '') {
+     	nombreMots = 0;
+    }
+
+    var msg = ' ' + nombreMots + ' mot(s) | ' + nombreCaractere + ' Caractere(s) / 160';
+    $('#compteur').text(msg);
+    if (nombreCaractere > 160) { $('#compteur').addClass("mauvais"); } else { $('#compteur').removeClass("mauvais"); }
+
+  })
 
 });
-
 <?= $this->Html->scriptEnd(); ?>
