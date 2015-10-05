@@ -35,7 +35,6 @@
 							?>
 						</td>
 						<td class="actions">
-							<?php // echo $this->Html->link('<span class="fa fa-edit fa-2x" ></span>', array('action' => 'edit', $comment['Comment']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
 							<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$comment['Comment']['id'],
               				array(
               				  'class' => 'btn btn-default btn-remove-modal btn-sm',
@@ -43,7 +42,8 @@
               				  'data-toggle' => 'modal',
               				  'role'  => 'button',
               				  'data-uid' => $comment['Comment']['id']
-              				  )); ?>
+              				  ));
+              ?>
 						</td>
 					</tr>
 					<?php endforeach; ?>
@@ -56,8 +56,8 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<!-- <li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span> &nbsp;&nbsp;New Comment'), array('action' => 'add'), array('escape' => false)); ?>
-					</li> -->
+					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>'.__("edit this visitors book")), array('action' => 'add'), array('escape' => false)); ?>
+					</li>
 				</ul>
 			</div><!-- end body -->
 		</div><!-- end panel -->

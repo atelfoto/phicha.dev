@@ -205,9 +205,6 @@ array('class'=>'img-circle center-block','alt'=>'User Image','title'=>'avatar'))
 <li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
 <?= $this->Html->link(__("homes manager") , array('controller' => 'homes', 'action' => 'index')); ?>
 </li>
-<li <?php if ($this->request->controller =='homes' && $this->request->action =='admin_add'):?> class="active"<?php  endif; ?>>
-<?= $this->Html->link(__("Add new image"), array('controller' => 'homes', 'action' => 'add')); ?>
-</li>
 </ul>
 </li>
 <li class="treeview <?php if ($this->request->controller =='comments'):?>active<?php endif; ?>">
