@@ -7,9 +7,9 @@ $this->Html->addCrumb(__('sitemap'),array('controller'=>"pages","action"=>"sitem
 <div class="row">
 	<div class="col-md-10 col-md-offset-1 text-capitalize">
 		<div class="row ">
-			<div class="col-md-5 col-md-offset-1" class="text-center">
-			<h3></h3>
-				<ol>
+			<div class="col-md-3 col-md-offset-2" class="">
+				<h3>&nbsp;</h3>
+				<ol class="sitemap">
 					<li> <?php echo $this->Html->link(__("home"), array('controller' => 'homes', 'action' => 'index')); ?></li>
 					<li> <?php echo $this->Html->link("galerie photos", array('controller' => 'portfolios', 'action' => 'index')); ?>
 						<ol>
@@ -43,8 +43,8 @@ $this->Html->addCrumb(__('sitemap'),array('controller'=>"pages","action"=>"sitem
 				</figure>
 			</div>
 			<div class="col-md-5 col-md-offset-1">
-				<h3></h3>
-				<ol>
+				<h3>&nbsp;</h3>
+				<ol class="sitemap">
 					<li> <?php echo $this->Html->link(__('Legal Information'), array('controller' => 'pages', 'action' => 'legalinformations')); ?></li>
 					<li> <?php echo $this->Html->link("plan du site", array('controller' => 'pages', 'action' => 'sitemap')); ?></li>
 				</ol>

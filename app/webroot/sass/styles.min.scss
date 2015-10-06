@@ -230,6 +230,16 @@ address {
 	}
 }
 }
+/**
+ * sitemap
+ */
+ol.sitemap li{
+	padding-bottom: 10px !important;
+	ol > li:nth-child(1){
+		padding-top: 10px;
+	}
+}
+
 @media(min-width:767px) {
 
 	.navbar {
