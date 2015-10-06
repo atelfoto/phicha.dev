@@ -11,7 +11,7 @@ class PortfoliosController extends AppController {
 /**
  * Components
  *
- * @var array
+ * @var
  */
 public $components = array('Paginator', 'Flash', 'Session');
 	public $cacheAction = array(

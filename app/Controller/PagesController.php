@@ -31,59 +31,74 @@ App::uses('AppController', 'Controller');
 
 class PagesController extends AppController {
 
-		public $cacheAction = array(
+/**
+ * [$cacheAction description]
+ * @var array
+ */
+	public $cacheAction = array(
 		'home'=>'2 DAY',
 		'customers'=>'2 DAY',
 		);
 
-	// public function display() {
-	// 	$path = func_get_args();
-
-	// 	$count = count($path);
-	// 	if (!$count) {
-	// 		return $this->redirect('/');
-	// 	}
-	// 	$page = $subpage = $title_for_layout = null;
-
-	// 	if (!empty($path[0])) {
-	// 		$page = $path[0];
-	// 	}
-	// 	if (!empty($path[1])) {
-	// 		$subpage = $path[1];
-	// 	}
-	// 	if (!empty($path[$count - 1])) {
-	// 		$title_for_layout = Inflector::humanize($path[$count - 1]);
-	// 	}
-	// 	$this->set(compact('page', 'subpage', 'title_for_layout'));
-
-	// 	try {
-	// 		$this->render(implode('/', $path));
-	// 	} catch (MissingViewException $e) {
-	// 		if (Configure::read('debug')) {
-	// 			throw $e;
-	// 		}
-	// 		throw new NotFoundException();
-	// 	}
-	// }
-public $helpers = array('GoogleMap');//a enlever une fois tester
 /**
- * This controller does not use a model
- *
+ * [$components description]
  * @var array
  */
-	// public $uses = array();
-public $uses= array('User','Comment','Carousel','Enews','Portfolio');
+	public $components = array("RequestHandler");
 
 
+/**
+ * [$uses description]
+ * @var array
+ */
+	public $uses= array('User','Comment','Carousel','Enews','Portfolio');
+
+/**
+ * [home description]
+ * @return [type] [description]
+ */
 	public function home()	{
 		$this->layout= 'home';
 
 	}
-
+/**
+ * [customers description]
+ * @return [type] [description]
+ */
 	public function customers(){
 
 	}
+	/**
+ * [legalinformations description]
+ * @return [type] [description]
+ */
+	public function legalinformations()	{
 
+	}
+/**
+ * [sitemap description]
+ * @return [type] [description]
+ */
+	public	function sitemap(){
+			$this->loadModel('Portfolio');
+			$portfolios = $this->Portfolio->find('all', array(
+		//		'order' => array('created ASC'),
+				"conditions"=>array(
+					'online'=>1)
+			));
+			$this->set(compact('portfolios'));
+		}
+/**
+ * [sitemapxml description]
+ * @return [type] [description]
+ */
+public function sitemapxml(){
+    $this->layout='ajax';
+    $this->loadModel('Portfolio');
+    $this->RequestHandler->respondAs('xml');
+    $listPortfolios = $this->Portfolio->find('all',array('conditions'=>array('online'=>1),'order'=> array('Portfolio.modified'=>'Desc')));
+    $this->set(compact('listPortfolios'));
+}
 	public function admin_dashboard(){
 		$this->layout='admin';
 		$this->set('users_count', $this->User->find('count'));
@@ -107,26 +122,8 @@ public $uses= array('User','Comment','Carousel','Enews','Portfolio');
 	}
 
 
-	function admin_index(){
+public	function admin_index(){
 
-
-	}
-	public function map()
-	{
-
-	}
-/**
- * [legalinformations description]
- * @return [type] [description]
- */
-	public function legalinformations()	{
-
-	}
-/**
- * [sitemap description]
- * @return [type] [description]
- */
-	public function sitemap(){
 
 	}
 

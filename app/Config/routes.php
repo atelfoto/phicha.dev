@@ -24,6 +24,7 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
+Router::parseExtensions('rss',"html");
 	//Router::connect('/', array('controller' => 'pages', 'action' =>  'home'));
 	Router::connect('/', array('controller' => 'homes', 'action' =>  'index'));
 /**
@@ -37,7 +38,8 @@
 	Router::connect('/map', array('controller' => 'contacts', 'pages' => 'map'));
 	Router::connect("/livre-d-or", array('controller' => 'comments', 'action' => 'index'));
 	Router::connect("/legalinformations", array('controller' => 'pages', 'action' => 'legalinformations'));
-	Router::connect("sitemap", array("plugin"=>"sitemaps",'controller' => 'sitemaps', 'action' => 'index'));
+	Router::connect("/sitemap", array('controller' => 'pages', 'action' => 'sitemap'));
+	Router::connect('/sitemap.xml', array('controller' => 'pages', 'action' => 'sitemapxml','ext'=>"xml"));
 	// Router::connect("/livre-d-or/**", array('controller' => 'comments', 'action' => 'index'));
 /**
  *array('plugin' => 'todo', 'controller' => 'todo_items', 'action' => 'create')
