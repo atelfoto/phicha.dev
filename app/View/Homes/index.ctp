@@ -1,16 +1,18 @@
 <?php  echo  $this->set('title_for_layout',__("Accueil")); ?>
-<?php echo $this->Html->meta(array('name' => 'robots','type'=>"meta", 'content' => 'index,follow'),NULL,array('inline'=>false)); ?>
-<?php echo $this->Html->meta(array('name' => 'keywords', 'content' => ''));?>
-<?php echo $this->Html->meta("description", "Passionné par la photographie dès l'age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J'ai acquis mon savoir faire dans les ", array("inline"=>false)); ?>
-<?php echo $this->Html->meta(array('property' => 'og:description', 'type' => 'meta', 'content' => "Passionné par la photographie dès l'age de 15 ans, Je me suis installé à Paris comme photographe indépendant en 1987, J'ai acquis mon savoir faire dans les "),NULL,array("inline"=>false)); ?>
+<?php foreach ($homes as $home): ?>
+<?php  echo $this->Html->meta(array('name' => 'keywords','type' => 'meta',  'content' => $home["Home"]['keywords']),NULL,array("inline"=>false));?>
+<?php echo $this->Html->meta("description", $home["Home"]['description'], array("inline"=>false)); ?>
+<?php echo $this->Html->meta(array('property' => 'og:description', 'type' => 'meta', 'content' => $home["Home"]['description']),NULL,array("inline"=>false));
+echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['robots']),NULL,array("inline"=>false));
+?>
+<?php endforeach; ?>
 <?= $this->Html->css(array('home.min'),array('inline'=>false)); ?>
 <div id="Header">
 	<div class="col-sm-5 col-md-offset-1 col-xs-12 ">
 	<?php foreach ($homes as $home): ?>
-	<h1><?php // echo "studio chardon"; ?><?php echo h($home['Home']['name']); ?></h1>
+	<h1><?php echo h($home['Home']['name']); ?></h1>
 	<?php endforeach; ?>
-
-	</div>
+</div>
 	<div class="col-sm-4 col-xs-12">
 		<ul>
 			<li><a href="#" title="Twitter" class="twitterIcon"></a></li>
@@ -45,7 +47,6 @@
 	</div>
 </div>
 	<?php  echo $this->element('sidebar'); ?>
-
 <?php echo $this->Html->script(array("vegas.min"),array('inline'=>false)); ?>
 <?php  echo $this->element('vegas'); ?>
 

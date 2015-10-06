@@ -25,7 +25,7 @@
 					<?php foreach ($wallpapers as $wallpaper): ?>
 						<tr>
 							<td><?php echo h($wallpaper['Wallpaper']['id']); ?>&nbsp;</td>
-							<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/Wallpaper/photo/' . $wallpaper['Wallpaper']['photo_dir'] . '/' . 'thumb_' .$wallpaper['Wallpaper']['photo'],
+							<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/Wallpaper/photo/'.$wallpaper['Wallpaper']['photo_dir'].'/'.'thumb_'.$wallpaper['Wallpaper']['photo'],
 								array("url"=> array("controller"=>'homes','action'=>'view',"slug"=>$wallpaper['Wallpaper']['slug'],"admin"=>false ))); ?>
 							</td>
 							<td><?php echo h($wallpaper['Wallpaper']['name']); ?>&nbsp;</td>
