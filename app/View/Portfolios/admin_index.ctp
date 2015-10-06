@@ -64,7 +64,7 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New Portfolio'), array('action' => 'add'), array('escape' => false)); ?>
+					<li><?php echo $this->Html->link("<span class='fa fa-plus'> ".__("Add portfolio"), array('action' => 'add'), array('escape' => false)); ?>
 					</li>
 				</ul>
 			</div><!-- end body -->

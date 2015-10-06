@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><?php echo __('Add Portfolio'); ?></h1>
+	<h1><?php echo __('Edit')." ". __('Portfolio'); ?></h1>
 </div>
 <div class="row">
 	<div class="col-md-9">

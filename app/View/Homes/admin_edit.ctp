@@ -1,5 +1,5 @@
 	<div class="page-header">
-		<h1><?php echo __('edit home'); ?></h1>
+		<h1><?php echo __('Edit')." ".("homepage"); ?></h1>
 	</div>
 <div class="row">
 	<div class="col-md-9">
@@ -31,7 +31,7 @@
 									"No index, no follow"=>"No index, no follow",
 									))); ?>
 						<div class="form-group ">
-							<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea',"id"=>"metadescription", "class"=>"form-control")); ?>
+							<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea',"id"=>"metadescription", "class"=>"form-control" ,"focus")); ?>
 							<p id="compteur" class="text-right"><i>0 mots - 0 Caractere / 250</i></p>
 						</div>
 					</div> <!-- /publication -->

@@ -21,7 +21,7 @@
 				<span class="postal-code" itemprop="postalCode">52200</span>
 				<span itemprop="addressLocality" class="locality country-name">LANGRES</span>
 			</span>
-		</small> <br>
+		</small>
 		<ul class="list-inline">
 			<li>
 				<i class='glyphicon  glyphicon-earphone'>&nbsp;</i>
