@@ -35,29 +35,29 @@ class Home extends AppModel {
  * [$actsAs description]
  * @var array
  */
-	public $actsAs = array(
-			'Upload.Upload' => array(
-			'photo' => array(
-					'fields' => array(
-						'dir' => 'photo_dir'
-					),
-					'thumbnailMethod' => 'php',
-					'thumbnailSizes' => array(
-						"xvga"=>"720x488",
-						'thumb' => '150x150'
-					),
-					'deleteOnUpdate' => true,
-					'deleteFolderOnDelete' => true
-				)
-			),
-			'Sluggable.Sluggable' => array(
+public $actsAs = array(
+	'Upload.Upload' => array(
+		'photo' => array(
+			'fields' => array(
+				'dir' => 'photo_dir'
+				),
+			'thumbnailMethod' => 'php',
+			'thumbnailSizes' => array(
+				"xvga"=>"720x488",
+				'thumb' => '150x150'
+				),
+			'deleteOnUpdate' => true,
+			'deleteFolderOnDelete' => true
+			)
+		),
+	'Sluggable.Sluggable' => array(
 	        'field'     => 'name',  // Field that will be slugged
 	        'slug'      => 'slug',  // Field that will be used for the slug
 	        'lowercase' => true,    // Do we lowercase the slug ?
 	        'separator' => '-',     //
 	        'overwrite' => false    // Does the slug is auto generated when field is saved no matter what
-		)
-		);
+	        )
+	);
 
 
 

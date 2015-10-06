@@ -29,19 +29,25 @@
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	// Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	Router::connect('/portfolio',array('controller'=>'portfolios','action'=>'index'),array('pass'=>array('slug'),'slug'=>'[a-z0-9\-]+'));
 	Router::connect('/portfolio/:slug',array('controller'=>'portfolios','action'=>'view'),array('pass'=>array('slug'),'slug'=>'[a-z0-9\-]+'));
 	Router::connect('/acces-clients', array('controller' => 'pages', 'action' => 'customers'));
 	Router::connect('/contact', array('controller' => 'contacts', 'action' => 'index'));
 	Router::connect('/map', array('controller' => 'contacts', 'pages' => 'map'));
 	Router::connect("/livre-d-or", array('controller' => 'comments', 'action' => 'index'));
+	Router::connect("/legalinformations", array('controller' => 'pages', 'action' => 'legalinformations'));
+	Router::connect("sitemap", array("plugin"=>"sitemaps",'controller' => 'sitemaps', 'action' => 'index'));
 	// Router::connect("/livre-d-or/**", array('controller' => 'comments', 'action' => 'index'));
 /**
+ *array('plugin' => 'todo', 'controller' => 'todo_items', 'action' => 'create')
+ *
+ *
+ *
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
  */
-	CakePlugin::routes();
+	 CakePlugin::routes();
 
 /**
  * Load the CakePHP default routes. Only remove this if you do not want to use

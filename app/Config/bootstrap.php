@@ -70,6 +70,7 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 CakePlugin::loadAll();
+//CakePlugin::load(array('BoostCake','Localized',"Sluggable",'Upload','Sitemap' => array('routes' => TRUE, 'bootstrap' => TRUE)));
 /**
  * To prefer app translation over plugin translation, you can set
  *
