@@ -82,10 +82,10 @@ class PagesController extends AppController {
 	public	function sitemap(){
 			$this->loadModel('Portfolio');
 			$portfolios = $this->Portfolio->find('all', array(
-		//		'order' => array('created ASC'),
-				"conditions"=>array(
-					'online'=>1)
-			));
+				'order' => array('Portfolio.modified'=>'asc'),
+				"conditions"=>array('online'=>1)
+				)
+			);
 			$this->set(compact('portfolios'));
 		}
 /**

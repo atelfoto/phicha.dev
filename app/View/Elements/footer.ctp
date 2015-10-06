@@ -2,13 +2,13 @@
 	<nav class='text-center text-capitalize'>
 		<ul class='list-inline'>
 			<li><?php echo $this->Html->link(__('Legal Information'), array(
-				'controller' => 'pages', 'action' => 'legalinformations',"admin"=>false,"member"=>false)); ?> |
+				'controller' => 'pages', 'action' => 'legalinformations',"admin"=>false,"member"=>false)); ?>&nbsp;&nbsp;|
 			</li>
 			<li><?php echo $this->Html->link( __('Contact Us'), array(
-				'controller' => 'contacts', 'action' => 'index')); ?> |
+				'controller' => 'contacts', 'action' => 'index')); ?>&nbsp;&nbsp;|
 			</li>
-			<li><?php echo $this->Html->link("flux rss", array('controller' => 'posts', 'action' => 'feed',"ext"=>"rss")); ?> |
-			</li>
+			<!-- <li><?php echo $this->Html->link("flux rss", array('controller' => 'posts', 'action' => 'feed',"ext"=>"rss")); ?> |
+			</li> -->
 			<li><?php echo $this->Html->link(__("sitemap"), array('controller' => 'pages', 'action' => 'sitemap')); ?>
 			</li>
 		</ul>
@@ -29,8 +29,8 @@
 				</abbr>
 			</li>
 		</ul>
-		<i class="copyright">&nbsp;Copyright &copy;&nbsp;<?php echo date('Y'); ?> by
+		<em class="copyright">&nbsp;Copyright &copy;&nbsp;<?php echo date('Y'); ?> by
 			<span class="" itemprop="url"><?php echo env('HTTP_HOST'); ?></span> &nbsp; all rights reserved.
-		</i>
+		</em>
 	</address>
 </footer>

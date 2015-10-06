@@ -5,10 +5,6 @@
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
-	<url>
-		<loc><?php echo $this->Html->url(array("controller"=>'contacts',"action"=>'index'),true); ?></loc>
-		<changefreq>weekly</changefreq>
-	</url>
 	<?php foreach ($listPortfolios as $list): ?>
 	<url>
 		<loc><?php echo $this->Html->url(array('controller' => 'portfolios', 'action' => $list['Portfolio']['slug']),true); ?></loc>
