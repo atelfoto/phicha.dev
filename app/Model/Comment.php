@@ -75,9 +75,9 @@ class Comment extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'Post' => array(
-			'className' => 'Post',
-			'foreignKey' => 'post_id',
+		'Meta' => array(
+			'className' => 'Meta',
+			'foreignKey' => 'meta_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

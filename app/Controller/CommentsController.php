@@ -154,8 +154,7 @@ public function index() {
 			}
 		}
 		$users = $this->Comment->User->find('list');
-		$posts = $this->Comment->Post->find('list');
-		$this->set(compact('users', 'posts'));
+		$this->set(compact('users'));
 	}
 
 /**

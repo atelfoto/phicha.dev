@@ -56,7 +56,7 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>'.__("edit this visitors book")), array('action' => 'add'), array('escape' => false)); ?>
+					<li>
 					</li>
 				</ul>
 			</div><!-- end body -->
