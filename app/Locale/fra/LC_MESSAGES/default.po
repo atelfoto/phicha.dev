@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP 2.4.4\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-10-07 15:13+0200\n"
+"PO-Revision-Date: 2015-10-07 15:48+0200\n"
 "Last-Translator: philippe wagner <atelfoto@msn.com>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -980,8 +980,8 @@ msgid "Add new image"
 msgstr "Ajouter une image"
 
 #: View/Layouts/admin.ctp:230
-msgid "Wallpaper"
-msgstr ""
+msgid "wallpaper"
+msgstr "Fond d'écran"
 
 #: View/Layouts/admin.ctp:233
 msgid "wallpapers manager"
@@ -1387,7 +1387,7 @@ msgstr "Confirmer  mot de passe"
 
 #: View/Wallpapers/admin_add.ctp:54 View/Wallpapers/admin_edit.ctp:41
 msgid "List Wallpaper"
-msgstr ""
+msgstr "Liste des photos"
 
 #: View/Wallpapers/admin_edit.ctp:3
 msgid "Edit picture to background"

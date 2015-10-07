@@ -227,7 +227,7 @@ array('class'=>'img-circle center-block','alt'=>'User Image','title'=>'avatar'))
 </ul>
 </li>
 <li class="treeview <?php if ($this->request->controller =='wallpapers'):?>active<?php endif; ?>">
-<a href="#"><i class="fa fa-home"></i><span><?= __('Wallpaper');?></span> <i class="fa fa-angle-left pull-right"></i></a>
+<a href="#"><i class="fa fa-home"></i><span><?= __('wallpaper');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 <ul class="treeview-menu">
 <li <?php if ($this->request->controller =='wallpapers' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
 <?= $this->Html->link(__("wallpapers manager") , array('controller' => 'wallpapers', 'action' => 'index')); ?>
