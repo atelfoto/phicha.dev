@@ -12,8 +12,8 @@
 </ol>
 <div class="carousel-inner" role="listbox">
 <?php foreach ($pages as $k => $v): $v = current($v); ?>
-	<div class="item <?php echo $v['class']; ?>">
-		<?=  $this->Html->image('../files/carousel/photo/'.$v["photo_dir"].'/xvga_'.$v["photo"], array('alt'=>__('Studio chardon'))); ?>
+  	<div class="item <?php echo $v['class']; ?>">
+		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/xvga_'.$v["photo"], array('alt'=>__('Studio chardon'))); ?>
 		<div class="">
 			<div class="carousel-caption">
 				<p><?= __(''); ?></p>
@@ -31,3 +31,5 @@
 	<span class="sr-only" ><?= __('Next'); ?></span>
 </a>
 </div>
+
+
