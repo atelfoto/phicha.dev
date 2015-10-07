@@ -43,7 +43,9 @@ class Wallpaper extends AppModel {
 					),
 					'thumbnailMethod' => 'php',
 					'thumbnailSizes' => array(
-						"xvga"=>"720x488",
+						"desk"=>"1200x815",
+						"tablet"=>"992x672",
+						"mobile"=>"720x488",
 						'thumb' => '150x150'
 					),
 					'deleteOnUpdate' => true,
@@ -92,7 +94,7 @@ class Wallpaper extends AppModel {
 			),
 		),
 		'photo' => array(
-        	'uploadError' => array(
+			'uploadError' => array(
 				'rule' => 'uploadError',
 				'message' => ' Something is wrong, try again',
 				'on' => 'create'

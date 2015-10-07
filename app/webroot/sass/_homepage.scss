@@ -208,6 +208,10 @@ footer{
 }
 
 @media(max-width:768px){
+		html {
+	position: relative;
+  min-height: 100%;
+}
 	h1{
 	float:initial;
 	text-align: center;
@@ -268,7 +272,7 @@ footer{
 	}
 
 	footer{
-	position:relative !important;
+	//position:relative !important;
 	p{
 		font-size: 10px;
 	}
