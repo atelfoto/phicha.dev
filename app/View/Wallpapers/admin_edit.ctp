@@ -38,9 +38,9 @@
 			</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x" style="color:#367fa9;"></span>&nbsp;&nbsp; List Wallpaper'), array('action' => 'index'), array('escape' => false)); ?>
+					<li><?php echo $this->Html->link('<span class="fa fa-list fa-2x" style="color:#367fa9;"></span>&nbsp;&nbsp;'. __('List Wallpaper'), array('action' => 'index'), array('escape' => false)); ?>
 					</li>
-					<li><?php echo $this->Form->postLink(__('<span class="fa fa-trash fa-2x" style="color:#f00;"></span> &nbsp;&nbsp;Delete'), array('action' => 'delete', $this->Form->value('Wallpaper.id')), array('escape' => false), __('Are you sure you want to delete # %s?', $this->Form->value('Wallpaper.id'))); ?>
+					<li><?php echo $this->Form->postLink('<span class="fa fa-trash fa-2x" style="color:#f00;"></span> &nbsp;&nbsp;'.__("Delete"), array('action' => 'delete', $this->Form->value('Wallpaper.id')), array('escape' => false), __('Are you sure you want to delete # %s?', $this->Form->value('Wallpaper.id'))); ?>
 					</li>
 				</ul>
 			</div>

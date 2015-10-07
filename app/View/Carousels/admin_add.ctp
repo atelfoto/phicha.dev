@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><?php echo __('Add Carousel'); ?></h1>
+	<h1><?php echo __('Add picture'); ?></h1>
 </div>
 <div class="col-md-7 col-md-offset-1">
 	<div class="panel panel-info  box-home">

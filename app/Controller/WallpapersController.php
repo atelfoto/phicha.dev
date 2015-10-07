@@ -39,6 +39,13 @@ class WallpapersController extends AppController {
 	}
 
 
+	public function admin_view($id = null) {
+		if (!$this->Wallpaper->exists($id)) {
+			throw new NotFoundException(__('Invalid comment'));
+		}
+		$options = array('conditions' => array('Wallpaper.' . $this->Wallpaper->primaryKey => $id));
+		$this->set('wallpaper', $this->Wallpaper->find('first', $options));
+	}
 
 /**
  * admin_add method

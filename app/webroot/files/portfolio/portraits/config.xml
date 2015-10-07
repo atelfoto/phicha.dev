@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<juiceboxgallery
-
-	>
+<juiceboxgallery>
 
 			<image imageURL="images/01.jpg" thumbURL="thumbs/01.jpg" linkURL="" linkTarget="_blank">
 			<title><![CDATA[]]></title>
@@ -148,7 +146,7 @@
 			<title><![CDATA[]]></title>
 			<caption><![CDATA[<i class="copyright">&nbsp;Copyright &copy;&nbsp;</i>Baptiste Channat & Jacques Pouillet]]></caption>
 		</image>
-			<image imageURL="images/37.jpg" thumbURL="thumbs/37.jpg" linkURL="" linkTarget="_blank">
+		<image imageURL="images/37.jpg" thumbURL="thumbs/37.jpg" linkURL="" linkTarget="_blank">
 			<title><![CDATA[]]></title>
 			<caption><![CDATA[<i class="copyright">&nbsp;Copyright &copy;&nbsp;</i>Baptiste Channat & Jacques Pouillet]]></caption>
 		</image>

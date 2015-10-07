@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Carousels'); ?></h1>
+	<h1><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('Carousel'); ?></h1>
 </div>
 <div class="row">
 	<div class="col-md-9">
@@ -32,12 +32,12 @@
 							</td>
 							<td><?php echo $this->Date->french($carousel['Carousel']['created']); ?>&nbsp;</td>
 							<td><?php echo $this->Date->french($carousel['Carousel']['modified']); ?>&nbsp;</td>
-							<td><?php if($carousel['Carousel'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
+							<td><?php if($carousel['Carousel'][ 'online' ] == 0) {echo $this->Html->link('<span class="label label-danger">'.__("Offline").'</span>',
 								array('action'=>'enable', $carousel['Carousel']['id']),
 								array("style"=>"text-decoration:none;","data-toggle"=>"tooltip",
 									"data-placement"=>"bottom", "title"=>__('Enable this Carousel'),'escape'=>false));
 						}else{
-							echo $this->Html->link(__('<span class="label label-success">In line</span>'),
+							echo $this->Html->link('<span class="label label-success">'.__("In line").'</span>',
 								array('action'=>'disable', $carousel['Carousel']['id']),
 								array("style"=>"text-decoration:none;","data-toggle"=>"tooltip",
 									"data-placement"=>"bottom", "title"=>__('Disable this Post'),'escape'=>false));
@@ -69,7 +69,7 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New picture'), array('action' => 'add'), array('escape' => false)); ?>
+					<li><?php echo $this->Html->link('<span class="fa fa-plus"></span>&nbsp;&nbsp;'.__("New picture"), array('action' => 'add'), array('escape' => false)); ?>
 					</li>
 				</ul>
 			</div><!-- end body -->

@@ -25,8 +25,8 @@
 					<?php foreach ($wallpapers as $wallpaper): ?>
 						<tr>
 							<td><?php echo h($wallpaper['Wallpaper']['id']); ?>&nbsp;</td>
-							<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('../files/Wallpaper/photo/'.$wallpaper['Wallpaper']['photo_dir'].'/'.'thumb_'.$wallpaper['Wallpaper']['photo'],
-								array("url"=> array("controller"=>'homes','action'=>'view',"slug"=>$wallpaper['Wallpaper']['slug'],"admin"=>false ))); ?>
+							<td class="admin-edit-thumb img-thumbnail"><?php echo  $this->Html->image('/files/Wallpaper/photo/'.$wallpaper['Wallpaper']['photo_dir'].'/'.'thumb_'.$wallpaper['Wallpaper']['photo'],
+								array("url"=> array("controller"=>'wallpapers','action'=>'view',$wallpaper['Wallpaper']['id'],"admin"=>true ))); ?>
 							</td>
 							<td><?php echo h($wallpaper['Wallpaper']['name']); ?>&nbsp;</td>
 							<td>
@@ -36,12 +36,12 @@
 							<td><?php echo $this->Date->french($wallpaper['Wallpaper']['created']); ?>&nbsp;</td>
 							<td><?php echo $this->Date->french($wallpaper['Wallpaper']['modified']); ?>&nbsp;</td>
 							<td>
-								<?php if($wallpaper['Wallpaper'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
+								<?php if($wallpaper['Wallpaper'][ 'online' ] == 0) {echo $this->Html->link('<span class="label label-danger">'.__("Offline").'</span>',
 									array('action'=>'enable', $wallpaper['Wallpaper']['id']),
 									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
 										"title"=>__('Enable this picture'),'escape'=>false));
 									}else{
-									echo $this->Html->link(__('<span class="label label-success">In line</span>'),
+									echo $this->Html->link('<span class="label label-success">'.__("In line").'</span>',
 									array('action'=>'disable', $wallpaper['Wallpaper']['id']),
 									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
 										"title"=>__('Disable this picture'),'escape'=>false));

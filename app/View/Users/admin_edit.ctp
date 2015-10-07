@@ -7,7 +7,7 @@
 		<button  type="submit" class="btn btn-success btn-xs"><i class="fa fa fa-check fa-lg" style="color:#fff;">&nbsp;</i>
 			<?= __('Save changes'); ?>
 		</button>
-			<?= $this->Html->link(__('<i class="fa fa-times-circle fa-lg" style="color:#f00;">&nbsp;</i>Closed'),
+			<?= $this->Html->link('<i class="fa fa-times-circle fa-lg" style="color:#f00;">&nbsp;</i>'.__('Closed'),
 				array('controller' => 'users', 'action' => 'index'),
 				array('class'=>'btn btn-default btn-xs','type'=>'button','escape'=>false)); ?>
 	</div>

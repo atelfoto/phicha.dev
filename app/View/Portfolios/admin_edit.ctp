@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h1><?php echo __('Edit')." ". __('Portfolio'); ?></h1>
+	<h1><?php echo __('Edit')." ". __('this galerie'); ?></h1>
 </div>
 <div class="row">
 	<div class="col-md-9">
@@ -66,7 +66,8 @@
 									"No index, no follow"=>"No index, no follow",
 									))); ?>
 						<div class="form-group ">
-							<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea', "class"=>"form-control")); ?>
+							<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea',"id"=>"metadescription", "class"=>"form-control")); ?>
+							<p id="compteur" class="text-right"><i>0 mots - 0 Caractere / 250</i></p>
 						</div>
 					</div> <!-- /publication -->
 				</div> <!-- end tab-content -->
@@ -105,6 +106,24 @@
 <?php  echo  $this->Html->script(array('bootstrap-toggle.min','fileinput.min','fileinput_locale_fr'
 		),array('inline'=>false)); ?>
 <?=  $this->Html->scriptStart(array('inline'=>false)); ?>
+$(document).ready(function(e) {
+
+  $('#metadescription').keyup(function() {
+
+    var nombreCaractere = $(this).val().length;
+
+    var nombreMots = jQuery.trim($(this).val()).split(' ').length;
+    if($(this).val() === '') {
+     	nombreMots = 0;
+    }
+
+    var msg = ' ' + nombreMots + ' mot(s) | ' + nombreCaractere + ' Caractere(s) / 160';
+    $('#compteur').text(msg);
+    if (nombreCaractere > 160) { $('#compteur').addClass("mauvais"); } else { $('#compteur').removeClass("mauvais"); }
+
+  })
+
+});
 $('#publication a[href="#publications"]').tab('show')
 <?= $this->Html->scriptEnd(); ?>
 
