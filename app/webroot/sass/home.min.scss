@@ -44,11 +44,26 @@
 					background: transparent;
 					text-decoration: none !important;
 				}
+				&:active{
+					color: #555 !important;
+					background: transparent;
+					text-decoration: none !important;
+				}
 				 span{display: none;
 				 	// float:right;
 				 	// margin-right: 10px;
 				 }
 			}
+		}
+		li.active a{
+
+					color: #555 !important;
+					background: transparent;
+					text-decoration: none !important;
+
+
+
+
 		}
 	}
 }

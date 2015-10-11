@@ -31,7 +31,12 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    	public $helpers = array(
+
+/**
+ * [$helpers description]
+ * @var array
+ */
+  public $helpers = array(
 		'Text',
 		"Html",
 		'Form',
@@ -41,20 +46,28 @@ class AppController extends Controller {
 		'Cache',
 	);
 
-public $components = array('Session','Cookie',"Auth");
+/**
+ * [$components description]
+ * @var array
+ */
+	public $components = array('Session','Cookie',"Auth");
 
-	function beforeFilter(){
+/**
+ * [beforeFilter description]
+ * @return [type] [description]
+ */
+	public function beforeFilter(){
 		parent::beforeFilter();
 		$this->Auth->loginAction = array('controller'=>'users','action'=>'login','admin'=>false);
 		$this->Cookie->httpOnly = true;
 		if (!$this->Auth->loggedIn() && $this->Cookie->read('remember')) {
-		$cookie = $this->Cookie->read('remember');
-		$user = $this->User->find('first', array(
-		'conditions' => array(
-		'User.username' => $cookie['username'],
-		'User.password' => $cookie['password']
-		)
-		));
+			$cookie = $this->Cookie->read('remember');
+			$user = $this->User->find('first', array(
+				'conditions' => array(
+					'User.username' => $cookie['username'],
+					'User.password' => $cookie['password']
+					)
+				));
 
 		}
 
@@ -70,7 +83,12 @@ public $components = array('Session','Cookie',"Auth");
 		}
 	}
 
-	function isAuthorized($user){
+/**
+ * [isAuthorized description]
+ * @param  [type]  $user [description]
+ * @return boolean       [description]
+ */
+	public function isAuthorized($user){
 		if(!isset($this->request->params['prefix'])){
 			return true;
 		}

@@ -11,6 +11,7 @@ font_path ="../fonts"
 sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "js"
+#sass_options = {:debug_info => true}
 #output_style = :nested
 output_style = :compressed
 

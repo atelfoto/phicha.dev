@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP 2.4.4\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-10-07 15:48+0200\n"
+"PO-Revision-Date: 2015-10-08 15:57+0200\n"
 "Last-Translator: philippe wagner <atelfoto@msn.com>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -1469,7 +1469,7 @@ msgstr "Vous devez entrer un email valide:"
 
 #: Model/Contact.php:validation for field phone
 msgid "Must be valid french phone numero "
-msgstr "Doit être numero de  téléphone français valide"
+msgstr "Doit être un numero de  téléphone français valide"
 
 #: Model/Contact.php:validation for field mobile
 msgid "You must enter a numero mobile "

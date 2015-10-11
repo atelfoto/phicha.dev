@@ -42,7 +42,7 @@ Router::parseExtensions('rss',"html");
 	Router::connect('/sitemap.xml', array('controller' => 'pages', 'action' => 'sitemapxml','ext'=>"xml"));
 	// Router::connect("/livre-d-or/**", array('controller' => 'comments', 'action' => 'index'));
 /**
- *array('plugin' => 'todo', 'controller' => 'todo_items', 'action' => 'create')
+ *
  *
  *
  *

@@ -3,41 +3,44 @@ App::uses('FrValidation', 'Localized.Validation');
  class Contact extends AppModel {
 
  	public $useTable =false;
- 	 public $validate = array(
- 	 	'name'=> array(
- 	 		'rule' => 'notBlank',
- 	 		'required' => true,
- 	 		'message'=> 'you must enter your name',
-            'between' => array(
-                'rule'    => array('between', 5, 15),
-                'message' => 'Between 5 to 15 characters'
-            )
- 	 	),
- 	 	'email' => array(
-		 	'rule' => 'email',
-		 	'required' => true,
-		 	'message' => 'You must enter a valid email address'
-		 	),
- 	 	 'phone' => array(
- 	 	 	'rule' => array('phone', null, 'fr'),
- 	 	 	'message'=>'Must be valid french phone numero '
- 	 	 	),
- 	 	'mobile' => array(
-		 	'rule' => 'numeric',
-		 	'required' => false,
-		 	'message' => 'You must enter a numero mobile '
-		),
-		 'message' => array(
-		 	'rule' => 'notBlank',
-		 	'required' => true,
-		 	'message' => 'You must enter your message'
-		 	),
-		 'subject' => array(
-		 	'rule' => 'notBlank',
-		 	'required' => true,
-		 	'message' => 'You must enter your subject'
-		 	)
- 	 	);
+ 	public $validate = array(
+ 		'name'=> array(
+ 			"notempty"=>array(
+ 				'rule' => 'notBlank',
+ 				'required' => true,
+ 				'message'=> 'you must enter your name'),
+ 			'between' => array(
+ 				'rule'    => array('lengthBetween', 5, 15),
+ 				'message' => 'Between 5 to 15 characters'
+ 				)
+ 			),
+ 		'email' => array(
+ 			'rule' => 'email',
+ 			'required' => true,
+ 			'message' => 'You must enter a valid email address'
+ 			),
+ 		'phone' => array(
+ 			'rule' => array('phone', null, 'fr'),
+ 			'message'=>'Must be valid french phone numero '
+ 			),
+ 		'mobile' => array(
+ 			'rule' => 'numeric',
+ 			'required' => false,
+ 			'message' => 'You must enter a numero mobile ',
+ 			"allowEmpty"=>true,
+ 			),
+ 		'message' => array(
+ 			'rule' => 'notBlank',
+ 			'required' => true,
+ 			'message' => 'You must enter your message'
+ 			),
+ 		'subject' => array(
+ 			'rule' => 'notBlank',
+ 			'required' => true,
+ 			'message' => 'You must enter your subject'
+ 			)
+ 		);
+
  	public function send($d){
  		$this->set($d);
  		if ($this->validates()) {

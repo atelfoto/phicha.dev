@@ -16,7 +16,7 @@
 			<div class="box-home">
 				<div class="panel panel-default">
 					<div class="panel-heading text-center header">
-						<?= __('Contactez nous'); ?>
+						<?= 'Contactez nous'; ?>
 					</div>
 					<?= $this->Form->create('Contact') ; ?>
 					<div class="panel-body text-center">
