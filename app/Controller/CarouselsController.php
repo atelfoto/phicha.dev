@@ -9,16 +9,12 @@ App::uses('AppController', 'Controller');
  * @property SessionComponent $Session
  */
 class CarouselsController extends AppController {
-
 /**
  * Components
  *
  * @var array
  */
 	public $components = array('Paginator','RequestHandler', 'Flash', 'Session');
-
-
-
 /**
  * index method
  *
@@ -28,12 +24,11 @@ public function index(){
 		$pages = $this->Carousel->find('all'
 			 ,array(
 			 'conditions'=>array('type'=>'image/jpeg','online'=>1),
-			 'fields'    =>array('name','photo','photo_dir','class')
+			 'fields'    =>array('name','photo','photo_dir','class','content')
 			 )
 			);
 		return $pages;
 	}
-
 /**
  * view method
  *
@@ -48,12 +43,6 @@ public function index(){
 		$options = array('conditions' => array('Carousel.' . $this->Carousel->primaryKey => $id));
 		$this->set('carousel', $this->Carousel->find('first', $options));
 	}
-
-
-
-
-
-
 /**
  * admin_index method
  *

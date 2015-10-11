@@ -80,8 +80,10 @@
 				</div>
 			</div> <!--/ tabpanel#contenu -->
 			<div role="tabpanel" class="tab-pane" id="meta">
-				<?php echo $this->Form->input('keywords',array('label'=>__('keywords'),"class"=>"form-control","name"=>'data[Meta][keywords]')); ?>
-				<?php echo  $this->Form->input("robots", array("class"=>"form-control","type"=>"select","name"=>'data[Meta][robots]',
+				<?php echo $this->Form->create("Meta", array("controller"=>"meta","action"=>"index", "novalidate"=>"novalidate","admin"=>true)); ?>
+
+				<?php echo $this->Form->input('Meta.keywords',array('label'=>__('keywords'),"class"=>"form-control","name"=>'data[Meta][keywords]')); ?>
+				<?php echo  $this->Form->input("Meta.robots", array("class"=>"form-control","type"=>"select","name"=>'data[Meta][robots]',
 						"options"=>array(
 							"Paramètres globaux"=>"Paramètres globaux",
 							"Index, Follow"=>"Index, Follow",
@@ -90,9 +92,11 @@
 							"No index, no follow"=>"No index, no follow",
 							))); ?>
 				<div class="form-group ">
-					<?php  echo $this->Form->input('description',array('label'=>__('description'),'type'=>'textarea',"id"=>"metadescription", "class"=>"form-control" ,"focus")); ?>
+					<?php  echo $this->Form->input('Meta.description',array('label'=>__('description'),'type'=>'textarea',"id"=>"metadescription", "class"=>"form-control" ,"focus")); ?>
 					<p id="compteur" class="text-right"><i>0 mots - 0 Caractere / 250</i></p>
 				</div>
+				<?php echo  $this->Form->end("submit",NULL,array('class'=>"btn btn-default")); ?>
+
 			</div> <!-- /meta -->
 		</div> <!-- /tabcontent -->
 	</div> <!-- panel-info -->

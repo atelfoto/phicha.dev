@@ -16,7 +16,8 @@
 		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/xvga_'.$v["photo"], array('alt'=>__('Studio chardon'))); ?>
 		<div class="">
 			<div class="carousel-caption">
-				<p><?= __(''); ?></p>
+				<h2><?php echo $v['name']; ?></h2>
+				<p><?php echo $v['content']; ?></p>
 			</div>
 		</div>
 	</div>

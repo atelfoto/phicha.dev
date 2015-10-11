@@ -68,6 +68,7 @@ public $components = array('Paginator', 'Flash', 'Session');
 
 	public	function admin_index(){
 		$this->Portfolio->recursive = 0;
+		$this->loadModel('Meta');
 		$this->paginate = array('Portfolio'=>array(
 			'limit'=>5,
 					'order'=>array(
