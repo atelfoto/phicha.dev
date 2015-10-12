@@ -1,7 +1,7 @@
 <li <?php if ($this->request->controller =='homes' && $this->request->action =='index' ):?> class="active"<?php endif; ?> >
 	<?= $this->Html->link(__('<span class="visible-xs-inline-block glyphicon glyphicon-home ">&nbsp;</span>Accueil',true),array('controller'=>'homes','action'=>'index'),array('escape'=>false)); ?>
 </li>
-<li <?php if ($this->request->controller =='portfolios'):?> class="active"<?php endif; ?>>
+<li <?php if ($this->request->controller =='portfolios' && $this->request->action=='index'):?> class="active"<?php endif; ?>>
 	<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-picture'>&nbsp;</span>portfolio") ,array('controller'=>'portfolios','action'=>'index','admin'=>false),array('escape'=>false)); ?>
 </li>
 <li <?php if ($this->request->controller =='pages' && $this->request->action == "customers"):?> class="active"<?php endif; ?>>

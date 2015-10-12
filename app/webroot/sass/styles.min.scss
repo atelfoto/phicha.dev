@@ -175,10 +175,10 @@ header > time > small{
 	color: #fff;
 }
 
-.navbar-custom .nav li.active {
-	outline: nonte;
-	background-color: rgba(255,255,255,.3);
-}
+// .navbar-custom .nav li.active {
+// 	outline: nonte;
+// 	background-color: rgba(255,255,255,.3);
+// }
 
 .navbar-custom .nav li a {
 	-webkit-transition: background .3s ease-in-out;
@@ -188,9 +188,20 @@ header > time > small{
 
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus,
-.navbar-custom .nav li a.active {
+{
 	outline: 0;
 	background-color: rgba(255,255,255,.3);
+	color: rgba(0,0,0,.5);
+}
+.navbar-custom .nav li.active a{
+	outline: 0;
+	 background-color: rgba(255,255,255,.1);
+	 //background-color: transparent;
+	color: rgba(0,0,0,.7);
+	cursor: default;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.90);
+	// border-left: 1px solid #fff;
+	// border-right: 1px solid #fff;
 }
 // fin navigation
 

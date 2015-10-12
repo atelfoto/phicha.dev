@@ -19,21 +19,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min"));
 	?>
 	<script>
-
  (function($){
         /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
      $('.menu-icon').click(function(e){
          e.preventDefault();
          $('body').toggleClass('with--sidebar');
      });
-
      /* Je veux pouvoir masquer le menu si on clique sur le cache */
     $('#site-cache').click(function(e){
         $('body').removeClass('with--sidebar');
     });
-
  })(jQuery);
-
 //tooltype de bootstrap
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
@@ -70,18 +66,13 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
 	$(window).resize(function() {
-
 		ellipses1 = $("#bc1 :nth-child(2)")
 		if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
-
 			ellipses2 = $("#bc2 :nth-child(2)")
 		if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
-
 	})
-
 });
 </script>
-
 <script type="text/javascript">
 //script pour le menu mobile
 $(document).ready(function() {
@@ -103,7 +94,7 @@ $(document).ready(function() {
 </head>
 <body id="home" data-target=".navbar-fixed-top">
 	<div class="side-collapse-container">
-		<?php  echo $this->element('carrousel'); ?>
+		<?php  echo $this->element('carousel'); ?>
 		<?php   echo $this->Element('navigation'); ?>
 		<div class="container ">
 			<?php echo $this->Session->flash(); ?>
