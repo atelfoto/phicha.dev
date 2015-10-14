@@ -3,6 +3,4 @@
 	<ul class='sidebar-menu'>
 		<?php  echo $this->element('menu-main'); ?>
 	</ul>
-</div>
-<!--nocache-->
-
+</div><!--nocache-->
