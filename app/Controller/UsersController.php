@@ -38,7 +38,6 @@ public function signup(){
 						'notif',array('class'=>'success','type'=>'ok-sign'));
 				}else{
 				$this->Session->setFlash(__("Thank you to correct your mistakes"), 'notif', array('class'=>'danger','type'=>'info'));
-				//$this->Session->setFlash(__("Thank you to correct your mistakes"));
 			}
 		}
 	}

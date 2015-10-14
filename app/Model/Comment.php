@@ -19,43 +19,26 @@ class Comment extends AppModel {
  *
  * @var array
  */
-	public $validate = array(
-		'name' => array(
-			'notBlank' => array(
-				'rule' => array('notBlank'),
-				'message' => 'you must enter your name',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+public $validate = array(
+	'name' => array(
+		'notBlank' => array(
+			'rule' => array('notBlank'),
+			'message' => 'you must enter your name',
 			),
-			'lengthBetween' => array(
-				'rule' => array('lengthBetween',5,15),
-				'message' => 'Between 5 to 15 characters',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+		'lengthBetween' => array(
+			'rule' => array('lengthBetween',5,25),
+			'message' => 'Between 5 to 15 characters',
 			),
 		),
-		'mail' => array(
-			'email' => array(
-				'rule' => array('email'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+	'mail' => array(
+		'email' => array(
+			'rule' => array('email'),
 			),
 		),
-		'content' => array(
-			'notBlank' => array(
-				'rule' => array('notBlank'),
-				'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+	'content' => array(
+		'notBlank' => array(
+			'rule' => array('notBlank'),
+			'message' => 'Your custom message here',
 			),
 		),
 	);
@@ -67,20 +50,20 @@ class Comment extends AppModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Meta' => array(
-			'className' => 'Meta',
-			'foreignKey' => 'meta_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
+	// public $belongsTo = array(
+	// 	'User' => array(
+	// 		'className' => 'User',
+	// 		'foreignKey' => 'user_id',
+	// 		'conditions' => '',
+	// 		'fields' => '',
+	// 		'order' => ''
+	// 	),
+	// 	'Meta' => array(
+	// 		'className' => 'Meta',
+	// 		'foreignKey' => 'meta_id',
+	// 		'conditions' => '',
+	// 		'fields' => '',
+	// 		'order' => ''
+	// 	)
+	// );
 }

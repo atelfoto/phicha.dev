@@ -38,10 +38,34 @@ class CommentsController extends AppController {
  */
 public function index() {
 	$this->Comment->recursive = 0;
-	$this->set('comments_count', $this->Comment->find('count'));
-	if ($this->request->is('post')) {
-		$this->Comment->create();
-		if ($this->Comment->save($this->request->data)) {
+	if (!empty($this->request->data)) {
+		$this->Comment->create($this->request->data);
+		if ($this->Comment->validates()) {
+			$token = md5(time(). ' - ' . uniqid());
+			$this->Comment->create(array(
+				'name'   => $this->request->data['Comment']['name'],
+				'mail'   => $this->request->data['Comment']['mail'],
+				'content'   => $this->request->data['Comment']['content'],
+				'token'  => $token
+				));
+			$this->Comment->save();
+			App::uses('CakeEmail','Network/Email');
+					$CakeEmail = new CakeEmail('smtp'); // à changer par Default sur le site en ligne sinon smtp
+					$CakeEmail->to(array('philippewagner2@sfr.fr'));
+					$CakeEmail->from(array($this->request->data['Comment']["mail"]=>"livre d or"));
+					$CakeEmail->subject(__("Commentaire sur le livre d'or"));
+					$CakeEmail->viewVars(
+					$this->request->data['Comment']+
+						array(
+							"name"=>$this->Comment->name,
+							"mail"=>$this->Comment->mail,
+							"content"=>$this->Comment->content,
+							'token'=>$token,
+							'id'=>$this->Comment->id
+							));
+					$CakeEmail->emailFormat('html');
+					$CakeEmail->template('commentaire');
+					$CakeEmail->send();
 			$this->Session->setFlash(__('The comment has been saved.'),'notif',array('class'=>"success",'type'=>'ok-sign'));
 			return $this->redirect(array('action' => 'index'));
 		} else {
@@ -57,52 +81,45 @@ public function index() {
 	$this->set($d);
 }
 /**
+ * [activate description]
+ * @param  [type] $comment_id [description]
+ * @param  [type] $token      [description]
+ * @return [type]             [description]
+ */
+public function activate($comment_id,$token){
+	$comment = $this->Comment->find('first',array(
+		'fields'     =>array('id'),
+		'conditions' => array('id'=> $comment_id, 'token'=>$token)
+		));
+	if(empty($comment)){
+		$this->Session->setFlash(__("This change link is not good"),'notif',array('class'=>'danger', "type"=>'info'));
+		return $this->redirect('/');
+	}
+	$this->Session->setFlash(__("Your post has been validated"),'notif',array('class'=>'success', "type"=>'ok'));
+	$this->Comment->save(array(
+		'id'     => $comment['Comment']['id'],
+		'online' => 1,
+		'token'  => ''
+		));
+	return $this->redirect(array('action'=>'/'));
+}
+
+/**
  * add method
  *
  * @return void
  */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->Comment->create();
-			if ($this->Comment->save($this->request->data)) {
-				$this->Session->setFlash(__('The comment has been saved.'),'notif',array('class'=>"success",'type'=>'ok-sign'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'),'notif',array('class'=>"danger",'type'=>'info-sign'));
-			}
-		}
-
-	}
-
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-		if (!$this->Comment->exists($id)) {
-			throw new NotFoundException(__('Invalid comment'));
-		}
-		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Comment->save($this->request->data)) {
-				$this->Session->setFlash(__('The comment has been saved.'),'notif',array('class'=>"success",'type'=>'ok-sign'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'),'notif',array('class'=>"alert",'type'=>'ok-danger'));
-			}
-		} else {
-			$options = array('conditions' => array('Comment.' . $this->Comment->primaryKey => $id));
-			$this->request->data = $this->Comment->find('first', $options);
-		}
-		$users = $this->Comment->User->find('list');
-		$posts = $this->Comment->Post->find('list');
-		$this->set(compact('users', 'posts'));
-	}
-
-
-
+	// public function add() {
+	// 	if ($this->request->is('post')) {
+	// 		$this->Comment->create();
+	// 		if ($this->Comment->save($this->request->data)) {
+	// 			$this->Session->setFlash(__('The comment has been saved.'),'notif',array('class'=>"success",'type'=>'ok-sign'));
+	// 			return $this->redirect(array('action' => 'index'));
+	// 		} else {
+	// 			$this->Session->setFlash(__('The comment could not be saved. Please, try again.'),'notif',array('class'=>"danger",'type'=>'info-sign'));
+	// 		}
+	// 	}
+	// }
 /**
  * admin_index method
  *
@@ -121,8 +138,6 @@ public function index() {
 			));
 		$this->set($d);
 	}
-
-
 /**
  * admin_view method
  *
@@ -137,7 +152,6 @@ public function index() {
 		$options = array('conditions' => array('Comment.' . $this->Comment->primaryKey => $id));
 		$this->set('comment', $this->Comment->find('first', $options));
 	}
-
 /**
  * admin_add method
  *
@@ -180,8 +194,7 @@ public function index() {
 			$this->request->data = $this->Comment->find('first', $options);
 		}
 		$users = $this->Comment->User->find('list');
-		$posts = $this->Comment->Post->find('list');
-		$this->set(compact('users', 'posts'));
+		$this->set(compact('users'));
 	}
 /**
  * [admin_enable description]

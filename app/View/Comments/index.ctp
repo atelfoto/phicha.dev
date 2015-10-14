@@ -6,21 +6,21 @@
 		<h1><?php echo __("livre d'or"); ?></h1>
 	</div>
 	<div class="row">
-		<div>
+		<div class="">
 			<?php echo $this->Form->create('Comment', array(
 				'inputDefaults' => array(
 					'div' => 'form-group',
 					'label' => array(
-						'class' => 'col col-md-3 control-label'
+						'class' => 'col col-md-2 control-label'
 						),
 					'wrapInput' => 'col col-md-9',
-					'class' => 'form-control',
+					'class' => 'form-control ',
 					'required'=>false,
 					),
-				'class' => 'well form-horizontal col-md-11 col-md-offset-1'
+				'class' => 'well form-horizontal col-md-11 col-md-offset-1 box-home'
 				)); ?>
 			<h3 class="col-md-offset-2">
-				<strong><?php  echo $comments_count?> Commentaires </strong>
+				<strong><?php echo $this->Paginator->counter(array('format' => __('{:count} ')));?>Commentaires </strong>
 			</h3>
 			<?php echo $this->Form->input('name', array(
 				'placeholder' => 'nom'
@@ -29,7 +29,7 @@
 				'placeholder' => 'Email'
 				)); ?>
 			<?php echo $this->Form->input('content', array(
-				'wrapInput' => 'col col-md-9 col-md-offset-3',
+				'wrapInput' => 'col col-md-9 col-md-offset-2',
 				'label' => false,
 				'class' => "form-control",
 				'type'=>"textarea",
@@ -38,7 +38,7 @@
 				<?= $this->Form->input('website', array('label'=>false,'type'=>'text','class'=>'toto ')); ?>
 				<div class="form-group text-right">
 						<?php echo $this->Form->submit('envoyer', array(
-						'div' => 'col col-md-9 col-md-offset-3',
+						'div' => 'col col-md-8 col-md-offset-3',
 						'class' => 'btn btn-primary'
 						)); ?>
 				</div>
@@ -73,7 +73,7 @@
 							</header>
 							<div class="comment-post" style="margin-top:10px;">
 								<blockquote>
-									<p><?php echo $this->Text->truncate($comment['Comment']['content'],Null,array('exact' =>true,'html'=> true)); ?>
+									<p><?php echo $this->Text->truncate($comment['Comment']['content'],250,array('exact' =>true,'html'=> true)); ?>
 									</p>
 								</blockquote>
 							</div>
@@ -85,10 +85,8 @@
 			<?php endforeach; ?>
 		</div>
 		<div class="col-md-12 text-center">
-
 				<?php echo $this->element('pagination-counter'); ?>
 				<?php echo $this->element('pagination'); ?>
-
 		</div>
 	</div>
 </div>

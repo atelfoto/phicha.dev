@@ -11,13 +11,13 @@
 	    			    <div class="form-group">
 	    			    	<label for="ContactName"> <?= __('Username :'); ?> <i class="fa fa-asterisk"></i></label>
 	    			    	<div class="input-group">
-								<?= $this->Form->input('username', array('required'=>false,'label' => false,
+										<?= $this->Form->input('username', array('required'=>false,'label' => false,
 	    			     		'placeholder'=>__('Username :'),'class'=>'form-control')); ?>
 	    			     		<div class="input-group-addon"><i class="fa fa-user"></i>
 	    			     		</div>
 	    			    	</div>
 	    			    </div>
-			    		<div class="form-group">
+			    			<div class="form-group">
 	    			    	<label for="ContactName"> <?= __('Password :'); ?> <i class="fa fa-asterisk"></i></label>
 	    			    	<div class="input-group">
 			    				<?= $this->Form->input('password', array('required'=>false,'label' => false ,

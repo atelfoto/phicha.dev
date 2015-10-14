@@ -126,14 +126,12 @@ Support Team
 </li>
 <li class="dropdown tasks-menu"><!-- Tasks Menu -->
 <ul class="dropdown-menu">
-
 <li class="menu"><!-- Task item -->
 <a href="#"><!-- Task title and progress text -->
 <div class="progress xs"><!-- The progress bar -->
 </div>
 </a>
 </li><!-- end task item -->
-
 </ul>
 </li>
 <li class="dropdown user user-menu"><!-- User Account Menu -->
