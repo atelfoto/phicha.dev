@@ -15,6 +15,11 @@
 *.png
 *.mo
 *.sass-cache
+*.eot
+*.svg
+*.ttf
+*.woff
+*.woff2
 
 # IDE and editor specific files #
 #################################
