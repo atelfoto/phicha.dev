@@ -166,7 +166,7 @@ Configure::write('Routing.prefixes', array('admin','member'));
  * or in each action using $this->cacheAction = true.
  *
  */
-	Configure::write('Cache.check', true);
+	Configure::write('Cache.check', true);// remettre en fin de travaux
 
 /**
  * Enable cache view prefixes.

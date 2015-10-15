@@ -18,9 +18,9 @@ class CommentsController extends AppController {
 	public $components = array(
 		//'Paginator',
 		'Flash', 'Session');
-		public $cacheAction = array(
-		'index'=>'2 DAY'
-		);
+		// public $cacheAction = array(
+		// 'index'=>'2 DAY'
+		// );
 /**
  * [$paginate description]
  * @var array
@@ -41,21 +41,25 @@ public function index() {
 	if (!empty($this->request->data)) {
 		$this->Comment->create($this->request->data);
 		if ($this->Comment->validates()) {
-			$token = md5(time(). ' - ' . uniqid());
-			$this->Comment->create(array(
-				'name'   => $this->request->data['Comment']['name'],
-				'mail'   => $this->request->data['Comment']['mail'],
-				'content'   => $this->request->data['Comment']['content'],
-				'token'  => $token
-				));
-			$this->Comment->save();
-			App::uses('CakeEmail','Network/Email');
+			if (!empty($this->request->data['Comment']['website'])) {
+				$this->Session->setFlash(__("Your Mail us is reached."),'notif',array('class'=>"success",'type'=>'ok-sign'));
+				$this->request->data = array();
+			}else{
+				$token = md5(time(). ' - ' . uniqid());
+				$this->Comment->create(array(
+					'name'   => $this->request->data['Comment']['name'],
+					'mail'   => $this->request->data['Comment']['mail'],
+					'content'   => $this->request->data['Comment']['content'],
+					'token'  => $token
+					));
+				$this->Comment->save();
+				App::uses('CakeEmail','Network/Email');
 					$CakeEmail = new CakeEmail('smtp'); // à changer par Default sur le site en ligne sinon smtp
 					$CakeEmail->to(array('philippewagner2@sfr.fr'));
 					$CakeEmail->from(array($this->request->data['Comment']["mail"]=>"livre d or"));
 					$CakeEmail->subject(__("Commentaire sur le livre d'or"));
 					$CakeEmail->viewVars(
-					$this->request->data['Comment']+
+						$this->request->data['Comment']+
 						array(
 							"name"=>$this->Comment->name,
 							"mail"=>$this->Comment->mail,
@@ -66,20 +70,21 @@ public function index() {
 					$CakeEmail->emailFormat('html');
 					$CakeEmail->template('commentaire');
 					$CakeEmail->send();
-			$this->Session->setFlash(__('The comment has been saved.'),'notif',array('class'=>"success",'type'=>'ok-sign'));
-			return $this->redirect(array('action' => 'index'));
-		} else {
-			$this->Session->setFlash(__('The comment could not be saved. Please, try again.'),'notif',array('class'=>"danger",'type'=>'info-sign'));
+					$this->Session->setFlash(__('The comment has been saved.'),'notif',array('class'=>"success",'type'=>'ok-sign'));
+					return $this->redirect(array('action' => 'index'));
+				}
+			}else {
+				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'),'notif',array('class'=>"danger",'type'=>'info-sign'));
+			}
 		}
+		$this->paginate = array('Comment'=>array(
+			'limit'=>3,
+			'order'=>array(
+				'Comment.created'=>'desc')
+			));
+		$d['comments']= $this->Paginate('Comment',array('Comment.online >= 1'));
+		$this->set($d);
 	}
-	$this->paginate = array('Comment'=>array(
-		'limit'=>3,
-		'order'=>array(
-			'Comment.created'=>'desc')
-		));
-	$d['comments']= $this->Paginate('Comment',array('Comment.online >= 1'));
-	$this->set($d);
-}
 /**
  * [activate description]
  * @param  [type] $comment_id [description]
@@ -101,7 +106,10 @@ public function activate($comment_id,$token){
 		'online' => 1,
 		'token'  => ''
 		));
-	return $this->redirect(array('action'=>'/'));
+	foreach(glob(CACHE.'views'.DS.'*.php') as $file){
+        				unlink($file);
+        	   		 }
+	return $this->redirect(array('controller'=>"comments",'action'=>'index'));
 }
 
 /**

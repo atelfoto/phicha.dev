@@ -6,6 +6,7 @@
 <h1><?php echo __("livre d'or"); ?></h1>
 </div>
 <div class="row">
+<!--nocache-->
 <div class="">
 <?php echo $this->Form->create('Comment', array(
 'inputDefaults' => array(
@@ -35,7 +36,9 @@
 'type'=>"textarea",
 "placeholder"=>"votre commantaire..."
 )); ?>
-<?= $this->Form->input('website', array('label'=>false,'type'=>'text','class'=>'toto ')); ?>
+<?= $this->Form->input('website', array('label'=>false,'type'=>'text',
+//'class'=>'toto'
+)); ?>
 <div class="form-group text-right">
 <?php echo $this->Form->submit('envoyer', array(
 'div' => 'col col-md-8 col-md-offset-3',
@@ -44,6 +47,7 @@
 </div>
 <?php echo $this->Form->end(); ?>
 </div>
+<!--/nocache-->
 <div class="comment-list">
 <?php foreach ($comments as $comment):?>
 <article class="row ">
