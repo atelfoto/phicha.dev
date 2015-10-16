@@ -4,6 +4,8 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController{
 
 	public $displayField = array('username');
+
+public $components = array('Flash');
 /**
  * signup
  */
@@ -258,7 +260,9 @@ public function member_account(){
 	public function logout(){
 		$this->Auth->logout();
 		$this->Cookie->delete('remember');
-		$this->Session->setFlash(__("You are now offline"), "notif",array('class'=>'success','type'=>'ok'));
+		$this->Flash->success(__('You are now offline'));
+		//$this->Session->setFlash(__("You are now offline"), "notif",array('class'=>'success','type'=>'ok'));
+		//$this->Session->setFlash(__("You are now offline"));
 		$this->redirect('/');
 	}
 

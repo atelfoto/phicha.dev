@@ -19,7 +19,9 @@ echo $this->fetch('css');
 </head>
 <body id="home">
 <div  class="container">
-<?php  echo $this->Session->flash(); ?>
+<!--nocache-->
+<?php echo $this->Flash->render(); ?>
+<!--/nocache-->
 </div>
 <?php echo $this->fetch('content'); ?>
 <footer class="text-center">

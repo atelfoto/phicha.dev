@@ -12,7 +12,7 @@
 					<div class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
 					</div>
 					<?= $this->Form->input('username', array('required'=>false,'label' => false,
-					'placeholder'=>__('Username :'),'class'=>'form-control')); ?>
+					'placeholder'=>__('Username :'),'class'=>'form-control','autofocus'=>true)); ?>
 				</div>
 			</div>
 			<div class="form-group">
