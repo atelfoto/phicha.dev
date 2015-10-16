@@ -35,31 +35,41 @@
 							<td><?php if($carousel['Carousel'][ 'online' ] == 0) {echo $this->Html->link('<span class="label label-danger">'.__("Offline").'</span>',
 								array('action'=>'enable', $carousel['Carousel']['id']),
 								array("style"=>"text-decoration:none;","data-toggle"=>"tooltip",
-									"data-placement"=>"bottom", "title"=>__('Enable this Carousel'),'escape'=>false));
+									"data-placement"=>"top", "title"=>__('Enable this picture'),'escape'=>false));
 						}else{
 							echo $this->Html->link('<span class="label label-success">'.__("In line").'</span>',
 								array('action'=>'disable', $carousel['Carousel']['id']),
 								array("style"=>"text-decoration:none;","data-toggle"=>"tooltip",
-									"data-placement"=>"bottom", "title"=>__('Disable this Post'),'escape'=>false));
+									"data-placement"=>"top", "title"=>__('Disable this picture'),'escape'=>false));
 						}
 						?>
 					</td>
 					<td class="actions">
 						<?php echo $this->Html->link('<span class="fa fa-edit fa-2x"></span>',
-						array('action' => 'edit', $carousel['Carousel']['id']), array('class' => 'btn btn-default btn-sm','escape' => false)); ?>
+								array('action' => 'edit', $carousel['Carousel']['id']),
+								array('class' => 'btn btn-default btn-sm',
+											'escape' => false,
+											"data-title"=>__("edit"),
+											"data-toggle"=>"tooltip",
+											"data-placement" =>"top"
+						)); ?>
 					</td>
 					<td>
-						<?php echo $this->Html->link('<span class="fa fa-trash	fa-2x"></span>','#Modal'.$carousel['Carousel']['id'],
-							array('class' => 'btn btn-default btn-remove-modal btn-sm',
-								'escape' =>false,
-								'data-toggle' => 'modal',
-								'role'  => 'button',
-								'data-uid' => $carousel['Carousel']['id']
-								));
-								?>
-							</td>
-						</tr>
-					<?php endforeach; ?>
+						<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+							<?php echo $this->Html->link('<span class="fa fa-trash	fa-2x"></span>',$carousel['Carousel']['id'],
+								array('class' => 'btn btn-default btn-remove-modal btn-sm',
+									'escape' =>false,
+									'data-toggle' => 'modal',
+									"data-target"=>"#delete",
+									"data-title"=> __('delete'),
+									'role'  => 'button',
+									'data-uid' => $carousel['Carousel']['id']
+									));
+									?>
+						</p>
+					</td>
+				</tr>
+				<?php endforeach; ?>
 				</tbody>
 			</table>
 		</div>
@@ -80,36 +90,34 @@
 		<?php echo $this->element('pagination'); ?>
 	</div> <!-- end col-md-12 -->
 </div><!-- row end containing of content -->
-<?php foreach ($carousels as $k => $v): $v = current($v);?><!-- modal supprimer -->
-	<div class="modal fade" id="Modal<?= $v['id']; ?>">
-		<div class="modal-dialog ">
-			<div class="modal-content">
-				<div class="modal-header panel-default">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="<?php echo __('close'); ?>">&times;
-					</button>
-					<h4>
-						<i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
-						&nbsp;&nbsp;<?php echo __('Remove Picture'); ?>
-					</h4>
-				</div>
-				<div class="modal-body">
-					<p>
-						<?php echo __('Are you sure you want to delete'); ?>&nbsp;
-						<b style="color:#f00;"><?php echo  $v['name'] ?></b>&nbsp;
-						<?php echo __('of your Carousel') ?>
-						<span class="label-uname strong"></span> ?
-					</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?>
-					</button>
-					<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
-					array('class' => 'btn btn-danger delete-user-link')) ?>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-<?php endforeach ?>  <!-- fin modal supprimer -->
+<div class="modal fade" id="delete">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header panel-default">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="<?php echo __('close'); ?>">&times;
+				</button>
+				<h4>
+					<i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
+					&nbsp;&nbsp;<?php echo __('Remove Picture'); ?>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<p>
+					<?php echo __('Are you sure you want to delete'); ?>&nbsp;
+					<b style="color:#f00;"><?php echo  $carousel['Carousel']['name'] ?></b>&nbsp;
+					<?php echo __('of your Carousel') ?>
+					<span class="label-uname strong"></span> ?
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?>
+				</button>
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$carousel['Carousel']['id']),
+				array('class' => 'btn btn-danger delete-user-link')) ?>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
 		<div class="modal-content">

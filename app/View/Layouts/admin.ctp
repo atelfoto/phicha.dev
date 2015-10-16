@@ -25,7 +25,7 @@ th a.asc:after	 {
 content: ' ⇡';
 }
 </style>
-<?php echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min","admin/app.min","jquery.easing.min")); ?>
+<?php echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min","admin/app.min","jquery.easing.min","admin/jquery.slimscroll")); ?>
 <script>
 $(document).ready(function(){
 $('#topbar').hide();
@@ -68,7 +68,7 @@ $(".navbar-fixed-top").removeClass("top-nav-collapse");
 });
 </script>
 </head>
-<body class="skin-blue">
+<body class="skin-blue fixed">
 <div class="wrapper">
 <!-- nocache -->
 <header class="main-header">
@@ -225,7 +225,7 @@ array('class'=>'img-circle center-block','alt'=>'User Image','title'=>'avatar'))
 </ul>
 </li>
 <li class="treeview <?php if ($this->request->controller =='wallpapers'):?>active<?php endif; ?>">
-<a href="#"><i class="fa fa-home"></i><span><?= __('wallpaper');?></span> <i class="fa fa-angle-left pull-right"></i></a>
+<a href="#"><i class="fa fa-file-image-o"></i><span><?= __('wallpaper');?></span> <i class="fa fa-angle-left pull-right"></i></a>
 <ul class="treeview-menu">
 <li <?php if ($this->request->controller =='wallpapers' && $this->request->action =='admin_index'):?> class="active"<?php  endif; ?>>
 <?= $this->Html->link(__("wallpapers manager") , array('controller' => 'wallpapers', 'action' => 'index')); ?>

@@ -1,7 +1,7 @@
 <div class="page-header ">
 	<div class="panel  box-home">
 		<div class="panel-heading">
-			<h1 class=""><i class="fa fa-file-image-o">&nbsp;</i><?php echo __('home manager'); ?></h1>
+			<h1 class=""><i class="fa fa-home">&nbsp;</i><?php echo __('home manager'); ?></h1>
 		</div>
 	</div>
 </div>

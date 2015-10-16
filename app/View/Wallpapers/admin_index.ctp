@@ -18,7 +18,7 @@
 						<th><?php echo $this->Paginator->sort('created'); ?></th>
 						<th><?php echo $this->Paginator->sort('modified'); ?></th>
 						<th><?php echo $this->Paginator->sort('online'); ?></th>
-						<th class="actions"></th>
+						<th class="actions" colspan="2"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -38,12 +38,12 @@
 							<td>
 								<?php if($wallpaper['Wallpaper'][ 'online' ] == 0) {echo $this->Html->link('<span class="label label-danger">'.__("Offline").'</span>',
 									array('action'=>'enable', $wallpaper['Wallpaper']['id']),
-									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
+									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"top",
 										"title"=>__('Enable this picture'),'escape'=>false));
 									}else{
 									echo $this->Html->link('<span class="label label-success">'.__("In line").'</span>',
 									array('action'=>'disable', $wallpaper['Wallpaper']['id']),
-									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
+									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"top",
 										"title"=>__('Disable this picture'),'escape'=>false));
 									}
 								?>
@@ -51,20 +51,22 @@
 							<td class="actions">
 								<?php echo $this->Html->link('<span class="fa fa-edit fa-2x" "></span>',
 									array('action' => 'edit', $wallpaper['Wallpaper']['id']),
-									array('class' => 'btn btn-default btn-sm',"data-toggle"=>"tooltip","data-placement"=>"bottom",
+									array('class' => 'btn btn-default btn-sm',"data-toggle"=>"tooltip","data-placement"=>"top",
 									"title"=>__('edit this picture'),'escape' => false)); ?>
-								<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$wallpaper['Wallpaper']['id'],
+							</td>
+							<td class="actions">
+								<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+								<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>',$wallpaper['Wallpaper']['id'],
 									array(
 										'class' => 'btn btn-default btn-remove-modal btn-sm',
-										"title"=>__('delete this picture'),
 										'escape' =>false,
 										'data-toggle' => 'modal',
-										'data-toggle-2'=>'tooltip',
-										"data-placement"=>"bottom",
-										"title"=>__('edit this picture'),
+										"data-target"=>"#delete",
+										"data-title"=>__('edit this picture'),
 										'role'  => 'button',
 										'data-uid' => $wallpaper['Wallpaper']['id']
 										)); ?>
+									</p>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -90,8 +92,7 @@
 		</p>
 	</div>
 </div><!-- end containing of content -->
-<?php foreach ($wallpapers as $k => $v): $v = current($v);?><!-- modal supprimer -->
-<div class="modal fade" id="Modal<?= $v['id']; ?>">
+<div class="modal fade" id="delete">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
@@ -102,19 +103,18 @@
 			<div class="modal-body">
 				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
 					<b style="color:#f00;">
-					<?php echo  $v['name'] ?></b>
+					<?php echo $wallpaper['Wallpaper']['name'] ?></b>
 					<span class="label-uname strong"></span><?php echo __('to your background') ?> ?
 				</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
-				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$wallpaper['Wallpaper']['id']),
 						array('class' => 'btn btn-danger delete-user-link')) ?>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<?php endforeach ?>  <!-- fin modal supprimer -->
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
 		<div class="modal-content">

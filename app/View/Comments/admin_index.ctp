@@ -27,23 +27,27 @@
 						<td><?php echo $this->Date->french($comment['Comment']['created']); ?>&nbsp;</td>
 						<td><?php if($comment['Comment'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
 						 	array('action'=>'enable', $comment['Comment']['id']),
-							array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom", "title"=>__('Enable this portfolio'),'escape'=>false));
+							array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"top", "title"=>__('Enable this post'),'escape'=>false));
 							}else{
 							echo $this->Html->link(__('<span class="label label-success">In line</span>'), array('action'=>'disable', $comment['Comment']['id']),
-							array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom", "title"=>__('Disable this Post'),'escape'=>false));
+							array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"top", "title"=>__('Disable this Post'),'escape'=>false));
 							}
 							?>
 						</td>
 						<td class="actions">
-							<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#Modal'.$comment['Comment']['id'],
+							<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+							<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>',$comment['Comment']['id'],
               				array(
               				  'class' => 'btn btn-default btn-remove-modal btn-sm',
               				  'escape' =>false,
               				  'data-toggle' => 'modal',
+												"data-target"=>"#delete",
+												"data-title"=> __('delete'),
               				  'role'  => 'button',
               				  'data-uid' => $comment['Comment']['id']
               				  ));
               ?>
+              </p>
 						</td>
 					</tr>
 					<?php endforeach; ?>
@@ -69,34 +73,28 @@
 		</p>
 	</div>
 </div>
-<?php foreach ($comments as $k => $v): $v = current($v);?>
-<div class="modal fade" id="Modal<?= $v['id']; ?>">
+<div class="modal fade" id="delete">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
-			<!-- 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title=" <?php // echo __(' Press Esc to close'); ?>">&times;</button> -->
-				<!-- <h4> --><!-- <i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i> -->
-				&nbsp;&nbsp;<!-- </h4> --><?php // echo __('Remove Post') ?>
-				</div>
-			<div class="modal-header panel-default">
+			<p>&nbsp;</p>
 			</div>
 			<div class="modal-body">
 				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
 					<b style="color:#f00;">
-					<?php echo  $v['name'] ?></b>&nbsp;
+					<?php echo  $comment['Comment']['name'] ?></b>&nbsp;
 					<?php echo __('of your Articles') ?>
 					<span class="label-uname strong"></span> ?
 				</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
-				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$comment['Comment']['id']),
 						array('class' => 'btn btn-danger delete-user-link')) ?>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<?php endforeach ?>  <!-- fin modal supprimer -->
+</div><!-- /.modal delete-->
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
 		<div class="modal-content">

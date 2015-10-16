@@ -38,19 +38,29 @@
 								?>
 							</td>
 							<td class="actions">
-								<?php echo $this->Html->link("<span class='fa fa-edit fa-2x' ></span>", array('action' => 'edit',
-														$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>
+								<?php echo $this->Html->link("<span class='fa fa-edit fa-2x' ></span>",
+											array('action' => 'edit',$v['id']),
+											array('class' => 'btn btn-default',
+											'escape' =>false,
+											"data-title"=>__("edit"),
+											"data-toggle"=>"tooltip",
+											"data-placement" =>"top"
+								)); ?>
 							</td>
 							<td>
-								<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
+								<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+									<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
 										array(
 												'class' => 'btn btn-default btn-remove-modal',
 												'escape' =>false,
 												'data-toggle' => 'modal',
+												"data-target"=>"#delete",
+												"data-title"=> __('delete'),
 												'role'  => 'button',
 												'data-uid' => $v['id']
 												));
-								?>
+									?>
+								</p>
 							</td>
 						</tr>
 					<?php endforeach ?>
@@ -72,7 +82,7 @@
 	</div><!-- end col md 3 -->
 </div>
 
-<div class="modal fade" id="UsersModal">
+<div class="modal fade" id="delete">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header modal-danger">
