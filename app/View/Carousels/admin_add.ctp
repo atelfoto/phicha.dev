@@ -40,7 +40,8 @@
 				<?php echo  $this->Form->hidden("Carousel.photo_dir"); ?>
 			</div>
 			<div class="form-group text-right col-md-12">
-				<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-primary')); ?>
+				<?php echo $this->Form->submit(__('Submit'), array(
+				'class' => 'btn btn-primary',"data-loading-text"=>"Loading...", "id"=>"myButton","autocomplete"=>"off")); ?>
 			</div>
 			<?php echo $this->Form->end() ?>
 		</div>
@@ -76,4 +77,9 @@ $(document).ready(function(e) {
     if (nombreCaractere > 160) { $('#compteur').addClass("mauvais"); } else { $('#compteur').removeClass("mauvais"); }
   })
 });
+ $('#myButton').on('click', function () {
+    var $btn = $(this).button('loading')
+    // business logic...
+    $btn.button('reset')
+  })
 <?= $this->Html->scriptEnd(); ?>

@@ -117,7 +117,8 @@
 		<div class="panel-body">
 			<ul class="nav nav-pills nav-stacked">
 				<li role="presentation">
-					<?php echo $this->Html->link("<span class='fa fa-plus'> ".__("Add portfolio"), array('action' => 'add'), array('escape' => false)); ?>
+					<?php echo $this->Html->link("<span class='fa fa-plus'> ".__("Add portfolio"), array('action' => 'add'),
+					 array('escape' => false,)); ?>
 				</li>
 				<li role="presentation" class="active">
 					<a href="#contenu" aria-controls="publications" role="tab" data-toggle="tab">

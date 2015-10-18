@@ -18,8 +18,24 @@
 					<?php  echo $this->Form->input('photo', array('type' => 'file', 'label' => 'photo', 'id' => 'photo', 'class' => 'file', 'data-show-upload' => 'false', 'data-show-caption' => 'true' ));
 					echo $this->Form->input('photo_dir', array('type' => 'hidden')); ?>
 				</div>
-				<div class="col-md-12 text-right" style="top:-10px;">
-					<?php echo $this->Form->input('online', array('class' => '', 'label' => 'Online'));?>
+				<div class="col-md-12 text-right " style="top:-10px;">
+					<?php // echo $this->Form->input('online', array('class' => '', 'label' => 'Online'));?>
+						<?php echo $this->Form->input('online',array(
+						'label'=>__('Online'),
+						'required'=>false,
+						'type'=>'checkbox',
+						//'hiddenField' => false,
+						 'name'=>'data[Wallpaper][online]',
+						 'data-toggle'=>"toggle",
+						 "data-onstyle"=>"success",
+						 "data-offstyle"=>"danger",
+						 'data-style'=>"ios",
+						 'data-size'=>"mini",
+						 "data-on"=>__('En Ligne'),
+						  "data-off"=>__('Hors Ligne'),
+						  'div'=>array('class'=>'text-right '),
+						 ));
+						  ?>
 				</div>
 				<div class="form-group text-right col-md-12">
 					<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-primary')); ?>

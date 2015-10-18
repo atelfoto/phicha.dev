@@ -35,7 +35,6 @@
 		<?=  $this->Form->end(); ?>
 	</div>
 </div>
-<?php echo $this->Html->css(array('bootstrap-toggle'),array('inline'=>false)); ?>
-<?php  echo  $this->Html->script(array('bootstrap-toggle'),array('inline'=>false)); ?>
+<?php  echo  $this->Html->script(array('bootstrap-toggle.min'),array('inline'=>false)); ?>
 
 
