@@ -10,14 +10,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<title><?php echo $cakeDescription ?> <?php echo $this->fetch('title'); ?></title>
 	<link rel="apple-touch-icon" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
 	<link rel="apple-touch-startup-image" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
-	<?php
-	echo $this->Html->meta('icon');
+	<?php	echo $this->Html->meta('icon');
   echo $this->element("meta");
 	echo $this->fetch('meta');
 	echo $this->Html->css('styles.min');
 	echo $this->fetch('css');
-	echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min","app"));
-	?>
+	echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min","app"));?>
 <?php echo $this->fetch('script');	?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

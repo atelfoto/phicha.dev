@@ -24,10 +24,10 @@
 				languagelist:"Montrez les vignettes|Cachez les Vignettes|Plein Ecran|reduire plein Ecran|Ouvrez cette image une nouvelle fenêtre|Images",
 				backgroundColor: "rgba(34,34,34,1)",
 				containerId: "juicebox-container",
-				galleryHeight: "100%",
+				galleryHeight: "98%",
 				galleryWidth: "100%",
-				top:"150px"
+				//top:"150px"
 			});
 <?php  $this->Html->scriptEnd(); ?>
-<div id="juicebox-container" class=""></div>
+<div id="juicebox-container" class="" ></div>
 </div>

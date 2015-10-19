@@ -10,12 +10,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <title><?php echo $cakeDescription ?> <?php echo $this->fetch('title'); ?></title>
 <link rel="apple-touch-icon" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
 <link rel="apple-touch-startup-image" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
-<?php
-echo $this->Html->meta('icon');
+<?php echo $this->Html->meta('icon');
 echo $this->element('meta');
 echo $this->fetch('meta');
-echo $this->fetch('css');
-?>
+echo $this->fetch('css'); ?>
 </head>
 <body id="home">
 <div  class="container">
@@ -30,9 +28,7 @@ echo $this->fetch('css');
 </p>
 </footer>
 <div id="overlay"></div>
-<?php
-echo  $this->Html->script(array("jquery-1.11.3.min"));
-echo $this->fetch('script');
- ?>
+<?php echo  $this->Html->script(array("jquery-1.11.3.min"));
+echo $this->fetch('script'); ?>
 </body>
 </html>
