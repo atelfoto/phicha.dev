@@ -1,6 +1,17 @@
+ (function($){
+        /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
+     $('.menu-icon').click(function(e){
+         e.preventDefault();
+         $('body').toggleClass('with--sidebar');
+     });
+     /* Je veux pouvoir masquer le menu si on clique sur le cache */
+    $('#site-cache').click(function(e){
+        $('body').removeClass('with--sidebar');
+    });
+ })(jQuery);
 //tooltype de bootstrap
 $(function () {
-	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="tooltip"]').tooltip()
 });
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -30,16 +41,17 @@ $(document).ready(function(){
 		}else{
 			$this.removeClass('is-closed').addClass('is-opened');
 		}
-	});
+	})
 });
 $(document).ready(function(){
 	$(window).resize(function() {
-		ellipses1 = $("#bc1 :nth-child(2)");
-		if ($("#bc1 a:hidden").length >0) {ellipses1.show();} else {ellipses1.hide();}
-			ellipses2 = $("#bc2 :nth-child(2)");
-		if ($("#bc2 a:hidden").length >0) {ellipses2.show();} else {ellipses2.hide();}
-	});
+		ellipses1 = $("#bc1 :nth-child(2)")
+		if ($("#bc1 a:hidden").length >0) {ellipses1.show()} else {ellipses1.hide()}
+			ellipses2 = $("#bc2 :nth-child(2)")
+		if ($("#bc2 a:hidden").length >0) {ellipses2.show()} else {ellipses2.hide()}
+	})
 });
+
 //script pour le menu mobile
 $(document).ready(function() {
 	var sideslider = $('[data-toggle=collapse-side]');
@@ -50,14 +62,3 @@ $(document).ready(function() {
 		$(sel2).toggleClass('out');
 	});
 });
- (function($){
-        /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
-     $('.menu-icon').click(function(e){
-         e.preventDefault();
-         $('body').toggleClass('with--sidebar');
-     });
-     /* Je veux pouvoir masquer le menu si on clique sur le cache */
-    $('#site-cache').click(function(e){
-        $('body').removeClass('with--sidebar');
-    });
- })(jQuery);

@@ -35,23 +35,11 @@ class HomesController extends AppController {
 	// 		);
 	// 	return $pages;
 
-	//  }
-	// public function index($id)	{
-	// 	//$this->set('language', Configure::read('Config.language'));
-	// 	// $this->Home->recursive=0;
-	// 	// $this->set("homes");
-	// 	$this->layout= 'home';
-	// 	$this->Home->recursive = 0;
-	// 	$this->Home->id = $id;
-
-	// 		$this->request->data = $this->Home->read();
-	// }
 public function index() {
 		$this->layout= 'home';
 		$this->Home->recursive = 0;
 		$this->set('homes', $this->Paginator->paginate());
 	}
-
 
 /**
  * admin_index method
@@ -62,8 +50,6 @@ public function index() {
 		$this->Home->recursive = 0;
 		$this->set('homes', $this->Paginator->paginate());
 	}
-
-
 
 /**
  * admin_add method

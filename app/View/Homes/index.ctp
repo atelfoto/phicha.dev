@@ -30,5 +30,5 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 </div>
 </div>
 <?php  echo $this->element('sidebar'); ?>
-<?php echo $this->Html->script(array("vegas.min"),array('inline'=>false)); ?>
+<?php // echo $this->Html->script(array("home.min"),array('inline'=>false)); ?>
 <?php  echo $this->element('vegas'); ?>

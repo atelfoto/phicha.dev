@@ -15,8 +15,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->fetch('meta');
 	echo $this->Html->css('styles.min');
 	echo $this->fetch('css');
-	echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min","app"));?>
-<?php echo $this->fetch('script');	?>
+?>
+
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -46,4 +46,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div class="site-cache" id="site-cache"></div>
 		</div>
 	</body>
+
+<?php
+				//echo  $this->Html->script(array("default.min","appold"));
+				echo  $this->Html->script(array("jquery-1.11.3.min.js","bootstrap.min","appold"));
+ 				echo $this->fetch('script');	?>
 </html>

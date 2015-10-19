@@ -11,7 +11,7 @@
 <?php foreach ($pages as $k => $v): $v = current($v); ?>
 	<?php if ($this->request->is('mobile')): ?>
   	<div class="item <?php echo $v['class']; ?>">
-		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/vga_'.$v["photo"], array('alt'=>__('Studio chardon'))); ?>
+		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/vga_'.$v["photo"], array('alt'=>__('Studio chardon'),"width"=>"640px","height"=>"233")); ?>
 		<div class="">
 			<div class="carousel-caption">
 				<h2><?php echo $v['name']; ?></h2>
@@ -21,7 +21,7 @@
 	</div>
 <?php else: ?>
  	<div class="item <?php echo $v['class']; ?>">
-		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/xvga_'.$v["photo"], array('alt'=>__('Studio chardon'))); ?>
+		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/xvga_'.$v["photo"], array('alt'=>__('Studio chardon'),"width"=>"1900px","height"=>"694")); ?>
 		<div class="">
 			<div class="carousel-caption">
 				<h2><?php echo $v['name']; ?></h2>

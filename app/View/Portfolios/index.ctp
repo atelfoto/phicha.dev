@@ -10,7 +10,7 @@
 		  <div class="col-sm-6 col-md-4 text-capitalize " >
 		  <div class="thumbnail box-home">
 		  <?=   $this->Html->image("../files/portfolio/photo/". $portfolio['Portfolio']['photo_dir']."/". 'port_'. $portfolio['Portfolio']['photo'],
-		  	array("class" => "img-responsive ",'style'=>'height:262px', 'url' =>
+		  	array("class" => "img-responsive ","width"=>"350px","height"=>"262px",'style'=>'height:262px', 'url' =>
 		  	array('controller'=>'portfolios', 'action' => 'view','slug'=>$portfolio['Portfolio']['slug'],'admin'=> false))); ?>
 		  		<h3 class='text-center'><?php echo $this->Text->truncate($portfolio['Portfolio']['name'],28,array('exact' =>true,'html'=> true)); ?></h3>
 		  		<p class="text-center small" style="min-height:40px;"><?php  echo h($portfolio['Portfolio']['subtitle']); ?> <br>

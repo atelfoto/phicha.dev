@@ -28,7 +28,9 @@ echo $this->fetch('css'); ?>
 </p>
 </footer>
 <div id="overlay"></div>
-<?php echo  $this->Html->script(array("jquery-1.11.3.min"));
+<?php
+echo  $this->Html->script(array("home.min"));
+//echo  $this->Html->script(array("jquery-1.11.3.min"));
 echo $this->fetch('script'); ?>
 </body>
 </html>

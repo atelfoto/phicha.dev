@@ -6,17 +6,9 @@ body > div.navbar.navbar-custom.navbar-fixed-top{padding:0;height:50px !importan
 .navbar{padding-top: 0px;padding-bottom: 0px;}
 #juicebox-container{margin-top: 50px;}
 #myCarousel{display: none;}
-.breadcrumb{padding:0px 0 4px 0;
-	margin:0;
-display:none;
-}
-
-footer{
-	display:none;
-}
-
-@media(max-width:767px) {
-
+.breadcrumb{padding:0px 0 4px 0;margin:0;display:none;}
+footer{display:none;}
+@media(max-width:767px){
 	footer{display:none;}
 }
 
