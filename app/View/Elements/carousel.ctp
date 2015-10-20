@@ -1,6 +1,6 @@
 <?php  $pages=$this->requestAction(array('controller'=>'carousels','action'=>'index','admin'=>false)); ?>
 <div id="myCarousel" class="carousel slide"  data-ride="carousel">
-	<figure class="logo"> <?php  echo  $this->Html->image("logo.png",array("class"=>"img-responsive","alt"=>"blason château de chazeron")); ?></figure>
+	<figure class="logo"> </figure>
 	<h1 class="home hidden-xs"> <span><?= __('studio'); ?></span><br>Chardon</h1>
 <ol class="carousel-indicators">
 	<?php foreach ($pages as $kvv => $vv): $vv = current($vv); ?>
@@ -11,7 +11,7 @@
 <?php foreach ($pages as $k => $v): $v = current($v); ?>
 	<?php if ($this->request->is('mobile')): ?>
   	<div class="item <?php echo $v['class']; ?>">
-		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/vga_'.$v["photo"], array('alt'=>__('Studio chardon'),"width"=>"640px","height"=>"340px")); ?>
+		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/vga_'.$v["photo"], array('alt'=>__('Studio chardon'),"width"=>"640","height"=>"340")); ?>
 		<div class="">
 			<div class="carousel-caption">
 				<h2><?php echo $v['name']; ?></h2>
@@ -21,7 +21,7 @@
 	</div>
 <?php else: ?>
  	<div class="item <?php echo $v['class']; ?>">
-		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/xvga_'.$v["photo"], array('alt'=>__('Studio chardon'),"width"=>"1900px","height"=>"694")); ?>
+		<?=  $this->Html->image('/files/carousel/photo/'.$v["photo_dir"].'/xvga_'.$v["photo"], array('alt'=>__('Studio chardon'),"width"=>"1900","height"=>"694")); ?>
 		<div class="">
 			<div class="carousel-caption">
 				<h2><?php echo $v['name']; ?></h2>

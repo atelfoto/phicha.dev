@@ -12,6 +12,8 @@
  'content' => $this->Text->truncate(strip_tags($portfolio['Portfolio']['description']), 200)),NULL,array("inline"=>false)); ?>
 <?php echo $this->Html->meta(array('name' => 'twitter:description', 'type' => 'meta',
  'content' => $this->Text->truncate(strip_tags($portfolio['Portfolio']['description']), 200)),NULL,array("inline"=>false)); ?>
+ <?php $this->Html->addCrumb('Portfolio',array("controller"=>"portfolio","action"=>"index"),array('class'=>"btn btn-default ")); ?>
+ <?php $this->Html->addCrumb($portfolio['Portfolio']['name'],array("controller"=>"portfolio","action"=>"view","slug"),array('class'=>"btn btn-default disabled")); ?>
  <div class="container">
  <!--START Juicebox EMBED.-->
 <?php    $this->Html->script("jbcore/juicebox-o", array("inline"=>false)); ?>

@@ -1,4 +1,17 @@
 @font-face {
+    font-family: 'ralewaybold';
+    src: url('raleway/raleway-bold-webfont.eot');
+    src: url('raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('raleway/raleway-bold-webfont.woff2') format('woff2'),
+         url('raleway/raleway-bold-webfont.woff') format('woff'),
+         url('raleway/raleway-bold-webfont.ttf') format('truetype'),
+         url('raleway/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
 	font-family: 'Lora';
 	font-style: normal;
 	font-weight: 400;

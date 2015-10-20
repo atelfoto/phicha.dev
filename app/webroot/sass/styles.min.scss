@@ -5,7 +5,7 @@
 @import "bootstrap/theme";
 @import "compass";
 //@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic|Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:700);
+//@import url(https://fonts.googleapis.com/css?family=Raleway:700);raleway
 
 @import "_font";
 @import "_navbar-lateral";
@@ -54,12 +54,14 @@ label i.glyphicon-asterisk , form .text-left i.glyphicon-asterisk{
 
 
 //pour le HEADER
-
-#myCarousel .logo{
-	position: absolute;
+.logo{
+	display: block;
+	@include replace-text-with-dimensions('logo.png',0,0);
 	z-index: 15;
-	left:5%;
+	position: absolute;
 }
+
+
 #myCarousel >  {
 
 	border-bottom: -2px #f00 solid;
