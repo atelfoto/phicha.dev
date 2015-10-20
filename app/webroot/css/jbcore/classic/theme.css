@@ -1,5 +1,5 @@
 /**
- * Juicebox 1.4.3.2 Classic Theme
+ * Juicebox 1.4.4 Classic Theme
  *
  * Copyright (c) 2015 Juicebox Inc. All rights reserved.
  * http://www.juicebox.net
@@ -9,7 +9,7 @@
  *
  * Support and Documentation: http://www.juicebox.net/support
  *
- * Build Time: 02/11/2015 04:42:56 PM
+ * Build Time: 06/16/2015 09:32:19 PM
  */
 
 .juicebox-gallery
@@ -254,11 +254,12 @@ div.jb-area-caption
 }
 .jb-cap-frame .jbac-number {
 	float: right;
-	color: #ccc;
+	color: #fff;
 	width: 72px;
 	text-align: right;
 	font-size: 13px;
 	cursor:default;
+	margin-top: 6px;
 }
 .jb-caption .jb-caption-title {
 	font-size: 17px;
@@ -942,7 +943,7 @@ div.jb-idx-thumbnail-show-more {
     @-ms-viewport {width: device-width; initial-scale: 1; user-scalable: no;}
 }
 
-body, html {
+.juicebox-gallery {
 	-ms-touch-action:none;
 }
 .jcbx-glry-classic {

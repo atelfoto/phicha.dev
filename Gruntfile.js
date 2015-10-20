@@ -11,7 +11,7 @@ module.exports=function(grunt){
 			dist: {
 				files: {
 					'app/webroot/js/home.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/vegas.min.js"],
-					'app/webroot/js/default.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/bootstrap.min.js"]
+					'app/webroot/js/default.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/bootstrap.min.js","app/webroot/js/app.min.js"]
 					// "app/webroot/js/app.min.js": ["app/webroot/js/app.js"],
 					// "app/webroot/js/app2.min.js": ["app/webroot/js/default.min.js", "app/webroot/js/app.js"]
 				}
@@ -20,7 +20,7 @@ module.exports=function(grunt){
 		cssmin: {
 			target: {
 				files: {
-					'app/webroot/css/jbcore/classic/theme.min.css': ['app/webroot/files/portfolio/portraits/jbcore/classic/theme.css']
+					'app/webroot/css/jbcore/classic/theme.min.css': ['app/webroot/css/jbcore/classic/theme.css']
 				}
 			}
 		},
@@ -42,7 +42,8 @@ module.exports=function(grunt){
 			}
 		}
 	});
-	grunt.registerTask('default',['jshint','uglify'] )
+	grunt.registerTask('default',['cssmin'] )
+	//grunt.registerTask('default',['uglify'] )
 
 
 }

@@ -6,7 +6,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html lang="fr">
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 	<title><?php echo $cakeDescription ?> <?php echo $this->fetch('title'); ?></title>
 	<link rel="apple-touch-icon" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
 	<link rel="apple-touch-startup-image" href="<?= env('HTTP_HOST')  ?>/img/apple-image.png"/>
@@ -15,6 +15,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->fetch('meta');
 	echo $this->Html->css('styles.min');
 	echo $this->fetch('css');
+	echo  $this->Html->script(array("default.min"));
+	//echo  $this->Html->script(array("jquery-1.11.3.min.js","bootstrap.min","app.min"));
 ?>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,9 +48,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div class="site-cache" id="site-cache"></div>
 		</div>
 	</body>
-
 <?php
 				//echo  $this->Html->script(array("default.min","appold"));
-				echo  $this->Html->script(array("jquery-1.11.3.min.js","bootstrap.min","appold"));
+
  				echo $this->fetch('script');	?>
 </html>

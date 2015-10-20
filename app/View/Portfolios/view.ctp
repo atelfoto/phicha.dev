@@ -12,22 +12,26 @@
  'content' => $this->Text->truncate(strip_tags($portfolio['Portfolio']['description']), 200)),NULL,array("inline"=>false)); ?>
 <?php echo $this->Html->meta(array('name' => 'twitter:description', 'type' => 'meta',
  'content' => $this->Text->truncate(strip_tags($portfolio['Portfolio']['description']), 200)),NULL,array("inline"=>false)); ?>
- <?php  echo $this->Html->css(array('portfolio'),array('inline'=>false)); ?>
-<?php    $this->Html->script("../files/portfolio/".$portfolio['Portfolio']['slug']."/jbcore/juicebox", array("inline"=>false)); ?>
+ <div class="container">
+ <!--START Juicebox EMBED.-->
+<?php    $this->Html->script("jbcore/juicebox-o", array("inline"=>false)); ?>
 <?php  $this->Html->scriptStart(array("inline"=>false)); ?>
 			new juicebox({
 				baseUrl : '../files/portfolio/<?php echo $portfolio['Portfolio']['slug']; ?>/',
-				useFullscreenExpand: true,
+				themeUrl: '../../css/jbcore/classic/theme.min.css',
+				//useFullscreenExpand: true,
 				//showOpenButton: false,
 				debugMode: true,
 				galleryTitle: '<?php echo $portfolio['Portfolio']['name']; ?>',
-				languagelist:"Montrez les vignettes|Cachez les Vignettes|Plein Ecran|reduire plein Ecran|Ouvrez cette image une nouvelle fenêtre|Images",
-				backgroundColor: "rgba(34,34,34,1)",
+				languagelist:"Afficher les vignettes|Masquer les Vignettes|Afficher Plein Ecran|Quitter plein Ecran|Ouvrir dans  nouvelle fenêtre|Images",
+				//backgroundColor: "rgba(34,34,34,1)",
+				backgroundColor:'rgba(0,0,0,.9)',
 				containerId: "juicebox-container",
-				galleryHeight: "98%",
+				galleryHeight: "100%",
 				galleryWidth: "100%",
-				//top:"150px"
 			});
 <?php  $this->Html->scriptEnd(); ?>
 <div id="juicebox-container" class="" ></div>
+<!-- END Juicebox EMBED -->
+</div>
 </div>

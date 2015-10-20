@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<juiceboxgallery
+<juiceboxgallery>
 
-				thumbFrameColor="rgba(204,204,204,0.5)"
-					useFullscreenExpand="true"
-		>
-
+			<image imageURL="images/20150702_172707.jpg" thumbURL="thumbs/20150702_172707.jpg" linkURL="" linkTarget="_blank">
+			<title><![CDATA[ ]]></title>
+			<caption><![CDATA[]]></caption>
+		</image>
 			<image imageURL="images/20150702_181021.jpg" thumbURL="thumbs/20150702_181021.jpg" linkURL="" linkTarget="_blank">
 			<title><![CDATA[ ]]></title>
 			<caption><![CDATA[]]></caption>
@@ -90,5 +90,5 @@
 			<title><![CDATA[ ]]></title>
 			<caption><![CDATA[]]></caption>
 		</image>
-	
+
 </juiceboxgallery>
