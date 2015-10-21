@@ -24,8 +24,8 @@ body {
 h1 {
 	text-transform: capitalize;
 	//font-family: 'Lora', serif;
-	font-family: "Indie Flower";
-	font-size:7em;
+	font-family: "Indie Flower", cursive;
+	font-size:6em;
 	//font-size:68px;
 	letter-spacing:-2px;
 	line-height:60px;
@@ -66,6 +66,9 @@ line-height: 1.5em ;
 vertical-align: baseline;
 letter-spacing: normal;
 word-spacing: 0px;
+//font-style: italic;
+	font-variant: normal;
+	font-weight: 400;
 
 }
 p.first:first-letter{

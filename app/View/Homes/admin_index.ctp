@@ -62,15 +62,14 @@
 						?>
 					</li>
 					<li>
-						<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>'. __("delete"),'#Modal'.$home['Home']['id'],
+						<span data-placement="top" data-toggle="tooltip" title="Delete" class="text-center"></span>
+						<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>'. __("delete"),$home['Home']['id'],
 									array(
 										'class' => 'btn-remove-modal btn-sm',
-										"title"=>__('delete this picture'),
 										'escape' =>false,
 										'data-toggle' => 'modal',
-										'data-toggle-2'=>'tooltip',
-										"data-placement"=>"bottom",
-										"title"=>__('edit this picture'),
+										"data-target"=>"#delete",
+										"data-title"=>__('delete'),
 										'role'  => 'button',
 										'data-uid' => $home['Home']['id']
 						)); ?>
@@ -86,8 +85,7 @@
 		</p>
 	</div>
 </div><!-- end containing of content -->
-<?php foreach ($homes as $k => $v): $v = current($v);?><!-- modal supprimer -->
-<div class="modal fade" id="Modal<?= $v['id']; ?>">
+<div class="modal fade" id="delete"><!-- modal supprimer -->
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
@@ -109,8 +107,7 @@
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<?php endforeach ?>  <!-- fin modal supprimer -->
+</div><!-- fin modal supprimer -->
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
 		<div class="modal-content">

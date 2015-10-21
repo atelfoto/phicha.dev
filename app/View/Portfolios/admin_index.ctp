@@ -135,33 +135,35 @@
 	</div><!-- end panel -->
 </div><!-- end col md 3 -->
 </div>
-
-	<div class="modal fade" id="delete">
-		<div class="modal-dialog ">
-			<div class="modal-content">
-				<div class="modal-header panel-default">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="<?php echo __(' close'); ?>">&times;
-					</button>
-					<h4><i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
-						&nbsp;&nbsp;<?php echo __('Remove Post') ?></h4>
-				</div>
-				<div class="modal-body">
-					<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
-						<b style="color:#f00;">
-							<?php echo  $portfolio['Portfolio']['name'] ?>
-						</b>&nbsp;
-						<?php echo __('of your Articles') ?>
-						<span class="label-uname strong"></span>
-					</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
-						<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$portfolio['Portfolio']['id']),
-							array('class' => 'btn btn-danger delete-user-link')) ?>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+<div class="modal fade" id="delete">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header panel-default">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="<?php echo __(' close'); ?>">
+					&times;
+				</button>
+				<h4>
+					<i class="fa fa-exclamation-triangle fa-lg" style="color:#f1b900;"></i>
+					&nbsp;&nbsp;<?php echo __('Remove Post') ?>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
+					<b style="color:#f00;">
+						<?php echo  $portfolio['Portfolio']['name'] ?>
+					</b>&nbsp;
+					<?php echo __('of your Articles') ?>
+					<span class="label-uname strong"></span>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$portfolio['Portfolio']['id']),
+				array('class' => 'btn btn-danger delete-user-link')) ?>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
