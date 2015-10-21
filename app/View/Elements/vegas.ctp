@@ -30,6 +30,7 @@ slides: [
 } else {
 //  alert('bureau');
 $( function() {
+
 $('#home').vegas({
 overlay: !0,
 transitionDuration: 4e3,
@@ -59,4 +60,5 @@ transition: "swirlLeft2" },
 });
 });
 }
+
 <?php  $this->Html->scriptEnd(); ?>

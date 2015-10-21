@@ -6,15 +6,15 @@
 </div>
 
 <?php  echo  $this->Html->scriptStart(array('inline'=>false)); ?>
-	jQuery(function(){
-					$('.close').click(function(){
-									var e = $(this);
-									$.get(e.attr('href'));
-									e.parent().slideUp('slow');
-									return false;
-					});
-				 $(document).ready(function(){
-			$('.flash-msg').delay(10000).fadeOut('slow');
-		});
+jQuery(function(){
+$('.close').click(function(){
+var e = $(this);
+$.get(e.attr('href'));
+e.parent().slideUp('slow');
+return false;
+});
+$(document).ready(function(){
+$('.flash-msg').delay(10000).fadeOut('slow');
+});
 	});
 <?php echo  $this->Html->scriptEnd(); ?>
