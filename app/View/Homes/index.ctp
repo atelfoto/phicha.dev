@@ -7,27 +7,27 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 ?>
 <?php endforeach; ?>
 <?= $this->Html->css(array('home.min'),array('inline'=>false)); ?>
-<div id="Header">
-<div class="col-sm-5 col-md-offset-1 col-xs-12 ">
+<div  class="site-container">
+<!-- 	<nav>
+		<ul>
+			<li><a href="#" title="Twitter" class="twitterIcon"></a></li>
+			<li><a href="#" title="facebook" class="facebookIcon"></a></li>
+			<li><a href="#" title="linkedIn" class="linkedInIcon"></a></li>
+			<li><a href="#" title="Pintrest" class="pintrestIcon"></a></li>
+		</ul>
+	</nav> -->
+	<!--nocache-->
+	<?php echo $this->Flash->render(); ?>
+	<!--/nocache-->
 <?php foreach ($homes as $home): ?>
-<h1><?php echo h($home['Home']['name']); ?></h1>
+	<h1><?php echo h($home['Home']['name']); ?></h1>
 <?php endforeach; ?>
-</div>
-<div class="col-sm-4 col-xs-12">
-<ul>
-<li><a href="#" title="Twitter" class="twitterIcon"></a></li>
-<li><a href="#" title="facebook" class="facebookIcon"></a></li>
-<li><a href="#" title="linkedIn" class="linkedInIcon"></a></li>
-<li><a href="#" title="Pintrest" class="pintrestIcon"></a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-5 col-lg-offset-2 col-md-offset-1 col-md-7 col-sm-7"  >
-<div id="Content" class="wrapper">
-<?php foreach ($homes as $home): ?>
-<?= $home["Home"]['content']; ?>
-<?php endforeach; ?>
-</div>
-</div>
+	<div id="Content" class="main">
+		<?php foreach ($homes as $home): ?>
+			<?= $home["Home"]['content']; ?>
+		<?php endforeach; ?>
+	</div>
+
 <?php  echo $this->element('sidebar'); ?>
+</div>
 <?php  echo $this->element('vegas'); ?>

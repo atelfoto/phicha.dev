@@ -41,5 +41,5 @@
 	<?php  echo $this->element('sidebar'); ?>
 
 <?php echo $this->Html->script(array("vegas.min"),array('inline'=>false)); ?>
-<?php  echo $this->element('vegas'); ?>
+<?php // echo $this->element('vegas'); ?>
 

@@ -16,16 +16,15 @@ echo $this->fetch('meta');
 echo $this->fetch('css'); ?>
 </head>
 <body id="home">
-<div  class="container">
-<!--nocache-->
-<?php echo $this->Flash->render(); ?>
-<!--/nocache-->
-</div>
 <?php echo $this->fetch('content'); ?>
 <footer class="text-center">
-<p>
-<strong><small><em>Copyright &copy; 2014-<?php echo date('Y'); ?> <a href=""><?php echo env('HTTP_HOST'); ?></a></em></small></strong> All rights reserved
-</p>
+	<p>
+		<strong>
+			<small>
+				<em>Copyright &copy; 2014-<?php echo date('Y'); ?> <a href=""><?php echo env('HTTP_HOST'); ?></a></em>
+			</small>
+		</strong> All rights reserved
+	</p>
 </footer>
 <div id="overlay"></div>
 <?php
