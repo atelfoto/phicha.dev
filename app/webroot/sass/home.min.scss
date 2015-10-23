@@ -1,15 +1,7 @@
 //@import "_bootstrap-home";
 //@import "compass/reset";
 @import "compass";
-// @import "susy";
-// @import "breakpoint";
-//  @font-face {
-//  	font-family: 'Indie Flower';
-//  	font-style: normal;
-//  	font-weight: 400;
-//  	src: local('Indie Flower'), local('IndieFlower'), url(http://fonts.gstatic.com/s/indieflower/v7/10JVD_humAd5zP2yrFqw6ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
-//  	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-// }
+@import "compass/layout.scss";
 @include font-face('Indie Flower',
     font-files('indie-flower/indieflower-webfont.woff2',woff2,
         'indie-flower/indieflower-webfont.woff',woff,
@@ -22,12 +14,10 @@
         'lora/lora-regular-webfont.ttf',truetype,
         'lora/lora-regular-webfont.svg#indieflower',svg),
         'lora/lora-regular-webfont.eot',normal,normal);
-
-//@import "_font";
 $menu-width: 300px !default;
 $couleur-dark: lighten(rgb(0,0,0),30%);
 $couleur-grey:  rgb(153,153,153);
 $couleur-light: transparentize($couleur-grey, 0.8);
+@include sticky-footer(30px, "#container", "#container_footer", "#footer");
 @import "_homepage";
 @import "_vegas";
-//@import "_sidebare";

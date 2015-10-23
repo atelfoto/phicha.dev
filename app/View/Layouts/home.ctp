@@ -17,7 +17,7 @@ echo $this->fetch('css'); ?>
 </head>
 <body id="home">
 <?php echo $this->fetch('content'); ?>
-<footer>
+<footer id="footer">
 	<p>
 		<strong>
 			<small>

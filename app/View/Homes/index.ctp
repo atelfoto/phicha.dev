@@ -7,7 +7,7 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 ?>
 <?php endforeach; ?>
 <?= $this->Html->css(array('home.min'),array('inline'=>false)); ?>
-<div  class="site-container">
+<div id="container"  class="site-container">
   <header class="header">
     <a href="#" class="header__icon" id="header__icon"></a>
     <!-- <a href="#" class="header__logo">Logo</a> -->
@@ -24,7 +24,7 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 	<?php echo $this->Flash->render(); ?>
 	<!--/nocache-->
 	<?php foreach ($homes as $home): ?>
-		<h1><?php echo h($home['Home']['name']); ?></h1>
+	<h1><?php echo h($home['Home']['name']); ?></h1>
 	<?php endforeach; ?>
 	<div id="Content" class="main">
 		<?php foreach ($homes as $home): ?>

@@ -1,7 +1,7 @@
 @import "susy";
 @import "breakpoint";
  $susy: (
- 	container: 640px,
+ 	container: 800px,
  	columns: 4,
  	gutters: 10px/100px,
  	gutter-position: inside-static,
@@ -107,7 +107,7 @@ $social-sprite-dimensions:true;
  }
  p, pre {
  	margin:0 0 10px 0;
- 	font-size: 1.4em;
+ 	font-size: 1.25em;
  	font-family: "Indie Flower";
  	line-height: 1.5em ;
  	vertical-align: baseline;
@@ -145,7 +145,7 @@ ul.sidebar-menu{
 		text-transform: capitalize;
 		text-decoration: none;
 		text-align: right;
-		font-size: 2.6em;
+		font-size: 2.5em;
 		font-weight: 700;
 		font-family: "lora";
 		color: #fff;
@@ -230,7 +230,7 @@ footer{
 	=            BUREAU            =
 	==============================*/
 
-@include susy-breakpoint(640px, $desktop) {
+@include susy-breakpoint(820px, $desktop) {
 		.site-container{@include container;}
 		.header{@include span(12 last);
 			}
@@ -238,12 +238,12 @@ footer{
 				position: relative !important;
 			}
 		h1{
-			margin-top: 0.9em;
+			margin-top: 0;
 			margin-bottom: 0.9em;
 			text-align: left;
 		}
 		p{
-			padding-left: 2em;
+			padding-left: 0em;
 		}
 		.main{
 			@include span(8);}
@@ -251,6 +251,7 @@ footer{
 		ul.sidebar-menu{
 			display: block;
 			position: relative ;
+			top:50px;
 			@include transition-duration(0.3s);
 			@include transform(translateX(0px));
 		}
@@ -265,7 +266,6 @@ footer{
 			height: 66px;
 			line-height: 66px;
 			color: #fff;
- 	    // background-color: $couleur-bg;
  }
  .header__logo{
  	font-weight: bold;
@@ -276,16 +276,18 @@ footer{
  .header__icon{
  	display: none;
  }
-/*------------------------------------*\
-    $MENU
-\*------------------------------------*/
 
 footer{
 	@include span(12);
-	bottom: -30px;
 
+//footer {position: absolute; bottom: 0; left: 0; right: 0}
 }
 
+}
+@include susy-breakpoint(1281px, $desktop) {
+	h1{
 
-
+			margin-left: -140px;
+		}
+//footer {position: absolute; bottom: 0; left: 0; right: 0}
 }
