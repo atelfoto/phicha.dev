@@ -8,26 +8,45 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 <?php endforeach; ?>
 <?= $this->Html->css(array('home.min'),array('inline'=>false)); ?>
 <div  class="site-container">
-<!-- 	<nav>
-		<ul>
-			<li><a href="#" title="Twitter" class="twitterIcon"></a></li>
-			<li><a href="#" title="facebook" class="facebookIcon"></a></li>
-			<li><a href="#" title="linkedIn" class="linkedInIcon"></a></li>
-			<li><a href="#" title="Pintrest" class="pintrestIcon"></a></li>
-		</ul>
-	</nav> -->
+  <header class="header">
+    <a href="#" class="header__icon" id="header__icon"></a>
+    <!-- <a href="#" class="header__logo">Logo</a> -->
+    <nav class="menu-social">
+    	<ul class="list-inline">
+				<li><a href="#" title="Twitter"  class="social-facebook">facebok</a></li>
+				<li><a href="#" title="facebook" class="social-twitter">twitter</a></li>
+				<li><a href="#" title="linkedIn" class="social-googleplus">googleplus</a></li>
+				<li><a href="#" title="Pintrest" class="social-linkedin">linkedin</a></li>
+			</ul>
+    </nav>
+  </header>
 	<!--nocache-->
 	<?php echo $this->Flash->render(); ?>
 	<!--/nocache-->
-<?php foreach ($homes as $home): ?>
-	<h1><?php echo h($home['Home']['name']); ?></h1>
-<?php endforeach; ?>
+	<?php foreach ($homes as $home): ?>
+		<h1><?php echo h($home['Home']['name']); ?></h1>
+	<?php endforeach; ?>
 	<div id="Content" class="main">
 		<?php foreach ($homes as $home): ?>
 			<?= $home["Home"]['content']; ?>
 		<?php endforeach; ?>
 	</div>
-
-<?php  echo $this->element('sidebar'); ?>
+		<?php  echo $this->element('sidebar'); ?>
+	<div class="site-cache" id="site-cache"></div>
 </div>
 <?php  echo $this->element('vegas'); ?>
+ <?php $this->Html->scriptStart(array('inline'=>false)); ?>
+ (function($){
+    /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
+    $('#header__icon').click(function(e){
+        e.preventDefault();
+        $('body').toggleClass('with--sidebar');
+    });
+    /* Je veux pouvoir masquer le menu si on clique sur le cache */
+   $('#site-cache').click(function(e){
+       $('body').removeClass('with--sidebar');
+   })
+})(jQuery);
+<?php $this->Html->scriptEnd(); ?>
+
+

@@ -22,7 +22,12 @@
         'lora/lora-regular-webfont.ttf',truetype,
         'lora/lora-regular-webfont.svg#indieflower',svg),
         'lora/lora-regular-webfont.eot',normal,normal);
-@import "_vegas";
+
 //@import "_font";
+$menu-width: 300px !default;
+$couleur-dark: lighten(rgb(0,0,0),30%);
+$couleur-grey:  rgb(153,153,153);
+$couleur-light: transparentize($couleur-grey, 0.8);
 @import "_homepage";
+@import "_vegas";
 //@import "_sidebare";
