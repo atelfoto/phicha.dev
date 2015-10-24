@@ -39,7 +39,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						?>
 					</div><?php echo $this->element('social'); ?>
 				</div>
-
 			</div>
 			<?php echo $this->fetch('content'); ?>
 			<?php  echo $this->element('footer'); ?>
