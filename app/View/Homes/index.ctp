@@ -11,14 +11,10 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
   <header class="header">
     <a href="#" class="header__icon" id="header__icon"></a>
     <!-- <a href="#" class="header__logo">Logo</a> -->
-    <nav class="menu-social">
-    	<ul class="list-inline">
-				<li><a href="#" title="Twitter"  class="social-facebook">facebok</a></li>
-				<li><a href="#" title="facebook" class="social-twitter">twitter</a></li>
-				<li><a href="#" title="linkedIn" class="social-googleplus">googleplus</a></li>
-				<li><a href="#" title="Pintrest" class="social-linkedin">linkedin</a></li>
-			</ul>
-    </nav>
+    <!-- <nav class="menu-social"> -->
+    <?php  echo $this->element('social'); ?>
+
+   <!--  </nav> -->
   </header>
 	<!--nocache-->
 	<?php echo $this->Flash->render(); ?>

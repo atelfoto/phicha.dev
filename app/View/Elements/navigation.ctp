@@ -8,7 +8,7 @@
 					</path>
 				</svg>
 			</button>
-			<a class="navbar-brand visible-xs" href="#"><?= __('studio') ?></a>
+			<a class="navbar-brand visible-xs" href="/"><?= __('studio') ?></a>
 		</div>
 		<div id="navbar" class="navbar-custom side-collapse in">
 		<nav class="navbar-collapse">

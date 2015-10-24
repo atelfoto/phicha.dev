@@ -32,3 +32,11 @@ output_style = :compressed
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+#configuration conditionnée par l'environnement
+#if environment  == :production
+#	output_style = :compressed
+#else
+#	output_style = :expanded
+#	sass_options = { :debug_info => true}
+#end

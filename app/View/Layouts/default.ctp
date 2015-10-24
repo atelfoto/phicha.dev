@@ -25,7 +25,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body id="home" data-target=".navbar-fixed-top">
 	<div class="side-collapse-container">
 		<?php  echo $this->element('carousel'); ?>
-		<?php   echo $this->Element('navigation'); ?>
+		<?php   echo $this->element('navigation'); ?>
 		<div class="container ">
 			<?php echo $this->Session->flash(); ?>
 			<div class="breadcrumb" style="margin-top:10px;">
@@ -37,8 +37,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						'escape' => false
 						));
 						?>
-					</div>
+					</div><?php echo $this->element('social'); ?>
 				</div>
+
 			</div>
 			<?php echo $this->fetch('content'); ?>
 			<?php  echo $this->element('footer'); ?>

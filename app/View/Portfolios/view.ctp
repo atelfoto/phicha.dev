@@ -21,8 +21,8 @@
 			new juicebox({
 				baseUrl : '../files/portfolio/<?php echo $portfolio['Portfolio']['slug']; ?>/',
 				themeUrl: '../../css/jbcore/classic/theme.min.css',
-				//useFullscreenExpand: true,
-				//showOpenButton: false,
+				useFullscreenExpand: false,
+				showOpenButton: false,
 				debugMode: true,
 				galleryTitle: '<?php echo $portfolio['Portfolio']['name']; ?>',
 				languagelist:"Afficher les vignettes|Masquer les Vignettes|Afficher Plein Ecran|Quitter plein Ecran|Ouvrir dans  nouvelle fenêtre|Images",

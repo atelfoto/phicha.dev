@@ -10,7 +10,8 @@
  	 // 	image: show,
  	 // 	)
  	);
-$desktop: layout(1260px 12 30px/100px inside-static);
+$desktop: layout(1280px 12 30px/100px inside-static);
+$lg: layout(1980px 12 30px/100px inside-static);
 @include border-box-sizing;
 
 .site-container {
@@ -64,34 +65,7 @@ body{
     list-style: none;
 
 }
-/*
-menu social
- */
-.list-inline {
-	@include horizontal-list;
-	padding-top: 16px;
-	float: right;
-	li{
-		margin-right: 5px;
-		height: 34px;
-		line-height: 34px;
-		background:rgba(255,255,255, 0.44);
-	}
-}
 
-$social-layout: smart;
-$social-sprite-dimensions:true;
-@import "social/*.png";
-@include all-social-sprites;
-
-.social-sprite{
-	@include hide-text;
-	@include opacity(1);
-	display: block;
-	&:hover, &:focus{
-		@include opacity(.5);
-	}
-}
 
  h1 {
  	text-transform: capitalize;
@@ -126,7 +100,8 @@ $social-sprite-dimensions:true;
  	padding-bottom: 0.1em;
  	margin-top:0.25em;
  }
-p::first-line { margin-left: 20px }
+p:first-line { margin-left: 20px }
+p:last-child{margin-bottom: 50px;}
 
 ul.sidebar-menu{
 	z-index: 99;
@@ -227,7 +202,7 @@ footer{
 	}
 }
 	/*==============================
-	=            BUREAU            =
+	=            BUREAU       820px     =
 	==============================*/
 
 @include susy-breakpoint(820px, $desktop) {
@@ -279,15 +254,17 @@ footer{
 
 footer{
 	@include span(12);
+	footer{
+		padding-top: 20px;
+	}
 
-//footer {position: absolute; bottom: 0; left: 0; right: 0}
+
 }
 
 }
-@include susy-breakpoint(1281px, $desktop) {
+@include susy-breakpoint(1600px, $lg) {
 	h1{
-
 			margin-left: -140px;
 		}
-//footer {position: absolute; bottom: 0; left: 0; right: 0}
+
 }

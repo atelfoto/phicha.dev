@@ -1,0 +1,28 @@
+/*
+menu social
+ */
+.menu-social.list-inline {
+	@include horizontal-list;
+	padding-top: 16px;
+	float: right;
+	li{
+		margin-right: 5px;
+		height: 34px;
+		line-height: 34px;
+		background:rgba(255,255,255, 0.44);
+	}
+}
+
+$social-layout: smart;
+$social-sprite-dimensions:true;
+@import "social/*.png";
+@include all-social-sprites;
+
+.social-sprite{
+	@include hide-text;
+	@include opacity(1);
+	display: block;
+	&:hover, &:focus{
+		@include opacity(.5);
+	}
+}
