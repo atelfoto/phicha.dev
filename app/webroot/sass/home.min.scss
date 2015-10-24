@@ -19,7 +19,8 @@ $couleur-dark: lighten(rgb(0,0,0),30%);
 $couleur-grey:  rgb(153,153,153);
 $couleur-light: transparentize($couleur-grey, 0.8);
 
-@import "social";
+
 @import "_homepage";
-@include sticky-footer(30px, "#container", "#container_footer", "#footer");
+@import "social";
 @import "_vegas";
+@include sticky-footer(30px, "#container", "#container_footer", "#footer");

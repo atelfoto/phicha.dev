@@ -101,7 +101,7 @@ body{
  	margin-top:0.25em;
  }
 p:first-line { margin-left: 20px }
-p:last-child{margin-bottom: 50px;}
+//p:last-child{padding-bottom: 50px;}
 
 ul.sidebar-menu{
 	z-index: 99;
@@ -254,10 +254,13 @@ footer{
 
 footer{
 	@include span(12);
-	footer{
-		padding-top: 20px;
-	}
+	// footer{
+	// 	padding-top: 20px;
+	// }
 
+	}
+	#layout_footer{
+		@include span(12);
 
 }
 

@@ -10,11 +10,7 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 <div id="container"  class="site-container">
   <header class="header">
     <a href="#" class="header__icon" id="header__icon"></a>
-    <!-- <a href="#" class="header__logo">Logo</a> -->
-    <!-- <nav class="menu-social"> -->
     <?php  echo $this->element('social'); ?>
-
-   <!--  </nav> -->
   </header>
 	<!--nocache-->
 	<?php echo $this->Flash->render(); ?>
@@ -29,6 +25,7 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 	</div>
 		<?php  echo $this->element('sidebar'); ?>
 	<div class="site-cache" id="site-cache"></div>
+	 <div id='layout_footer'></div>
 </div>
 <?php  echo $this->element('vegas'); ?>
  <?php $this->Html->scriptStart(array('inline'=>false)); ?>
