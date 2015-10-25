@@ -31,7 +31,7 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
 	<div class="site-cache" id="site-cache"></div>
 	 <div id='layout_footer'></div>
 </div>
-<?php //  echo $this->element('vegas'); ?>
+<?php   echo $this->element('vegas'); ?>
  <?php $this->Html->scriptStart(array('inline'=>false)); ?>
  (function($){
     /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
