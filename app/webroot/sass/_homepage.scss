@@ -201,6 +201,23 @@ footer{
 
 	}
 }
+
+
+@include susy-breakpoint(320px, $desktop) {
+	h1{
+
+ 	font-size:4.5em;
+	}
+	footer{
+		p{
+			padding-top: 0;
+			padding-bottom: 0;
+			font-size: 0.5px;
+		}
+	}
+
+}
+
 	/*==============================
 	=            BUREAU       820px     =
 	==============================*/
@@ -216,6 +233,7 @@ footer{
 			margin-top: 0;
 			margin-bottom: 0.9em;
 			text-align: left;
+ 			font-size:6em;
 		}
 		p{
 			padding-left: 0em;

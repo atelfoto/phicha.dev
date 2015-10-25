@@ -25,7 +25,7 @@
 				</div>
 			</div>
 			<div class="input checkbox">
-				<?php echo  $this->Form->input('remember', array('type'=>'checkbox',
+				<?php echo  $this->Form->input('remember', array('type'=>'checkbox', "checked"=>true,
 				'label'=>__('Remember me') ,'div'=>false, 'required'=>false,'class'=>'input')); ?>
 				<!-- <label for="UserRemember">Se souvenir de moi ?</label> -->
 			</div>

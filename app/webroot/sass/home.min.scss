@@ -1,5 +1,7 @@
-//@import "_bootstrap-home";
+@import "_bootstrap-home";
 //@import "compass/reset";
+@import "bootstrap/variables";
+@import "bootstrap/alerts";
 @import "compass";
 @import "compass/layout.scss";
 @include font-face('Indie Flower',

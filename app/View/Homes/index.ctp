@@ -12,11 +12,11 @@ echo $this->Html->meta(array('name' => 'robots', 'content' => $home["Home"]['rob
     <a href="#" class="header__icon" id="header__icon"></a>
     <?php  echo $this->element('social'); ?>
   </header>
-	<!--nocache-->
 	 <!--nocache-->
 <?php echo $this->Session->flash(); ?>
 <?php echo $this->Session->flash('auth'); ?>
 <!--/nocache-->
+<!--nocache-->
 	<?php // echo $this->Flash->render(); ?>
 	<!--/nocache-->
 	<?php foreach ($homes as $home): ?>

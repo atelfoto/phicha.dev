@@ -52,7 +52,7 @@ $(document).ready(function() {
 });
  (function($){
         /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
-     $('.menu-icon').click(function(e){
+     $('#menu-icon').click(function(e){
          e.preventDefault();
          $('body').toggleClass('with--sidebar');
      });

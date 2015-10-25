@@ -42,8 +42,8 @@ module.exports=function(grunt){
 			}
 		}
 	});
-	grunt.registerTask('default',['cssmin'] )
-	//grunt.registerTask('default',['uglify'] )
+	//grunt.registerTask('default',['cssmin'] )
+	grunt.registerTask('default',['uglify'] )
 
 
 }
