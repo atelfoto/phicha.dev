@@ -21,8 +21,8 @@
 								<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 								<th><?php echo $this->Paginator->sort('created'); ?></th>
 								<th><?php echo $this->Paginator->sort('modified'); ?></th>
-								<th><?php echo $this->Paginator->sort('online'); ?></th>
-								<th class="actions" colspan="2"></th>
+								<th class="actions" colspan="3"><?php echo $this->Paginator->sort('online'); ?></th>
+								<!-- <th class="actions" colspan="2"></th> -->
 							</tr>
 						</thead>
 						<tbody>
@@ -70,7 +70,7 @@
 												'class' => 'btn btn-default btn-remove-modal btn-sm',
 												'escape' =>false,
 												'data-toggle' => 'modal',
-												"data-target"=>"#delete",
+												"data-target"=>"#delete-".$portfolio['Portfolio']['id'],
 												"data-title"=> __('delete'),
 												'role'  => 'button',
 												'data-uid' => $portfolio['Portfolio']['id'])
@@ -135,7 +135,8 @@
 	</div><!-- end panel -->
 </div><!-- end col md 3 -->
 </div>
-<div class="modal fade" id="delete">
+<?php foreach ($portfolios as $k => $v): $v = current($v);?>
+<div class="modal fade" id="delete-<?= $v['id']; ?>">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
@@ -150,7 +151,7 @@
 			<div class="modal-body">
 				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
 					<b style="color:#f00;">
-						<?php echo  $portfolio['Portfolio']['name'] ?>
+						<?php echo  $v['name'] ?>
 					</b>&nbsp;
 					<?php echo __('of your Articles') ?>
 					<span class="label-uname strong"></span>
@@ -163,7 +164,8 @@
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+</div>
+<?php endforeach ?><!-- /.modal -->
 
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
