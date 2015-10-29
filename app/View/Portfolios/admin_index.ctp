@@ -153,13 +153,13 @@
 					<b style="color:#f00;">
 						<?php echo  $v['name'] ?>
 					</b>&nbsp;
-					<?php echo __('of your Articles') ?>
+					<?php echo __('of your Portfolio') ?>
 					<span class="label-uname strong"></span>
 				</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
-				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$portfolio['Portfolio']['id']),
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
 				array('class' => 'btn btn-danger delete-user-link')) ?>
 			</div>
 		</div><!-- /.modal-content -->
