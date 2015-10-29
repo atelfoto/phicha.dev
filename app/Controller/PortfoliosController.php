@@ -131,7 +131,13 @@ public $components = array('Paginator', 'Flash', 'Session');
 		}
 		if ($this->request->is(array('post', 'put'))) {
 
-			if ($this->Portfolio->save($this->request->data)) {
+			if ($this->Portfolio->save($this->request->data)) {Cache::clear();
+				foreach(glob(CACHE.'models'.DS.'*') as $file){
+        	unlink($file);
+        }
+        foreach(glob(CACHE.'views'.DS.'*.php') as $file){
+        	unlink($file);
+        }
 				$this->Session->setFlash(__('The portfolio has been saved.'), 'notif', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -159,7 +165,7 @@ public $components = array('Paginator', 'Flash', 'Session');
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Portfolio->delete()) {
-        	 foreach(glob(CACHE.'models'.DS.'myapp_cake_model_default_chateauccxbdchaz_portfolios') as $file){
+        	 foreach(glob(CACHE.'models'.DS.'myapp_cake_model_default_cake_phicha_portfolios') as $file){
         				unlink($file);
         	   		 }
 			$this->Session->setFlash(__('The portfolio has been deleted.'), 'notif', array('class' => 'alert alert-success'));

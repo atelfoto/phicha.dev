@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP 2.4.4\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-10-08 15:57+0200\n"
+"PO-Revision-Date: 2015-10-26 14:17+0100\n"
 "Last-Translator: philippe wagner <atelfoto@msn.com>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: Controller/CarouselsController.php:46;76;110;145
@@ -175,7 +175,7 @@ msgstr "La post avec l 'Id %s a bien été publiée."
 
 #: Controller/PortfoliosController.php:183
 msgid "Portfolio ID %s was not published."
-msgstr "La post avec l 'Id %s a bien été publiée."
+msgstr "Le Portfolio avec l 'Id %s n'a pas pu être publiée."
 
 #: Controller/PortfoliosController.php:187;210
 msgid "No Portfolio by that ID was found."
