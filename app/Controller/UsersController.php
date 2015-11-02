@@ -88,6 +88,7 @@ public function signup(){
 	* @return [type] [description]
 	**/
 	public function forgot (){
+		$this->layout = "home";
 		if(!empty($this->request->data)){
 			$user = $this->User->findByMail($this->request->data['User']['mail'],array('id'));
 			if(empty($user)){
@@ -138,7 +139,6 @@ public function password($user_id,$token){
 		}
 	}
 }
-
 /**
  * activate
  */
@@ -284,13 +284,9 @@ public function member_account(){
 	}
 
 /**
- * [index description]
+ * [admin_index description]
  * @return [type] [description]
  */
-function index(){
-
-}
-
 function admin_index(){
 	$d['users']= $this->Paginate('User');
 	$this->set($d);
