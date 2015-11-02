@@ -64,7 +64,7 @@
 									</div>
 								</div> <!-- /col-md-6 -->
 							</div>
-							<?=  $this->Form->input('subject', array('label'=>__('Subject :&nbsp;<i class="glyphicon glyphicon-asterisk"></i>'),
+							<?=  $this->Form->input('subject', array('label'=>__('Subject').' :&nbsp;<i class="glyphicon glyphicon-asterisk"></i>',
 							'required'=>false,'class'=>"form-control","placeholder"=>__("Subject of your message:"))); ?>
 							<div class="form-group required">
 								<label for="ContactMessage"> <?= __('Your Message '); ?>:&nbsp;<i class="glyphicon glyphicon-asterisk"></i></label>

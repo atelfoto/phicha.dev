@@ -29,7 +29,7 @@
 			</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x"></span> &nbsp;&nbsp;List Carousels'),
+					<li><?php echo $this->Html->link('<span class="fa fa-list fa-2x"></span>&nbsp;&nbsp;'.__('List Carousels'),
 						array('action' => 'index'), array('escape' => false)); ?>
 					</li>
 				</ul>

@@ -31,7 +31,7 @@
 							<td><?php echo $this->Date->french($home['Home']['created']); ?>&nbsp;</td>
 							<td><?php echo $this->Date->french($home['Home']['modified']); ?>&nbsp;</td>
 							<td>
-								<?php if($home['Home'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
+								<?php if($home['Home'][ 'online' ] == 0) {echo $this->Html->link('<span class="label label-danger">'.__("Offline").'</span>',
 									array('action'=>'enable', $home['Home']['id']),
 									array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"bottom",
 										"title"=>__('Enable this page'),'escape'=>false));

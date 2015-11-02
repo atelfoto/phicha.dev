@@ -50,7 +50,7 @@
 			</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-list fa-2x"></span> &nbsp;&nbsp;home'),
+					<li><?php echo $this->Html->link('<span class="fa fa-list fa-2x"></span> &nbsp;&nbsp;'.__('home'),
 						array('action' => 'index'), array('escape' => false)); ?>
 					</li>
 					<li role="presentation" class="active">

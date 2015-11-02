@@ -58,9 +58,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><?= $this->Html->link(__("See the site"), '/',array('target' => '_blank')); ?></li>
-					<li><?php echo $this->Html->link(__('help&nbsp;<i class="glyphicon glyphicon-question-sign"></i>') ,
+					<li><?php echo $this->Html->link(__('help').'&nbsp;<i class="glyphicon glyphicon-question-sign"></i>' ,
 					 array('controller' => 'pages', 'action' => 'help'),array('escape'=>false)); ?></li>
-					<li><?php echo $this->Html->link(__('Logout&nbsp;<i class="glyphicon glyphicon-new-window"></i>') ,
+					<li><?php echo $this->Html->link(__('Logout').'&nbsp;<i class="glyphicon glyphicon-new-window"></i>' ,
 					 array('controller' => 'users', 'action' => 'logout','admin'=>false),array('escape'=>false)); ?></li>
 					<li class="dropdown user user-menu">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">

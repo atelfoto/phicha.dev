@@ -42,6 +42,7 @@ class AppController extends Controller {
 		'Form',
 		'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
 		'Form' => array('className' => 'BoostCake.BoostCakeForm'),
+		'Image',
 		'Cache',
 		'Session',
 	);

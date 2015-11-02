@@ -55,7 +55,7 @@
 									"title"=>__('edit this picture'),'escape' => false)); ?>
 							</td>
 							<td class="actions">
-								<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+								<p data-placement="top" data-toggle="tooltip" title="<?= __('delete'); ?>" class="text-center">
 								<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>',$wallpaper['Wallpaper']['id'],
 									array(
 										'class' => 'btn btn-default btn-remove-modal btn-sm',
@@ -79,7 +79,7 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New picture'), array('action' => 'add'), array('escape' => false)); ?>
+					<li><?php echo $this->Html->link('<span class="fa fa-plus"></span>&nbsp;&nbsp;'.__('New picture'), array('action' => 'add'), array('escape' => false)); ?>
 					</li>
 				</ul>
 			</div><!-- end body -->

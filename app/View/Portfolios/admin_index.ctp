@@ -41,7 +41,7 @@
 								<td><?php echo $this->Date->french($portfolio['Portfolio']['created']); ?>&nbsp;</td>
 								<td><?php echo $this->Date->french($portfolio['Portfolio']['modified']); ?>&nbsp;</td>
 								<td><?php if($portfolio['Portfolio'][ 'online' ] == 0) {
-													echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
+													echo $this->Html->link('<span class="label label-danger">'.__('Offline').'</span>',
 														array('action'=>'enable', $portfolio['Portfolio']['id']),
 														array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"top",
 															"title"=>__('Enable this portfolio'),'escape'=>false));
@@ -64,7 +64,7 @@
 									?>
 								</td>
 								<td>
-									<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+									<p data-placement="top" data-toggle="tooltip" title="<?= __('delete'); ?>" class="text-center">
 										<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>',$portfolio['Portfolio']['id'],
 											array(
 												'class' => 'btn btn-default btn-remove-modal btn-sm',

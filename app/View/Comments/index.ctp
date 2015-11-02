@@ -21,7 +21,7 @@
 				'class' => 'well form-horizontal col-md-11 col-md-offset-1 '
 			)); ?>
 			<h3 class="col-md-offset-2">
-				<strong><?php echo $this->Paginator->counter(array('format' => __('{:count} ')));?>Commentaires </strong>
+				<strong><?php echo $this->Paginator->counter(array('format' => '{:count} '));?>Commentaires </strong>
 			</h3>
 			<?php echo $this->Form->input('name', array(
 					'placeholder' => 'nom'

@@ -55,7 +55,7 @@
 						)); ?>
 					</td>
 					<td>
-						<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+						<p data-placement="top" data-toggle="tooltip" title="<?= __('delete'); ?>" class="text-center">
 							<?php echo $this->Html->link('<span class="fa fa-trash	fa-2x"></span>',$carousel['Carousel']['id'],
 								array('class' => 'btn btn-default btn-remove-modal btn-sm',
 									'escape' =>false,

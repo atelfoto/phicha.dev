@@ -23,14 +23,15 @@
 				 			$v['id']),array('class' => 'btn btn-default','escape' =>false)); ?>
 				 		</td>
 				 		<td>
-							<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
+							<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#UsersModal',
 	              				array(
 	              				  'class' => 'btn btn-default btn-remove-modal',
 	              				  'escape' =>false,
 	              				  'data-toggle' => 'modal',
 	              				  'role'  => 'button',
 	              				  'data-uid' => $v['id']
-	               				));
+	               				)
+	               			);
 	            ?>
 						</td>
 					</tr>
@@ -45,7 +46,7 @@
 			<div class="panel-heading">Actions</div>
 			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li><?php echo $this->Html->link(__('<span class="fa fa-plus"></span>&nbsp;&nbsp;New'), array('action' => 'add'), array('escape' => false)); ?>
+					<li><?php echo $this->Html->link('<span class="fa fa-plus"></span>&nbsp;&nbsp;'.__('New'), array('action' => 'add'), array('escape' => false)); ?>
 					</li>
 				</ul>
 			</div><!-- end body -->
@@ -60,7 +61,7 @@
 			</div>
 			<div class="modal-body">
 				<p>&nbsp;</p>
-				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo __('&nbsp; '. $v['id'].' &nbsp;'); ?></b><?php echo __(' permanently from your users'); ?>
+				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo '&nbsp; '. $v['id'].' &nbsp;'; ?></b><?php echo __(' permanently from your users'); ?>
 					<span class="label-uname strong"></span> ?</p>
 					<p>&nbsp;</p>
 			</div>

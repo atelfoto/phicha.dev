@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CakePHP 2.4.4</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <style>
+
+
+/*
+Based on Minimal CSS (minimalcss.com) under the MIT license.
+*/
+
+/* Reset */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* Layout */
+body { background-color: #fff; color: #333;	font: 14px/20px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+header { width: 100%; margin: 0 auto; position: relative; padding: 20px 0; margin-bottom: 20px; }
+
+nav ul { margin: 0; }
+nav ul li { display: inline; margin-right: 20px; font-size: 16px; line-height: 28px; color: #333; }
+nav ul li a { color: #333; }
+
+.container { position: relative; max-width: 90%; margin: 0 auto; }
+
+footer { border-top:1px solid #ccc; font-size:11px; line-height:26px; color:#999; }
+footer a { color:#999999; }
+footer a:hover { color:#105CB6; }
+footer ul li { display:inline; list-style:none; padding-left:20px; }
+
+/* Typography */
+a { color: #105CB6; text-decoration: none; }
+a:hover, a:focus { color: #105CB6; text-decoration: underline; }
+a:active { color: #105CB6; }
+
+h1 { font-size: 24px; line-height: 20px; margin: 10px 0; }
+h2 { font-size: 20px; line-height: 20px; margin: 10px 0; }
+h3 { font-size: 16px; line-height: 20px; margin: 10px 0; }
+h4 { font-size: 14px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 12px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 10px; line-height: 20px; margin: 10px 0; }
+h1,h2,h3,h4,h5,h6 { color: #333; }
+
+p { margin-bottom: 10px; }
+
+.float-left     { float: left; }
+.float-right    { float: right; }
+img.float-left  { float: left; margin: 0 20px 20px 0; }
+img.float-right { float: right; margin: 0 0 20px 20px; }
+img.center      { margin: 0 auto; display: block; }
+
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Misc */
+hr { background-color: #ccc; border: 0px; color: #ccc; height: 1px; margin: 8px 0 20px 0; }
+pre, code { background:#E0ECF6; display:block; margin-bottom: 20px; padding:10px; }
+
+blockquote { margin: 10px 10px 20px; padding: 9px; background-color: #f8f8f8; color: #666; border-left: 5px solid #ddd; font: 14px/20px Georgia, Times, serif; quotes: "\201C" "\201D"; }
+blockquote p { margin: 0; }
+blockquote:before { content: open-quote; font-weight: bold; }
+blockquote:after  { content: close-quote; font-weight: bold; }
+
+/* List */
+ul { list-style-position:inside; }
+ol { list-style-position:inside; }
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th { font-weight: bold; }
+tfoot { font-style: italic; }
+
+/* Metadata part */
+
+.metadata {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 90%;
+}
+table.metadata td {
+  padding-right: 20px;
+}
+
+.stats {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.graph {
+  width: 100%;
+}
+.graph div { float: left; }
+.graph div:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.graph div:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+.percent-done    { background-color: #71DD46; height: 10px; }
+.percent-fuzzy   { background-color: #FFD300; height: 10px; }
+.percent-untrans { background-color: #F1F1F1; height: 10px; }
+.legend {
+  font-size: smaller;
+  color: #aaa;
+  padding-top: 12px;
+  text-align: center;
+}
+
+/* Translations */
+table.translations {
+  width: 100%;
+  table-layout: fixed;
+}
+table.translations th, table.translations td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #E1E1E1;
+}
+table.translations th {
+  text-align: left;
+}
+table.translations th:first-child, table.translations td:first-child { padding-left: 0; }
+table.translations th:last-child, table.translations td:last-child { padding-right: 0; }
+
+.with-comments td {
+  border-bottom: none !important;
+}
+tr.comments div {
+  float: right;
+  max-width: 75%;
+  font-size: smaller;
+  color: #aaa;
+}
+tr.comments div p:last-child { margin-bottom: 0; }
+
+.fuzzy .tra {
+  color: #a9861b;
+}
+
+.msgctxt {
+  font-size: smaller;
+  color: #6d8e13;
+}
+
+
+  </style>
+</head>
+<body>
+<div class='container'>
+<table class='metadata'>
+<tr><td>Projet :</td><td>CakePHP 2.4.4</td></tr>
+<tr><td>Langue :</td><td>français</td></tr>
+</table>
+<div class='stats'>
+  <div class='graph'>
+    <div class='percent-done' style='width: 95.0311%'>&nbsp;</div>
+    <div class='percent-fuzzy' style='width: 0.931677%'>&nbsp;</div>
+    <div class='percent-untrans' style='width: 4.03727%'>&nbsp;</div>
+  </div>
+  <div class='legend'>Traduit : 306 de 322 (95 %)  •  Restant : 16  </div>
+</div>
+<table class='translations'>
+  <thead>
+    <tr>
+      <th>Texte source — anglais</th>
+      <th>Traduction — français</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid carousel</td>
+<td class='tra'  lang='fr'>
+Action invalide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The carousel has been saved.</td>
+<td class='tra'  lang='fr'>
+Le carrousel a été enregistré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The carousel could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le carrousel n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The carousel has been deleted.</td>
+<td class='tra'  lang='fr'>
+Le carrousel a été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The carousel could not be deleted. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le carrousel n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must provide a valid ID number to enable a post.</td>
+<td class='tra'  lang='fr'>
+Vous devez fournir un numéro d'identification valide pour activer un message.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Carousel ID %s has been published.</td>
+<td class='tra'  lang='fr'>
+Carrousel ID %s a été publié.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Carousel ID %s was not published.</td>
+<td class='tra'  lang='fr'>
+Carrousel ID %s n'a pas pu être publié.</td>
+</tr>
+<tr class='i fuzzy'>
+<td class='src'  lang='en'>
+No Carousel by that ID was found.</td>
+<td class='tra'  lang='fr'>
+Aucunes pages utilisateur de trouvées pour cet ID</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must provide a valid ID number to disable a portfolio.</td>
+<td class='tra'  lang='fr'>
+Vous devez fournir un numéro d'identification valide pour désactiver un post.</td>
+</tr>
+<tr class='i fuzzy'>
+<td class='src'  lang='en'>
+Carousel ID %s has been disabled.</td>
+<td class='tra'  lang='fr'>
+L' utilisateur avec l 'Identifiant %s a été désactivé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+portfolio ID %s was not disabled.</td>
+<td class='tra'  lang='fr'>
+La page avec l 'Id %s n'a pas pu être désactivé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Mail us is reached.</td>
+<td class='tra'  lang='fr'>
+Merci Votre Mail nous est bien parvenu.</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Commentaire sur le livre d'or</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The comment has been saved.</td>
+<td class='tra'  lang='fr'>
+Votre commentaire a été enregistré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The comment could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+votre commentaire n'a pas été sauvegardé. Merci de corriger vos erreurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This change link is not good</td>
+<td class='tra'  lang='fr'>
+Ce lien ne semble pas bon</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your post has been validated</td>
+<td class='tra'  lang='fr'>
+Votre post a été validé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid comment</td>
+<td class='tra'  lang='fr'>
+Action invalide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Comment ID %s has been published.</td>
+<td class='tra'  lang='fr'>
+Le commentairet avec l 'Id %s a bien été publiée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Comment ID %s was not published.</td>
+<td class='tra'  lang='fr'>
+Le commentaire avec l 'Id %s a bien été publiée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Comment by that ID was found.</td>
+<td class='tra'  lang='fr'>
+Aucun commentaire avec cet ID n'a été trouvé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must provide a valid ID number to disable a comment.</td>
+<td class='tra'  lang='fr'>
+Vous devez fournir un numéro d'identification valide pour désactiver ce commentaire.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Comment ID %s has been disabled.</td>
+<td class='tra'  lang='fr'>
+Le commentaire avec l 'Id %s a été désactivé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+comment ID %s was not disabled.</td>
+<td class='tra'  lang='fr'>
+Le commentaire avec l 'Id %s n'a pas pu être désactivé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The comment has been deleted.</td>
+<td class='tra'  lang='fr'>
+Le commentaire a été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The comment could not be deleted. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le commentaire n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thank you.Your Mail Us is reached.</td>
+<td class='tra'  lang='fr'>
+Merci Votre Mail nous est bien parvenu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thank you to correct your fields.</td>
+<td class='tra'  lang='fr'>
+Merci de corriger vos erreurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid enews</td>
+<td class='tra'  lang='fr'>
+newsletter invalide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thanks your Email has been saved.See you later</td>
+<td class='tra'  lang='fr'>
+Merci, que votre Email a été enregistrée. A plus tard</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The enews could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le newsletter n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The enews has been saved.</td>
+<td class='tra'  lang='fr'>
+La newsletter a été enregistré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The enews has been deleted.</td>
+<td class='tra'  lang='fr'>
+La newsletter a été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The enews could not be deleted. Please, try again.</td>
+<td class='tra'  lang='fr'>
+L'opération n'a pas pu être supprimé. S'il vous plaît réessayer plus tard.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This page has been saved.</td>
+<td class='tra'  lang='fr'>
+La page a bien été enregistré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This page could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le lien n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid page</td>
+<td class='tra'  lang='fr'>
+Lien invalide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This page has been deleted.</td>
+<td class='tra'  lang='fr'>
+La page a bien été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This page could not be deleted. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le lien n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This has been saved.</td>
+<td class='tra'  lang='fr'>
+ceci a été enregistré</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le lien n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid portfolio</td>
+<td class='tra'  lang='fr'>
+portfolio non valide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The portfolio has been saved.</td>
+<td class='tra'  lang='fr'>
+Le carrousel a été enregistré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The portfolio could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le lien n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The portfolio has been deleted.</td>
+<td class='tra'  lang='fr'>
+Le carrousel a été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The portfolio could not be deleted. Please, try again.</td>
+<td class='tra'  lang='fr'>
+La categorie n'a pas pu être supprimé. S'il vous plaît réessayer plus tard.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portfolio ID %s has been published.</td>
+<td class='tra'  lang='fr'>
+La post avec l 'Id %s a bien été publiée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portfolio ID %s was not published.</td>
+<td class='tra'  lang='fr'>
+Le Portfolio avec l 'Id %s n'a pas pu être publiée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Portfolio by that ID was found.</td>
+<td class='tra'  lang='fr'>
+Aucunes pages portfolio de trouvées pour cet ID</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portfolio ID %s has been disabled.</td>
+<td class='tra'  lang='fr'>
+La page avec l 'Id %s a été désactivé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid post</td>
+<td class='tra'  lang='fr'>
+Action invalide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The post has been saved.</td>
+<td class='tra'  lang='fr'>
+Le post a été enregistré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The post could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le lien n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The post has been deleted.</td>
+<td class='tra'  lang='fr'>
+Le poste a été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The post could not be deleted. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le lien n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ your registration to our site</td>
+<td class='tra'  lang='fr'>
+votre inscription sur notre site</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thank you you are registered mail sent to you to confirm your compte.Veuillez check your spam in case.</td>
+<td class='tra'  lang='fr'>
+Merci vous êtes bien inscrit un mail vous a été envoyé pour valider votre compte.Veuillez vérifier vos spam au cas où.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thank you to correct your mistakes</td>
+<td class='tra'  lang='fr'>
+Merci de corriger vos erreurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thank you you are registered mail sent to you to confirm your compte.Please check your spam in case.</td>
+<td class='tra'  lang='fr'>
+Merci vous êtes bien inscrit un mail vous a été envoyé pour valider votre compte.Veuillez vérifier vos spam au cas où.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This email address is not associated with any account</td>
+<td class='tra'  lang='fr'>
+Cet email n'est associé à aucun compte:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Password regeneration</td>
+<td class='tra'  lang='fr'>
+Régénération du mot de passe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+An email was sent to you with instructions to regenerate your password! Please check your span !!</td>
+<td class='tra'  lang='fr'>
+Un Email vous a été envoyé avec les instructions pour regénérer votre mot de passe! Veuillez vérifier vos span!!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This link does not look good</td>
+<td class='tra'  lang='fr'>
+Ce lien ne semble pas bon</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+your password has been changed</td>
+<td class='tra'  lang='fr'>
+Votre mot de passe a été modifié avec succès.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your account has been validated</td>
+<td class='tra'  lang='fr'>
+Votre compte a été validé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your information has been changed</td>
+<td class='tra'  lang='fr'>
+Vos information ont été modifié.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your information could not be validated</td>
+<td class='tra'  lang='fr'>
+Vos informations n'ont pas pus être validé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hello You are logged nows</td>
+<td class='tra'  lang='fr'>
+Bonjour Vous êtes maintenants connecté</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your login or your password are not correct</td>
+<td class='tra'  lang='fr'>
+Votre login ou votre mot de passe ne sont pas correct</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You are now offline</td>
+<td class='tra'  lang='fr'>
+Vous êtes maintenant Déconnecté</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The user has been added</td>
+<td class='tra'  lang='fr'>
+L'utilisateur a été ajouté</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The users could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+Le lien n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must provide a valid ID number to enable a user.</td>
+<td class='tra'  lang='fr'>
+Vous devez fournir un numéro d'identification valide pour activer une page.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+User ID %s has been published.</td>
+<td class='tra'  lang='fr'>
+L' utilisateur avec l 'Identifiant %s a bien été publié.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+User ID %s was not saved.</td>
+<td class='tra'  lang='fr'>
+L' utilisateur avec l 'Identifiant %s n'a pas pu  être sauvé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No user by that ID was found.</td>
+<td class='tra'  lang='fr'>
+Aucunes pages utilisateur de trouvées pour cet ID</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must provide a valid ID number to disable a user.</td>
+<td class='tra'  lang='fr'>
+Vous devez fournir un numéro d'identification valide pour désactiver un post.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+User ID %s has been disabled.</td>
+<td class='tra'  lang='fr'>
+L' utilisateur avec l 'Identifiant %s a été désactivé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No User by that ID was found.</td>
+<td class='tra'  lang='fr'>
+Aucunes pages utilisateur de trouvées pour cet ID</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+User removed: %s</td>
+<td class='tra'  lang='fr'>
+L' Utilisateur %s a été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Could not remove product</td>
+<td class='tra'  lang='fr'>
+Impossible d'enregistrer le produit</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The picture has been saved.</td>
+<td class='tra'  lang='fr'>
+L'image a été enregistré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The picture could not be saved. Please, try again.</td>
+<td class='tra'  lang='fr'>
+L'image n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid picture</td>
+<td class='tra'  lang='fr'>
+Action invalide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The picture has been deleted.</td>
+<td class='tra'  lang='fr'>
+L'image a été supprimé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The picture could not be deleted. Please, try again.</td>
+<td class='tra'  lang='fr'>
+La photo n'a pas été sauvegardé. Veuillez réessayer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Debug setting does not allow access to this url.</td>
+<td class='tra'  lang='fr'>
+Le réglage de débogage ne permet pas l'accès à cette URL.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alert notice message testing...</td>
+<td class='tra'  lang='fr'>
+Un message de test avis d'alerte ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alert success message testing...</td>
+<td class='tra'  lang='fr'>
+Un message test de réussite d&amp;#39;alerte ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alert error message testing...</td>
+<td class='tra'  lang='fr'>
+Un message de test avis d'alerte ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alert info message testing...</td>
+<td class='tra'  lang='fr'>
+Un message de test avis d'alerte ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alert warning message testing...</td>
+<td class='tra'  lang='fr'>
+Un message de test avis d'alerte ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Alert danger message testing...</td>
+<td class='tra'  lang='fr'>
+Un message de test avis d'alerte ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No filename after parsing. Function %s returned an invalid filename</td>
+<td class='tra'  lang='fr'>
+Aucun nom de fichier après l'analyse. Fonction %s a retourné un nom de fichier non valide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add picture</td>
+<td class='tra'  lang='fr'>
+Ajouter une photo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Online</td>
+<td class='tra'  lang='fr'>
+En ligne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+En Ligne</td>
+<td class='tra'  lang='fr'>
+En Ligne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hors Ligne</td>
+<td class='tra'  lang='fr'>
+Hors Ligne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Submit</td>
+<td class='tra'  lang='fr'>
+Soumettre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Carousel</td>
+<td class='tra'  lang='fr'>
+Liste du carrousel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Carousel</td>
+<td class='tra'  lang='fr'>
+Modifier le  carrousel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Carousel</td>
+<td class='tra'  lang='fr'>
+Carrousel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Offline</td>
+<td class='tra'  lang='fr'>
+En ligne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enable this picture</td>
+<td class='tra'  lang='fr'>
+Activer cette photo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+In line</td>
+<td class='tra'  lang='fr'>
+En ligne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disable this picture</td>
+<td class='tra'  lang='fr'>
+Désactiver cette photo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+edit</td>
+<td class='tra'  lang='fr'>
+Modifié</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+delete</td>
+<td class='tra'  lang='fr'>
+Effacer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New picture</td>
+<td class='tra'  lang='fr'>
+Ajouter une photo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+close</td>
+<td class='tra'  lang='fr'>
+Fermer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove Picture</td>
+<td class='tra'  lang='fr'>
+Supprimer cette photo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete</td>
+<td class='tra'  lang='fr'>
+Etes-vous sûr de vouloir supprimer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+of your Carousel</td>
+<td class='tra'  lang='fr'>
+de votre carousel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cancel</td>
+<td class='tra'  lang='fr'>
+Annuler</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete</td>
+<td class='tra'  lang='fr'>
+Supprimer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Help</td>
+<td class='tra'  lang='fr'>
+Aide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Closed</td>
+<td class='tra'  lang='fr'>
+Fermer</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+livre d'or</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i fuzzy'>
+<td class='src'  lang='en'>
+Admin Add Comment</td>
+<td class='tra'  lang='fr'>
+Administrateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Actions</td>
+<td class='tra'  lang='fr'>
+Actions</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Comments</td>
+<td class='tra'  lang='fr'>
+liste des commentaires</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Users</td>
+<td class='tra'  lang='fr'>
+Liste des utilisateurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New User</td>
+<td class='tra'  lang='fr'>
+Nouveau Utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Posts</td>
+<td class='tra'  lang='fr'>
+Liste des messages</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New Post</td>
+<td class='tra'  lang='fr'>
+Nouveau Post</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Admin Edit Comment</td>
+<td class='tra'  lang='fr'>
+Modifier les commentaires</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete # %s?</td>
+<td class='tra'  lang='fr'>
+Êtes vous sûr de vouloir supprimer # %s ?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+comments manager</td>
+<td class='tra'  lang='fr'>
+Gestionnaire du livre d'or</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enable this post</td>
+<td class='tra'  lang='fr'>
+Activez ce Post</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;span class="label label-success"&gt;In line&lt;/span&gt;</td>
+<td class='tra'  lang='fr'>
+&lt;span class="label label-success"&gt;Activé&lt;/span&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disable this Post</td>
+<td class='tra'  lang='fr'>
+Désactiver ce Post</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+of your Articles</td>
+<td class='tra'  lang='fr'>
+de vos Articles </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Comment</td>
+<td class='tra'  lang='fr'>
+Commentaire </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Id</td>
+<td class='tra'  lang='fr'>
+Id</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+User</td>
+<td class='tra'  lang='fr'>
+Utilisateur </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Username</td>
+<td class='tra'  lang='fr'>
+Nom d'utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mail</td>
+<td class='tra'  lang='fr'>
+Email</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Content</td>
+<td class='tra'  lang='fr'>
+Contenu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Post</td>
+<td class='tra'  lang='fr'>
+Post</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Created</td>
+<td class='tra'  lang='fr'>
+créé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Comment</td>
+<td class='tra'  lang='fr'>
+Editer l'article</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Comment</td>
+<td class='tra'  lang='fr'>
+Supprimer</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+New Comment</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Contactez nous</td>
+<td class='tra'  lang='fr'>
+Contact nous</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Contact</td>
+<td class='tra'  lang='fr'>
+Contact</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Vous désirez nous joindre ? Merci d’utiliser ce formulaire de contact.</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Required field:</td>
+<td class='tra'  lang='fr'>
+Champs obligatoire :</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Name :</td>
+<td class='tra'  lang='fr'>
+Votre nom :</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Email :</td>
+<td class='tra'  lang='fr'>
+Votre Email :</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+your Phone :</td>
+<td class='tra'  lang='fr'>
+votre téléphone :</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Mobile</td>
+<td class='tra'  lang='fr'>
+Votre Mobile</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Subject</td>
+<td class='tra'  lang='fr'>
+Objet</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Subject of your message:</td>
+<td class='tra'  lang='fr'>
+Sujet de votre message</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Message </td>
+<td class='tra'  lang='fr'>
+Votre message</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enter Your message ...</td>
+<td class='tra'  lang='fr'>
+Introduisez votre message</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Reset</td>
+<td class='tra'  lang='fr'>
+Réinitialiser</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+studio</td>
+<td class='tra'  lang='fr'>
+Studio</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Studio chardon</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Previous</td>
+<td class='tra'  lang='fr'>
+précédent</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Next</td>
+<td class='tra'  lang='fr'>
+suivant</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Legal Information</td>
+<td class='tra'  lang='fr'>
+mentions légales</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Contact Us</td>
+<td class='tra'  lang='fr'>
+Contact</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+sitemap</td>
+<td class='tra'  lang='fr'>
+Plan du Site</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+home</td>
+<td class='tra'  lang='fr'>
+Accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;span class='visible-xs-inline-block glyphicon glyphicon-picture'&gt;&amp;nbsp;&lt;/span&gt;portfolio</td>
+<td class='tra'  lang='fr'>
+&lt;span class='visible-xs-inline-block glyphicon glyphicon-picture'&gt;&amp;nbsp;&lt;/span&gt;portfolio</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Acces clients</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;span class='visible-xs-inline-block glyphicon glyphicon-envelope'&gt;&amp;nbsp;&lt;/span&gt;contact</td>
+<td class='tra'  lang='fr'>
+&lt;span class='visible-xs-inline-block glyphicon glyphicon-envelope'&gt;&amp;nbsp;&lt;/span&gt;contact</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Livre d'or</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+index</td>
+<td class='tra'  lang='fr'>
+index</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Account</td>
+<td class='tra'  lang='fr'>
+Compte</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Error:</td>
+<td class='tra'  lang='fr'>
+Erreur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}</td>
+<td class='tra'  lang='fr'>
+Page {:page} de {:pages}, {:current} enregistrements sur un total de {:count}, à partir de l'enregistrement {:start}, jusqu'au {:end}</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ Previous</td>
+<td class='tra'  lang='fr'>
+précédent</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Login</td>
+<td class='tra'  lang='fr'>
+S'identifier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Username :</td>
+<td class='tra'  lang='fr'>
+Utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Password :</td>
+<td class='tra'  lang='fr'>
+Mot de passe:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remember me</td>
+<td class='tra'  lang='fr'>
+Se souvenir de moi</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Forgot password?</td>
+<td class='tra'  lang='fr'>
+Mot de passe oublié?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Required Field</td>
+<td class='tra'  lang='fr'>
+Champs obligatoire :</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+newsletter manager</td>
+<td class='tra'  lang='fr'>
+ Gestionnaire de la newsletter</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New</td>
+<td class='tra'  lang='fr'>
+Nouveau </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ close</td>
+<td class='tra'  lang='fr'>
+Fermer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove user</td>
+<td class='tra'  lang='fr'>
+Supprimer l'utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete </td>
+<td class='tra'  lang='fr'>
+Etes vous sur de vouloir suprimer </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ permanently from your users</td>
+<td class='tra'  lang='fr'>
+ de façon permanente de vos utilisateurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Picture to home page</td>
+<td class='tra'  lang='fr'>
+Ajouter une photo </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Carousels</td>
+<td class='tra'  lang='fr'>
+Liste du Carrousel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit</td>
+<td class='tra'  lang='fr'>
+Modifier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+homepage</td>
+<td class='tra'  lang='fr'>
+Gestionnaire de la page d'Accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+keywords</td>
+<td class='tra'  lang='fr'>
+mots-clés</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+description</td>
+<td class='tra'  lang='fr'>
+Description</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+home manager</td>
+<td class='tra'  lang='fr'>
+Gestionnaire de la page d'Accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enable this page</td>
+<td class='tra'  lang='fr'>
+Activer cette page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disable this page</td>
+<td class='tra'  lang='fr'>
+Désactiver cette page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+edit this homepage</td>
+<td class='tra'  lang='fr'>
+Modifier la page d accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+edit the homepage</td>
+<td class='tra'  lang='fr'>
+Modifier la page d' accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove this picture</td>
+<td class='tra'  lang='fr'>
+Supprimer cette  photo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+to your background</td>
+<td class='tra'  lang='fr'>
+de votre arrière-plan</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Accueil</td>
+<td class='tra'  lang='fr'>
+Accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Member since</td>
+<td class='tra'  lang='fr'>
+Membre depuis</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Logout</td>
+<td class='tra'  lang='fr'>
+Déconnexion</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Dashboard</td>
+<td class='tra'  lang='fr'>
+Panneau d'administration</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Home</td>
+<td class='tra'  lang='fr'>
+Accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+homes manager</td>
+<td class='tra'  lang='fr'>
+Gestionnaire de la page d'Accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+visitors book</td>
+<td class='tra'  lang='fr'>
+livre d’or</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+carousel manager</td>
+<td class='tra'  lang='fr'>
+ Gestionnaire du carrousel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add new image</td>
+<td class='tra'  lang='fr'>
+Ajouter une image</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+wallpaper</td>
+<td class='tra'  lang='fr'>
+Fond d'écran</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+wallpapers manager</td>
+<td class='tra'  lang='fr'>
+ Gestionnaire du fond d'écran</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+portfolio</td>
+<td class='tra'  lang='fr'>
+portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+portfolios manager</td>
+<td class='tra'  lang='fr'>
+Gestionnaire du Portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add new portfolio</td>
+<td class='tra'  lang='fr'>
+Ajouter un portfolio</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+newsletter</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+users</td>
+<td class='tra'  lang='fr'>
+Utilisateurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+users manager</td>
+<td class='tra'  lang='fr'>
+ Gestionnaire des utilisateurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+add new user</td>
+<td class='tra'  lang='fr'>
+Ajouter un utilisateur</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+maintenance</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ Clear Cache</td>
+<td class='tra'  lang='fr'>
+Nettoyer le cache</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Administrator</td>
+<td class='tra'  lang='fr'>
+Administrateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+See the site</td>
+<td class='tra'  lang='fr'>
+Voir le site</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+help</td>
+<td class='tra'  lang='fr'>
+aide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+carousel</td>
+<td class='tra'  lang='fr'>
+Carrousel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Quick Email</td>
+<td class='tra'  lang='fr'>
+Rapide Email</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Email to:</td>
+<td class='tra'  lang='fr'>
+Email</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Message</td>
+<td class='tra'  lang='fr'>
+ Message</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Send</td>
+<td class='tra'  lang='fr'>
+Envoyer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Calendar</td>
+<td class='tra'  lang='fr'>
+Calendrier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add new event</td>
+<td class='tra'  lang='fr'>
+Ajouter un événement</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Clear events</td>
+<td class='tra'  lang='fr'>
+Evénements</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+View calendar</td>
+<td class='tra'  lang='fr'>
+Voir calendrier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+MENTIONS LEGALES :</td>
+<td class='tra'  lang='fr'>
+MENTIONS LEGALES :</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+plan</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Portfolio</td>
+<td class='tra'  lang='fr'>
+Ajouter un portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+photographer</td>
+<td class='tra'  lang='fr'>
+Photographe</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+photographe</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+subtitle</td>
+<td class='tra'  lang='fr'>
+sous-titre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Portfolio</td>
+<td class='tra'  lang='fr'>
+Liste du Portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+this galerie</td>
+<td class='tra'  lang='fr'>
+Cette galerie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enable this portfolio</td>
+<td class='tra'  lang='fr'>
+Activez ce Portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add portfolio</td>
+<td class='tra'  lang='fr'>
+Ajouter une galerie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove Post</td>
+<td class='tra'  lang='fr'>
+Supprimer l'article</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+of your Portfolio</td>
+<td class='tra'  lang='fr'>
+de votre portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portfolio</td>
+<td class='tra'  lang='fr'>
+portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Portfolio</td>
+<td class='tra'  lang='fr'>
+Modifier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Portfolio</td>
+<td class='tra'  lang='fr'>
+﻿Supprimer ce portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Portfolios</td>
+<td class='tra'  lang='fr'>
+Liste du portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New Portfolio</td>
+<td class='tra'  lang='fr'>
+Ajouter un portfolio</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Name</td>
+<td class='tra'  lang='fr'>
+Nom</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Slug</td>
+<td class='tra'  lang='fr'>
+url</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Type</td>
+<td class='tra'  lang='fr'>
+Type</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Modified</td>
+<td class='tra'  lang='fr'>
+Modifié</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+published</td>
+<td class='tra'  lang='fr'>
+publié</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Admin Add Post</td>
+<td class='tra'  lang='fr'>
+Admin Add Post</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Categories</td>
+<td class='tra'  lang='fr'>
+Liste des Catégories</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New Category</td>
+<td class='tra'  lang='fr'>
+Ajouter une catégorie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Media</td>
+<td class='tra'  lang='fr'>
+liste des médias</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+New Media</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Admin Edit Post</td>
+<td class='tra'  lang='fr'>
+Editer l'article</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Posts</td>
+<td class='tra'  lang='fr'>
+Actualités</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+View</td>
+<td class='tra'  lang='fr'>
+Vue</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+previous</td>
+<td class='tra'  lang='fr'>
+précédent</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+next</td>
+<td class='tra'  lang='fr'>
+suivant</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Category</td>
+<td class='tra'  lang='fr'>
+Catégorie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Media</td>
+<td class='tra'  lang='fr'>
+média</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Post</td>
+<td class='tra'  lang='fr'>
+Editer l'article</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Post</td>
+<td class='tra'  lang='fr'>
+﻿Supprimer l'article</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select a file from your computer</td>
+<td class='tra'  lang='fr'>
+Choisisez un fichier sur votre ordinateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+firstname</td>
+<td class='tra'  lang='fr'>
+Prénom</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+email</td>
+<td class='tra'  lang='fr'>
+Email</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Change</td>
+<td class='tra'  lang='fr'>
+Change</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit User</td>
+<td class='tra'  lang='fr'>
+Editer un Utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save changes</td>
+<td class='tra'  lang='fr'>
+﻿Sauvegarder les modifications</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+User Manager</td>
+<td class='tra'  lang='fr'>
+ Gestionnaire des utilisateurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Role</td>
+<td class='tra'  lang='fr'>
+Rôle</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Registration Date</td>
+<td class='tra'  lang='fr'>
+Date d’enregistrement</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last Visit Date</td>
+<td class='tra'  lang='fr'>
+derniere visite</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+online</td>
+<td class='tra'  lang='fr'>
+En ligne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enable  </td>
+<td class='tra'  lang='fr'>
+Activer </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disable  </td>
+<td class='tra'  lang='fr'>
+Désactiver </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New user</td>
+<td class='tra'  lang='fr'>
+Ajouter un utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Register</td>
+<td class='tra'  lang='fr'>
+ Enregistrer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+add user</td>
+<td class='tra'  lang='fr'>
+Ajouter un utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Press Esc to close</td>
+<td class='tra'  lang='fr'>
+Appuyez sur ÉCHAP pour fermer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Confirm Password :</td>
+<td class='tra'  lang='fr'>
+Confirmer  mot de passe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Email :</td>
+<td class='tra'  lang='fr'>
+Email</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+forgot</td>
+<td class='tra'  lang='fr'>
+Mot de passe oublié?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Password Reminder</td>
+<td class='tra'  lang='fr'>
+Mot de passe oublié</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+To change your password please fill in the fields below your email address.</td>
+<td class='tra'  lang='fr'>
+Pour modifier votre mot de passe veuillez remplir les champs ci-dessous .</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+An email will be sent with the information needed to create your new password</td>
+<td class='tra'  lang='fr'>
+Un email vous  sera envoyé avec les informations nécessaires pour créer votre nouveau mot de passe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Mail</td>
+<td class='tra'  lang='fr'>
+Votre Mail</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Email</td>
+<td class='tra'  lang='fr'>
+Votre Email</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+login</td>
+<td class='tra'  lang='fr'>
+S'identifier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Change password</td>
+<td class='tra'  lang='fr'>
+Changer le mot de passe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Password</td>
+<td class='tra'  lang='fr'>
+Mot de passe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Confirm Password</td>
+<td class='tra'  lang='fr'>
+Confirmer  mot de passe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+List Wallpaper</td>
+<td class='tra'  lang='fr'>
+Liste des photos</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit picture to background</td>
+<td class='tra'  lang='fr'>
+Ajouter une photo </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+wallpaper manager</td>
+<td class='tra'  lang='fr'>
+Gestionnaire du fond d'écran</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+edit this picture</td>
+<td class='tra'  lang='fr'>
+Modifier la photo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Name is required</td>
+<td class='tra'  lang='fr'>
+un nom est réquis</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ This name has already been chosen.</td>
+<td class='tra'  lang='fr'>
+Cette Utilisateur est déja utilisé:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+numeric</td>
+<td class='tra'  lang='fr'>
+numerique</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ Something is wrong, try again</td>
+<td class='tra'  lang='fr'>
+Quelque chose ne va pas, essayez à nouveau</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+File exceeds the size limit upload file</td>
+<td class='tra'  lang='fr'>
+Le fichier dépasse la limite de taille ou le fichier a un format non supporté.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The picture is not jpg or png</td>
+<td class='tra'  lang='fr'>
+cette image n est pas un jpg ou un png</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The image does not have the extension jpg or png</td>
+<td class='tra'  lang='fr'>
+L'image n'a pas l'extension jpg ou png</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The image is already registered</td>
+<td class='tra'  lang='fr'>
+Cette Utilisateur est déja utilisé:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+you must enter your name</td>
+<td class='tra'  lang='fr'>
+Vous devez entrer votre nom</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Between 5 to 15 characters</td>
+<td class='tra'  lang='fr'>
+Entre 5 et 15 charactére:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your custom message here</td>
+<td class='tra'  lang='fr'>
+Votre message...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must enter a valid email address</td>
+<td class='tra'  lang='fr'>
+Vous devez entrer un email valide:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Must be valid french phone numero </td>
+<td class='tra'  lang='fr'>
+Doit être un numero de  téléphone français valide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must enter a numero mobile </td>
+<td class='tra'  lang='fr'>
+Vous devez entrer un numéro de mobile</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must enter your message</td>
+<td class='tra'  lang='fr'>
+Vous devez entrer un message:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must enter your subject</td>
+<td class='tra'  lang='fr'>
+Vous devez entrer un sujet:</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+vous devez insérer un émail valide</td>
+<td class='tra'  lang='fr'>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This username is already used</td>
+<td class='tra'  lang='fr'>
+Cette Utilisateur est déja utilisé:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This field must not be empty</td>
+<td class='tra'  lang='fr'>
+Ce champ ne doit pas être vide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must specify a password</td>
+<td class='tra'  lang='fr'>
+vous devez envoyer des jpg</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ This password is not identical</td>
+<td class='tra'  lang='fr'>
+Ce mot de passe n'est pas identique</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must send a jpg</td>
+<td class='tra'  lang='fr'>
+vous devez envoyer des jpg</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

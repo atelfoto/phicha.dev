@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CakePHP 2.4.4\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-10-26 14:17+0100\n"
+"PO-Revision-Date: 2015-11-01 02:05+0100\n"
 "Last-Translator: philippe wagner <atelfoto@msn.com>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -15,85 +15,129 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.8.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: Controller/CarouselsController.php:46;76;110;145
-#: Controller/HomesController.php:96 Controller/WallpapersController.php:78
+#: Controller/CarouselsController.php:41;65;99;134
+#: Controller/HomesController.php:82 Controller/WallpapersController.php:78
 msgid "Invalid carousel"
 msgstr "Action invalide"
 
-#: Controller/CarouselsController.php:91;122
+#: Controller/CarouselsController.php:80;111
 msgid "The carousel has been saved."
 msgstr "Le carrousel a été enregistré."
 
-#: Controller/CarouselsController.php:94;125
+#: Controller/CarouselsController.php:83;114
 msgid "The carousel could not be saved. Please, try again."
 msgstr "Le carrousel n'a pas été sauvegardé. Veuillez réessayer."
 
-#: Controller/CarouselsController.php:149
+#: Controller/CarouselsController.php:138
 msgid "The carousel has been deleted."
 msgstr "Le carrousel a été supprimé."
 
-#: Controller/CarouselsController.php:151
+#: Controller/CarouselsController.php:140
 msgid "The carousel could not be deleted. Please, try again."
 msgstr "Le carrousel n'a pas été sauvegardé. Veuillez réessayer."
 
-#: Controller/CommentsController.php:45;68;90;150;173
-msgid "The comment has been saved."
-msgstr "Votre commentaire a été enregistré."
-
-#: Controller/CommentsController.php:48;71;93;153;176
-msgid "The comment could not be saved. Please, try again."
-msgstr ""
-"votre commentaire n'a pas été sauvegardé. Merci de corriger vos erreurs"
-
-#: Controller/CommentsController.php:86;135;169;248
-#: Controller/WallpapersController.php:44
-msgid "Invalid comment"
-msgstr "Action invalide"
-
-#: Controller/CommentsController.php:194
-#: Controller/PortfoliosController.php:174
+#: Controller/CarouselsController.php:149 Controller/CommentsController.php:215
+#: Controller/PortfoliosController.php:181
 msgid "You must provide a valid ID number to enable a post."
 msgstr ""
 "Vous devez fournir un numéro d'identification valide pour activer un message."
 
-#: Controller/CommentsController.php:200
+#: Controller/CarouselsController.php:155
+msgid "Carousel ID %s has been published."
+msgstr "Carrousel ID %s a été publié."
+
+#: Controller/CarouselsController.php:158
+msgid "Carousel ID %s was not published."
+msgstr "Carrousel ID %s n'a pas pu être publié."
+
+#: Controller/CarouselsController.php:162;187
+#, fuzzy
+msgid "No Carousel by that ID was found."
+msgstr "Aucunes pages utilisateur de trouvées pour cet ID"
+
+#: Controller/CarouselsController.php:172
+#: Controller/PortfoliosController.php:203
+msgid "You must provide a valid ID number to disable a portfolio."
+msgstr ""
+"Vous devez fournir un numéro d'identification valide pour désactiver un post."
+
+#: Controller/CarouselsController.php:180
+#, fuzzy
+msgid "Carousel ID %s has been disabled."
+msgstr "L' utilisateur avec l 'Identifiant %s a été désactivé."
+
+#: Controller/CarouselsController.php:182
+#: Controller/PortfoliosController.php:212
+msgid "portfolio ID %s was not disabled."
+msgstr "La page avec l 'Id %s n'a pas pu être désactivé."
+
+#: Controller/CommentsController.php:45 Controller/ContactsController.php:13
+#: Controller/PagesController.php:110
+msgid "Your Mail us is reached."
+msgstr "Merci Votre Mail nous est bien parvenu."
+
+#: Controller/CommentsController.php:60
+msgid "Commentaire sur le livre d'or"
+msgstr ""
+
+#: Controller/CommentsController.php:73;172;195
+msgid "The comment has been saved."
+msgstr "Votre commentaire a été enregistré."
+
+#: Controller/CommentsController.php:77;175;198
+msgid "The comment could not be saved. Please, try again."
+msgstr ""
+"votre commentaire n'a pas été sauvegardé. Merci de corriger vos erreurs"
+
+#: Controller/CommentsController.php:100 Controller/UsersController.php:151
+msgid "This change link is not good"
+msgstr "Ce lien ne semble pas bon"
+
+#: Controller/CommentsController.php:103
+msgid "Your post has been validated"
+msgstr "Votre post a été validé"
+
+#: Controller/CommentsController.php:158;191;269
+#: Controller/WallpapersController.php:44
+msgid "Invalid comment"
+msgstr "Action invalide"
+
+#: Controller/CommentsController.php:221
 msgid "Comment ID %s has been published."
 msgstr "Le commentairet avec l 'Id %s a bien été publiée."
 
-#: Controller/CommentsController.php:203
+#: Controller/CommentsController.php:224
 msgid "Comment ID %s was not published."
 msgstr "Le commentaire avec l 'Id %s a bien été publiée."
 
-#: Controller/CommentsController.php:207;233
+#: Controller/CommentsController.php:228;254
 msgid "No Comment by that ID was found."
 msgstr "Aucun commentaire avec cet ID n'a été trouvé"
 
-#: Controller/CommentsController.php:219
+#: Controller/CommentsController.php:240
 msgid "You must provide a valid ID number to disable a comment."
 msgstr ""
 "Vous devez fournir un numéro d'identification valide pour désactiver ce "
 "commentaire."
 
-#: Controller/CommentsController.php:226
+#: Controller/CommentsController.php:247
 msgid "Comment ID %s has been disabled."
 msgstr "Le commentaire avec l 'Id %s a été désactivé."
 
-#: Controller/CommentsController.php:228
+#: Controller/CommentsController.php:249
 msgid "comment ID %s was not disabled."
 msgstr "Le commentaire avec l 'Id %s n'a pas pu être désactivé."
 
-#: Controller/CommentsController.php:252
+#: Controller/CommentsController.php:273
 msgid "The comment has been deleted."
 msgstr "Le commentaire a été supprimé."
 
-#: Controller/CommentsController.php:254
+#: Controller/CommentsController.php:275
 msgid "The comment could not be deleted. Please, try again."
 msgstr "Le commentaire n'a pas été sauvegardé. Veuillez réessayer."
-
-#: Controller/ContactsController.php:13 Controller/PagesController.php:110
-msgid "Your Mail us is reached."
-msgstr "Merci Votre Mail nous est bien parvenu."
 
 #: Controller/ContactsController.php:17 Controller/PagesController.php:115
 msgid "Thank you.Your Mail Us is reached."
@@ -128,71 +172,70 @@ msgid "The enews could not be deleted. Please, try again."
 msgstr ""
 "L'opération n'a pas pu être supprimé. S'il vous plaît réessayer plus tard."
 
-#: Controller/HomesController.php:77;100
+#: Controller/HomesController.php:63;86
 msgid "This page has been saved."
 msgstr "La page a bien été enregistré."
 
-#: Controller/HomesController.php:80;103
+#: Controller/HomesController.php:66;89
 msgid "This page could not be saved. Please, try again."
 msgstr "Le lien n'a pas été sauvegardé. Veuillez réessayer."
 
-#: Controller/HomesController.php:123
+#: Controller/HomesController.php:109
 msgid "Invalid page"
 msgstr "Lien invalide"
 
-#: Controller/HomesController.php:127
+#: Controller/HomesController.php:113
 msgid "This page has been deleted."
 msgstr "La page a bien été supprimé."
 
-#: Controller/HomesController.php:129
+#: Controller/HomesController.php:115
 msgid "This page could not be deleted. Please, try again."
 msgstr "Le lien n'a pas été sauvegardé. Veuillez réessayer."
 
-#: Controller/PortfoliosController.php:91;129;157
+#: Controller/MetasController.php:8
+msgid "This has been saved."
+msgstr "ceci a été enregistré"
+
+#: Controller/MetasController.php:12
+msgid "This could not be saved. Please, try again."
+msgstr "Le lien n'a pas été sauvegardé. Veuillez réessayer."
+
+#: Controller/PortfoliosController.php:92;130;164
 msgid "Invalid portfolio"
 msgstr "portfolio non valide"
 
-#: Controller/PortfoliosController.php:110;134
+#: Controller/PortfoliosController.php:111;141
 msgid "The portfolio has been saved."
 msgstr "Le carrousel a été enregistré."
 
-#: Controller/PortfoliosController.php:113;137
+#: Controller/PortfoliosController.php:114;144
 msgid "The portfolio could not be saved. Please, try again."
 msgstr "Le lien n'a pas été sauvegardé. Veuillez réessayer."
 
-#: Controller/PortfoliosController.php:164
+#: Controller/PortfoliosController.php:171
 msgid "The portfolio has been deleted."
 msgstr "Le carrousel a été supprimé."
 
-#: Controller/PortfoliosController.php:166
+#: Controller/PortfoliosController.php:173
 msgid "The portfolio could not be deleted. Please, try again."
 msgstr ""
 "La categorie n'a pas pu être supprimé. S'il vous plaît réessayer plus tard."
 
-#: Controller/PortfoliosController.php:180
+#: Controller/PortfoliosController.php:187
 msgid "Portfolio ID %s has been published."
 msgstr "La post avec l 'Id %s a bien été publiée."
 
-#: Controller/PortfoliosController.php:183
+#: Controller/PortfoliosController.php:190
 msgid "Portfolio ID %s was not published."
 msgstr "Le Portfolio avec l 'Id %s n'a pas pu être publiée."
 
-#: Controller/PortfoliosController.php:187;210
+#: Controller/PortfoliosController.php:194;217
 msgid "No Portfolio by that ID was found."
 msgstr "Aucunes pages portfolio de trouvées pour cet ID"
 
-#: Controller/PortfoliosController.php:196
-msgid "You must provide a valid ID number to disable a portfolio."
-msgstr ""
-"Vous devez fournir un numéro d'identification valide pour désactiver un post."
-
-#: Controller/PortfoliosController.php:203
+#: Controller/PortfoliosController.php:210
 msgid "Portfolio ID %s has been disabled."
 msgstr "La page avec l 'Id %s a été désactivé"
-
-#: Controller/PortfoliosController.php:205
-msgid "portfolio ID %s was not disabled."
-msgstr "La page avec l 'Id %s n'a pas pu être désactivé."
 
 #: Controller/PostsController.php:40;76;105;135;171;200
 msgid "Invalid post"
@@ -214,11 +257,11 @@ msgstr "Le poste a été supprimé."
 msgid "The post could not be deleted. Please, try again."
 msgstr "Le lien n'a pas été sauvegardé. Veuillez réessayer."
 
-#: Controller/UsersController.php:26;65
+#: Controller/UsersController.php:28;66
 msgid " your registration to our site"
 msgstr "votre inscription sur notre site"
 
-#: Controller/UsersController.php:37
+#: Controller/UsersController.php:39
 msgid ""
 "Thank you you are registered mail sent to you to confirm your compte."
 "Veuillez check your spam in case."
@@ -226,11 +269,11 @@ msgstr ""
 "Merci vous êtes bien inscrit un mail vous a été envoyé pour valider votre "
 "compte.Veuillez vérifier vos spam au cas où."
 
-#: Controller/UsersController.php:40;81
+#: Controller/UsersController.php:42;82
 msgid "Thank you to correct your mistakes"
 msgstr "Merci de corriger vos erreurs"
 
-#: Controller/UsersController.php:77
+#: Controller/UsersController.php:78
 msgid ""
 "Thank you you are registered mail sent to you to confirm your compte.Please "
 "check your spam in case."
@@ -238,15 +281,15 @@ msgstr ""
 "Merci vous êtes bien inscrit un mail vous a été envoyé pour valider votre "
 "compte.Veuillez vérifier vos spam au cas où."
 
-#: Controller/UsersController.php:93
+#: Controller/UsersController.php:94
 msgid "This email address is not associated with any account"
 msgstr "Cet email n'est associé à aucun compte:"
 
-#: Controller/UsersController.php:102
+#: Controller/UsersController.php:103
 msgid "Password regeneration"
 msgstr "Régénération du mot de passe"
 
-#: Controller/UsersController.php:107
+#: Controller/UsersController.php:108
 msgid ""
 "An email was sent to you with instructions to regenerate your password! "
 "Please check your span !!"
@@ -254,85 +297,81 @@ msgstr ""
 "Un Email vous a été envoyé avec les instructions pour regénérer votre mot de "
 "passe! Veuillez vérifier vos span!!"
 
-#: Controller/UsersController.php:122
+#: Controller/UsersController.php:123
 msgid "This link does not look good"
 msgstr "Ce lien ne semble pas bon"
 
-#: Controller/UsersController.php:135
+#: Controller/UsersController.php:136
 msgid "your password has been changed"
 msgstr "Votre mot de passe a été modifié avec succès."
 
-#: Controller/UsersController.php:150
-msgid "This change link is not good"
-msgstr "Ce lien ne semble pas bon"
-
-#: Controller/UsersController.php:153
+#: Controller/UsersController.php:154
 msgid "Your account has been validated"
 msgstr "Votre compte a été validé"
 
-#: Controller/UsersController.php:181;210
+#: Controller/UsersController.php:182;211
 msgid "Your information has been changed"
 msgstr "Vos information ont été modifié."
 
-#: Controller/UsersController.php:184;213
+#: Controller/UsersController.php:185;214
 msgid "Your information could not be validated"
 msgstr "Vos informations n'ont pas pus être validé"
 
-#: Controller/UsersController.php:242
+#: Controller/UsersController.php:243
 msgid "Hello You are logged nows"
 msgstr "Bonjour Vous êtes maintenants connecté"
 
-#: Controller/UsersController.php:251
+#: Controller/UsersController.php:252
 msgid "Your login or your password are not correct"
 msgstr "Votre login ou votre mot de passe ne sont pas correct"
 
-#: Controller/UsersController.php:262;273
+#: Controller/UsersController.php:263;276
 msgid "You are now offline"
 msgstr "Vous êtes maintenant Déconnecté"
 
-#: Controller/UsersController.php:305
+#: Controller/UsersController.php:308
 msgid "The user has been added"
 msgstr "L'utilisateur a été ajouté"
 
-#: Controller/UsersController.php:308
+#: Controller/UsersController.php:311
 msgid "The users could not be saved. Please, try again."
 msgstr "Le lien n'a pas été sauvegardé. Veuillez réessayer."
 
-#: Controller/UsersController.php:330
+#: Controller/UsersController.php:333
 msgid "You must provide a valid ID number to enable a user."
 msgstr ""
 "Vous devez fournir un numéro d'identification valide pour activer une page."
 
-#: Controller/UsersController.php:336
+#: Controller/UsersController.php:339
 msgid "User ID %s has been published."
 msgstr "L' utilisateur avec l 'Identifiant %s a bien été publié."
 
-#: Controller/UsersController.php:338;362
+#: Controller/UsersController.php:341;365
 msgid "User ID %s was not saved."
 msgstr "L' utilisateur avec l 'Identifiant %s n'a pas pu  être sauvé."
 
-#: Controller/UsersController.php:342
+#: Controller/UsersController.php:345
 msgid "No user by that ID was found."
 msgstr "Aucunes pages utilisateur de trouvées pour cet ID"
 
-#: Controller/UsersController.php:354
+#: Controller/UsersController.php:357
 msgid "You must provide a valid ID number to disable a user."
 msgstr ""
 "Vous devez fournir un numéro d'identification valide pour désactiver un post."
 
-#: Controller/UsersController.php:360
+#: Controller/UsersController.php:363
 msgid "User ID %s has been disabled."
 msgstr "L' utilisateur avec l 'Identifiant %s a été désactivé."
 
-#: Controller/UsersController.php:366
+#: Controller/UsersController.php:369
 msgid "No User by that ID was found."
 msgstr "Aucunes pages utilisateur de trouvées pour cet ID"
 
-#: Controller/UsersController.php:379
+#: Controller/UsersController.php:382
 msgid "User removed: %s"
 msgstr "L' Utilisateur %s a été supprimé."
 
-#: Controller/UsersController.php:382
+#: Controller/UsersController.php:385
 msgid "Could not remove product"
 msgstr "Impossible d'enregistrer le produit"
 
@@ -401,39 +440,40 @@ msgstr ""
 msgid "Add picture"
 msgstr "Ajouter une photo"
 
-#: View/Carousels/admin_add.ctp:21 View/Carousels/admin_edit.ctp:25
+#: View/Carousels/admin_add.ctp:26 View/Carousels/admin_edit.ctp:30
 #: View/Comments/admin_view.ctp:39 View/Comments/view.ctp:39
 #: View/Portfolios/admin_add.ctp:34 View/Portfolios/admin_edit.ctp:36
 #: View/Portfolios/admin_view.ctp:69 View/Posts/admin_view.ctp:39
 #: View/Posts/view.ctp:39 View/Users/admin_edit.ctp:20
-#: View/Wallpapers/admin_add.ctp:22
+#: View/Wallpapers/admin_add.ctp:22 View/Wallpapers/admin_edit.ctp:24
 msgid "Online"
 msgstr "En ligne"
 
-#: View/Carousels/admin_add.ctp:31 View/Carousels/admin_edit.ctp:35
+#: View/Carousels/admin_add.ctp:35 View/Carousels/admin_edit.ctp:40
 #: View/Portfolios/admin_add.ctp:43 View/Portfolios/admin_edit.ctp:45
 #: View/Users/admin_edit.ctp:29 View/Wallpapers/admin_add.ctp:32
+#: View/Wallpapers/admin_edit.ctp:34
 msgid "En Ligne"
 msgstr "En Ligne"
 
-#: View/Carousels/admin_add.ctp:32 View/Carousels/admin_edit.ctp:36
+#: View/Carousels/admin_add.ctp:36 View/Carousels/admin_edit.ctp:41
 #: View/Portfolios/admin_add.ctp:44 View/Portfolios/admin_edit.ctp:46
 #: View/Users/admin_edit.ctp:30 View/Wallpapers/admin_add.ctp:33
+#: View/Wallpapers/admin_edit.ctp:35
 msgid "Hors Ligne"
 msgstr "Hors Ligne"
 
-#: View/Carousels/admin_add.ctp:39 View/Carousels/admin_edit.ctp:43
+#: View/Carousels/admin_add.ctp:43 View/Carousels/admin_edit.ctp:48
 #: View/Comments/admin_add.ctp:14 View/Comments/admin_edit.ctp:15
-#: View/Comments/edit.ctp:15 View/Contacts/index.ctp:82
-#: View/Homes/admin_add.ctp:19 View/Homes/admin_edit.ctp:40
-#: View/Portfolios/admin_add.ctp:72 View/Portfolios/admin_edit.ctp:75
-#: View/Posts/admin_add.ctp:16 View/Posts/admin_edit.ctp:17
-#: View/Users/forgot.ctp:20 View/Wallpapers/admin_add.ctp:41
-#: View/Wallpapers/admin_edit.ctp:25
+#: View/Contacts/index.ctp:82 View/Homes/admin_add.ctp:19
+#: View/Homes/admin_edit.ctp:40 View/Portfolios/admin_add.ctp:72
+#: View/Portfolios/admin_edit.ctp:75 View/Posts/admin_add.ctp:16
+#: View/Posts/admin_edit.ctp:17 View/Users/forgot.ctp:21
+#: View/Wallpapers/admin_add.ctp:41 View/Wallpapers/admin_edit.ctp:41
 msgid "Submit"
 msgstr "Soumettre"
 
-#: View/Carousels/admin_add.ctp:52
+#: View/Carousels/admin_add.ctp:57 View/Carousels/admin_edit.ctp:61
 msgid "List Carousel"
 msgstr "Liste du carrousel"
 
@@ -441,77 +481,85 @@ msgstr "Liste du carrousel"
 msgid "Edit Carousel"
 msgstr "Modifier le  carrousel"
 
-#: View/Carousels/admin_edit.ctp:56
-msgid "<span class=\"fa fa-list\"></span> &nbsp;&nbsp;List Carousel"
-msgstr "<span class=\"fa fa-list\"></span> &nbsp;&nbsp;List Carousel"
-
-#: View/Carousels/admin_index.ctp:2 View/Layouts/admin.ctp:219
+#: View/Carousels/admin_index.ctp:2 View/Layouts/admin.ctp:217
 msgid "Carousel"
 msgstr "Carrousel"
 
-#: View/Carousels/admin_index.ctp:35 View/Wallpapers/admin_index.ctp:39
+#: View/Carousels/admin_index.ctp:35 View/Comments/admin_index.ctp:29
+#: View/Homes/admin_index.ctp:34 View/Portfolios/admin_index.ctp:44
+#: View/Wallpapers/admin_index.ctp:39
 msgid "Offline"
 msgstr "En ligne"
 
-#: View/Carousels/admin_index.ctp:38
-msgid "Enable this Carousel"
-msgstr "Activez le carrousel"
+#: View/Carousels/admin_index.ctp:38 View/Wallpapers/admin_index.ctp:42
+msgid "Enable this picture"
+msgstr "Activer cette photo"
 
 #: View/Carousels/admin_index.ctp:40 View/Wallpapers/admin_index.ctp:44
 msgid "In line"
 msgstr "En ligne"
 
-#: View/Carousels/admin_index.ctp:43 View/Comments/admin_index.ctp:33
-#: View/Portfolios/admin_index.ctp:51
-msgid "Disable this Post"
-msgstr "Désactiver ce Post"
+#: View/Carousels/admin_index.ctp:43 View/Wallpapers/admin_index.ctp:47
+msgid "Disable this picture"
+msgstr "Désactiver cette photo"
 
-#: View/Carousels/admin_index.ctp:72
+#: View/Carousels/admin_index.ctp:52 View/Portfolios/admin_index.ctp:60
+#: View/Users/admin_index.ctp:45
+msgid "edit"
+msgstr "Modifié"
+
+#: View/Carousels/admin_index.ctp:64 View/Comments/admin_index.ctp:46
+#: View/Homes/admin_index.ctp:66;72 View/Portfolios/admin_index.ctp:74
+#: View/Users/admin_index.ctp:58
+msgid "delete"
+msgstr "Effacer"
+
+#: View/Carousels/admin_index.ctp:82 View/Wallpapers/admin_index.ctp:82
 msgid "New picture"
 msgstr "Ajouter une photo"
 
-#: View/Carousels/admin_index.ctp:88
+#: View/Carousels/admin_index.ctp:97
 msgid "close"
 msgstr "Fermer"
 
-#: View/Carousels/admin_index.ctp:92
+#: View/Carousels/admin_index.ctp:101
 msgid "Remove Picture"
 msgstr "Supprimer cette photo"
 
-#: View/Carousels/admin_index.ctp:97 View/Comments/admin_index.ctp:84
-#: View/Homes/admin_index.ctp:99 View/Portfolios/admin_index.ctp:135
-#: View/Wallpapers/admin_index.ctp:103
+#: View/Carousels/admin_index.ctp:106 View/Comments/admin_index.ctp:84
+#: View/Homes/admin_index.ctp:97 View/Portfolios/admin_index.ctp:152
+#: View/Wallpapers/admin_index.ctp:104
 msgid "Are you sure you want to delete"
 msgstr "Etes-vous sûr de vouloir supprimer"
 
-#: View/Carousels/admin_index.ctp:99
+#: View/Carousels/admin_index.ctp:108
 msgid "of your Carousel"
 msgstr "de votre carousel"
 
-#: View/Carousels/admin_index.ctp:104 View/Comments/admin_index.ctp:92
-#: View/Enews/admin_index.ctp:68 View/Homes/admin_index.ctp:106
-#: View/Portfolios/admin_index.ctp:144 View/Users/admin_index.ctp:87
-#: View/Wallpapers/admin_index.ctp:110
+#: View/Carousels/admin_index.ctp:113 View/Comments/admin_index.ctp:92
+#: View/Enews/admin_index.ctp:69 View/Homes/admin_index.ctp:104
+#: View/Portfolios/admin_index.ctp:161 View/Users/admin_index.ctp:97
+#: View/Wallpapers/admin_index.ctp:111
 msgid "Cancel"
 msgstr "Annuler"
 
-#: View/Carousels/admin_index.ctp:106 View/Comments/admin_edit.ctp:21
-#: View/Comments/admin_index.ctp:93 View/Comments/edit.ctp:21
-#: View/Enews/admin_index.ctp:69 View/Homes/admin_index.ctp:107
-#: View/Portfolios/admin_index.ctp:145 View/Posts/admin_edit.ctp:23
-#: View/Posts/admin_index.ctp:43 View/Users/admin_index.ctp:88
-#: View/Wallpapers/admin_edit.ctp:43 View/Wallpapers/admin_index.ctp:111
+#: View/Carousels/admin_index.ctp:115 View/Comments/admin_edit.ctp:21
+#: View/Comments/admin_index.ctp:93 View/Enews/admin_index.ctp:70
+#: View/Homes/admin_index.ctp:105 View/Portfolios/admin_index.ctp:162
+#: View/Posts/admin_edit.ctp:23 View/Posts/admin_index.ctp:43
+#: View/Users/admin_index.ctp:98 View/Wallpapers/admin_edit.ctp:59
+#: View/Wallpapers/admin_index.ctp:112
 msgid "Delete"
 msgstr "Supprimer"
 
-#: View/Carousels/admin_index.ctp:118 View/Comments/admin_index.ctp:105
-#: View/Homes/admin_index.ctp:119 View/Portfolios/admin_index.ctp:157
+#: View/Carousels/admin_index.ctp:126 View/Comments/admin_index.ctp:104
+#: View/Homes/admin_index.ctp:116 View/Portfolios/admin_index.ctp:175
 #: View/Wallpapers/admin_index.ctp:123
 msgid "Help"
 msgstr "Aide"
 
-#: View/Carousels/admin_index.ctp:124 View/Comments/admin_index.ctp:111
-#: View/Homes/admin_index.ctp:125 View/Portfolios/admin_index.ctp:163
+#: View/Carousels/admin_index.ctp:132 View/Comments/admin_index.ctp:110
+#: View/Homes/admin_index.ctp:122 View/Portfolios/admin_index.ctp:181
 #: View/Users/admin_edit.ctp:10 View/Wallpapers/admin_index.ctp:129
 msgid "Closed"
 msgstr "Fermer"
@@ -526,47 +574,45 @@ msgid "Admin Add Comment"
 msgstr "Administrateur"
 
 #: View/Comments/admin_add.ctp:17 View/Comments/admin_edit.ctp:18
-#: View/Comments/admin_view.ctp:47 View/Comments/edit.ctp:18
-#: View/Comments/view.ctp:47 View/Posts/admin_add.ctp:19
-#: View/Posts/admin_edit.ctp:20 View/Posts/admin_index.ctp:17;64
-#: View/Posts/admin_view.ctp:62 View/Posts/view.ctp:62
+#: View/Comments/admin_view.ctp:47 View/Comments/view.ctp:47
+#: View/Posts/admin_add.ctp:19 View/Posts/admin_edit.ctp:20
+#: View/Posts/admin_index.ctp:17;64 View/Posts/admin_view.ctp:62
+#: View/Posts/view.ctp:62
 msgid "Actions"
 msgstr "Actions"
 
 #: View/Comments/admin_add.ctp:20 View/Comments/admin_edit.ctp:22
-#: View/Comments/admin_view.ctp:51 View/Comments/edit.ctp:22
-#: View/Comments/view.ctp:51
+#: View/Comments/admin_view.ctp:51 View/Comments/view.ctp:51
 msgid "List Comments"
 msgstr "liste des commentaires"
 
 #: View/Comments/admin_add.ctp:21 View/Comments/admin_edit.ctp:23
-#: View/Comments/admin_view.ctp:53 View/Comments/edit.ctp:23
-#: View/Comments/view.ctp:53 View/Posts/admin_add.ctp:23
+#: View/Comments/admin_view.ctp:53 View/Comments/view.ctp:53
+#: View/Portfolios/admin_view.ctp:22 View/Posts/admin_add.ctp:23
 #: View/Posts/admin_edit.ctp:25 View/Posts/admin_index.ctp:67
 #: View/Posts/admin_view.ctp:68 View/Posts/view.ctp:68
 msgid "List Users"
 msgstr "Liste des utilisateurs"
 
 #: View/Comments/admin_add.ctp:22 View/Comments/admin_edit.ctp:24
-#: View/Comments/admin_view.ctp:54 View/Comments/edit.ctp:24
-#: View/Comments/view.ctp:54 View/Posts/admin_add.ctp:24
+#: View/Comments/admin_view.ctp:54 View/Comments/view.ctp:54
+#: View/Portfolios/admin_view.ctp:23 View/Posts/admin_add.ctp:24
 #: View/Posts/admin_edit.ctp:26 View/Posts/admin_index.ctp:68
 #: View/Posts/admin_view.ctp:69 View/Posts/view.ctp:69
 msgid "New User"
 msgstr "Nouveau Utilisateur"
 
 #: View/Comments/admin_add.ctp:23 View/Comments/admin_edit.ctp:25
-#: View/Comments/admin_view.ctp:55 View/Comments/edit.ctp:25
-#: View/Comments/view.ctp:55 View/Posts/admin_add.ctp:22
-#: View/Posts/admin_edit.ctp:24 View/Posts/admin_view.ctp:66
-#: View/Posts/view.ctp:66
+#: View/Comments/admin_view.ctp:55 View/Comments/view.ctp:55
+#: View/Posts/admin_add.ctp:22 View/Posts/admin_edit.ctp:24
+#: View/Posts/admin_view.ctp:66 View/Posts/view.ctp:66
 msgid "List Posts"
 msgstr "Liste des messages"
 
 #: View/Comments/admin_add.ctp:24 View/Comments/admin_edit.ctp:26
-#: View/Comments/admin_view.ctp:56 View/Comments/edit.ctp:26
-#: View/Comments/view.ctp:56 View/Posts/admin_index.ctp:66
-#: View/Posts/admin_view.ctp:67 View/Posts/view.ctp:67
+#: View/Comments/admin_view.ctp:56 View/Comments/view.ctp:56
+#: View/Posts/admin_index.ctp:66 View/Posts/admin_view.ctp:67
+#: View/Posts/view.ctp:67
 msgid "New Post"
 msgstr "Nouveau Post"
 
@@ -575,32 +621,31 @@ msgid "Admin Edit Comment"
 msgstr "Modifier les commentaires"
 
 #: View/Comments/admin_edit.ctp:21 View/Comments/admin_view.ctp:50
-#: View/Comments/edit.ctp:21 View/Comments/view.ctp:50
-#: View/Portfolios/admin_view.ctp:19 View/Posts/admin_edit.ctp:23
-#: View/Posts/admin_index.ctp:43 View/Posts/admin_view.ctp:65
-#: View/Posts/view.ctp:65 View/Wallpapers/admin_edit.ctp:43
+#: View/Comments/view.ctp:50 View/Portfolios/admin_view.ctp:19
+#: View/Posts/admin_edit.ctp:23 View/Posts/admin_index.ctp:43
+#: View/Posts/admin_view.ctp:65 View/Posts/view.ctp:65
+#: View/Wallpapers/admin_edit.ctp:59
 msgid "Are you sure you want to delete # %s?"
 msgstr "Êtes vous sûr de vouloir supprimer # %s ?"
 
-#: View/Comments/admin_index.ctp:3 View/Layouts/admin.ctp:214
+#: View/Comments/admin_index.ctp:3 View/Layouts/admin.ctp:212
 msgid "comments manager"
 msgstr "Gestionnaire du livre d'or"
 
-#: View/Comments/admin_index.ctp:28 View/Homes/admin_index.ctp:34
-#: View/Portfolios/admin_index.ctp:44
-msgid "<span class=\"label label-danger\">Offline</span>"
-msgstr "<span class=\"label label-default\">Désactivé</span>"
+#: View/Comments/admin_index.ctp:31
+msgid "Enable this post"
+msgstr "Activez ce Post"
 
-#: View/Comments/admin_index.ctp:30 View/Portfolios/admin_index.ctp:47
-msgid "Enable this portfolio"
-msgstr "Activez ce Portfolio"
-
-#: View/Comments/admin_index.ctp:32 View/Homes/admin_index.ctp:39
+#: View/Comments/admin_index.ctp:33 View/Homes/admin_index.ctp:39
 #: View/Portfolios/admin_index.ctp:49
 msgid "<span class=\"label label-success\">In line</span>"
 msgstr "<span class=\"label label-success\">Activé</span>"
 
-#: View/Comments/admin_index.ctp:87 View/Portfolios/admin_index.ctp:139
+#: View/Comments/admin_index.ctp:34 View/Portfolios/admin_index.ctp:51
+msgid "Disable this Post"
+msgstr "Désactiver ce Post"
+
+#: View/Comments/admin_index.ctp:87
 msgid "of your Articles"
 msgstr "de vos Articles "
 
@@ -646,8 +691,7 @@ msgstr "Post"
 msgid "Created"
 msgstr "créé"
 
-#: View/Comments/admin_view.ctp:49 View/Comments/edit.ctp:4
-#: View/Comments/view.ctp:49
+#: View/Comments/admin_view.ctp:49 View/Comments/view.ctp:49
 msgid "Edit Comment"
 msgstr "Editer l'article"
 
@@ -659,7 +703,7 @@ msgstr "Supprimer"
 msgid "New Comment"
 msgstr ""
 
-#: View/Contacts/index.ctp:1;19
+#: View/Contacts/index.ctp:1
 msgid "Contactez nous"
 msgstr "Contact nous"
 
@@ -691,9 +735,9 @@ msgstr "votre téléphone :"
 msgid "Your Mobile"
 msgstr "Votre Mobile"
 
-#: View/Contacts/index.ctp:67
-msgid "Subject :&nbsp;<i class=\"glyphicon glyphicon-asterisk\"></i>"
-msgstr ""
+#: View/Contacts/index.ctp:67 View/Pages/admin_dashboard.ctp:93
+msgid "Subject"
+msgstr "Objet"
 
 #: View/Contacts/index.ctp:68
 msgid "Subject of your message:"
@@ -713,19 +757,19 @@ msgstr "Introduisez votre message"
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: View/Elements/carrousel.ctp:4 View/Elements/navigation.ctp:11
+#: View/Elements/carousel.ctp:4 View/Elements/navigation.ctp:11
 msgid "studio"
 msgstr "Studio"
 
-#: View/Elements/carrousel.ctp:16
+#: View/Elements/carousel.ctp:14;24
 msgid "Studio chardon"
 msgstr ""
 
-#: View/Elements/carrousel.ctp:27
+#: View/Elements/carousel.ctp:37
 msgid "Previous"
 msgstr "précédent"
 
-#: View/Elements/carrousel.ctp:31 View/Elements/pagination.ctp:9
+#: View/Elements/carousel.ctp:41 View/Elements/pagination.ctp:9;10
 msgid "Next"
 msgstr "suivant"
 
@@ -742,13 +786,10 @@ msgstr "Contact"
 msgid "sitemap"
 msgstr "Plan du Site"
 
-#: View/Elements/menu-main.ctp:2
-msgid ""
-"<span class=\"visible-xs-inline-block glyphicon glyphicon-home \">&nbsp;</"
-"span>Accueil"
-msgstr ""
-"<span class=\"visible-xs-inline-block glyphicon glyphicon-home \">&nbsp;</"
-"span>Accueil"
+#: View/Elements/menu-main.ctp:2 View/Homes/admin_edit.ctp:53
+#: View/Layouts/admin.ctp:282 View/Pages/sitemap.ctp:13
+msgid "home"
+msgstr "Accueil"
 
 #: View/Elements/menu-main.ctp:5
 msgid ""
@@ -758,10 +799,8 @@ msgstr ""
 "<span class='visible-xs-inline-block glyphicon glyphicon-picture'>&nbsp;</"
 "span>portfolio"
 
-#: View/Elements/menu-main.ctp:8
-msgid ""
-"<span class='visible-xs-inline-block glyphicon glyphicon-shopping-"
-"cart'>&nbsp;</span>Acces clients"
+#: View/Elements/menu-main.ctp:8 View/Pages/customers.ctp:7
+msgid "Acces clients"
 msgstr ""
 
 #: View/Elements/menu-main.ctp:11
@@ -773,16 +812,14 @@ msgstr ""
 "span>contact"
 
 #: View/Elements/menu-main.ctp:14
-msgid ""
-"<span class='visible-xs-inline-block glyphicon glyphicon-book'>&nbsp;</"
-"span>Livre d'or"
+msgid "Livre d'or"
 msgstr ""
 
 #: View/Elements/navigation.ctp:28
 msgid "index"
 msgstr "index"
 
-#: View/Elements/navigation.ctp:29 View/Layouts/admin.ctp:159
+#: View/Elements/navigation.ctp:29 View/Layouts/admin.ctp:157
 #: View/Layouts/member.ctp:74 View/Users/admin_account.ctp:2;6
 #: View/Users/member_account.ctp:1;5
 msgid "Account"
@@ -801,16 +838,8 @@ msgstr ""
 "count}, à partir de l'enregistrement {:start}, jusqu'au {:end}"
 
 #: View/Elements/pagination.ctp:6
-msgid "&larr;"
-msgstr ""
-
-#: View/Elements/pagination.ctp:6
-msgid "&larr; Previous"
-msgstr "&larr; Précédent"
-
-#: View/Elements/pagination.ctp:9
-msgid "Next &rarr;"
-msgstr "Suivant &rarr;"
+msgid " Previous"
+msgstr "précédent"
 
 #: View/Elements/users/login2.ctp:4;42
 msgid "Login"
@@ -838,36 +867,28 @@ msgstr "Mot de passe oublié?"
 msgid "Required Field"
 msgstr "Champs obligatoire :"
 
-#: View/Enews/admin_index.ctp:2 View/Layouts/admin.ctp:255
+#: View/Enews/admin_index.ctp:2 View/Layouts/admin.ctp:253
 msgid "newsletter manager"
 msgstr " Gestionnaire de la newsletter"
 
-#: View/Enews/admin_index.ctp:26 View/Users/admin_index.ctp:45
-msgid "<span class=\"fa fa-trash fa-2x\" ></span>"
-msgstr "<span class=\"fa fa-trash fa-2x\" ></span>"
+#: View/Enews/admin_index.ctp:49
+msgid "New"
+msgstr "Nouveau "
 
-#: View/Enews/admin_index.ctp:48
-msgid "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;New"
-msgstr "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;Nouveau"
-
-#: View/Enews/admin_index.ctp:58 View/Homes/admin_index.ctp:94
-#: View/Portfolios/admin_index.ctp:129 View/Wallpapers/admin_index.ctp:98
+#: View/Enews/admin_index.ctp:59 View/Homes/admin_index.ctp:92
+#: View/Portfolios/admin_index.ctp:143 View/Wallpapers/admin_index.ctp:99
 msgid " close"
 msgstr "Fermer"
 
-#: View/Enews/admin_index.ctp:59 View/Users/admin_index.ctp:80
+#: View/Enews/admin_index.ctp:60 View/Users/admin_index.ctp:90
 msgid "Remove user"
 msgstr "Supprimer l'utilisateur"
 
-#: View/Enews/admin_index.ctp:63 View/Users/admin_index.ctp:83
+#: View/Enews/admin_index.ctp:64 View/Users/admin_index.ctp:93
 msgid "Are you sure you want to delete "
 msgstr "Etes vous sur de vouloir suprimer "
 
-#: View/Enews/admin_index.ctp:63 View/Users/admin_index.ctp:83
-msgid "&nbsp; "
-msgstr "&nbsp; "
-
-#: View/Enews/admin_index.ctp:63 View/Users/admin_index.ctp:83
+#: View/Enews/admin_index.ctp:64 View/Users/admin_index.ctp:93
 msgid " permanently from your users"
 msgstr " de façon permanente de vos utilisateurs"
 
@@ -876,9 +897,8 @@ msgid "Add Picture to home page"
 msgstr "Ajouter une photo "
 
 #: View/Homes/admin_add.ctp:32
-msgid "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;List Carousels"
-msgstr ""
-"<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;Liste du Carrousel"
+msgid "List Carousels"
+msgstr "Liste du Carrousel"
 
 #: View/Homes/admin_edit.ctp:2 View/Portfolios/admin_edit.ctp:2
 #: View/Posts/admin_index.ctp:42
@@ -890,18 +910,14 @@ msgid "homepage"
 msgstr "Gestionnaire de la page d'Accueil"
 
 #: View/Homes/admin_edit.ctp:24 View/Portfolios/admin_add.ctp:57
-#: View/Portfolios/admin_edit.ctp:59 View/Portfolios/admin_index.ctp:83
+#: View/Portfolios/admin_edit.ctp:59 View/Portfolios/admin_index.ctp:93
 msgid "keywords"
 msgstr "mots-clés"
 
 #: View/Homes/admin_edit.ctp:34 View/Portfolios/admin_add.ctp:67
-#: View/Portfolios/admin_edit.ctp:69 View/Portfolios/admin_index.ctp:93
+#: View/Portfolios/admin_edit.ctp:69 View/Portfolios/admin_index.ctp:103
 msgid "description"
 msgstr "Description"
-
-#: View/Homes/admin_edit.ctp:53
-msgid "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;home"
-msgstr "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;Accueil"
 
 #: View/Homes/admin_index.ctp:4
 msgid "home manager"
@@ -923,113 +939,93 @@ msgstr "Modifier la page d accueil"
 msgid "edit the homepage"
 msgstr "Modifier la page d' accueil"
 
-#: View/Homes/admin_index.ctp:65
-msgid "delete"
-msgstr "Effacer"
-
-#: View/Homes/admin_index.ctp:68 View/Wallpapers/admin_index.ctp:59
-msgid "delete this picture"
-msgstr "supprimer l' image"
-
-#: View/Homes/admin_index.ctp:73 View/Wallpapers/admin_index.ctp:55;64
-msgid "edit this picture"
-msgstr "Modifier la photo"
-
-#: View/Homes/admin_index.ctp:96 View/Wallpapers/admin_index.ctp:100
+#: View/Homes/admin_index.ctp:94 View/Wallpapers/admin_index.ctp:101
 msgid "Remove this picture"
 msgstr "Supprimer cette  photo"
 
-#: View/Homes/admin_index.ctp:102 View/Wallpapers/admin_index.ctp:106
+#: View/Homes/admin_index.ctp:100 View/Wallpapers/admin_index.ctp:107
 msgid "to your background"
 msgstr "de votre arrière-plan"
 
-#: View/Homes/index.ctp:1 View/Pages/home.ctp:1 View/Wallpapers/index.ctp:1
+#: View/Homes/index.ctp:1 View/Pages/home.ctp:1 View/Wallpapers/indexOLD.ctp:1
 msgid "Accueil"
 msgstr "Accueil"
 
-#: View/Layouts/admin.ctp:154
+#: View/Layouts/admin.ctp:152
 msgid "Member since"
 msgstr "Membre depuis"
 
-#: View/Layouts/admin.ctp:163
-msgid "Logout&nbsp;<i class=\"fa fa-external-link\"></i>"
-msgstr "déconnexion&nbsp;<i class=\"fa fa-external-link\"></i>"
+#: View/Layouts/admin.ctp:161 View/Layouts/member.ctp:63
+msgid "Logout"
+msgstr "Déconnexion"
 
-#: View/Layouts/admin.ctp:199 View/Pages/admin_dashboard.ctp:2;5
+#: View/Layouts/admin.ctp:197 View/Pages/admin_dashboard.ctp:2;5
 msgid "Dashboard"
 msgstr "Panneau d'administration"
 
-#: View/Layouts/admin.ctp:203
+#: View/Layouts/admin.ctp:201
 msgid "Home"
 msgstr "Accueil"
 
-#: View/Layouts/admin.ctp:206
+#: View/Layouts/admin.ctp:204
 msgid "homes manager"
 msgstr "Gestionnaire de la page d'Accueil"
 
-#: View/Layouts/admin.ctp:211 View/Pages/admin_dashboard.ctp:46;53
+#: View/Layouts/admin.ctp:209 View/Pages/admin_dashboard.ctp:46;53
 msgid "visitors book"
 msgstr "livre d’or"
 
-#: View/Layouts/admin.ctp:222
+#: View/Layouts/admin.ctp:220
 msgid "carousel manager"
 msgstr " Gestionnaire du carrousel"
 
-#: View/Layouts/admin.ctp:225;236
+#: View/Layouts/admin.ctp:223;234
 msgid "Add new image"
 msgstr "Ajouter une image"
 
-#: View/Layouts/admin.ctp:230
+#: View/Layouts/admin.ctp:228
 msgid "wallpaper"
 msgstr "Fond d'écran"
 
-#: View/Layouts/admin.ctp:233
+#: View/Layouts/admin.ctp:231
 msgid "wallpapers manager"
 msgstr " Gestionnaire du fond d'écran"
 
-#: View/Layouts/admin.ctp:241
+#: View/Layouts/admin.ctp:239
 msgid "portfolio"
 msgstr "portfolio"
 
-#: View/Layouts/admin.ctp:244 View/Portfolios/admin_index.ctp:3
+#: View/Layouts/admin.ctp:242 View/Portfolios/admin_index.ctp:3
 msgid "portfolios manager"
 msgstr "Gestionnaire du Portfolio"
 
-#: View/Layouts/admin.ctp:247
+#: View/Layouts/admin.ctp:245
 msgid "Add new portfolio"
 msgstr "Ajouter un portfolio"
 
-#: View/Layouts/admin.ctp:252 View/Pages/admin_dashboard.ctp:63;69
+#: View/Layouts/admin.ctp:250 View/Pages/admin_dashboard.ctp:63;69
 msgid "newsletter"
 msgstr ""
 
-#: View/Layouts/admin.ctp:260 View/Pages/admin_dashboard.ctp:14;20
+#: View/Layouts/admin.ctp:258 View/Pages/admin_dashboard.ctp:14;20
 msgid "users"
 msgstr "Utilisateurs"
 
-#: View/Layouts/admin.ctp:263
+#: View/Layouts/admin.ctp:261
 msgid "users manager"
 msgstr " Gestionnaire des utilisateurs"
 
-#: View/Layouts/admin.ctp:266
+#: View/Layouts/admin.ctp:264
 msgid "add new user"
 msgstr "Ajouter un utilisateur"
 
-#: View/Layouts/admin.ctp:271
+#: View/Layouts/admin.ctp:269
 msgid "maintenance"
 msgstr ""
 
-#: View/Layouts/admin.ctp:274
+#: View/Layouts/admin.ctp:272
 msgid " Clear Cache"
 msgstr "Nettoyer le cache"
-
-#: View/Layouts/admin.ctp:284 View/Pages/sitemap.ctp:13
-msgid "home"
-msgstr "Accueil"
-
-#: View/Layouts/default.ctp:113
-msgid "<i class=\"glyphicon glyphicon-home\"></i>"
-msgstr "<i class=\"glyphicon glyphicon-home\"></i>"
 
 #: View/Layouts/member.ctp:53
 msgid "Administrator"
@@ -1040,12 +1036,8 @@ msgid "See the site"
 msgstr "Voir le site"
 
 #: View/Layouts/member.ctp:61
-msgid "help&nbsp;<i class=\"glyphicon glyphicon-question-sign\"></i>"
-msgstr "Aide&nbsp;<i class=\"glyphicon glyphicon-question-sign\"></i>"
-
-#: View/Layouts/member.ctp:63
-msgid "Logout&nbsp;<i class=\"glyphicon glyphicon-new-window\"></i>"
-msgstr "Déconnecter&nbsp;<i class=\"glyphicon glyphicon-new-window\"></i>"
+msgid "help"
+msgstr "aide"
 
 #: View/Pages/admin_dashboard.ctp:30;36
 msgid "carousel"
@@ -1058,10 +1050,6 @@ msgstr "Rapide Email"
 #: View/Pages/admin_dashboard.ctp:90
 msgid "Email to:"
 msgstr "Email"
-
-#: View/Pages/admin_dashboard.ctp:93
-msgid "Subject"
-msgstr "Objet"
 
 #: View/Pages/admin_dashboard.ctp:98
 msgid "Message"
@@ -1086,10 +1074,6 @@ msgstr "Evénements"
 #: View/Pages/admin_dashboard.ctp:123
 msgid "View calendar"
 msgstr "Voir calendrier"
-
-#: View/Pages/customers.ctp:7
-msgid "Acces clients"
-msgstr ""
 
 #: View/Pages/legalinformations.ctp:8
 msgid "MENTIONS LEGALES :"
@@ -1116,59 +1100,50 @@ msgstr ""
 msgid "subtitle"
 msgstr "sous-titre"
 
-#: View/Portfolios/admin_add.ctp:85
-msgid "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;List Portfolio"
-msgstr ""
-"<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;Liste du Portfolio"
-
-#: View/Portfolios/admin_edit.ctp:2
-msgid "this galerie"
-msgstr ""
-
-#: View/Portfolios/admin_edit.ctp:88 View/Portfolios/admin_index.ctp:112
+#: View/Portfolios/admin_add.ctp:85 View/Portfolios/admin_edit.ctp:88
+#: View/Portfolios/admin_index.ctp:125
 msgid "List Portfolio"
 msgstr "Liste du Portfolio"
 
-#: View/Portfolios/admin_index.ctp:108
+#: View/Portfolios/admin_edit.ctp:2
+msgid "this galerie"
+msgstr "Cette galerie"
+
+#: View/Portfolios/admin_index.ctp:47
+msgid "Enable this portfolio"
+msgstr "Activez ce Portfolio"
+
+#: View/Portfolios/admin_index.ctp:120
 msgid "Add portfolio"
 msgstr "Ajouter une galerie"
 
-#: View/Portfolios/admin_index.ctp:132
+#: View/Portfolios/admin_index.ctp:148
 msgid "Remove Post"
 msgstr "Supprimer l'article"
+
+#: View/Portfolios/admin_index.ctp:156
+msgid "of your Portfolio"
+msgstr "de votre portfolio"
 
 #: View/Portfolios/admin_view.ctp:5 View/Portfolios/index.ctp:6
 msgid "Portfolio"
 msgstr "portfolio"
 
 #: View/Portfolios/admin_view.ctp:18
-msgid ""
-"<span class=\"glyphicon glyphicon-edit\"></span>&nbsp&nbsp;Edit Portfolio"
-msgstr "<i class=\"glyphicon glyphicon-user\"></i>&nbsp;  éditer"
+msgid "Edit Portfolio"
+msgstr "Modifier"
 
 #: View/Portfolios/admin_view.ctp:19
-msgid ""
-"<span class=\"glyphicon glyphicon-remove\"></span>&nbsp;&nbsp;Delete "
-"Portfolio"
-msgstr "<i class=\"glyphicon glyphicon-trash tra\" style></i>&nbsp;Supprimer"
+msgid "Delete Portfolio"
+msgstr "﻿Supprimer ce portfolio"
 
 #: View/Portfolios/admin_view.ctp:20
-msgid ""
-"<span class=\"glyphicon glyphicon-list\"></span>&nbsp&nbsp;List Portfolios"
-msgstr "<i class=\"glyphicon glyphicon-user\"></i>&nbsp;liste des portfolios"
+msgid "List Portfolios"
+msgstr "Liste du portfolio"
 
 #: View/Portfolios/admin_view.ctp:21
-msgid ""
-"<span class=\"glyphicon glyphicon-plus\"></span>&nbsp&nbsp;New Portfolio"
-msgstr "<i class=\"glyphicon glyphicon-plus\"></i>&nbsp;Ajouter un portfolio"
-
-#: View/Portfolios/admin_view.ctp:22
-msgid "<span class=\"glyphicon glyphicon-list\"></span>&nbsp&nbsp;List Users"
-msgstr "<i class=\"glyphicon glyphicon-plus\"></i>&nbsp;liste des utilisateurs"
-
-#: View/Portfolios/admin_view.ctp:23
-msgid "<span class=\"glyphicon glyphicon-plus\"></span>&nbsp&nbsp;New User"
-msgstr "<i class=\"glyphicon glyphicon-plus\"></i>&nbsp;Ajouter un utilisateur"
+msgid "New Portfolio"
+msgstr "Ajouter un portfolio"
 
 #: View/Portfolios/admin_view.ctp:41 View/Posts/admin_view.ctp:9
 #: View/Posts/view.ctp:9 View/Users/admin_account.ctp:31
@@ -1313,7 +1288,7 @@ msgstr "Activer "
 msgid "Disable  "
 msgstr "Désactiver "
 
-#: View/Users/admin_index.ctp:67
+#: View/Users/admin_index.ctp:77
 msgid "New user"
 msgstr "Ajouter un utilisateur"
 
@@ -1324,10 +1299,6 @@ msgstr " Enregistrer"
 #: View/Users/admin_signup.ctp:3;14
 msgid "add user"
 msgstr "Ajouter un utilisateur"
-
-#: View/Users/admin_signup.ctp:9
-msgid "<i class=\"fa fa-times\"></i>"
-msgstr ""
 
 #: View/Users/admin_signup.ctp:12
 msgid "Press Esc to close"
@@ -1351,21 +1322,22 @@ msgstr "Mot de passe oublié"
 
 #: View/Users/forgot.ctp:11
 msgid ""
-"To change your password please fill in the fields below your email address. "
-"<br>\n"
-"\t\t\t\t\t\tAn email will be sent with the information needed to create your "
-"new password"
+"To change your password please fill in the fields below your email address."
 msgstr ""
 "Pour modifier votre mot de passe veuillez remplir les champs ci-dessous ."
-"<br>\n"
-"\t\t\t\t\t\t\tUn email vous  sera envoyé avec les informations nécessaires "
-"pour créer votre nouveau mot de passe"
 
-#: View/Users/forgot.ctp:15
+#: View/Users/forgot.ctp:13
+msgid ""
+"An email will be sent with the information needed to create your new password"
+msgstr ""
+"Un email vous  sera envoyé avec les informations nécessaires pour créer "
+"votre nouveau mot de passe"
+
+#: View/Users/forgot.ctp:16
 msgid "Your Mail"
 msgstr "Votre Mail"
 
-#: View/Users/forgot.ctp:15
+#: View/Users/forgot.ctp:16
 msgid "Your Email"
 msgstr "Votre Email"
 
@@ -1385,7 +1357,7 @@ msgstr "Mot de passe"
 msgid "Confirm Password"
 msgstr "Confirmer  mot de passe"
 
-#: View/Wallpapers/admin_add.ctp:54 View/Wallpapers/admin_edit.ctp:41
+#: View/Wallpapers/admin_add.ctp:54 View/Wallpapers/admin_edit.ctp:57
 msgid "List Wallpaper"
 msgstr "Liste des photos"
 
@@ -1397,17 +1369,9 @@ msgstr "Ajouter une photo "
 msgid "wallpaper manager"
 msgstr "Gestionnaire du fond d'écran"
 
-#: View/Wallpapers/admin_index.ctp:42
-msgid "Enable this picture"
-msgstr "Activer cette photo"
-
-#: View/Wallpapers/admin_index.ctp:47
-msgid "Disable this picture"
-msgstr "Désactiver cette photo"
-
-#: View/Wallpapers/admin_index.ctp:80
-msgid "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;New picture"
-msgstr "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;Ajouter une photo"
+#: View/Wallpapers/admin_index.ctp:55;65
+msgid "edit this picture"
+msgstr "Modifier la photo"
 
 #: Model/Carousel.php:validation for field name Model/Home.php:validation
 #: Model/Portfolio.php:validation Model/Wallpaper.php:validation
@@ -1455,7 +1419,7 @@ msgstr "Cette Utilisateur est déja utilisé:"
 msgid "you must enter your name"
 msgstr "Vous devez entrer votre nom"
 
-#: Model/Comment.php:validation for field name
+#: Model/Comment.php:validation for field name Model/Contact.php:validation
 msgid "Between 5 to 15 characters"
 msgstr "Entre 5 et 15 charactére:"
 
@@ -1507,6 +1471,107 @@ msgstr "Ce mot de passe n'est pas identique"
 #: Model/User.php:validation for field avatarf
 msgid "You must send a jpg"
 msgstr "vous devez envoyer des jpg"
+
+#~ msgid ""
+#~ "<span class=\"visible-xs-inline-block glyphicon glyphicon-home \">&nbsp;</"
+#~ "span>Accueil"
+#~ msgstr ""
+#~ "<span class=\"visible-xs-inline-block glyphicon glyphicon-home \">&nbsp;</"
+#~ "span>Accueil"
+
+#~ msgid "Next &rarr;"
+#~ msgstr "Suivant &rarr;"
+
+#~ msgid "&nbsp; "
+#~ msgstr "&nbsp; "
+
+#~ msgid ""
+#~ "<span class=\"glyphicon glyphicon-list\"></span>&nbsp&nbsp;List Portfolios"
+#~ msgstr ""
+#~ "<i class=\"glyphicon glyphicon-user\"></i>&nbsp;liste des portfolios"
+
+#~ msgid "<span class=\"fa fa-trash fa-2x\" ></span>"
+#~ msgstr "<span class=\"fa fa-trash fa-2x\" ></span>"
+
+#, fuzzy
+#~ msgid "{:count} "
+#~ msgstr "Compte"
+
+#, fuzzy
+#~ msgid ""
+#~ "<span class=\"visible-xs-inline-block glyphicon glyphicon-home \">&nbsp;</"
+#~ "span>"
+#~ msgstr ""
+#~ "<span class=\"visible-xs-inline-block glyphicon glyphicon-home \">&nbsp;</"
+#~ "span>Accueil"
+
+#~ msgid "&larr; Previous"
+#~ msgstr "&larr; Précédent"
+
+#~ msgid "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;New"
+#~ msgstr "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;Nouveau"
+
+#~ msgid "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;List Carousels"
+#~ msgstr ""
+#~ "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;Liste du Carrousel"
+
+#~ msgid "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;home"
+#~ msgstr "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;Accueil"
+
+#~ msgid "Logout&nbsp;<i class=\"fa fa-external-link\"></i>"
+#~ msgstr "déconnexion&nbsp;<i class=\"fa fa-external-link\"></i>"
+
+#~ msgid "<i class=\"glyphicon glyphicon-home\"></i>"
+#~ msgstr "<i class=\"glyphicon glyphicon-home\"></i>"
+
+#~ msgid "help&nbsp;<i class=\"glyphicon glyphicon-question-sign\"></i>"
+#~ msgstr "Aide&nbsp;<i class=\"glyphicon glyphicon-question-sign\"></i>"
+
+#~ msgid "Logout&nbsp;<i class=\"glyphicon glyphicon-new-window\"></i>"
+#~ msgstr "Déconnecter&nbsp;<i class=\"glyphicon glyphicon-new-window\"></i>"
+
+#~ msgid "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;List Portfolio"
+#~ msgstr ""
+#~ "<span class=\"fa fa-list fa-2x\"></span> &nbsp;&nbsp;Liste du Portfolio"
+
+#~ msgid ""
+#~ "<span class=\"glyphicon glyphicon-edit\"></span>&nbsp&nbsp;Edit Portfolio"
+#~ msgstr "<i class=\"glyphicon glyphicon-user\"></i>&nbsp;  éditer"
+
+#~ msgid ""
+#~ "<span class=\"glyphicon glyphicon-remove\"></span>&nbsp;&nbsp;Delete "
+#~ "Portfolio"
+#~ msgstr ""
+#~ "<i class=\"glyphicon glyphicon-trash tra\" style></i>&nbsp;Supprimer"
+
+#~ msgid ""
+#~ "<span class=\"glyphicon glyphicon-plus\"></span>&nbsp&nbsp;New Portfolio"
+#~ msgstr ""
+#~ "<i class=\"glyphicon glyphicon-plus\"></i>&nbsp;Ajouter un portfolio"
+
+#~ msgid ""
+#~ "<span class=\"glyphicon glyphicon-list\"></span>&nbsp&nbsp;List Users"
+#~ msgstr ""
+#~ "<i class=\"glyphicon glyphicon-plus\"></i>&nbsp;liste des utilisateurs"
+
+#~ msgid "<span class=\"glyphicon glyphicon-plus\"></span>&nbsp&nbsp;New User"
+#~ msgstr ""
+#~ "<i class=\"glyphicon glyphicon-plus\"></i>&nbsp;Ajouter un utilisateur"
+
+#~ msgid "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;New picture"
+#~ msgstr "<span class=\"fa fa-plus\"></span>&nbsp;&nbsp;Ajouter une photo"
+
+#~ msgid "<span class=\"fa fa-list\"></span> &nbsp;&nbsp;List Carousel"
+#~ msgstr "<span class=\"fa fa-list\"></span> &nbsp;&nbsp;List Carousel"
+
+#~ msgid "Enable this Carousel"
+#~ msgstr "Activez le carrousel"
+
+#~ msgid "<span class=\"label label-danger\">Offline</span>"
+#~ msgstr "<span class=\"label label-default\">Désactivé</span>"
+
+#~ msgid "delete this picture"
+#~ msgstr "supprimer l' image"
 
 #~ msgid "Add Carousel"
 #~ msgstr "Ajouter un Carousel"
@@ -2347,9 +2412,6 @@ msgstr "vous devez envoyer des jpg"
 #~ msgid "add page"
 #~ msgstr "Ajouter une Page"
 
-#~ msgid "help"
-#~ msgstr "aide"
-
 #~ msgid ""
 #~ "Headers already sent in %s on line %s. Cannot send log data to FirePHP."
 #~ msgstr ""
@@ -2410,9 +2472,6 @@ msgstr "vous devez envoyer des jpg"
 
 #~ msgid "Your database configuration file is NOT present."
 #~ msgstr "Votre fichier de configuration de base de données est présent."
-
-#~ msgid "New"
-#~ msgstr "Nouveau %s"
 
 #~ msgid "The Rapid Development Framework"
 #~ msgstr "CakePHP: le cadre du développement de php rapide"

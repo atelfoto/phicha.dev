@@ -33,7 +33,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div class="breadcrumb" style="margin-top:10px;">
 				<div id="bc1" class="btn-group btn-breadcrumb">
 					<?php   echo $this->Html->getCrumbs('', array(
-						'text' => __('<i class="glyphicon glyphicon-home"></i>'),
+						'text' => '<i class="glyphicon glyphicon-home"></i>',
 						"class"=>"btn btn-default",
 						'url' => array('controller' => 'pages', 'action' => 'home'),
 						'escape' => false

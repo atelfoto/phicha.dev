@@ -48,8 +48,8 @@
 								)); ?>
 							</td>
 							<td>
-								<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
-									<?php echo $this->Html->link(__('<span class="fa fa-trash fa-2x" ></span>'),'#UsersModal',
+								<p data-placement="top" data-toggle="tooltip" title="<?= __('delete'); ?>" class="text-center">
+									<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#UsersModal',
 										array(
 												'class' => 'btn btn-default btn-remove-modal',
 												'escape' =>false,
@@ -90,7 +90,7 @@
 				<h4 id="myModalLabel"><?php echo __('Remove user') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo __('&nbsp; '. $v['username'].' &nbsp;'); ?></b><?php echo __(' permanently from your users'); ?>
+				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo '&nbsp; '. $v['username'].' &nbsp;'; ?></b><?php echo __(' permanently from your users'); ?>
 					<span class="label-uname strong"></span> ?</p>
 			</div>
 			<div class="modal-footer">

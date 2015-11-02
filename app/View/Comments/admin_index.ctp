@@ -25,7 +25,8 @@
 						<td><?php echo h($comment['Comment']['mail']); ?>&nbsp;</td>
 						<td><?php echo h($comment['Comment']['content']); ?>&nbsp;</td>
 						<td><?php echo $this->Date->french($comment['Comment']['created']); ?>&nbsp;</td>
-						<td><?php if($comment['Comment'][ 'online' ] == 0) {echo $this->Html->link(__('<span class="label label-danger">Offline</span>'),
+						<td><?php if($comment['Comment'][ 'online' ] == 0) {echo $this->Html->link(
+							'<span class="label label-danger">'.__('Offline').'</span>',
 						 	array('action'=>'enable', $comment['Comment']['id']),
 							array("style"=>"text-decoration:none;","data-toggle"=>"tooltip","data-placement"=>"top", "title"=>__('Enable this post'),'escape'=>false));
 							}else{
@@ -35,7 +36,7 @@
 							?>
 						</td>
 						<td class="actions">
-							<p data-placement="top" data-toggle="tooltip" title="Delete" class="text-center">
+							<p data-placement="top" data-toggle="tooltip" title="<?= __('delete'); ?>" class="text-center">
 							<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>',$comment['Comment']['id'],
               				array(
               				  'class' => 'btn btn-default btn-remove-modal btn-sm',

@@ -6,7 +6,7 @@
 	<div class=" col-md-6 col-md-offset-3">
 		<div class="panel panel-info box-home">
 			<div class="panel-heading">
-			<?= $this->Html->link(__('<i class="fa fa-times"></i>'),
+			<?= $this->Html->link('<i class="fa fa-times"></i>',
 				array('action' => 'index'),
 				array('class'=>'btn btn-xs close',
 						"data-toggle"=>"tooltip", "data-placement"=>"left", "title"=> __('Press Esc to close'),

@@ -8,8 +8,9 @@
 			<div class="panel-body text-center">
 				<fieldset>
 					<legend> <?= __('Password Reminder'); ?></legend> <!-- Rappel du Mot de passe -->
-					<p><?= __('To change your password please fill in the fields below your email address. <br>
-						An email will be sent with the information needed to create your new password'); ?>
+					<p><?php echo __('To change your password please fill in the fields below your email address.');
+					         echo "<br>";
+					         echo __('An email will be sent with the information needed to create your new password'); ?>
 					</p>
 					<?=  $this->Form->create('User'); ?>
 					<?=  $this->Form->input('mail',array('label'=>__('Your Mail'),'placeholder'=>__('Your Email'),'class'=>'form-control ')); ?>
