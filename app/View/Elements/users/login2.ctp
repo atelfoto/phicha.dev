@@ -1,10 +1,10 @@
 <?php $this->Html->addCrumb('login',array("controller"=>"users","action"=>"login"),array('class'=>"btn btn-default")); ?>
 <div class="panel panel-primary box-home">
 	<div class="panel-heading">
-		<h1 class="panel-title"><?= __('Login'); ?></h1>
+		<h2 class="panel-title"><?= __('Login'); ?></h2>
 	</div>
 	<div class="panel-body ">
-		<?= $this->Form->create('User',array('controller'=>'users','action'=>'login')); ?>
+		<?= $this->Form->create('User',array("url"=>array('controller'=>'users','action'=>'login'))); ?>
 		<fieldset>
 			<div class="form-group required">
 				<label for="username"> <?= __('Username :'); ?> <i class="glyphicon glyphicon-asterisk"></i></label>

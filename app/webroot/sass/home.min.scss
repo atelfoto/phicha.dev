@@ -21,8 +21,85 @@ $couleur-dark: lighten(rgb(0,0,0),30%);
 $couleur-grey:  rgb(153,153,153);
 $couleur-light: transparentize($couleur-grey, 0.8);
 
-
+@import "compass/layout.scss";
+@include sticky-footer(50px, "#container", "#container_footer", "#footer");
 @import "_homepage";
 @import "social";
 @import "_vegas";
-@include sticky-footer(30px, "#container", "#container_footer", "#footer");
+
+
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+
+.btn-primary {
+     background-image: linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF337AB7', endColorstr='#FF265A88', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border-color: #245580;
+}
+
+.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+}
+
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #265a88;
+    background-position: 0 -15px;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.btn-primary:active, .btn-primary.active, .open>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background-color: #265a88;
+    border-color: #245580;
+}
+.btn:active, .btn.active {
+    background-image: none;
+}
+.btn-primary:active, .btn-primary.active, {
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}

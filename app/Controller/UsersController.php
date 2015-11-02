@@ -223,6 +223,7 @@ public function member_account(){
 	* login
 	**/
 	function login(){
+		$this->layout ="home";
 		if ($this->request->is('post')) {
 			if ($this->Auth->login()) {
 				$this->request->prefix;

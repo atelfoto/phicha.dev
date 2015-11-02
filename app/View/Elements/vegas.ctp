@@ -5,11 +5,11 @@ if ( ((screen.width  >= 480) && (screen.height >= 800)) || ((screen.width  >= 80
 $( function() {
 $('#home').vegas({
 slides: [
-{ src: 'files/wallpaper/photo/1/tablet_01.jpg' },
-{ src: 'files/wallpaper/photo/2/tablet_02.jpg' },
-{ src: 'files/wallpaper/photo/3/tablet_03.jpg' },
-{ src: 'files/wallpaper/photo/4/tablet_04.jpg' },
-{ src: 'files/wallpaper/photo/5/tablet_05.jpg' },
+{ src: '/files/wallpaper/photo/1/tablet_01.jpg' },
+{ src: '/files/wallpaper/photo/2/tablet_02.jpg' },
+{ src: '/files/wallpaper/photo/3/tablet_03.jpg' },
+{ src: '/files/wallpaper/photo/4/tablet_04.jpg' },
+{ src: '/files/wallpaper/photo/5/tablet_05.jpg' },
 ]
 });
 });
@@ -18,11 +18,11 @@ slides: [
 $( function() {
 $('#home').vegas({
 slides: [
-{ src: 'files/wallpaper/photo/1/mobile_01.jpg' },
-{ src: 'files/wallpaper/photo/2/mobile_02.jpg' },
-{ src: 'files/wallpaper/photo/3/mobile_03.jpg' },
-{ src: 'files/wallpaper/photo/4/mobile_04.jpg' },
-{ src: 'files/wallpaper/photo/5/mobile_05.jpg' },
+{ src: '/files/wallpaper/photo/1/mobile_01.jpg' },
+{ src: '/files/wallpaper/photo/2/mobile_02.jpg' },
+{ src: '/files/wallpaper/photo/3/mobile_03.jpg' },
+{ src: '/files/wallpaper/photo/4/mobile_04.jpg' },
+{ src: '/files/wallpaper/photo/5/mobile_05.jpg' },
 ]
 });
 });
