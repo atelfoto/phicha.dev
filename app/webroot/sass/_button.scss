@@ -1,0 +1,47 @@
+$default-transition-duration:0.2s;
+//$color:#64b651;
+$color:#3bb3e0;
+
+.text-right {
+    text-align: right;
+}
+
+div.button {
+	button{
+		background-color:$color;
+		padding:10px;
+		position:relative;
+		font-family: 'Open Sans', sans-serif;
+		font-size:12px;
+		text-decoration:none;
+    cursor: pointer;
+		color:#fff;
+		margin-left: 20px;
+		 border: solid 1px darken($color,20);
+		 @include background-image( linear-gradient(top,$color,darken($color,10)) );
+		 @include box-shadow(inset 0px 1px 1px lighten($color,20));
+		 border-radius: 5px;
+	}
+	button:active{
+	    @include background-image( linear-gradient(bottom,$color,darken($color,10)) );
+
+	 }
+	 button:focus {
+    outline: none;
+}
+	button:before{
+		//background-color:#ccd0d5;
+		background-color: rgba(204, 208, 213,0.4);
+		content:"";
+		display:block;
+		position:absolute;
+		width:120%;
+		height:120%;
+		padding:24px;
+		 left:-8px;
+		 top:-8px;
+		z-index:-1;
+		border-radius: 5px;
+		@include box-shadow(inset 0px 1px 1px #909193,0px 1px 0px #fff);
+	}
+}
