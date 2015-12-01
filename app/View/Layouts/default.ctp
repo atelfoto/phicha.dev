@@ -35,7 +35,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					<?php   echo $this->Html->getCrumbs('', array(
 						'text' => '<i class="glyphicon glyphicon-home"></i>',
 						"class"=>"btn btn-default",
-						'url' => array('controller' => 'pages', 'action' => 'home'),
+						'url' => array('controller' => 'homes', 'action' => 'index'),
 						'escape' => false
 						));
 						?>
