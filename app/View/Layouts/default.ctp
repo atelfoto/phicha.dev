@@ -29,7 +29,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<?php  echo $this->element('carousel'); ?>
 		<?php   echo $this->element('navigation'); ?>
 		<div class="container ">
-			<?php echo $this->Session->flash(); ?>
 			<div class="breadcrumb" style="margin-top:10px;">
 				<div id="bc1" class="btn-group btn-breadcrumb">
 					<?php   echo $this->Html->getCrumbs('', array(
@@ -40,6 +39,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						));
 						?>
 					</div><?php echo $this->element('social'); ?>
+					<?php echo $this->Session->flash(); ?>
 				</div>
 			</div>
 			<?php echo $this->fetch('content'); ?>
