@@ -143,19 +143,18 @@ public function index(){
 	}
 
 	function admin_enable($id=null) {
-		$carousel = $this->Carousel->get(null,$id,$default = null);
+		$carousel = $this->Carousel->read(null,$id);
 		if (!$id && empty($carousel)) {
-
 			$this->Session->setFlash(__('You must provide a valid ID number to enable a post.',true),'notif',array('class'=>'danger','type'=>'sign'));
 			$this->redirect(array('action'=>'index'));
 		}
 		if (!empty($carousel)) {
 			$carousel['Carousel']['online'] = 1;
-			if ($this->Carousel->save($this->request->data)) {
-				$this->Session->setFlash(__('Carousel ID %s has been published.',h($id)),'notif',array('class'=>'success','type'=>'ok'));
+			if ($this->Carousel->save($this->Carousel->saveField('online', 1,false))) {
+				$this->Session->setFlash(__('The Carousel %s has been published.',h($id)),'notif',array('class'=>'success','type'=>'ok'));
 
 			} else {
-				$this->Session->setFlash(__('Carousel ID %s was not published.',h($id)),'notif',array('class'=>'danger','type'=>'sign'));
+				$this->Session->setFlash(__('The Carousel %s was not published.',h($id)),'notif',array('class'=>'danger','type'=>'sign'));
 			}
 			$this->redirect(array('action'=>'index'));
 		} else {
@@ -165,18 +164,14 @@ public function index(){
 	}
 
 	function admin_disable($id=null) {
-		$carousel = $this->Carousel->read(null,$id,$default = null);
-
+		$carousel = $this->Carousel->read(null,$id);
 		if (!$id && empty($carousel)) {
-
 			$this->Session->setFlash(__('You must provide a valid ID number to disable a portfolio.',true),'notif',array('class'=>'danger','type'=>'sign'));
 			$this->redirect(array('action'=>'index'));
 		}
 		if (!empty($carousel)) {
 			$carousel['Carousel']['online'] = 0;
-			$carousel= $carousel['Carousel']['online'] ;
-			if ($this->Carousel->save($carousel)) {
-
+			if ($this->Carousel->save($this->Carousel->saveField('online', 0,false))) {
 				$this->Session->setFlash(__('Carousel ID %s has been disabled.',h($id)),'notif',array('class'=>'success','type'=>'ok'));
 			} else {
 				$this->Session->setFlash(__('portfolio ID %s was not disabled.',h($id)),'notif',array('class'=>'danger','type'=>'sign'));
