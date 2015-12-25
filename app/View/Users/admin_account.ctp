@@ -1,7 +1,5 @@
 <?php echo $this->Html->css(array('fileinput.min'),array('inline'=>false)); ?>
 <?php  echo $this->set('title_for_layout',__('Account'));  ?>
-
-
  		<div class="page-header">
 		 	<h1><?php  echo __('Account'); ?></h1>
 		</div>

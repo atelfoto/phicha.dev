@@ -73,7 +73,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<!-- nocache -->
 		<header class="main-header">
 			<?= $this->Html->link($cakeDescription, '/',array('target' => '_blank',"class"=>"logo")); ?><!-- Logo -->
-			<nav class="navbar navbar-static-top" role="navigation"><!-- Header Navbar -->
+			<nav class="navbar navbar-static-top"><!-- Header Navbar -->
 				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"><!-- Sidebar toggle button-->
 					<span class="sr-only">Toggle navigation</span>
 				</a>
@@ -288,9 +288,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<?= $this->Session->flash(); ?>
 				<?= $this->Session->flash('Auth'); ?>
 				<!-- /nocache -->
-				<?php  echo $this->fetch('content'); ?>
+				<?php // echo $this->fetch('content'); ?>
 			</section><!-- /.content -->
-		</div><!-- /.content-wrapper -->
+	</div><!-- /.content-wrapper -->
 		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
 				<b>Version</b> <?php echo $cakeVersion; ?>

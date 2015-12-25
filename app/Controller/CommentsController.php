@@ -136,7 +136,7 @@ public function activate($comment_id,$token){
 	function admin_index(){
 		$this->Comment->recursive = 0;
 		$this->paginate = array('Comment'=>array(
-			'limit'=>5,
+			'limit'=>12,
 			'order' => array(
             'Comment.created' => 'desc')
 			));
