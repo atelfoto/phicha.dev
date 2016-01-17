@@ -183,7 +183,7 @@ public $components = array('Paginator', 'Flash', 'Session');
 		}
 		if (!empty($portfolio)) {
 			$portfolio['Portfolio']['online'] = 1;
-			if ($this->Portfolio->save($portfolio)) {
+			if ($this->Portfolio->save($this->Portfolio->saveField('online', 1,false))) {
 				$this->Session->setFlash(__('Portfolio ID %s has been published.',h($id)),'notif',array('class'=>'success','type'=>'ok'));
 
 			} else {
@@ -198,15 +198,13 @@ public $components = array('Paginator', 'Flash', 'Session');
 
 	function admin_disable($id=null) {
 		$portfolio = $this->Portfolio->read(null,$id);
-
 		if (!$id && empty($portfolio)) {
 			$this->Session->setFlash(__('You must provide a valid ID number to disable a portfolio.',true),'notif',array('class'=>'danger','type'=>'sign'));
 			$this->redirect(array('action'=>'index'));
 		}
 		if (!empty($portfolio)) {
 			$portfolio['Portfolio']['online'] = 0;
-			if ($this->Portfolio->save($portfolio)) {
-
+			if ($this->Portfolio->save($this->Portfolio->saveField('online', 0,false))) {
 				$this->Session->setFlash(__('Portfolio ID %s has been disabled.',h($id)),'notif',array('class'=>'success','type'=>'ok'));
 			} else {
 				$this->Session->setFlash(__('portfolio ID %s was not disabled.',h($id)),'notif',array('class'=>'danger','type'=>'sign'));
