@@ -140,10 +140,15 @@ public function admin_index() {
  * @return void
  */
 	public function admin_delete($id = null) {
+		$carousel = $this->Carousel->read(null,$id);
 		$this->Carousel->id = $id;
 		if (!$this->Carousel->exists()) {
 			throw new NotFoundException(__('Invalid carousel'));
 		}
+	if ($carousel['Carousel']['class']== 'active'){
+		$this->Session->setFlash(__('You cannot delete an active image.Please select another image before.'), 'notif', array('class' => 'alert alert-danger'));
+		return $this->redirect(array('action' => 'index'));
+	}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Carousel->delete()) {
 			$this->Session->setFlash(__('The carousel has been deleted.'), 'notif', array('class' => 'alert alert-success'));
