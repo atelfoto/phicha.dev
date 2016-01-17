@@ -31,8 +31,14 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
-	Configure::write('debug', 2);
 
+//	Configure::write('debug', 2); configure le debug à 2 en local et à 1 en ligne laisser SetEnv CAKEPHP_DEBUG 2 sur apache
+//	voir ici http://book.cakephp.org/2.0/fr/deployment.html
+	if (getenv('CAKEPHP_DEBUG')) {
+        Configure::write('debug', 0);
+} else {
+        Configure::write('debug', 0);
+}
 /**
  * Configure the Error handler used to handle errors for your application. By default
  * ErrorHandler::handleError() is used. It will display errors using Debugger, when debug > 0

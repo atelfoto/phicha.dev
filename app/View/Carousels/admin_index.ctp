@@ -60,7 +60,7 @@
 								array('class' => 'btn btn-default btn-remove-modal btn-sm',
 									'escape' =>false,
 									'data-toggle' => 'modal',
-									"data-target"=>"#delete",
+									"data-target"=>"#delete-".$carousel['Carousel']['id'],
 									"data-title"=> __('delete'),
 									'role'  => 'button',
 									'data-uid' => $carousel['Carousel']['id']
@@ -90,7 +90,8 @@
 		<?php echo $this->element('pagination'); ?>
 	</div> <!-- end col-md-12 -->
 </div><!-- row end containing of content -->
-<div class="modal fade" id="delete">
+<?php foreach ($carousels as $k => $v): $v = current($v); ?>
+<div class="modal fade" id="delete-<?= $v['id']; ?>">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
@@ -104,7 +105,7 @@
 			<div class="modal-body">
 				<p>
 					<?php echo __('Are you sure you want to delete'); ?>&nbsp;
-					<b style="color:#f00;"><?php echo  $carousel['Carousel']['name'] ?></b>&nbsp;
+					<b style="color:#f00;"><?php echo  $v['name'] ?></b>&nbsp;
 					<?php echo __('of your Carousel') ?>
 					<span class="label-uname strong"></span> ?
 				</p>
@@ -112,12 +113,13 @@
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?>
 				</button>
-				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$carousel['Carousel']['id']),
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
 				array('class' => 'btn btn-danger delete-user-link')) ?>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<?php endforeach ?>
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
 		<div class="modal-content">

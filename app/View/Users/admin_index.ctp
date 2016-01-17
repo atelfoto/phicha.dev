@@ -49,7 +49,7 @@
 							</td>
 							<td>
 								<p data-placement="top" data-toggle="tooltip" title="<?= __('delete'); ?>" class="text-center">
-									<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>','#UsersModal',
+									<?php echo $this->Html->link('<span class="fa fa-trash fa-2x" ></span>',$v['id'],
 										array(
 												'class' => 'btn btn-default btn-remove-modal',
 												'escape' =>false,
@@ -81,8 +81,8 @@
 		</div><!-- end panel -->
 	</div><!-- end col md 3 -->
 </div>
-
-<div class="modal fade" id="delete">
+<?php foreach ($users as $kk => $vv): $vv = current($vv);?>
+<div class="modal fade" id="delete-<?= $vv['id']; ?>">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header modal-danger">
@@ -90,17 +90,18 @@
 				<h4 id="myModalLabel"><?php echo __('Remove user') ?></h4>
 			</div>
 			<div class="modal-body">
-				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo '&nbsp; '. $v['username'].' &nbsp;'; ?></b><?php echo __(' permanently from your users'); ?>
+				<p><?php echo __('Are you sure you want to delete '); ?><b style="color:#f00;"><?php echo '&nbsp; '. $vv['username'].' &nbsp;'; ?></b><?php echo __(' permanently from your users'); ?>
 					<span class="label-uname strong"></span> ?</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
-				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$vv['id']),
 						array('class' => 'btn btn-danger delete-user-link')) ?>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<?php endforeach ?>
 
 
 

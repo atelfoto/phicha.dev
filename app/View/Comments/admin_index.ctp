@@ -42,7 +42,7 @@
               				  'class' => 'btn btn-default btn-remove-modal btn-sm',
               				  'escape' =>false,
               				  'data-toggle' => 'modal',
-												"data-target"=>"#delete",
+												"data-target"=>"#delete-".$comment['Comment']['id'],
 												"data-title"=> __('delete'),
               				  'role'  => 'button',
               				  'data-uid' => $comment['Comment']['id']
@@ -74,7 +74,8 @@
 		</p>
 	</div>
 </div>
-<div class="modal fade" id="delete">
+<?php foreach ($comments as $k => $v): $v = current($v);  ?>
+<div class="modal fade" id="delete-<?= $v['id']; ?>">
 	<div class="modal-dialog ">
 		<div class="modal-content">
 			<div class="modal-header panel-default">
@@ -83,19 +84,20 @@
 			<div class="modal-body">
 				<p><?php echo __('Are you sure you want to delete'); ?>&nbsp;
 					<b style="color:#f00;">
-					<?php echo  $comment['Comment']['name'] ?></b>&nbsp;
+					<?php echo  $v['name'] ?></b>&nbsp;
 					<?php echo __('of your Articles') ?>
 					<span class="label-uname strong"></span> ?
 				</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo __('Cancel') ?></button>
-				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$comment['Comment']['id']),
+				<?php  echo $this->Form->postLink(__('Delete'),array('action' => 'delete',	$v['id']),
 						array('class' => 'btn btn-danger delete-user-link')) ?>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal delete-->
+<?php endforeach ?>
 <div class="modal fade" id="ModalAide"> <!-- modal Aide -->
 	<div class="modal-dialog ">
 		<div class="modal-content">

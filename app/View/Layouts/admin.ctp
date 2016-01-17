@@ -288,7 +288,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<?= $this->Session->flash(); ?>
 				<?= $this->Session->flash('Auth'); ?>
 				<!-- /nocache -->
-				<?php // echo $this->fetch('content'); ?>
+				<?php  echo $this->fetch('content'); ?>
 			</section><!-- /.content -->
 	</div><!-- /.content-wrapper -->
 		<footer class="main-footer">
