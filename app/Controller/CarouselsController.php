@@ -48,11 +48,22 @@ public function index(){
  *
  * @return void
  */
-	public function admin_index() {
-		$this->Carousel->recursive = 0;
-		$this->set('carousels', $this->Paginator->paginate());
-	}
-
+	// public function admin_index() {
+	// 	$this->Carousel->recursive = 0;
+	// 	$this->set('carousels', $this->Paginator->paginate());
+	// }
+public function admin_index() {
+	$actionHeading =__('carousel manager');
+	$this->Carousel->recursive = 0;
+	$this->paginate = array('Carousel'=>array(
+		'limit'=>6,
+		'order'=>array('Carousel.class' => 'desc'),
+		));
+	$d['carousels'] = $this->Paginate('Carousel',array(
+		'online >= 0'));
+	$this->set($d);
+	$this->set(compact('actionHeading'));
+}
 /**
  * admin_view method
  *
@@ -141,7 +152,29 @@ public function index(){
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+function admin_active($id=null) {
+	$carousel = $this->Carousel->read(null,$id);
+	//debug($carousel);die();
 
+	if (!$id && empty($carousel)) {
+		$this->Session->setFlash(__('You must provide a valid ID number to enable a post.',true),'notif',array('class'=>'danger','type'=>'sign'));
+		$this->redirect(array('action'=>'index'));
+	}
+	if (!empty($carousel)) {
+		$this->Carousel->updateAll(array('Carousel.class' => "' '"));
+		$this->Carousel->saveField('class', "active",false);
+		$this->Carousel->saveField('online', 1,false);
+		if ($this->Carousel->save($this->Carousel->saveField('class',"active",false))) {
+			$this->Session->setFlash(__('The Carousel %s has been published.',h($id)),'notif',array('class'=>'success','type'=>'ok'));
+		} else {
+			$this->Session->setFlash(__('The Carousel %s was not published.',h($id)),'notif',array('class'=>'danger','type'=>'sign'));
+		}
+		$this->redirect(array('action'=>'index'));
+	} else {
+		$this->Session->setFlash(__('No Carousel by that ID was found.',true),'notif',array('class'=>'danger','type'=>'sign'));
+		$this->redirect(array('action'=>'index'));
+	}
+}
 	function admin_enable($id=null) {
 		$carousel = $this->Carousel->read(null,$id);
 		if (!$id && empty($carousel)) {
@@ -168,6 +201,11 @@ public function index(){
 		if (!$id && empty($carousel)) {
 			$this->Session->setFlash(__('You must provide a valid ID number to disable a portfolio.',true),'notif',array('class'=>'danger','type'=>'sign'));
 			$this->redirect(array('action'=>'index'));
+		}
+		if ($carousel['Carousel']['class']== 'active'){
+			$this->Session->setFlash(__('you can not disable or delete an active image please select another image before'),
+				'notif', array('class' => 'alert alert-danger'));
+			return $this->redirect(array('action' => 'index'));
 		}
 		if (!empty($carousel)) {
 			$carousel['Carousel']['online'] = 0;

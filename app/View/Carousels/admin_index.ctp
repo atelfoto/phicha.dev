@@ -13,6 +13,7 @@
 						<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 						<th><?php echo $this->Paginator->sort('created'); ?></th>
 						<th><?php echo $this->Paginator->sort('modified'); ?></th>
+						<th><?php echo $this->Paginator->sort('class',__('active')); ?></th>
 						<th><?php echo $this->Paginator->sort('online'); ?></th>
 						<th class="actions" colspan="2"></th>
 					</tr>
@@ -32,6 +33,16 @@
 							</td>
 							<td><?php echo $this->Date->french($carousel['Carousel']['created']); ?>&nbsp;</td>
 							<td><?php echo $this->Date->french($carousel['Carousel']['modified']); ?>&nbsp;</td>
+							<td><?php if($carousel['Carousel'][ 'class' ] === "active") {
+								echo $this->Html->tag('span', "", array('class' => "fa fa-star","style"=>"font-size: 18px; color: rgb(240, 173, 78)"));
+								}else{
+								echo $this->Html->link('<span class="fa fa-star-o" style="font-size: 18px; color: rgb(230, 230, 230)"></span>',
+								array('action'=>'active', $carousel['Carousel']['id']),
+								array("style"=>"text-decoration:none;","data-toggle"=>"tooltip",
+									"data-placement"=>"top", "title"=>__('Activate this picture'),'escape'=>false));
+								}
+								?>
+							</td>
 							<td><?php if($carousel['Carousel'][ 'online' ] == 0) {echo $this->Html->link('<span class="label label-danger">'.__("Offline").'</span>',
 								array('action'=>'enable', $carousel['Carousel']['id']),
 								array("style"=>"text-decoration:none;","data-toggle"=>"tooltip",
