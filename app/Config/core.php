@@ -35,7 +35,7 @@
 //	Configure::write('debug', 2); configure le debug à 2 en local et à 1 en ligne laisser SetEnv CAKEPHP_DEBUG 2 sur apache
 //	voir ici http://book.cakephp.org/2.0/fr/deployment.html
 	if (getenv('CAKEPHP_DEBUG')) {
-        Configure::write('debug', 0);
+        Configure::write('debug', 2);
 } else {
         Configure::write('debug', 0);
 }
