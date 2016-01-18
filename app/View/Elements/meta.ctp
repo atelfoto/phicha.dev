@@ -6,13 +6,13 @@ $cakeDescription = __d('cake_dev', 'studio chardon');
 <?php echo $this->Html->meta(array('property' => 'og:type', 'type' => 'meta', 'content' => "website" )); ?>
 <?php echo $this->Html->meta(array('property' => 'og:title', 'type' => 'meta', 'content' => "Site officiel de philippe chardon photographe ".$this->fetch('title') )); ?>
 <?= $this->Html->meta(array('property' => 'og:url', 'type' => 'meta', 'content' => env('HTTP_HOST') )); ?>
-<?= $this->Html->meta(array('property' => 'og:image', 'type' => 'meta', 'content' =>  env('HTTP_HOST')."/img/sceenshot.jpg" )); ?>
+<?= $this->Html->meta(array('property' => 'og:image', 'type' => 'meta', 'content' =>  env('HTTP_HOST')."/img/screenshot.jpg" )); ?>
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="<?php echo $cakeDescription ?>">
 <meta name="twitter:creator" content="<?php echo $cakeDescription ?>">
 <meta name="twitter:domain" content="<?php echo env('HTTP_HOST'); ?>">
 <meta name="twitter:title" content="<?php echo $cakeDescription ?>" />
-<meta name="twitter:image" content="<?php echo env('HTTP_HOST'); ?>/img/sceenshot.jpg" />
+<meta name="twitter:image" content="<?php echo env('HTTP_HOST'); ?>/img/screenshot.jpg" />
 <meta name="twitter:url" content="<?php echo env('HTTP_HOST'); ?>" />
 <meta name="application-name" content="<?php echo $cakeDescription ?>"/>
 <meta name="msapplication-TileColor" content="#EBEAE6"/>

@@ -27,9 +27,6 @@ echo $this->fetch('css'); ?>
 	<!--/nocache-->
 	<h1><?php  echo $cakeDescription  ?></h1>
 	<?php echo $this->fetch('content'); ?>
-
-
-
 	 <div id='container_footer'></div>
 </div><div class="site-cache" id="site-cache"></div>
 <footer id="footer">
@@ -56,7 +53,10 @@ echo $this->fetch('css'); ?>
 })(jQuery);
 <?php $this->Html->scriptEnd(); ?>
 <?php
-echo  $this->Html->script(array("home.min"));
+
+echo  $this->Html->script(array("home.min"
+	,"jsocial"
+	));
 echo $this->fetch('script'); ?>
 
 </body>
