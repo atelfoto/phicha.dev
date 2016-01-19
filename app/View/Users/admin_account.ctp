@@ -1,4 +1,3 @@
-<?php echo $this->Html->css(array('fileinput.min'),array('inline'=>false)); ?>
 <?php  echo $this->set('title_for_layout',__('Account'));  ?>
  		<div class="page-header">
 		 	<h1><?php  echo __('Account'); ?></h1>
@@ -40,7 +39,6 @@
  	</div>
 </div>
 
-<?php echo  $this->Html->script(array("fileinput.min"), array('inline'=>false)); ?>
 <?=  $this->Html->scriptStart(array('inline'=>false)); ?>
 $("#file-0").fileinput({
 	allowedFileExtensions : ['jpg'],

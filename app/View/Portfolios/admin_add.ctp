@@ -100,8 +100,6 @@
 		</div>
 	</div><!-- end col md 3 -->
 </div> <!-- /row -->
-<?php  echo  $this->Html->script(array('bootstrap-toggle.min','fileinput.min','fileinput_locale_fr'
-		),array('inline'=>false)); ?>
 <?=  $this->Html->scriptStart(array('inline'=>false)); ?>
 $('#publication a[href="#publications"]').tab('show')
 <?= $this->Html->scriptEnd(); ?>

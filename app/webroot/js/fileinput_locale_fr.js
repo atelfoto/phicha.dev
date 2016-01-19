@@ -25,7 +25,7 @@
         msgFilesTooLess: 'Vous devez sélectionner au moins <b>{n}</b> {files} à transmetter. Merci de recommencer !',
         msgFilesTooMany: 'Le nombre de fichier sélectionné <b>({n})</b> dépasse la quantité maximale autorisée qui est de <b>{m}</b>. Merci de recommencer !',
         msgFileNotFound: 'Le fichier "{name}" est introuvable !',
-        msgFileSecured: "Des restrictions de sécurité vous empêchent d'accéder au fichier \"{name}\".",
+        msgFileSecured: 'Des restrictions de sécurité vous empêchent d\'accéder au fichier "{name}".',
         msgFileNotReadable: 'Le fichier "{name}" est illisble.',
         msgFilePreviewAborted: 'Prévisualisation du fichier "{name}" annulée.',
         msgFilePreviewError: 'Une erreur est survenue lors de la lecture du fichier "{name}".',

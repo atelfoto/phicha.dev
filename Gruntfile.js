@@ -2,7 +2,7 @@ module.exports=function(grunt){
 	require('load-grunt-tasks')(grunt);
 	grunt.initConfig({
 		jshint: {
-			all: ['app/webroot/js/vegas.js','app/webroot/js/app.js','app/webroot/js/jsocial.js']
+			all: ['app/webroot/js/vegas.js','app/webroot/js/app.js','app/webroot/js/jsocial.js','app/webroot/js/admin/jquery.slimscroll.js','app/webroot/js/fileinput_locale_fr.js']
 		},
 		uglify: {
 			options:{
@@ -11,9 +11,8 @@ module.exports=function(grunt){
 			dist: {
 				files: {
 					'app/webroot/js/home.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/vegas.min.js","app/webroot/js/jsocial.js"],
-					'app/webroot/js/default.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/bootstrap.min.js","app/webroot/js/app.min.js","app/webroot/js/jsocial.js"]
-					// "app/webroot/js/app.min.js": ["app/webroot/js/app.js"],
-					// "app/webroot/js/app2.min.js": ["app/webroot/js/default.min.js", "app/webroot/js/app.js"]
+					'app/webroot/js/default.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/bootstrap.min.js","app/webroot/js/app.min.js","app/webroot/js/jsocial.js"],
+					'app/webroot/js/admin.min.js':["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/bootstrap.min.js","app/webroot/js/admin/app.min.js","app/webroot/js/jquery.easing.min.js",'app/webroot/js/bootstrap-toggle.min.js','app/webroot/js/fileinput.min.js','app/webroot/js/fileinput_locale_fr.js']
 				}
 			}
 		},
@@ -42,7 +41,6 @@ module.exports=function(grunt){
 			}
 		}
 	});
-	//grunt.registerTask('default',['cssmin'] )
 	grunt.registerTask('default',['uglify'] )
 
 

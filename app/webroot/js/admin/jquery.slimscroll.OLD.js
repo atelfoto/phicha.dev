@@ -26,7 +26,7 @@
         // default scroll position on load - top / bottom / $('selector')
         start: 'top',
         // sets scrollbar opacity
-        opacity: ".4",
+        opacity: .4,
         // enables always-on mode for the scrollbar
         alwaysVisible: false,
         // check if we should hide the scrollbar when user is hovering over
@@ -36,7 +36,7 @@
         // sets rail color
         railColor: '#333',
         // sets rail opacity
-        railOpacity: ".2",
+        railOpacity: .2,
         // whether  we should use jQuery UI Draggable to enable bar dragging
         railDraggable: true,
         // defautlt CSS class of the slimscroll rail
@@ -326,7 +326,7 @@
             return;
           }
 
-        //  var e = e || window.event;
+          var e = e || window.event;
 
           var delta = 0;
           if (e.wheelDelta) {
@@ -409,7 +409,7 @@
           }
           else
           {
-            document.attachEvent("onmousewheel", _onWheel);
+            document.attachEvent("onmousewheel", _onWheel)
           }
         }
 
@@ -439,7 +439,7 @@
             // publish approporiate event
             if (lastScroll != percentScroll)
             {
-              var msg = (~~percentScroll === 0) ? 'top' : 'bottom';
+              var msg = (~~percentScroll == 0) ? 'top' : 'bottom';
               me.trigger('slimscroll', msg);
             }
           }

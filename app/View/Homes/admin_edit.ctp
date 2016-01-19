@@ -68,29 +68,29 @@
 		</div>
 	</div><!-- end col md 3 -->
 </div>
-	<?php  echo  $this->Html->script(array('tinymce/tinymce.min'),array('inline'=>false)); ?>
+<?php  echo  $this->Html->script(array('tinymce/tinymce.min'),array('inline'=>false)); ?>
 <?=  $this->Html->scriptStart(array('inline'=>false)); ?>
 //pour le textarea
 tinyMCE.init({
-   selector: ".textarea1",
-   mode:"exact",
-	 entity_encoding : "raw",
-	 encoding: "UTF-8",
-   theme: "modern",
-	 language :"fr_FR",
-   resize: "both",
-  	plugins: [
-     	"wordcount visualblocks visualchars  fullscreen",
-     	"insertdatetime media nonbreaking save table contextmenu directionality",
-     	"template paste textcolor emmet visualblocks  code fullscreen "
-  	],
+  selector: ".textarea1",
+  mode:"exact",
+  entity_encoding : "raw",
+  encoding: "UTF-8",
+  theme: "modern",
+  language :"fr_FR",
+  resize: "both",
+  plugins: [
+  "wordcount visualblocks visualchars  fullscreen",
+  "insertdatetime media nonbreaking save table contextmenu directionality",
+  "template paste textcolor emmet visualblocks  code fullscreen "
+  ],
 });
 $(document).ready(function(e) {
   $('#metadescription').keyup(function() {
     var nombreCaractere = $(this).val().length;
     var nombreMots = jQuery.trim($(this).val()).split(' ').length;
     if($(this).val() === '') {
-     	nombreMots = 0;
+      nombreMots = 0;
     }
     var msg = ' ' + nombreMots + ' mot(s) | ' + nombreCaractere + ' Caractere(s) / 160';
     $('#compteur').text(msg);

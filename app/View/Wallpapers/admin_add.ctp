@@ -58,4 +58,3 @@
 			</div>
 		</div>
 	</div><!-- end col md 3 -->
-	<?php  echo  $this->Html->script(array('bootstrap-toggle.min','fileinput.min','fileinput_locale_fr'	),array('inline'=>false)); ?>

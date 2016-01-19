@@ -42,19 +42,15 @@
 tinyMCE.init({
     selector: ".textarea1",
     mode:"exact",
-	entity_encoding : "raw",
-	encoding: "UTF-8",
+    entity_encoding : "raw",
+    encoding: "UTF-8",
     theme: "modern",
-	language :"fr_FR",
+    language :"fr_FR",
     resize: "both",
-    	plugins: [
-        "wordcount visualblocks visualchars  fullscreen",
-        "insertdatetime media nonbreaking save table contextmenu directionality",
-        "template paste textcolor emmet visualblocks  code fullscreen "
+    plugins: [
+    "wordcount visualblocks visualchars  fullscreen",
+    "insertdatetime media nonbreaking save table contextmenu directionality",
+    "template paste textcolor emmet visualblocks  code fullscreen "
     ],
-
-
-
 });
-
 <?= $this->Html->scriptEnd(); ?>

@@ -100,7 +100,6 @@
 	</div>
 </div>
 <!-- </div> -->
-<?php //  $this->Html->script("https://maps.google.com/maps/api/js?sensor=false",array('inline'=>false)); ?>
 <?=  $this->Html->script("https://maps.google.com/maps/api/js",array('inline'=>false)); ?>
 <?= $this->Html->scriptStart(array("inline"=>false)); ?>
 jQuery(function ($) {

@@ -25,48 +25,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			content: ' ⇡';
 		}
 	</style>
-	<?php echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min","admin/app.min","jquery.easing.min","admin/jquery.slimscroll")); ?>
-	<script>
-		$(document).ready(function(){
-			$('#topbar').hide();
-			$(function(){
-				$(window).scroll(function(){
-					if ($(this).scrollTop() > 100){
-						$('#topbar').fadeIn();
-					}else{
-						$('#topbar').fadeOut();
-					}
-				});
-			});
-			$('#topbar a').click(function(){
-				$('body,html').animate({
-					scrollTop: 0
-				}, 1500,'easeInOutExpo');
-				return false;
-			});
-		});
-		$(function () {
-			$('[data-toggle="tooltip"]').tooltip()
-		});
-		// jQuery for page scrolling feature - requires jQuery Easing plugin
-		$(function() {
-			$('a.page-scroll').bind('click', function(event) {
-				var $anchor = $(this);
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1500, 'easeInOutExpo');
-				event.preventDefault();
-			});
-		});
-			// jQuery to collapse the navbar on scroll
-		$(window).scroll(function() {
-			if ($(".navbar").offset().top > 50) {
-				$(".navbar-fixed-top").addClass("top-nav-collapse");
-			} else {
-				$(".navbar-fixed-top").removeClass("top-nav-collapse");
-			}
-		});
-	</script>
 </head>
 <body class="skin-blue fixed">
 	<div class="wrapper">
@@ -299,6 +257,48 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</footer>
 		<?php // echo $this->element('top'); ?>
 	</div><!-- ./wrapper -->
+	<?php echo  $this->Html->script(array("admin.min.js","admin/jquery.slimscroll.js")); ?>
+	<script>
+		$(document).ready(function(){
+			$('#topbar').hide();
+			$(function(){
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 100){
+						$('#topbar').fadeIn();
+					}else{
+						$('#topbar').fadeOut();
+					}
+				});
+			});
+			$('#topbar a').click(function(){
+				$('body,html').animate({
+					scrollTop: 0
+				}, 1500,'easeInOutExpo');
+				return false;
+			});
+		});
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+		// jQuery for page scrolling feature - requires jQuery Easing plugin
+		$(function() {
+			$('a.page-scroll').bind('click', function(event) {
+				var $anchor = $(this);
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1500, 'easeInOutExpo');
+				event.preventDefault();
+			});
+		});
+			// jQuery to collapse the navbar on scroll
+		$(window).scroll(function() {
+			if ($(".navbar").offset().top > 50) {
+				$(".navbar-fixed-top").addClass("top-nav-collapse");
+			} else {
+				$(".navbar-fixed-top").removeClass("top-nav-collapse");
+			}
+		});
+	</script>
 	<?php  echo $this->fetch('script'); ?>
 </body>
 </html>
