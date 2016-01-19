@@ -100,8 +100,9 @@
 	</div>
 </div>
 <!-- </div> -->
-<?=  $this->Html->script("https://maps.google.com/maps/api/js?sensor=false",array('inline'=>false));; ?>
-<?= $this->Html->scriptStart(); ?>
+<?php //  $this->Html->script("https://maps.google.com/maps/api/js?sensor=false",array('inline'=>false)); ?>
+<?=  $this->Html->script("https://maps.google.com/maps/api/js",array('inline'=>false)); ?>
+<?= $this->Html->scriptStart(array("inline"=>false)); ?>
 jQuery(function ($) {
 $(function () {
 $('#myTab a:last').tab('show')

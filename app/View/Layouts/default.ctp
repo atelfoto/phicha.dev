@@ -15,9 +15,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->fetch('meta');
 	echo $this->Html->css('styles.min');
 	echo $this->fetch('css');
-	//echo  $this->Html->script(array("jquery-1.11.3.min","bootstrap.min","app"));
-	echo  $this->Html->script(array("default.min"));
-
 	?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -49,7 +46,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 	</body>
 <?php
-echo  $this->Html->script(array("jsocial"));
-
+echo  $this->Html->script(array("default.min"));
 echo $this->fetch('script');	?>
 </html>

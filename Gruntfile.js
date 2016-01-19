@@ -10,8 +10,8 @@ module.exports=function(grunt){
 			},
 			dist: {
 				files: {
-					'app/webroot/js/home.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/vegas.min.js","app/webroot/js/jsocial"],
-					'app/webroot/js/default.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/bootstrap.min.js","app/webroot/js/app.min.js","app/webroot/js/jsocial"]
+					'app/webroot/js/home.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/vegas.min.js","app/webroot/js/jsocial.js"],
+					'app/webroot/js/default.min.js': ["app/webroot/js/jquery-1.11.3.min.js","app/webroot/js/bootstrap.min.js","app/webroot/js/app.min.js","app/webroot/js/jsocial.js"]
 					// "app/webroot/js/app.min.js": ["app/webroot/js/app.js"],
 					// "app/webroot/js/app2.min.js": ["app/webroot/js/default.min.js", "app/webroot/js/app.js"]
 				}

@@ -1,5 +1,7 @@
+/**
+* social
+**/
 (function(){
-
 var popupCenter = function(url,title, width,height){
 	 var popupWidth = width || 640;
 	 var popupHeight = height || 320;
@@ -15,7 +17,6 @@ var popupCenter = function(url,title, width,height){
 	 return true;
 
 };
-
 document.querySelector('.social-twitter').addEventListener('click', function(e) {
 	 e.preventDefault();
 	 var url = this.getAttribute('data-url');
@@ -47,3 +48,16 @@ document.querySelector('.social-linkedin').addEventListener('click', function(e)
 		popupCenter(shareUrl, "Partager sur Linkedin");
 });
 })();
+//menu
+ (function($){
+    /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
+    $('#header__icon').click(function(e){
+        e.preventDefault();
+        $('body').toggleClass('with--sidebar');
+    });
+    /* Je veux pouvoir masquer le menu si on clique sur le cache */
+   $('#site-cache').click(function(e){
+       $('body').removeClass('with--sidebar');
+   });
+})(jQuery);
+

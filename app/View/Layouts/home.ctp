@@ -39,25 +39,8 @@ echo $this->fetch('css'); ?>
 	</p>
 </footer>
 <div id="overlay"></div>
-<?php $this->Html->scriptStart(array('inline'=>false)); ?>
- (function($){
-    /* Quand je clique sur l'icône hamburger je rajoute une classe au body */
-    $('#header__icon').click(function(e){
-        e.preventDefault();
-        $('body').toggleClass('with--sidebar');
-    });
-    /* Je veux pouvoir masquer le menu si on clique sur le cache */
-   $('#site-cache').click(function(e){
-       $('body').removeClass('with--sidebar');
-   })
-})(jQuery);
-<?php $this->Html->scriptEnd(); ?>
 <?php
-
-echo  $this->Html->script(array("home.min"
-	,"jsocial"
-	));
+echo  $this->Html->script(array("home.min"));
 echo $this->fetch('script'); ?>
-
 </body>
 </html>
