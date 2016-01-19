@@ -59,5 +59,6 @@ $(document).ready(function() {
      /* Je veux pouvoir masquer le menu si on clique sur le cache */
     $('#site-cache').click(function(e){
         $('body').removeClass('with--sidebar');
+        $('.menu-icon').addClass('is-closed').removeClass('is-opened');
     });
  })(jQuery);

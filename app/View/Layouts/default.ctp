@@ -42,7 +42,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 			<?php echo $this->fetch('content'); ?>
 			<?php  echo $this->element('footer'); ?>
-		<div class="site-cache" id="site-cache">
+		<div class="site-cache" id="site-cache" data-target-1=".side-collapse" data-target-2=".side-collapse-container" data-toggle="collapse-side" data-target="#navbar">
 		</div>
 	</div>
 </body>
