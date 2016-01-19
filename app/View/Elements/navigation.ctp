@@ -12,7 +12,7 @@
 		</div>
 		<div id="navbar" class="navbar-custom side-collapse in">
 		<nav class="navbar-collapse">
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav" id="navbar-nav">
 				<?php  echo $this->element('menu-main'); ?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

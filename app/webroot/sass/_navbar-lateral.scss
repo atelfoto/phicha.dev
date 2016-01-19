@@ -62,7 +62,7 @@ $gray-dark:lighten($gray-base, 20%);*/
 	// }
 
 .with--sidebar{
-		ul.navbar-nav{//.site-pusher
+		ul.navbar-nav, #navbar{//.site-pusher
 			@include transition-duration(0.3s);
 			@include transform(translateX(0px));
 		}
