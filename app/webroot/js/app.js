@@ -20,7 +20,7 @@ $(window).scroll(function() {
 		$(".navbar-fixed-top").removeClass("top-nav-collapse");
 	}
 });
-// script hamburger
+// script hamburger icon
 $(document).ready(function(){
 	$('.menu-icon').click(function(e){
 		e.preventDefault();

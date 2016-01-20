@@ -24,9 +24,9 @@ module.exports=function(grunt){
 			}
 		},
 		watch:{
-			dist:{
-				files:['app/webroot/js/vegas.js'],
-				tasks:["default.min"],
+			js:{
+				files:['app/webroot/js/*.js','!app/webroot/js/*.min.js'],
+				tasks:["jshint","uglify"],
 				options:{ spawn:false}
 			}
 		},
