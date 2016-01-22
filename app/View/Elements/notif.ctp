@@ -1,4 +1,4 @@
-<div class="alert alert-<?php echo isset($class) ? $class: 'success'; ?> flash-msg" role="alert" aria-hidden="true">
+<div style="max-height:60px;" class="alert alert-<?php echo isset($class) ? $class: 'success'; ?> flash-msg" role="alert" aria-hidden="true">
 	<span class="glyphicon glyphicon-<?php echo isset($type) ? $type: 'ok'; ?>-sign " role="alert" aria-hidden="true" ></span>
 		<!-- <span class="sr-only"><?php echo __('Error:'); ?>x</span> -->
 	<a href="#" class="close text-right"  ></a>

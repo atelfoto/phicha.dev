@@ -118,7 +118,6 @@ body{
 
 }
 
-
  h1 {
  	text-transform: capitalize;
  	font-family: "Indie Flower", cursive;
@@ -167,36 +166,41 @@ ul.sidebar-menu{
 		text-align: center;
 		text-decoration: none;
 		padding: 12px 5px 12px 15px;
-	}
-	a{
-		text-transform: capitalize;
-		text-decoration: none;
-		text-align: right;
-		font-size: 2.5em;
-		font-weight: 700;
-		font-family: "lora";
-		color: #fff;
-		text-shadow:5px 5px 4px rgba(0,0,0, 0.90);
 
-
-		&:hover{
-			color:#777;
+		a{
+			text-transform: capitalize;
+			text-decoration: none;
+			text-align: right;
+			font-size: 2.5em;
+			font-weight: 700;
+			font-family: "lora";
+			color: #fff;
+			text-shadow:5px 5px 4px rgba(0,0,0, 0.90);
+			display: block;transition: all 1000ms ease;
+			&:hover{
+				color:#777;
+				background: transparent;
+				text-decoration: none !important;
+				text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.00);
+				transform: scale(1.0) translateX(-15px);
+			}
+		}
+		&.active a{
+			color: #555 !important;
 			background: transparent;
 			text-decoration: none !important;
 			text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.00);
-
+			cursor:default;
 		}
-
 	}
 }
-li.active a{
-		color: #555 !important;
-					background: transparent;
-					text-decoration: none !important;
-					text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.00);
-					cursor:default;
+ul.sidebar-menu	li.active a:hover{
+
+	transition: all 0 !important;
+	transform:scale(1.0) translateX(0px)!important;
 
 }
+
 .header{
 		position: static;
 	}

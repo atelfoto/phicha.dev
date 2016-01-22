@@ -23,7 +23,7 @@ echo $this->fetch('css'); ?>
   </header>
 	<!--nocache-->
 	<?php echo $this->Session->flash(); ?>
-	<?php // echo $this->Session->flash('auth'); ?>
+	<?php  echo $this->Session->flash('auth'); ?>
 	<!--/nocache-->
 	<h1><?php  echo $cakeDescription  ?></h1>
 	<?php echo $this->fetch('content'); ?>
