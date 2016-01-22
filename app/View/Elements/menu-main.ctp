@@ -8,7 +8,7 @@
 	<?= $this->Html->link("<span class='visible-xs-inline-block glyphicon glyphicon-shopping-cart'>&nbsp;</span>".__("Acces clients") ,array('controller'=>'pages','action'=>'customers','admin'=>false),array('escape'=>false)); ?>
 </li>
 <li <?php if ($this->request->controller =='contacts'):?> class="active"<?php endif; ?>>
-	<?= $this->Html->link(__("<span class='visible-xs-inline-block glyphicon glyphicon-envelope'>&nbsp;</span>contact") ,array('controller'=>'contacts','action'=>'index','admin'=>false),array(,'escape'=>false)); ?>
+	<?= $this->Html->link("<span class='visible-xs-inline-block glyphicon glyphicon-envelope'>&nbsp;</span>" .__("contact") , array('controller'=>'contacts','action'=>'index','admin'=>false),array('escape'=>false)); ?>
 </li>
 <li <?php if ($this->request->controller =='comments'):?> class="active"<?php endif; ?>>
 	<?= $this->Html->link("<span class='visible-xs-inline-block glyphicon glyphicon-book'>&nbsp;</span>".__("Livre d'or") ,array('controller'=>'comments','action'=>'index','admin'=>false),array('escape'=>false)); ?>
